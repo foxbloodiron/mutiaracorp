@@ -1,0 +1,88 @@
+/* 
+
+# Alamraya Custom Styling
+
+============================
+*/
+
+.card-title-block {
+    /*margin: -20px;*/
+    padding: 20px !important;
+    background-color: #fafafa;
+    border-bottom: 1px solid #dbdbdb !important;
+}
+.input-group-append > .btn-sm{
+	height: 31px;
+}
+.input-group-append > .btn-md{
+	height: 38px;
+}
+.input-group-append > .btn-lg{
+	height: 48px;
+}
+.select2-container--default .select2-selection--single{
+	border: 1px solid #ced4da;
+}
+.form-control ~ .select2-container .select2-selection--single{
+	height: 38px;
+}
+.form-control-sm ~ .select2-container .select2-selection--single{
+	height: 31px;
+}
+.form-control-lg ~ .select2-container .select2-selection--single{
+	height: 48px;
+}
+.input-group-addon {
+    padding: 0 7px 0 7px;
+}
+.modal-open .main-wrapper{
+	overflow: hidden;
+}
+fieldset{
+	border:1px solid #dbdbdb;
+	padding: 15px;
+}
+.btn{
+	margin-bottom: 0;
+}
+.header .header-block-search .input-container > button{
+	left: 0;
+}
+.header .header-block-search .input-container > button > i{
+	position: initial;
+	pointer-events: none;
+	display: block;
+	height: 17px;
+	line-height: 17px;
+	left: 0;
+}
+.table-condensed > thead > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > tbody > tr > td{
+	padding: 5px;
+}
+@media (max-width:768px){
+	#search-container{
+		display: none;
+		position: absolute;
+		background: white;
+		left: 0;
+		width: 100%;
+		text-align: left;
+		z-index: 1;
+	}
+	#search-container form{
+		width: 100%;
+	}
+	#filterInput{
+		width: 100%;
+		max-width: 100%;
+	}
+	#btn-reset{
+		right: 0;
+		position: absolute;
+		left: unset;
+		margin: 6px;
+		top: 0;
+	}
+}
