@@ -2,14 +2,14 @@
 
 @section('content')
 
-@include('masterdatautama.suplier.modal_produk')
-
 <article class="content">
 
 	<div class="title-block text-primary">
-	    <h1 class="title"> Master Suplier </h1>
+	    <h1 class="title"> Master Cabang</h1>
 	    <p class="title-description">
-	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a> / <span>Master Data Utama</span> / <span class="text-primary" style="font-weight: bold;">Kelola Data Suplier</span>
+	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
+	    	 / <span>Master Data Utama</span>
+	    	 / <span class="text-primary" style="font-weight: bold;">Master Cabang</span>
 	     </p>
 	</div>
 
@@ -22,48 +22,42 @@
 				<div class="card">
                     <div class="card-header bordered p-2">
                     	<div class="header-block">
-	                        <h3 class="title"> Data Suplier </h3>
+	                        <h3 class="title"> Data Cabang </h3>
 	                    </div>
 	                    <div class="header-block pull-right">
-                			<button class="btn btn-primary" data-toggle="modal" data-target="#tambah" onclick="window.location.href='{{route('tambah_suplier')}}'"><i class="fa fa-plus"></i>&nbsp;Tambah Data</button>
+                    			<a class="btn btn-primary" href="{{route('tambah_cabang')}}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+	                    	
 	                    </div>
                     </div>
                     <div class="card-block">
                         <section>
                         	
+                        	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_suplier">
+	                            <table class="table table-striped table-hover" cellspacing="0" id="table_cabang">
 	                                <thead class="bg-primary">
-	                                    <tr align="center">
+	                                    <tr>
 							                <th width="1%">No</th>
-											<th width="10%">Kode Suplier</th>
-							                <th width="10%">Nama Suplier</th>
-							                <th width="10%">Alamat</th>
-							                <th width="10%">No Telp</th>
-											<th width="10%">Contact Person</th>
-											<th width="10%">No Contact Person</th>
-											<th width="10%">Produk</th>
-							                <th width="5%">Aksi</th>
+							                <th>Nama Cabang</th>
+							                <th>Alamat Cabang</th>
+							                <th>No Telp</th>
+							                <th>Aksi</th>
 							            </tr>
 	                                </thead>
 	                                <tbody>
-	                                	<tr align="center">
+	                                	<tr>
 	                                		<td>1</td>
-											<td>321123</td>
-	                                		<td>David</td>
-	                                		<td>Jl. Hehe</td>
-	                                		<td>08132312451123</td>
-	                                		<td>Ridwan</td>
-											<td>01231912371293</td>
-											<td><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>
+	                                		<td>CUS/0001</td>
+	                                		<td>Jl. Cabang</td>
+	                                		<td>0843123123123</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='{{route('edit_suplier')}}'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-eye-slash"></i></button>
+	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
 	                                			</div>
 	                                		</td>
 	                                	</tr>
-	                                </tbody>
+							        </tbody>
 	                            </table>
 	                        </div>
                         </section>
@@ -83,7 +77,7 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		var table = $('#table_suplier').DataTable();
+		var table = $('#table_cabang').DataTable();
 
 		$(document).on('click', '.btn-disable', function(){
 			var ini = $(this);
@@ -108,7 +102,7 @@
 								loaderBg: '#fdcb6e',
 								icon: 'info'
 							})
-					        ini.parents('.btn-group').html('<button class="btn btn-danger btn-enable" type="button" title="enable"><i class="fa fa-eye"></i></button>');
+					        ini.parents('.btn-group').html('<button class="btn btn-danger btn-enable" type="button" title="Enable"><i class="fa fa-eye"></i></button>');
 				        }
 			        },
 			        cancel:{
@@ -131,10 +125,10 @@
 				icon: 'info'
 			})
 			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
-	                                		'<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-eye-slash"></i></button>')
+	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>')
 		})
-		$('#table_suplier tbody').on('click','.btn-edit', function(){
-			window.location.href='{{route('edit_suplier')}}'
+        $('#table_cabang tbody').on('click','.btn-edit', function(){
+			window.location.href='{{route('edit_cabang')}}'
 		})
 	});
 </script>

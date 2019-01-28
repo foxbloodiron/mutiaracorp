@@ -199,10 +199,10 @@
                             <a href="{{route('suplier.index')}}">Master Suplier</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/cabang/*') ? 'active' : ''}}">
-                            <a href="#">Master Cabang</a>
+                            <a href="{{ route('cabang.index') }}">Master Cabang</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/agen/*') ? 'active' : ''}}">
-                            <a href="#">Master Agen</a>
+                            <a href="{{ route('agen.index')}}">Master Agen</a>
                         </li>
                         <li>
                             <a href="#"> Master Cabang

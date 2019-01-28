@@ -162,16 +162,32 @@ class MasterController extends Controller
 
     // * Master Cabang
 
-    public function kelolacabang()
+    public function cabang()
     {   
-        return view('masterdatautama.cabang.kelolacabang.kelolacabang');
+        return view('masterdatautama.cabang.index');
+    }
+    public function tambah_cabang()
+    {   
+        return view('masterdatautama.cabang.tambah_cabang');
+    }
+    public function edit_cabang()
+    {   
+        return view('masterdatautama.cabang.edit_cabang');
     }
 
     // * Master Agen
 
-    public function kelolaagen()
+    public function agen()
     {   
-        return view('masterdatautama.agen.kelolaagen.kelolaagen');
+        return view('masterdatautama.agen.index');
+    }
+    public function tambah_agen()
+    {   
+        return view('masterdatautama.agen.tambah_agen');
+    }
+    public function edit_agen()
+    {   
+        return view('masterdatautama.agen.edit_agen');
     }
 
     // =================================== End Master Data Utama ===================================

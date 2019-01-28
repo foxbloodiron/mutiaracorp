@@ -56,10 +56,17 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/masterdatautama/harga/hargapergolongan/index', 'MasterController@hargapergolongan')->name('hargapergolongan');
 
 	Route::get('/masterdatautama/suplier/index', 'MasterController@suplier')->name('suplier.index');
-	Route::get('/masterdatautama/suplier/tambah_kelolasuplier', 'MasterController@tambah_suplier')->name('tambah_suplier');
-	Route::get('/masterdatautama/suplier/edit_kelolasuplier', 'MasterController@edit_suplier')->name('edit_suplier');
+	Route::get('/masterdatautama/suplier/tambah_suplier', 'MasterController@tambah_suplier')->name('tambah_suplier');
+	Route::get('/masterdatautama/suplier/edit_suplier', 'MasterController@edit_suplier')->name('edit_suplier');
 
-	Route::get('/masterdatautama/cabang/kelolacabang/index', 'MasterController@kelolacabang')->name('kelolacabang');
+	Route::get('/masterdatautama/cabang/index', 'MasterController@cabang')->name('cabang.index');
+	Route::get('/masterdatautama/cabang/tambah_cabang', 'MasterController@tambah_cabang')->name('tambah_cabang');
+	Route::get('/masterdatautama/cabang/edit_cabang', 'MasterController@edit_cabang')->name('edit_cabang');
+
+	Route::get('/masterdatautama/agen/index', 'MasterController@agen')->name('agen.index');
+	Route::get('/masterdatautama/agen/tambah_agen', 'MasterController@tambah_agen')->name('tambah_agen');
+	Route::get('/masterdatautama/agen/edit_agen', 'MasterController@edit_agen')->name('edit_agen');
+
 
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen');
 
