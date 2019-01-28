@@ -6,32 +6,44 @@ use Illuminate\Http\Request;
 
 class ProduksiController extends Controller
 {
-    public function pencatatanhasil()
+    public function pembuatan_order()
     {
-    	return view('produksi/pencatatanhasil/pencatatanhasil');
+    	return view('produksi/orderproduksi/pembuatanorder/index');
     }
-    public function proses_pencatatanhasil()
+    public function penentuan_termin()
     {
-        return view('produksi/pencatatanhasil/proses_pencatatanhasil');
+        return view('produksi/orderproduksi/penentuantermin/index');
     }
-    public function perencanaanproduksi()
+    public function histori_order()
     {
-    	return view('produksi/perencanaanproduksi/perencanaanproduksi');
+        return view('produksi/orderproduksi/historiorder/index');
     }
-    public function produksirencana()
+    public function data_penerimaan()
     {
-    	return view('produksi/produksirencana/produksirencana');
+        return view('produksi/penerimaanbarang/datapenerimaan/index');
     }
-    public function produksitanparencana()
+    public function histori_penerimaan()
     {
-    	return view('produksi/produksitanparencana/produksitanparencana');
+        return view('produksi/penerimaanbarang/historipenerimaan/index');
     }
-    public function upahboronganproduksi()
+    public function pencatatan_pembayaran()
     {
-    	return view('produksi/upahboronganproduksi/upahboronganproduksi');
+        return view('produksi/pembayaran/pencatatanpembayaran/index');
     }
-    public function proses_upahboronganproduksi()
+    public function histori_pembayaran()
     {
-        return view('produksi/upahboronganproduksi/proses_upahboronganproduksi');
+        return view('produksi/pembayaran/historipembayaran/index');
+    }
+    public function pencatatan_return()
+    {
+        return view('produksi/returnproduksi/pencatatanreturn/index');
+    }
+    public function perlakuan_return()
+    {
+        return view('produksi/returnproduksi/perlakuanreturn/index');
+    }
+    public function histori_return()
+    {
+        return view('produksi/returnproduksi/historireturn/index');
     }
 }
