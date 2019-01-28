@@ -178,13 +178,13 @@
                                 <i class="fa arrow"></i>
                             </a>
                             <ul class="sidebar-nav">
-                                <li class="{{Request::is('masterdatautama/datapegawai/kelolapegawai/*') ? 'active' : ''}}">
+                                <li class="{{Request::is('masterdatautama/datapegawai/kelolapegawai/*') ? 'open' : ''}}">
                                     <a href="{{route('kelolapegawai')}}"> Kelola Data Pegawai </a>
                                 </li>
-                                <li class="{{Request::is('masterdatautama/datapegawai/profilpegawai/*') ? 'active' : ''}}">
+                                <li class="{{Request::is('masterdatautama/datapegawai/profilpegawai/*') ? 'open' : ''}}">
                                     <a href="{{route('profilpegawai')}}"> Profil Data Pegawai </a>
                                 </li>
-                                <li class="{{Request::is('masterdatautama/datapegawai/passwordpegawai/*') ? 'active' : ''}}">
+                                <li class="{{Request::is('masterdatautama/datapegawai/passwordpegawai/*') ? 'open' : ''}}">
                                     <a href="{{route('passwordpegawai')}}">Ganti Password Pegawai</a>
                                 </li>
                             </ul>
