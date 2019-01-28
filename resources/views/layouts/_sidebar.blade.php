@@ -262,7 +262,7 @@
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
-                        <li class="{{Request::is('produksi/orderproduksi/*') ? 'open' : ''}}">
+                        <li class="{{Request::is('produksi/orderproduksi/*') ? 'aktif open' : ''}}">
                             <a href="#"> Order Produksi
                                 <i class="fa arrow"></i>
                             </a>
@@ -278,7 +278,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="{{Request::is('produksi/penerimaanbarang/*') ? 'open' : ''}}">
+                        <li class="{{Request::is('produksi/penerimaanbarang/*') ? 'aktif open' : ''}}">
                             <a href="#"> Penerimaan Barang
                                 <i class="fa arrow"></i>
                             </a>
@@ -291,7 +291,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="{{Request::is('produksi/pembayaran/*') ? 'open' : ''}}">
+                        <li class="{{Request::is('produksi/pembayaran/*') ? 'aktif open' : ''}}">
                             <a href="#"> Pembayaran
                                 <i class="fa arrow"></i>
                             </a>
@@ -304,7 +304,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="{{Request::is('produksi/returnproduksi/*') ? 'open' : ''}}">
+                        <li class="{{Request::is('produksi/returnproduksi/*') ? 'aktif open' : ''}}">
                             <a href="#"> Return Produksi
                                 <i class="fa arrow"></i>
                             </a>
@@ -328,7 +328,7 @@
                         <i class="fa arrow"></i>
                     </a>
                 <ul class="sidebar-nav">
-                    <li class="{{Request::is('inventory/barangmasuk/*') ? 'open' : ''}}">
+                    <li class="{{Request::is('inventory/barangmasuk/*') ? 'aktif open' : ''}}">
                         <a href="#"> Pengelolaan Barang Masuk
                             <i class="fa arrow"></i>
                         </a>
