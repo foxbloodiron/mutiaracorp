@@ -20,7 +20,7 @@
 
 
         <!-- Theme initialization -->
-        <script>
+{{--         <script>
             var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
             {};
             var themeName = themeSettings.themeName || '';
@@ -36,7 +36,8 @@
             {
                 document.write('<link rel="stylesheet" id="theme-style" href="' + firstUrl +'/assets/css/app.css">');
             }
-        </script>
+        </script> --}}
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/app.css')}}">
         <style type="text/css">
             .sidebar .sidebar-menu > li > a i {
     
