@@ -169,246 +169,378 @@
                         <i class="fa fa-sitemap"></i> Master Data Utama
                         <i class="fa arrow"></i>
                     </a>
-                <ul class="sidebar-nav">
-                    <li>
-                        <a href="#"> Master Data Pegawai
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Kelola Data Pegawai </a>
-                            </li>
-                            <li>
-                                <a href="#"> Profil Data Pegawai </a>
-                            </li>
-                            <li>
-                                <a href="#">Ganti Password Pegawai</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Master Produk
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Kelola Data Jenis Produk </a>
-                            </li>
-                            <li>
-                                <a href="#"> Profil Data Produk </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Master Harga
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Kelola Data Golongan Harga </a>
-                            </li>
-                            <li>
-                                <a href="#"> Kelola Data Harga Per Satuan </a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Data Per Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Data Per Golongan</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Master Suplier
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Kelola Data Suplier </a>
-                            </li>
-                            <li>
-                                <a href="#"> Kelola Produk Per Suplier </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Master Cabang
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Kelola Data Cabang </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Master Agen
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Kelola Data Agen </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a href="#"> Master Data Pegawai
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Kelola Data Pegawai </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Profil Data Pegawai </a>
+                                </li>
+                                <li>
+                                    <a href="#">Ganti Password Pegawai</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Master Produk
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Kelola Data Jenis Produk </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Profil Data Produk </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Master Harga
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Kelola Data Golongan Harga </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Kelola Data Harga Per Satuan </a>
+                                </li>
+                                <li>
+                                    <a href="#">Kelola Data Per Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kelola Data Per Golongan</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Master Suplier
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Kelola Data Suplier </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Kelola Produk Per Suplier </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Master Cabang
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Kelola Data Cabang </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Master Agen
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Kelola Data Agen </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     <a href="">
                         <i class="fa fa-sitemap"></i> Aktivitas Produksi
                         <i class="fa arrow"></i>
                     </a>
-                <ul class="sidebar-nav">
-                    <li>
-                        <a href="#"> Order Produksi
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pembuatan Order Produksi </a>
-                            </li>
-                            <li>
-                                <a href="#"> Penentuan Termin Pembayaran</a>
-                            </li>
-                            <li>
-                                <a href="#">Histori Order Produksi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Penerimaan Barang
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Data Penerimaan Barang </a>
-                            </li>
-                            <li>
-                                <a href="#"> Histori Penerimaan Barang </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Pembayaran
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pencatatan Data Pembayaran </a>
-                            </li>
-                            <li>
-                                <a href="#"> Histori Pembayaran </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Return Produksi
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pencatatan Data Return </a>
-                            </li>
-                            <li>
-                                <a href="#"> Perlakuan Return  </a>
-                            </li>
-                            <li>
-                                <a href="#">Histori Return Produksi</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a href="#"> Order Produksi
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Pembuatan Order Produksi </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Penentuan Termin Pembayaran</a>
+                                </li>
+                                <li>
+                                    <a href="#">Histori Order Produksi</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Penerimaan Barang
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Data Penerimaan Barang </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Histori Penerimaan Barang </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Pembayaran
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Pencatatan Data Pembayaran </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Histori Pembayaran </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Return Produksi
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Pencatatan Data Return </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Perlakuan Return  </a>
+                                </li>
+                                <li>
+                                    <a href="#">Histori Return Produksi</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     <a href="">
                         <i class="fa fa-sitemap"></i> Aktivitas Inventory
                         <i class="fa arrow"></i>
                     </a>
-                <ul class="sidebar-nav">
-                    <li>
-                        <a href="#"> Pengelolaan Barang Masuk
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pencatatan Barang Masuk </a>
-                            </li>
-                            <li>
-                                <a href="#"> Pencatatan Lokasi Barang </a>
-                            </li>
-                            <li>
-                                <a href="#">Histori Barang Masuk</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Pengelolaan Barang Keluar
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pencatatan Barang Keluar </a>
-                            </li>
-                            <li>
-                                <a href="#"> Pencatatan Lokasi Barang </a>
-                            </li>
-                            <li>
-                                <a href="#">Histori Barang Masuk</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Pengelolaan Distribusi Barang
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pencatatan Distribusi Barang </a>
-                            </li>
-                            <li>
-                                <a href="#"> Monitoring Progress Distribusi </a>
-                            </li>
-                            <li>
-                                <a href="#">Histori Distribusi Barang</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Data Per Golongan</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#"> Pengelolaan Manajemen Stok
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Opname Stok </a>
-                            </li>
-                            <li>
-                                <a href="#"> Adjustment Stok  </a>
-                            </li>
-                            <li>
-                                <a href="#"> Approval Adjustment Stok</a>
-                            </li>
-                            <li>
-                                <a href="#"> Pengelolaan Data Max/Min</a>
-                            </li>
-                            <li>
-                                <a href="#"> Pengelolaan Data Re-Order Point</a>
-                            </li>
-                            <li>
-                                <a href="#"> Analisa Stok Turn Over</a>
-                            </li>
-                            <li>
-                                <a href="#"> Histori Opname</a>
-                            </li>
-                            <li>
-                                <a href="#"> Histori Adjustment</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a href="#"> Pengelolaan Barang Masuk
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Pencatatan Barang Masuk </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Pencatatan Lokasi Barang </a>
+                                </li>
+                                <li>
+                                    <a href="#">Histori Barang Masuk</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Pengelolaan Barang Keluar
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Pencatatan Barang Keluar </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Pencatatan Lokasi Barang </a>
+                                </li>
+                                <li>
+                                    <a href="#">Histori Barang Masuk</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Pengelolaan Distribusi Barang
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Pencatatan Distribusi Barang </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Monitoring Progress Distribusi </a>
+                                </li>
+                                <li>
+                                    <a href="#">Histori Distribusi Barang</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kelola Data Per Golongan</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"> Pengelolaan Manajemen Stok
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li>
+                                    <a href="#"> Opname Stok </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Adjustment Stok  </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Approval Adjustment Stok</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Pengelolaan Data Max/Min</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Pengelolaan Data Re-Order Point</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Analisa Stok Turn Over</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Histori Opname</a>
+                                </li>
+                                <li>
+                                    <a href="#"> Histori Adjustment</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#">
+                        <i class="fa fa-sitemap"></i>
+                        Aktivitas Marketing
+                        <i class="fa arrow"></i>
+                    </a>
+                    <ul class="sidebar-nav">
+                        <li class="">
+                            <a href="#">Manajemen Marketing
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li class="">
+                                    <a href="#">Kelola Data Promosi Tahunan</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Kelola Data Promosi Bulanan</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Usulan Biaya Promosi</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Approval Promosi</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Histori Promosi</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#">Manajemen Penjualan Pusat
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li class="">
+                                    <a href="#">Target dan Realisasi Penjualan</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Terima Order Penjualan Agen</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Distribusi Penjualan Agen</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Return Penjualan Agen</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Histori Penjualan</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#">Manajemen Konsinyasi Pusat
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li class="">
+                                    <a href="#">Penempatan Produk ke Konsignee</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Monitoring Penjualan Konsignee</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Nota Penjualan Konsignee</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Penerimaan Uang Pembayaran Penjualan Konsignee</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Histori Konsinyasi</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#">Manajemen Marketing Area
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li class="">
+                                    <a href="#">Pendaftaran dan Pengelolaan Data Agen</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Order Produk ke Pusat</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Kelola Data Order Agen</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Kelola Data Canvassing</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Hutang Piutang Marketing Area</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Histori Order Produk</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Histori Penjualan ke Agen</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Histori Canvassing</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Histori Konsinyasi</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#">Manajemen Agen
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li class="">
+                                    <a href="#">Order Produk ke Agen/Pusat</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Kelola Penjualan Langsung</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Kelola Penjualan Via Website Mutiara Berlian</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Kelola Laporan Keuangan Sederhana</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Kelola Data Inventory Agen</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="{{Request::is('suplier/*') ? 'active open' : ''}}">
                     <a href="#">
                         <i class="fa fa-user"></i> Suplier
