@@ -156,14 +156,14 @@ class MasterController extends Controller
 
     public function kelolacabang()
     {   
-        return view('masterdatautama.harga.kelolacabang.kelolacabang');
+        return view('masterdatautama.cabang.kelolacabang.kelolacabang');
     }
 
     // * Master Agen
 
     public function kelolaagen()
     {   
-        return view('masterdatautama.harga.kelolaagen.kelolaagen');
+        return view('masterdatautama.agen.kelolaagen.kelolaagen');
     }
 
     // =================================== End Master Data Utama ===================================

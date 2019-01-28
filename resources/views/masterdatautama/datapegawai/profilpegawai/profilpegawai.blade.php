@@ -53,7 +53,7 @@
 	                                		<td>Sudah Menikah</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" title="Edit" onclick="window.location.href='{{ route('edit_datapegawai')}}'"type="button"><i class="fa fa-pencil"></i></button>
+	                                				<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
 	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
 	                                			</div>
 	                                		</td>
@@ -67,7 +67,7 @@
 	                                		<td>Sudah Menikah</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
-													<button class="btn btn-warning btn-edit" title="Edit" onclick="window.location.href='{{ route('edit_datapegawai')}}'"type="button"><i class="fa fa-pencil"></i></button>
+													<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
 	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
 	                                			</div>
 	                                		</td>
@@ -81,7 +81,7 @@
 	                                		<td>Belum Menikah</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
-													<button class="btn btn-warning btn-edit" title="Edit" onclick="window.location.href='{{ route('edit_datapegawai')}}'"type="button"><i class="fa fa-pencil"></i></button>
+													<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
 	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
 	                                			</div>
 	                                		</td>
