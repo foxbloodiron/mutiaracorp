@@ -56,8 +56,9 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/masterdatautama/harga/hargapersatuan/index', 'MasterController@hargapersatuan')->name('hargapersatuan');
 	Route::get('/masterdatautama/harga/hargapergolongan/index', 'MasterController@hargapergolongan')->name('hargapergolongan');
 
-	Route::get('/masterdatautama/suplier/kelolasuplier/index', 'MasterController@kelolasuplier')->name('kelolasuplier');
-	Route::get('/masterdatautama/suplier/produkpersuplier/index', 'MasterController@produkpersuplier')->name('produkpersuplier');
+	Route::get('/masterdatautama/suplier/index', 'MasterController@suplier')->name('suplier.index');
+	Route::get('/masterdatautama/suplier/tambah_kelolasuplier', 'MasterController@tambah_suplier')->name('tambah_suplier');
+	Route::get('/masterdatautama/suplier/edit_kelolasuplier', 'MasterController@edit_suplier')->name('edit_suplier');
 
 	Route::get('/masterdatautama/cabang/kelolacabang/index', 'MasterController@kelolacabang')->name('kelolacabang');
 

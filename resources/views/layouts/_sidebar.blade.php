@@ -221,18 +221,14 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#"> Master Suplier
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li>
-                                    <a href="#"> Kelola Data Suplier </a>
-                                </li>
-                                <li>
-                                    <a href="#"> Kelola Produk Per Suplier </a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('masterdatautama/suplier/*') ? 'active' : ''}}">
+                            <a href="{{route('suplier.index')}}">Master Suplier</a>
+                        </li>
+                        <li class="{{Request::is('masterdatautama/cabang/*') ? 'active' : ''}}">
+                            <a href="#">Master Cabang</a>
+                        </li>
+                        <li class="{{Request::is('masterdatautama/agen/*') ? 'active' : ''}}">
+                            <a href="#">Master Agen</a>
                         </li>
                         <li>
                             <a href="#"> Master Cabang

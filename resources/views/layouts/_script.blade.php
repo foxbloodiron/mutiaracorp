@@ -64,7 +64,7 @@
           }
 
         } );
-		$('.data-table').dataTable();
+		$('.data-table').DataTable();
 
 		$('.datepicker').datepicker({
 			format:"dd-mm-yyyy",

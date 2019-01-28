@@ -142,14 +142,24 @@ class MasterController extends Controller
 
     // * Master Suplier
 
-    public function kelolasuplier()
+    public function suplier()
     {   
-        return view('masterdatautama.suplier.kelolasuplier.kelolasuplier');
+        return view('masterdatautama.suplier.index');
+    }
+
+    public function tambah_suplier()
+    {   
+        return view('masterdatautama.suplier.tambah_suplier');
+    }
+
+    public function edit_suplier()
+    {   
+        return view('masterdatautama.suplier.edit_suplier');
     }
 
     public function produkpersuplier()
     {   
-        return view('masterdatautama.suplier.produkpersuplier.produkpersuplier');
+        return view('masterdatautama.suplier.produkpersuplier.index');
     }
 
     // * Master Cabang
