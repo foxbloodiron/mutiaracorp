@@ -15,7 +15,7 @@
                               <span class="l l3"></span>
                               <span class="l l4"></span>
                               <span class="l l5"></span>
-                          </div>Alexis</h1>
+                          </div class="login-text">Mutiara Berlian</h1>
                     </header>
                     <div class="auth-content">
                         <p class="text-center">LOGIN TO CONTINUE</p>

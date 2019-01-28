@@ -114,6 +114,7 @@ body {
     line-height: 30px;
     font-size: 26px;
     font-weight: 600;
+    font-family: 'Courgette', cursive;
     margin: 0; }
   .auth-container .auth-content {
     padding: 30px 50px;

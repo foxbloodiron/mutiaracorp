@@ -18,10 +18,10 @@
 *       Media Query Mixins
 ******************************************/
 .bg-primary {
-  background-color: #85CE36 !important;
+  background-color: #32ff7e!important;
 }
 thead.bg-primary,tfoot.bg-primary{
-  background-color: #85CE36 !important;
+  background-color: #00b894!important;
   color: white;
 }
 html,
@@ -747,7 +747,7 @@ body {
     .dropdown-menu .dropdown-item i {
       margin-right: 2px; }
     .dropdown-menu .dropdown-item:hover {
-      color: #85CE36 !important;
+      color: #00b894!important;
       background: none;
       background-color: whitesmoke; }
 
@@ -1017,7 +1017,7 @@ label,
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   border-style: dashed;
-  border: 1px #85CE36 solid;
+  border: 1px #00b894solid;
   color: #85CE36; }
   .images-container .image-container.new .image {
     font-size: 2.5rem; }
@@ -1437,7 +1437,7 @@ span a {
       color: #ffffff; }
 
 #nprogress .bar {
-  background: #85CE36 !important; }
+  background: #32ff7e!important; }
   #nprogress .bar .peg {
     -webkit-box-shadow: 0 0 10px #85CE36, 0 0 5px #85CE36;
             box-shadow: 0 0 10px #85CE36, 0 0 5px #85CE36; }
@@ -1446,8 +1446,8 @@ span a {
   top: 25px !important;
   right: 23px !important; }
   #nprogress .spinner .spinner-icon {
-    border-top-color: #85CE36 !important;
-    border-left-color: #85CE36 !important; }
+    border-top-color: #32ff7e!important;
+    border-left-color: #6effbf!important; }
 
 .pagination {
   margin-top: 0;
@@ -2403,7 +2403,7 @@ pre {
   margin-bottom: 0; }
 
 .sidebar {
-  background-color: #3a4651;
+  background-color: #2d3436;
   width: 240px;
   padding-bottom: 60px;
   position: absolute;
@@ -2430,7 +2430,7 @@ pre {
     overflow-y: auto;
     overflow-x: hidden; }
     .sidebar .sidebar-container::-webkit-scrollbar-track {
-      background-color: #2c353e; }
+      background-color: #fff; }
   .sidebar .label {
     font-size: .75em;
     display: inline-block;
@@ -2440,13 +2440,15 @@ pre {
     color: #000;
     margin: 0 3px; }
   .sidebar .label-screenful {
-    color: #fff;
+    color: #bdc3c7;
     background-color: #6769d4; }
   .sidebar .sidebar-menu {
     font-size: 14px;
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    background-color: rgba(45, 52, 54,1.0); 
+  }
     .sidebar .sidebar-menu li a:focus,
     .open .sidebar .sidebar-menu li a:focus {
       background-color: inherit; }
@@ -2466,7 +2468,8 @@ pre {
     .sidebar .sidebar-menu li.open > a,
     .sidebar .sidebar-menu li.open a:hover {
       color: #ffffff;
-      background-color: #2d363f; }
+      background-color: rgba(50, 255, 126,0.3)
+     }
     .sidebar .sidebar-menu .arrow {
       float: right;
       font-size: 18px;
@@ -2486,10 +2489,10 @@ pre {
       padding-right: 15px; }
     .sidebar .sidebar-menu > li.active > a,
     .sidebar .sidebar-menu > li.active > a:hover {
-      background-color: #85CE36 !important;
+      background-color: rgba(50, 255, 126,0.5)!important;
       color: #ffffff !important; }
     .sidebar .sidebar-menu > li.open > a {
-      background-color: #333e48; }
+      background-color: rgba(61, 61, 61,1.0); }
     .sidebar .sidebar-menu > li > a i {
       margin-right: 5px;
       font-size: 16px; }
@@ -2500,7 +2503,7 @@ pre {
       padding-bottom: 10px;
       padding-left: 50px;
       padding-right: 15px;
-      background-color: #333e48; }
+      background-color:rgba(30, 39, 46,1.0) }
     .sidebar .sidebar-menu > li > .sidebar-nav > li.active a {
       color: #ffffff; }
     .sidebar .sidebar-menu > li > .sidebar-nav > li > .sidebar-nav > li a {
@@ -2709,7 +2712,7 @@ pre {
 
 .customize {
   width: 100%;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   padding: 5px 15px;
   text-align: center; }
   .customize .customize-header {
@@ -2805,7 +2808,9 @@ pre {
   text-align: left;
   padding-left: 25px;
   line-height: 70px;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #4b4b4b;
+ }
   @media (max-width: 767.98px) {
     .sidebar-header .brand {
       line-height: 50px;

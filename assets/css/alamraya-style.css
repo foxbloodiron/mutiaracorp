@@ -86,3 +86,11 @@ fieldset{
 		top: 0;
 	}
 }
+
+.text-brand {
+	font-family: 'Courgette', cursive;
+	font-size: 1.5em;
+}
+.login-text {
+	font-family: 'Courgette', cursive;
+}
