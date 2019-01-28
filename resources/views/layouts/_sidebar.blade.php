@@ -214,7 +214,7 @@
                                     <a href="#"> Kelola Data Harga Per Satuan </a>
                                 </li>
                                 <li>
-                                    <a href="#">Kelola Data Per Item</a>
+                                    <a href="#">Kelola Data Harga Per Item</a>
                                 </li>
                                 <li>
                                     <a href="#">Kelola Data Per Golongan</a>
