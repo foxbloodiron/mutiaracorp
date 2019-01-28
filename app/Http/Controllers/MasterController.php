@@ -86,5 +86,88 @@ class MasterController extends Controller
     {
         return view('master/datasatuan/edit_datasatuan');
     }
+
+    // =============================== Master Data Utama ===============================
+
+    //  * Master Data Pegawai
+
+    public function kelolapegawai()
+    {
+        return view('masterdatautama.datapegawai.kelolapegawai.kelolapegawai');
+    }
+
+    public function profilpegawai()
+    {
+        return view('masterdatautama.datapegawai.profilpegawai.profilpegawai');
+    }
+
+    public function passwordpegawai()
+    {
+        return view('masterdatautama.datapegawai.passwordpegawai.passwordpegawai');
+    }
+
+    // * Master Data Produk
+
+    public function datajenisproduk()
+    {   
+        return view('masterdatautama.produk.datajenisproduk.datajenisproduk');
+    }
+
+    public function dataproduk()
+    {   
+        return view('masterdatautama.produk.dataproduk.dataproduk');
+    }    
+
+    // * Master Harga
+
+    public function golonganharga()
+    {   
+        return view('masterdatautama.harga.golonganharga.golonganharga');
+    }
+
+    public function hargaperitem()
+    {   
+        return view('masterdatautama.harga.hargaperitem.hargaperitem');
+    }
+
+    public function hargapersatuan()
+    {   
+        return view('masterdatautama.harga.hargapersatuan.hargapersatuan');
+    }
+
+    public function hargapergolongan()
+    {   
+        return view('masterdatautama.harga.hargapergolongan.hargapergolongan');
+    }
+
+    // * Master Suplier
+
+    public function kelolasuplier()
+    {   
+        return view('masterdatautama.suplier.kelolasuplier.kelolasuplier');
+    }
+
+    public function produkpersuplier()
+    {   
+        return view('masterdatautama.suplier.produkpersuplier.produkpersuplier');
+    }
+
+    // * Master Cabang
+
+    public function kelolacabang()
+    {   
+        return view('masterdatautama.harga.kelolacabang.kelolacabang');
+    }
+
+    // * Master Agen
+
+    public function kelolaagen()
+    {   
+        return view('masterdatautama.harga.kelolaagen.kelolaagen');
+    }
+
+    // =================================== End Master Data Utama ===================================
+
+
 }
 

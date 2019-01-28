@@ -42,6 +42,29 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/master/datasatuan/tambah_datasatuan', 'MasterController@tambah_datasatuan')->name('tambah_datasatuan');
 	Route::get('/master/datasatuan/edit_datasatuan', 'MasterController@edit_datasatuan')->name('edit_datasatuan');
 
+	// !====================================================== Master Data Utama ======================================================!
+
+	Route::get('/masterdatautama/datapegawai/kelolapegawai/index', 'MasterController@kelolapegawai')->name('kelolapegawai');
+	Route::get('/masterdatautama/datapegawai/profilpegawai/index', 'MasterController@profilpegawai')->name('profilpegawai');
+	Route::get('/masterdatautama/datapegawai/passwordpegawai/index', 'MasterController@passwordpegawai')->name('passwordpegawai');
+
+	Route::get('/masterdatautama/produk/datajenisproduk/index', 'MasterController@datajenisproduk')->name('datajenisproduk');
+	Route::get('/masterdatautama/produk/dataproduk/index', 'MasterController@dataproduk')->name('dataproduk');
+
+	Route::get('/masterdatautama/harga/golonganharga/index', 'MasterController@golonganharga')->name('golonganharga');
+	Route::get('/masterdatautama/harga/hargaperitem/index', 'MasterController@hargaperitem')->name('hargaperitem');
+	Route::get('/masterdatautama/harga/hargapersatuan/index', 'MasterController@hargapersatuan')->name('hargapersatuan');
+	Route::get('/masterdatautama/harga/hargapergolongan/index', 'MasterController@hargapergolongan')->name('hargapergolongan');
+
+	Route::get('/masterdatautama/suplier/kelolasuplier/index', 'MasterController@kelolasuplier')->name('kelolasuplier');
+	Route::get('/masterdatautama/suplier/produkpersuplier/index', 'MasterController@produkpersuplier')->name('produkpersuplier');
+
+	Route::get('/masterdatautama/cabang/kelolacabang/index', 'MasterController@kelolacabang')->name('kelolacabang');
+
+	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen');
+
+	// !===================================================== End Master Data Utama =====================================================!
+	
 	// PRODUKSI
 	// Order Produksi
 	Route::get('/produksi/orderproduksi/pembuatan_order/index', 'ProduksiController@pembuatan_order')->name('pembuatan_order.index');
@@ -58,6 +81,16 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/produksi/returnproduksi/perlakuanreturn/index', 'ProduksiController@perlakuan_return')->name('perlakuan_return.index');
 	Route::get('/produksi/returnproduksi/historireturn/index', 'ProduksiController@histori_return')->name('histori_return.index');
 	// END PRODUKSI
+
+	// Produksi
+	Route::get('/produksi/pencatatanhasil/pencatatanhasil', 'ProduksiController@pencatatanhasil')->name('pencatatanhasil');
+	Route::get('/produksi/pencatatanhasil/proses_pencatatanhasil', 'ProduksiController@proses_pencatatanhasil')->name('proses_pencatatanhasil');
+	Route::get('/produksi/perencanaanproduksi/perencanaanproduksi', 'ProduksiController@perencanaanproduksi')->name('perencanaanproduksi');
+	Route::get('/produksi/produksirencana/produksirencana', 'ProduksiController@produksirencana')->name('produksirencana');
+	Route::get('/produksi/produksitanparencana/produksitanparencana', 'ProduksiController@produksitanparencana')->name('produksitanparencana');
+	Route::get('/produksi/upahboronganproduksi/upahboronganproduksi', 'ProduksiController@upahboronganproduksi')->name('upahboronganproduksi');
+	Route::get('/produksi/upahboronganproduksi/proses_upahboronganproduksi', 'ProduksiController@proses_upahboronganproduksi')->name('proses_upahboronganproduksi');
+
 
 	// INVENTORY
 	// Barang Masuk

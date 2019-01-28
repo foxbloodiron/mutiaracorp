@@ -94,3 +94,14 @@ fieldset{
 .login-text {
 	font-family: 'Courgette', cursive;
 }
+.sidebar .sidebar-menu > li > .sidebar-nav > li.active a ,
+.sidebar .sidebar-menu > li > .sidebar-nav > li > .sidebar-nav > li.active a ,
+.sidebar .sidebar-menu > li > .sidebar-nav > li > .sidebar-nav > li > .sidebar-nav > li.active a ,
+
+{
+	color: #ffffff; 
+}
+.sidebar .sidebar-menu > li > .sidebar-nav > li.aktif > a{
+	color: white;
+    background-color: rgba(85, 187, 221, .8) ;
+}
