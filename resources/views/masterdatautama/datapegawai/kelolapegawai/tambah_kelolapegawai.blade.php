@@ -9,7 +9,7 @@
       <p class="title-description">
         <i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
          / <span>Master Data Utama</span>
-         / <a href="#"><span>Kelola Data Pegawai</span></a>
+         / <a href="{{route('kelolapegawai')}}"><span>Data Pegawai</span></a>
          / <span class="text-primary font-weight-bold">Tambah Data Pegawai</span>
        </p>
   </div>
@@ -26,132 +26,186 @@
                         <h3 class="title">Tambah Data Pegawai</h3>
                       </div>
                       <div class="header-block pull-right">
-                        <a href="#" class="btn btn-secondary"><i class="fa fa-arrow-left"></i></a>
+                        <a href="{{route('kelolapegawai')}}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i></a>
                       </div>
                     </div>
 
                     <div class="card-block">
                         <section>
                         
+                          <fieldset>
+                            <div class="row">
 
-                          <div class="row">
 
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>NIK</label>
-                            </div>
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>NIK</label>
                               </div>
-                            </div>
 
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nama Pegawai</label>
-                            </div>
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Password</label>
-                            </div>
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Status</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <select class="form-control form-control-sm">
-                                  <option value="">--Pilih Status--</option>
-                                  <option value="1">Belum Menikah</option>
-                                  <option value="2">Sudah Menikah</option>
-                                </select>
-                              </div>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Jenis Kelamin</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Tempat Lahir</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Tanggal Lahir</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                  <input type="text" class="form-control form-control-sm datepicker" name="">
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
                                 </div>
                               </div>
-                            </div>
 
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>E-mail</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Nama Pegawai</label>
                               </div>
-                            </div>
 
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nomor HP</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
                               </div>
-                            </div>
 
-                            <div class="col-md-3 col-sm-12 col-xs-12">
-                              <label>Alamat</label>
-                            </div>
 
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                              <div class="form-group">
-                                <textarea type="text" class="form-control form-control-sm"></textarea>
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Status</label>
                               </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <select class="form-control form-control-sm">
+                                    <option value="">--Pilih Status--</option>
+                                    <option value="1">Belum Menikah</option>
+                                    <option value="2">Sudah Menikah</option>
+                                  </select>
+                                </div>
+                              </div>
+                              
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Jenis Kelamin</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <select class="form-control form-control-sm" name="" id="">
+                                    <option value="L">Laki-laki</option>
+                                    <option value="P">Perempuan</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Tempat Lahir</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Tanggal Lahir</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" class="form-control form-control-sm datepicker" name="">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>E-mail</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Nomor HP</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Jabatan</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-12 col-xs-12">
+                                <label>Alamat</label>
+                              </div>
+
+                              <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                  <textarea type="text" class="form-control form-control-sm"></textarea>
+                                </div>
+                              </div>
+
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Foto</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="file" class="form-control form-control-sm" name="foto" id="foto">
+                                </div>
+                              </div>
+
+                              <div class="col-12" align="center">
+                                <div class="form-group">
+                                  <img src="{{asset('assets/img/add-image-icon.png')}}" height="120px" width="90px" id="img-preview" style="cursor: pointer;">
+                                </div>
+                              </div>
+
                             </div>
+                          </fieldset>
 
-                          </div>
+                          <fieldset class="mt-3">
+                            <div class="row">
+                              
 
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Username</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Password</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <input type="password" class="form-control form-control-sm" value="123456" name="">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-primary btn-sm" id="showpassword"><i class="fa fa-eye" id="showpassword-icon"></i></button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </fieldset>
                           
                         </section>
                     </div>
                     <div class="card-footer text-right">
                       <button class="btn btn-primary btn-submit" type="button">Simpan</button>
-                      <a href="{{route('datapegawai')}}" class="btn btn-secondary">Kembali</a>
+                      <a href="{{route('kelolapegawai')}}" class="btn btn-secondary">Kembali</a>
                     </div>
                 </div>
 
@@ -167,7 +221,7 @@
 @section('extra_script')
 <script type="text/javascript">
   $(document).ready(function(){
-    $(document).on('click', '.btn-submit', function(){
+    $('.btn-submit').on('click', function(){
 			$.toast({
 				heading: 'Success',
 				text: 'Data Berhasil di Simpan',
@@ -176,7 +230,40 @@
 				loaderBg: '#55efc4',
 				icon: 'success'
 			})
-		})
+		});
+
+    $('#showpassword').click(function(){
+      var val = $(this).parents('.input-group').find('input')
+      .attr('type', function(index, attr){
+        return attr == 'text' ? 'password' : 'text';
+      });
+
+      $('#showpassword-icon').toggleClass('fa-eye fa-eye-slash');
+    });
+
+    function readURL(input, target) {
+
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          $(target).attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#foto").change(function() {
+      readURL(this, '#img-preview');
+    });  
+
+    $('#img-preview').click(function(){
+
+      $('#foto').click();
+
+    });
+
   });
 </script>
 @endsection

@@ -4,11 +4,11 @@
 <article class="content">
 
 	<div class="title-block text-primary">
-	    <h1 class="title"> Kelola Data Pegawai </h1>
+	    <h1 class="title"> Kelola Data Jenis Produk </h1>
 	    <p class="title-description">
 	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a> 
 	    	/ <span>Master Data Utama</span> 
-	    	/ <span class="text-primary font-weight-bold">Kelola Data Pegawai</span>
+	    	/ <span class="text-primary font-weight-bold">Kelola Data Jenis Produk</span>
 	     </p>
 	</div>
 
@@ -21,7 +21,7 @@
 				<div class="card">
                     <div class="card-header bordered p-2">
                     	<div class="header-block">
-	                        <h3 class="title"> Kelola Data Pegawai </h3>
+	                        <h3 class="title"> Kelola Data Jenis Produk </h3>
 	                    </div>
 	                    <div class="header-block pull-right">
                 			<button class="btn btn-primary"><i class="fa fa-plus"></i>&nbsp;Tambah Data</button>
