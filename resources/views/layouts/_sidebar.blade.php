@@ -164,25 +164,28 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="">
+                <li class="{{Request::is('masterdatautama/*') ? 'active open' : ''}}">
+                    <a href="#">
                         <i class="fa fa-sitemap"></i> Master Data Utama
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
-                        <li>
-                            <a href="#"> Master Data Pegawai
+                        <li class="{{Request::is('masterdatautama/datapegawai/*') ? 'aktif open' : ''}}">
+                            <a href="#"> 
+                                <span>
+                                    Master Data Pegawai
+                                </span>
                                 <i class="fa arrow"></i>
                             </a>
                             <ul class="sidebar-nav">
-                                <li>
-                                    <a href="#"> Kelola Data Pegawai </a>
+                                <li class="{{Request::is('masterdatautama/datapegawai/kelolapegawai/*') ? 'active' : ''}}">
+                                    <a href="{{route('kelolapegawai')}}"> Kelola Data Pegawai </a>
                                 </li>
-                                <li>
-                                    <a href="#"> Profil Data Pegawai </a>
+                                <li class="{{Request::is('masterdatautama/datapegawai/profilpegawai/*') ? 'active' : ''}}">
+                                    <a href="{{route('profilpegawai')}}"> Profil Data Pegawai </a>
                                 </li>
-                                <li>
-                                    <a href="#">Ganti Password Pegawai</a>
+                                <li class="{{Request::is('masterdatautama/datapegawai/passwordpegawai/*') ? 'active' : ''}}">
+                                    <a href="{{route('passwordpegawai')}}">Ganti Password Pegawai</a>
                                 </li>
                             </ul>
                         </li>
