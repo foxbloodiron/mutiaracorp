@@ -170,37 +170,11 @@
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
-                        <li class="{{Request::is('masterdatautama/datapegawai/*') ? 'aktif open' : ''}}">
-                            <a href="#"> 
-                                <span>
-                                    Master Data Pegawai
-                                </span>
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="{{Request::is('masterdatautama/datapegawai/kelolapegawai/*') ? 'open' : ''}}">
-                                    <a href="{{route('kelolapegawai')}}"> Kelola Data Pegawai </a>
-                                </li>
-                                <li class="{{Request::is('masterdatautama/datapegawai/profilpegawai/*') ? 'open' : ''}}">
-                                    <a href="{{route('profilpegawai')}}"> Profil Data Pegawai </a>
-                                </li>
-                                <li class="{{Request::is('masterdatautama/datapegawai/passwordpegawai/*') ? 'open' : ''}}">
-                                    <a href="{{route('passwordpegawai')}}">Ganti Password Pegawai</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('masterdatautama/datapegawai/*') ? 'active' : ''}}">
+                            <a href="{{route('kelolapegawai')}}"> Master Data Pegawai</a>
                         </li>
-                        <li>
-                            <a href="#"> Master Produk
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li>
-                                    <a href="#"> Kelola Data Jenis Produk </a>
-                                </li>
-                                <li>
-                                    <a href="#"> Profil Data Produk </a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('masterdatautama/produk/*') ? 'active' : ''}}">
+                            <a href="{{route('dataproduk')}}"> Master Produk</a>
                         </li>
                         <li>
                             <a href="#"> Master Harga

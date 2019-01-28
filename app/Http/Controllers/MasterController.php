@@ -95,16 +95,14 @@ class MasterController extends Controller
     {
         return view('masterdatautama.datapegawai.kelolapegawai.kelolapegawai');
     }
-
-    public function profilpegawai()
+    public function edit_kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.profilpegawai.profilpegawai');
-    }
-
-    public function passwordpegawai()
+        return view('masterdatautama.datapegawai.kelolapegawai.edit_kelolapegawai');
+    }    
+    public function tambah_kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.passwordpegawai.passwordpegawai');
-    }
+        return view('masterdatautama.datapegawai.kelolapegawai.tambah_kelolapegawai');
+    }     
 
     // * Master Data Produk
 

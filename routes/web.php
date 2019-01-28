@@ -44,12 +44,11 @@ Route::group(['middleware' => 'auth'], function(){
 
 	// !====================================================== Master Data Utama ======================================================!
 
-	Route::get('/masterdatautama/datapegawai/kelolapegawai/index', 'MasterController@kelolapegawai')->name('kelolapegawai');
-	Route::get('/masterdatautama/datapegawai/profilpegawai/index', 'MasterController@profilpegawai')->name('profilpegawai');
-	Route::get('/masterdatautama/datapegawai/passwordpegawai/index', 'MasterController@passwordpegawai')->name('passwordpegawai');
+	Route::get('/masterdatautama/datapegawai/index', 'MasterController@kelolapegawai')->name('kelolapegawai');
+	Route::get('/masterdatautama/datapegawai/edit', 'MasterController@edit_kelolapegawai')->name('edit_kelolapegawai');
+	Route::get('/masterdatautama/datapegawai/create', 'MasterController@tambah_kelolapegawai')->name('tambah_kelolapegawai');
 
-	Route::get('/masterdatautama/produk/datajenisproduk/index', 'MasterController@datajenisproduk')->name('datajenisproduk');
-	Route::get('/masterdatautama/produk/dataproduk/index', 'MasterController@dataproduk')->name('dataproduk');
+	Route::get('/masterdatautama/produk/index', 'MasterController@dataproduk')->name('dataproduk');
 
 	Route::get('/masterdatautama/harga/golonganharga/index', 'MasterController@golonganharga')->name('golonganharga');
 	Route::get('/masterdatautama/harga/hargaperitem/index', 'MasterController@hargaperitem')->name('hargaperitem');

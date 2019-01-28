@@ -151,7 +151,7 @@
                     </div>
                     <div class="card-footer text-right">
                       <button class="btn btn-primary btn-submit" type="button">Simpan</button>
-                      <a href="{{route('datapegawai')}}" class="btn btn-secondary">Kembali</a>
+                      <a href="#" class="btn btn-secondary">Kembali</a>
                     </div>
                 </div>
 
