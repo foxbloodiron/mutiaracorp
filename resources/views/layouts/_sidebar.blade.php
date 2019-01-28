@@ -255,7 +255,7 @@
             </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-sitemap"></i> Aktivitas Produksi
+                        <i class="fa fa-product-hunt"></i> Aktivitas Produksi
                         <i class="fa arrow"></i>
                     </a>
                 <ul class="sidebar-nav">
@@ -321,7 +321,7 @@
             </li>
                 <li>
                     <a href="">
-                        <i class="fa fa-sitemap"></i> Aktivitas Inventory
+                        <i class="fa fa-desktop"></i> Aktivitas Inventory
                         <i class="fa arrow"></i>
                     </a>
                 <ul class="sidebar-nav">
@@ -404,6 +404,87 @@
                             </li>
                             <li>
                                 <a href="#"> Histori Adjustment</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-group"></i> Aktivitas SDM
+                        <i class="fa arrow"></i>
+                    </a>
+                <ul class="sidebar-nav">
+                    <li>
+                        <a href="#"> Proses Rekruitmen
+                            <i class="fa arrow"></i>
+                        </a>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#"> Kelola Posisi SDM </a>
+                            </li>
+                            <li>
+                                <a href="#"> Kelola Pengajuan SDM</a>
+                            </li>
+                            <li>
+                                <a href="#">Kelola Publikasi Lowongan Kerja</a>
+                            </li>
+                            <li>
+                                <a href="#">Kelola Prosedur Calon SDM</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Kelola Kinerja SDM
+                            <i class="fa arrow"></i>
+                        </a>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#">Kelola KPI SDM</a>
+                            </li>
+                            <li>
+                                <a href="#">Kelola SOP SDM</a>
+                            </li>
+                            <li>
+                                <a href="#">Dashboard KPI SDM</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Kelola Abesensi SDM
+                            <i class="fa arrow"></i>
+                        </a>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#">Kelola Hari Kerja dan Hari Libur</a>
+                            </li>
+                            <li>
+                                <a href="#">Kelola Jenis Cuti</a>
+                            </li>
+                            <li>
+                                <a href="#">Kelola Aturan Kehadiran</a>
+                            </li>
+                            <li>
+                                <a href="#">Daftar Presensi SDM</a>
+                            </li>
+                            <li>
+                                <a href="#">Dashboard Presensi SDM</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Kelola Penggajian
+                            <i class="fa arrow"></i>
+                        </a>
+                        <ul class="sidebar-nav">
+                            <li>
+                                <a href="#">Kelola Cashbon SDM</a>
+                            </li>
+                            <li>
+                                <a href="#">Kelola Bonus, Reward, Punishment SDM</a>
+                            </li>
+                            <li>
+                                <a href="#">Kelola Pembayaran Salary SDM</a>
                             </li>
                         </ul>
                     </li>
