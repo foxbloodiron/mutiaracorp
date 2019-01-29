@@ -159,9 +159,6 @@
                         <li class="{{Request::is('master/dataarmada/*') ? 'active' : ''}}">
                             <a href="{{route('dataarmada')}}">Data Armada</a>
                         </li>
-                        <li class="{{Request::is('master/datasatuan/*') ? 'active' : ''}}">
-                            <a href="{{route('datasatuan')}}">Data Satuan</a>
-                        </li>
                     </ul>
                 </li>
                 <li class="{{Request::is('masterdatautama/*') ? 'active open' : ''}}">
@@ -187,6 +184,9 @@
                         </li>
                         <li class="{{Request::is('masterdatautama/agen/*') ? 'active' : ''}}">
                             <a href="{{ route('agen.index')}}">Master Agen</a>
+                        </li>
+                        <li class="{{Request::is('masterdatautama/datasatuan/*') ? 'active' : ''}}">
+                            <a href="{{route('datasatuan')}}">Master Data Satuan</a>
                         </li>
                     </ul>
                 </li>
