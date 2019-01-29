@@ -6,44 +6,20 @@ use Illuminate\Http\Request;
 
 class ProduksiController extends Controller
 {
-    public function pembuatan_order()
+    public function order_produksi()
     {
-    	return view('produksi/orderproduksi/pembuatanorder/index');
+    	return view('produksi/orderproduksi/index');
     }
-    public function penentuan_termin()
+    public function penerimaan_barang()
     {
-        return view('produksi/orderproduksi/penentuantermin/index');
+    	return view('produksi/penerimaanbarang/index');
     }
-    public function histori_order()
+    public function pembayaran()
     {
-        return view('produksi/orderproduksi/historiorder/index');
+    	return view('produksi/pembayaran/index');
     }
-    public function data_penerimaan()
+    public function return_produksi()
     {
-        return view('produksi/penerimaanbarang/datapenerimaan/index');
-    }
-    public function histori_penerimaan()
-    {
-        return view('produksi/penerimaanbarang/historipenerimaan/index');
-    }
-    public function pencatatan_pembayaran()
-    {
-        return view('produksi/pembayaran/pencatatanpembayaran/index');
-    }
-    public function histori_pembayaran()
-    {
-        return view('produksi/pembayaran/historipembayaran/index');
-    }
-    public function pencatatan_return()
-    {
-        return view('produksi/returnproduksi/pencatatanreturn/index');
-    }
-    public function perlakuan_return()
-    {
-        return view('produksi/returnproduksi/perlakuanreturn/index');
-    }
-    public function histori_return()
-    {
-        return view('produksi/returnproduksi/historireturn/index');
+    	return view('produksi/returnproduksi/index');
     }
 }

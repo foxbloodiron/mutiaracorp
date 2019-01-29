@@ -196,63 +196,17 @@
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
-                        <li class="{{Request::is('produksi/orderproduksi/*') ? 'aktif open' : ''}}">
-                            <a href="#"> Order Produksi
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="{{Request::is('produksi/orderproduksi/pembuatanorder/*') ? 'open' : ''}}">
-                                    <a href="{{ route('pembuatan_order.index')}}"> Pembuatan Order Produksi </a>
-                                </li>
-                                <li class="{{Request::is('produksi/orderproduksi/penentuantermin/*') ? 'open' : ''}}">
-                                    <a href="{{ route('penentuan_termin.index')}}"> Penentuan Termin Pembayaran</a>
-                                </li>
-                                <li class="{{Request::is('produksi/orderproduksi/historiorder/*') ? 'open' : ''}}">
-                                    <a href="{{ route('histori_order.index')}}">Histori Order Produksi</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('produksi/orderproduksi/*') ? 'active' : ''}}">
+                            <a href="{{route('order.index')}}">Order Produksi</a>
                         </li>
-                        <li class="{{Request::is('produksi/penerimaanbarang/*') ? 'aktif open' : ''}}">
-                            <a href="#"> Penerimaan Barang
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="{{Request::is('produksi/penerimaanbarang/datapenerimaan/*') ? 'open' : ''}}">
-                                    <a href="{{ route('data_penerimaan.index') }}"> Data Penerimaan Barang </a>
-                                </li>
-                                <li class="{{Request::is('produksi/penerimaanbarang/historipenerimaan/*') ? 'open' : ''}}">
-                                    <a href="{{ route('histori_penerimaan.index') }}"> Histori Penerimaan Barang </a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('produksi/penerimaanbarang/*') ? 'active' : ''}}">
+                            <a href="{{route('penerimaan.index')}}">Penerimaan Barang</a>
                         </li>
-                        <li class="{{Request::is('produksi/pembayaran/*') ? 'aktif open' : ''}}">
-                            <a href="#"> Pembayaran
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="{{Request::is('produksi/pembayaran/pencatatanpembayaran/*') ? 'open' : ''}}">
-                                    <a href="{{ route('pencatatan_pembayaran.index') }}"> Pencatatan Data Pembayaran </a>
-                                </li>
-                                <li class="{{Request::is('produksi/pembayaran/historipembayaran/*') ? 'open' : ''}}">
-                                    <a href="{{ route('histori_pembayaran.index') }}"> Histori Pembayaran </a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('produksi/pembayaran/*') ? 'active' : ''}}">
+                            <a href="{{route('pembayaran.index')}}">Pembayaran</a>
                         </li>
-                        <li class="{{Request::is('produksi/returnproduksi/*') ? 'aktif open' : ''}}">
-                            <a href="#"> Return Produksi
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="{{Request::is('produksi/returnproduksi/pencatatanreturn/*') ? 'open' : ''}}">
-                                    <a href="{{ route('pencatatan_return.index')}}"> Pencatatan Data Return </a>
-                                </li>
-                                <li class="{{Request::is('produksi/returnproduksi/perlakuanreturn/*') ? 'open' : ''}}">
-                                    <a href="{{ route('perlakuan_return.index') }}"> Perlakuan Return  </a>
-                                </li>
-                                <li class="{{Request::is('produksi/returnproduksi/historireturn/*') ? 'open' : ''}}">
-                                    <a href="{{ route('histori_return.index') }}">Histori Return Produksi</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('produksi/returnproduksi/*') ? 'active' : ''}}">
+                            <a href="{{ route('return.index') }}">Return Produksi</a>
                         </li>
                     </ul>
                 </li>
