@@ -59,7 +59,7 @@
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='{{route('edit_suplier')}}'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-eye-slash"></i></button>
+	                                				<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-times-circle"></i></button>
 	                                			</div>
 	                                		</td>
 	                                	</tr>
@@ -92,8 +92,8 @@
 				closeAnimation: 'scale',
 				animationBounce: 1.5,
 				icon: 'fa fa-exclamation-triangle',
-			    title: 'Disable',
-				content: 'Apa anda yakin mau disable data ini?',
+				title: 'Peringatan!',
+				content: 'Apa anda yakin mau menonaktifkan data ini?',
 				theme: 'disable',
 			    buttons: {
 			        info: {
@@ -102,13 +102,13 @@
 			        	action : function(){
 							$.toast({
 								heading: 'Information',
-								text: 'Data Berhasil di Disable.',
+								text: 'Data Berhasil di Nonaktifkan.',
 								bgColor: '#0984e3',
 								textColor: 'white',
 								loaderBg: '#fdcb6e',
 								icon: 'info'
 							})
-					        ini.parents('.btn-group').html('<button class="btn btn-danger btn-enable" type="button" title="enable"><i class="fa fa-eye"></i></button>');
+					        ini.parents('.btn-group').html('<button class="btn btn-success btn-enable" type="button" title="enable"><i class="fa fa-check-circle"></i></button>');
 				        }
 			        },
 			        cancel:{
@@ -124,14 +124,14 @@
 		$(document).on('click', '.btn-enable', function(){
 			$.toast({
 				heading: 'Information',
-				text: 'Data Berhasil di Enable.',
+				text: 'Data Berhasil di Aktifkan.',
 				bgColor: '#0984e3',
 				textColor: 'white',
 				loaderBg: '#fdcb6e',
 				icon: 'info'
 			})
 			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
-	                                		'<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-eye-slash"></i></button>')
+	                                		'<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-times-circle"></i></button>')
 		})
 		$('#table_suplier tbody').on('click','.btn-edit', function(){
 			window.location.href='{{route('edit_suplier')}}'
