@@ -166,7 +166,7 @@
                 </li>
                 <li class="{{Request::is('masterdatautama/*') ? 'active open' : ''}}">
                     <a href="#">
-                        <i class="fa fa-sitemap"></i> Master Data Utama
+                        <i class="fa fa-th-large"></i> Master Data Utama
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
