@@ -38,9 +38,6 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/master/datapegawai/datapegawai', 'MasterController@datapegawai')->name('datapegawai');
 	Route::get('/master/datapegawai/tambah_datapegawai', 'MasterController@tambah_datapegawai')->name('tambah_datapegawai');
 	Route::get('/master/datapegawai/edit_datapegawai', 'MasterController@edit_datapegawai')->name('edit_datapegawai');
-	Route::get('/master/datasatuan/datasatuan', 'MasterController@datasatuan')->name('datasatuan');
-	Route::get('/master/datasatuan/tambah_datasatuan', 'MasterController@tambah_datasatuan')->name('tambah_datasatuan');
-	Route::get('/master/datasatuan/edit_datasatuan', 'MasterController@edit_datasatuan')->name('edit_datasatuan');
 
 	// !====================================================== Master Data Utama ======================================================!
 
@@ -70,6 +67,9 @@ Route::group(['middleware' => 'auth'], function(){
 
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen');
 
+	Route::get('/masterdatautama/datasatuan/datasatuan', 'MasterController@datasatuan')->name('datasatuan');
+	Route::get('/masterdatautama/datasatuan/tambah_datasatuan', 'MasterController@tambah_datasatuan')->name('tambah_datasatuan');
+	Route::get('/masterdatautama/datasatuan/edit_datasatuan', 'MasterController@edit_datasatuan')->name('edit_datasatuan');
 	// !===================================================== End Master Data Utama =====================================================!
 	
 	// PRODUKSI

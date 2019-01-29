@@ -74,18 +74,6 @@ class MasterController extends Controller
     {
         return view('master/dataarmada/modal_dataarmada');
     }
-    public function datasatuan()
-    {
-        return view('master/datasatuan/datasatuan');
-    }
-    public function tambah_datasatuan()
-    {
-        return view('master/datasatuan/tambah_datasatuan');
-    }
-    public function edit_datasatuan()
-    {
-        return view('master/datasatuan/edit_datasatuan');
-    }
 
     // =============================== Master Data Utama ===============================
 
@@ -93,27 +81,22 @@ class MasterController extends Controller
 
     public function kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.kelolapegawai.kelolapegawai');
+        return view('masterdatautama.datapegawai.kelolapegawai');
     }
     public function edit_kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.kelolapegawai.edit_kelolapegawai');
+        return view('masterdatautama.datapegawai.edit_kelolapegawai');
     }    
     public function tambah_kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.kelolapegawai.tambah_kelolapegawai');
+        return view('masterdatautama.datapegawai.tambah_kelolapegawai');
     }     
 
     // * Master Data Produk
 
-    public function datajenisproduk()
-    {   
-        return view('masterdatautama.produk.datajenisproduk.datajenisproduk');
-    }
-
     public function dataproduk()
     {   
-        return view('masterdatautama.produk.dataproduk.dataproduk');
+        return view('masterdatautama.produk.dataproduk');
     }    
 
     // * Master Harga
@@ -189,6 +172,20 @@ class MasterController extends Controller
     {   
         return view('masterdatautama.agen.edit_agen');
     }
+
+    public function datasatuan()
+    {
+        return view('masterdatautama/datasatuan/datasatuan');
+    }
+    public function tambah_datasatuan()
+    {
+        return view('masterdatautama/datasatuan/tambah_datasatuan');
+    }
+    public function edit_datasatuan()
+    {
+        return view('masterdatautama/datasatuan/edit_datasatuan');
+    }
+
 
     // =================================== End Master Data Utama ===================================
 
