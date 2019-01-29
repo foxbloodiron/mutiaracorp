@@ -166,7 +166,7 @@ $(document).ready(function(){
 	$(document).on('click', '.btn-enable', function(){
 		$.toast({
 			heading: 'Information',
-			text: 'Data Berhasil di Enable.',
+			text: 'Data Berhasil di Aktifkan.',
 			bgColor: '#0984e3',
 			textColor: 'white',
 			loaderBg: '#fdcb6e',
