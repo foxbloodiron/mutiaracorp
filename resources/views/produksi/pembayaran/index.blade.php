@@ -7,11 +7,11 @@
 <article class="content">
 
 	<div class="title-block text-primary">
-	    <h1 class="title"> Data Barang </h1>
+	    <h1 class="title"> Pembayaran </h1>
 	    <p class="title-description">
 	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
-	    	 / <span>Master Data</span>
-	    	 / <span class="text-primary" style="font-weight: bold;">Data Barang</span>
+	    	 / <span>Aktifitas Produksi</span>
+	    	 / <span class="text-primary" style="font-weight: bold;">Pembayaran</span>
 	     </p>
 	</div>
 
@@ -24,69 +24,39 @@
 				<div class="card">
                     <div class="card-header bordered p-2">
                     	<div class="header-block">
-                            <h3 class="title"> Data Barang </h3>
+                            <h3 class="title"> Pembayaran </h3>
                         </div>
                         <div class="header-block pull-right">
                         	
-                			<a class="btn btn-primary" href="{{route('tambah_databarang')}}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+                			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
                         </div>
                     </div>
                     <div class="card-block">
                         <section>
                         	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_barang">
+	                            <table class="table table-striped table-hover" cellspacing="0" id="table_pembayaran">
 	                                <thead class="bg-primary">
 	                                    <tr>
 	                                    	<th>No</th>
-	                                		<th>Kode Barang</th>
+	                                		<th>Nama</th>
 	                                		<th>Nama Barang</th>
-	                                		<th>Satuan</th>
-	                                		<th>Kelompok Barang</th>
-	                                		<th>Harga Beli</th>
+	                                		<th>Tanggal Pembayaran</th>
+	                                		<th>Jumlah</th>
 	                                		<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
 	                                		<td>1</td>
-	                                		<td>BRG/001</td>
-	                                		<td>Semen</td>
-	                                		<td>Karung</td>
-	                                		<td>Bahan Baku</td>
-	                                		<td></td>
+	                                		<td>Giono</td>
+	                                		<td>Permen Jahe</td>
+	                                		<td>07-09-2019</td>
+	                                		<td>250.000.00</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='{{ route('edit_databarang') }}'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
-	                                			</div>
-	                                		</td>
-	                                	</tr>
-	                                	<tr>
-	                                		<td>2</td>
-	                                		<td>BRG/002</td>
-	                                		<td>Pasir</td>
-	                                		<td>Butir</td>
-	                                		<td>Bahan Baku</td>
-	                                		<td></td>
-	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='{{ route('edit_databarang') }}'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
-	                                			</div>
-	                                		</td>
-	                                	</tr>
-	                                	<tr>
-	                                		<td>3</td>
-	                                		<td>BRG/003</td>
-	                                		<td>Cat</td>
-	                                		<td>Kaleng</td>
-	                                		<td>Bahan Baku</td>
-	                                		<td></td>
-	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='{{ route('edit_databarang') }}'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
+	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='#'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 	                                			</div>
 	                                		</td>
 	                                	</tr>
@@ -111,7 +81,7 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		var table = $('#table_satuan').DataTable();
+		var table = $('#table_pembayaran').DataTable();
 
 		$(document).on('click', '.btn-disable', function(){
 			var ini = $(this);
@@ -120,8 +90,8 @@
 				closeAnimation: 'scale',
 				animationBounce: 1.5,
 				icon: 'fa fa-exclamation-triangle',
-			    title: 'Disable',
-				content: 'Apa anda yakin mau disable data ini?',
+				title: 'Peringatan!',
+				content: 'Apa anda yakin mau menonaktifkan data ini?',
 				theme: 'disable',
 			    buttons: {
 			        info: {
@@ -130,13 +100,13 @@
 			        	action : function(){
 							$.toast({
 								heading: 'Information',
-								text: 'Data Berhasil di Disable.',
+								text: 'Data Berhasil di Nonaktifkan.',
 								bgColor: '#0984e3',
 								textColor: 'white',
 								loaderBg: '#fdcb6e',
 								icon: 'info'
 							})
-					        ini.parents('.btn-group').html('<button class="btn btn-danger btn-enable" type="button" title="Enable"><i class="fa fa-eye"></i></button>');
+					        ini.parents('.btn-group').html('<button class="btn btn-success btn-enable" type="button" title="Enable"><i class="fa fa-check-circle"></i></button>');
 				        }
 			        },
 			        cancel:{
@@ -152,14 +122,14 @@
 		$(document).on('click', '.btn-enable', function(){
 			$.toast({
 				heading: 'Information',
-				text: 'Data Berhasil di Enable.',
+				text: 'Data Berhasil di Aktifkan.',
 				bgColor: '#0984e3',
 				textColor: 'white',
 				loaderBg: '#fdcb6e',
 				icon: 'info'
 			})
 			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
-	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>')
+	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
 		})
 
 		// function table_hapus(a){
