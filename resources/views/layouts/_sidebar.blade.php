@@ -173,8 +173,8 @@
                         <li class="{{Request::is('masterdatautama/produk/*') ? 'active' : ''}}">
                             <a href="{{route('dataproduk')}}"> Master Produk</a>
                         </li>
-                        <li>
-                            <a href="#"> Master Harga</a>
+                        <li class="{{Request::is('masterdatautama/harga/*') ? 'active' : ''}}">
+                            <a href="{{route('dataharga')}}"> Master Harga</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/suplier/*') ? 'active' : ''}}">
                             <a href="{{route('suplier.index')}}">Master Suplier</a>
@@ -263,86 +263,16 @@
                     </a>
                 <ul class="sidebar-nav">
                     <li class="{{Request::is('inventory/barangmasuk/*') ? 'aktif open' : ''}}">
-                        <a href="#"> Pengelolaan Barang Masuk
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li class="{{Request::is('inventory/barangmasuk/pencatatanbarang/*') ? 'open' : ''}}">
-                                <a href="{{ route('pencatatan_masuk.index') }}"> Pencatatan Barang Masuk </a>
-                            </li>
-                            <li class="{{Request::is('inventory/barangmasuk/pencatatanlokasi/*') ? 'open' : ''}}">
-                                <a href="{{ route('lokasi_masuk.index') }}"> Pencatatan Lokasi Barang </a>
-                            </li>
-                            <li class="{{Request::is('inventory/barangmasuk/historibarangmasuk/*')}}">
-                                <a href="{{ route('histori_masuk.index')}}">Histori Barang Masuk</a>
-                            </li>
-                        </ul>
+                        <a href="#"> Pengelolaan Barang Masuk</a>
                     </li>
                     <li>
-                        <a href="#"> Pengelolaan Barang Keluar
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pencatatan Barang Keluar </a>
-                            </li>
-                            <li>
-                                <a href="#"> Pencatatan Lokasi Barang </a>
-                            </li>
-                            <li>
-                                <a href="#">Histori Barang Masuk</a>
-                            </li>
-                        </ul>
+                        <a href="#"> Pengelolaan Barang Keluar</a>
                     </li>
                     <li>
-                        <a href="#"> Pengelolaan Distribusi Barang
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Pencatatan Distribusi Barang </a>
-                            </li>
-                            <li>
-                                <a href="#"> Monitoring Progress Distribusi </a>
-                            </li>
-                            <li>
-                                <a href="#">Histori Distribusi Barang</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Data Per Golongan</a>
-                            </li>
-                        </ul>
+                        <a href="#"> Pengelolaan Distribusi Barang</a>
                     </li>
                     <li>
-                        <a href="#"> Pengelolaan Manajemen Stok
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Opname Stok </a>
-                            </li>
-                            <li>
-                                <a href="#"> Adjustment Stok  </a>
-                            </li>
-                            <li>
-                                <a href="#"> Approval Adjustment Stok</a>
-                            </li>
-                            <li>
-                                <a href="#"> Pengelolaan Data Max/Min</a>
-                            </li>
-                            <li>
-                                <a href="#"> Pengelolaan Data Re-Order Point</a>
-                            </li>
-                            <li>
-                                <a href="#"> Analisa Stok Turn Over</a>
-                            </li>
-                            <li>
-                                <a href="#"> Histori Opname</a>
-                            </li>
-                            <li>
-                                <a href="#"> Histori Adjustment</a>
-                            </li>
-                        </ul>
+                        <a href="#"> Pengelolaan Manajemen Stok</a>
                     </li>
                 </ul>
             </li>
