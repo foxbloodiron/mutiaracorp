@@ -54,11 +54,18 @@
 	                                		<td>Semen</td>
 	                                		<td>Karung</td>
 	                                		<td>Bahan Baku</td>
-	                                		<td></td>
+	                                		<td>
+	                                			<div class="pull-left">
+	                                				Rp. 
+	                                			</div>
+	                                			<div class="pull-right">
+	                                				0,00
+	                                			</div>
+	                                		</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
+	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 	                                			</div>
 	                                		</td>
 	                                	</tr>
@@ -68,11 +75,18 @@
 	                                		<td>Pasir</td>
 	                                		<td>Butir</td>
 	                                		<td>Bahan Baku</td>
-	                                		<td></td>
+	                                		<td>
+	                                			<div class="pull-left">
+	                                				Rp. 
+	                                			</div>
+	                                			<div class="pull-right">
+	                                				0,00
+	                                			</div>
+	                                		</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
+	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 	                                			</div>
 	                                		</td>
 	                                	</tr>
@@ -82,11 +96,18 @@
 	                                		<td>Cat</td>
 	                                		<td>Kaleng</td>
 	                                		<td>Bahan Baku</td>
-	                                		<td></td>
+	                                		<td>
+	                                			<div class="pull-left">
+	                                				Rp. 
+	                                			</div>
+	                                			<div class="pull-right">
+	                                				0,00
+	                                			</div>
+	                                		</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
+	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 	                                			</div>
 	                                		</td>
 	                                	</tr>

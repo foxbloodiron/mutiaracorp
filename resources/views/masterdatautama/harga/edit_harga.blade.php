@@ -153,21 +153,21 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Harga Satuan Utama</label>
                               <div class="form-group">
-                               <input type="number" class="form-control-sm form-control" name="">
+                               <input type="number" class="form-control-sm form-control text-right" name="">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Harga Satuan Alternatif 1</label>
                               <div class="form-group">
-                               <input type="number" class="form-control-sm form-control" name="">
+                               <input type="number" class="form-control-sm form-control text-right" name="">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Harga Satuan Alternatif 2</label>
                               <div class="form-group">
-                               <input type="number" class="form-control-sm form-control" name="">
+                               <input type="number" class="form-control-sm form-control text-right" name="">
                               </div>
                             </div>
 
