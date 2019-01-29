@@ -74,19 +74,13 @@ Route::group(['middleware' => 'auth'], function(){
 	
 	// PRODUKSI
 	// Order Produksi
-	Route::get('/produksi/orderproduksi/pembuatan_order/index', 'ProduksiController@pembuatan_order')->name('pembuatan_order.index');
-	Route::get('/produksi/orderproduksi/penentuan_termin/index', 'ProduksiController@penentuan_termin')->name('penentuan_termin.index');
-	Route::get('/produksi/orderproduksi/histori_order/index', 'ProduksiController@histori_order')->name('histori_order.index');
+	Route::get('/produksi/orderproduksi/index', 'ProduksiController@order_produksi')->name('order.index');
 	// Penerimaan Barang
-	Route::get('/produksi/penerimaanbarang/data_penerimaan/index', 'ProduksiController@data_penerimaan')->name('data_penerimaan.index');
-	Route::get('/produksi/penerimaanbarang/histori_penerimaan/index', 'ProduksiController@histori_penerimaan')->name('histori_penerimaan.index');
+	Route::get('/produksi/penerimaanbarang/index', 'ProduksiController@penerimaan_barang')->name('penerimaan.index');
 	// Pembayaran
-	Route::get('/produksi/pembayaran/pencatatanpembayaran/index', 'ProduksiController@pencatatan_pembayaran')->name('pencatatan_pembayaran.index');
-	Route::get('/produksi/pembayaran/historipembayaran/index', 'ProduksiController@histori_pembayaran')->name('histori_pembayaran.index');
+	Route::get('/produksi/pembayaran/index', 'ProduksiController@pembayaran')->name('pembayaran.index');
 	// Return Produksi
-	Route::get('/produksi/returnproduksi/pencatatanreturn/index', 'ProduksiController@pencatatan_return')->name('pencatatan_return.index');
-	Route::get('/produksi/returnproduksi/perlakuanreturn/index', 'ProduksiController@perlakuan_return')->name('perlakuan_return.index');
-	Route::get('/produksi/returnproduksi/historireturn/index', 'ProduksiController@histori_return')->name('histori_return.index');
+	Route::get('/produksi/returnproduksi/index', 'ProduksiController@return_produksi')->name('return.index');
 	// END PRODUKSI
 
 	// Produksi
