@@ -265,14 +265,14 @@
                     <li class="{{Request::is('inventory/barangmasuk/*') ? 'aktif open' : ''}}">
                         <a href="{{route('barangmasuk')}}"> Pengelolaan Barang Masuk</a>
                     </li>
-                    <li>
-                        <a href="#"> Pengelolaan Barang Keluar</a>
+                    <li class="{{Request::is('inventory/barangkeluar/*') ? 'aktif open' : ''}}">
+                        <a href="{{route('barangkeluar')}}"> Pengelolaan Barang Keluar</a>
                     </li>
-                    <li>
-                        <a href="#"> Pengelolaan Distribusi Barang</a>
+                    <li class="{{Request::is('inventory/distribusibarang/*') ? 'aktif open' : ''}}">
+                        <a href="{{route('distribusibarang')}}"> Pengelolaan Distribusi Barang</a>
                     </li>
-                    <li>
-                        <a href="#"> Pengelolaan Manajemen Stok</a>
+                    <li class="{{Request::is('inventory/manajemenstok/*') ? 'aktif open' : ''}}">
+                        <a href="{{route('manajemenstok')}}"> Pengelolaan Manajemen Stok</a>
                     </li>
                 </ul>
             </li>

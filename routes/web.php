@@ -105,8 +105,12 @@ Route::group(['middleware' => 'auth'], function(){
 	// Barang Masuk
 	Route::get('/inventory/barangmasuk/index', 'InventoryController@barangmasuk')->name('barangmasuk');
 	// Barang Keluar
+	Route::get('/inventory/barangkeluar/index', 'InventoryController@barangkeluar')->name('barangkeluar');
+
 	// Distribusi Barang
+	Route::get('/inventory/distribusibarang/index', 'InventoryController@distribusibarang')->name('distribusibarang');
 	// Manajemen Stok
+	Route::get('/inventory/manajemenstok/index', 'InventoryController@manajemenstok')->name('manajemenstok');
 	// END INVENTORY
 
 
