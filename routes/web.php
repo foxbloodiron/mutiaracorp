@@ -46,6 +46,10 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/masterdatautama/datapegawai/create', 'MasterController@tambah_kelolapegawai')->name('tambah_kelolapegawai');
 
 	Route::get('/masterdatautama/produk/index', 'MasterController@dataproduk')->name('dataproduk');
+	Route::get('/masterdatautama/produk/edit', 'MasterController@edit_dataproduk')->name('edit_dataproduk');
+	Route::get('/masterdatautama/produk/create', 'MasterController@tambah_dataproduk')->name('tambah_dataproduk');
+	Route::get('/masterdatautama/produk/jenis/edit', 'MasterController@edit_datajenisproduk')->name('edit_datajenisproduk');
+	Route::get('/masterdatautama/produk/jenis/create', 'MasterController@tambah_datajenisproduk')->name('tambah_datajenisproduk');
 
 	Route::get('/masterdatautama/harga/golonganharga/index', 'MasterController@golonganharga')->name('golonganharga');
 	Route::get('/masterdatautama/harga/hargaperitem/index', 'MasterController@hargaperitem')->name('hargaperitem');

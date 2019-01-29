@@ -99,6 +99,11 @@ class MasterController extends Controller
         return view('masterdatautama.produk.dataproduk');
     }    
 
+    public function tambah_dataproduk()
+    {   
+        return view('masterdatautama.produk.tambah_dataproduk');
+    }    
+
     // * Master Harga
 
     public function golonganharga()

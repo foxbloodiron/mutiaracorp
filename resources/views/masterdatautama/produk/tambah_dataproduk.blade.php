@@ -37,18 +37,7 @@
                           <div class="row">
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>NIK</label>
-                            </div>
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nama Pegawai</label>
+                              <label>Nama Produk</label>
                             </div>
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
@@ -58,91 +47,127 @@
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Password</label>
+                              <label>Jenis Produk</label>
                             </div>
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Status</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
                                 <select class="form-control form-control-sm">
-                                  <option value="">--Pilih Status--</option>
-                                  <option value="1">Belum Menikah</option>
-                                  <option value="2">Sudah Menikah</option>
+                                  <option value="" selected="" disabled="">--Pilih Jenis Produk--</option>
+                                  <option value="BB">Bahan Baku</option>
+                                  <option value="SP">Spare Part</option>
+                                  <option value="BJ">Barang Jual</option>
+                                  <option value="LL">Lain-lain</option>
                                 </select>
                               </div>
                             </div>
                             
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Jenis Kelamin</label>
+                              <label>Kode Produk</label>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="text" class="form-control form-control-sm" readonly="" name="">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Tempat Lahir</label>
+                              <label>Min Stock</label>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="number" class="form-control form-control-sm" name="">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Tanggal Lahir</label>
+                              <label>Satuan Utama</label>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                  <input type="text" class="form-control form-control-sm datepicker" name="">
-                                </div>
+                                <select class="form-control form-control-sm">
+                                  <option value="">--Pilih--</option>
+                                  <option>Kardus</option>
+                                  <option>Pcs</option>
+                                  <option>Kg</option>
+                                </select>
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>E-mail</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nomor HP</label>
+                              <label>Isi Satuan Utama</label>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                               <input type="number" class="form-control-sm form-control" min="0" readonly="" value="1" name="">
                               </div>
                             </div>
 
-                            <div class="col-md-3 col-sm-12 col-xs-12">
-                              <label>Alamat</label>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Satuan Alternatif 1</label>
                             </div>
 
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <textarea type="text" class="form-control form-control-sm"></textarea>
+                                <select class="form-control form-control-sm">
+                                  <option value="">--Pilih--</option>
+                                  <option>Kardus</option>
+                                  <option>Pcs</option>
+                                  <option>Kg</option>
+                                </select>
                               </div>
                             </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Isi Satuan Alternatif 1</label>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                               <input type="number" class="form-control-sm form-control" min="0" name="">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Satuan Alternatif 2</label>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <select class="form-control form-control-sm">
+                                  <option value="">--Pilih--</option>
+                                  <option>Kardus</option>
+                                  <option>Pcs</option>
+                                  <option>Kg</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Isi Satuan Alternatif 2</label>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                               <input type="number" class="form-control-sm form-control" min="0" name="">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Keterangan</label>
+                            </div>
+
+                            <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <textarea class="form-control"></textarea>
+                              </div>
+                            </div>
+
+
 
                           </div>
 
