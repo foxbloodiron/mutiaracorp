@@ -103,7 +103,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 	// INVENTORY
 	// Barang Masuk
-	Route::get('/inventory/barangmasuk/pencatatanbarang/index', 'InventoryController@pencatatan_barang_masuk')->name('pencatatan_masuk.index');
+	Route::get('/inventory/barangmasuk/index', 'InventoryController@barangmasuk')->name('barangmasuk');
 	// Barang Keluar
 	// Distribusi Barang
 	// Manajemen Stok

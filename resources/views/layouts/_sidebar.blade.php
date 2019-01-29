@@ -263,7 +263,7 @@
                     </a>
                 <ul class="sidebar-nav">
                     <li class="{{Request::is('inventory/barangmasuk/*') ? 'aktif open' : ''}}">
-                        <a href="#"> Pengelolaan Barang Masuk</a>
+                        <a href="{{route('barangmasuk')}}"> Pengelolaan Barang Masuk</a>
                     </li>
                     <li>
                         <a href="#"> Pengelolaan Barang Keluar</a>

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class InventoryController extends Controller
 {
-    public function pencatatan_barang_masuk()
+    public function barangmasuk()
     {
-        return view('inventory/barangmasuk/pencatatanbarang/index');
+        return view('inventory/barangmasuk/barangmasuk');
     }
 }
