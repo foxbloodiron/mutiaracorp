@@ -105,3 +105,6 @@ fieldset{
 	color: white;
     background-color: rgba(85, 187, 221, .8) ;
 }
+aside.sidebar{
+	padding-bottom: unset;
+}

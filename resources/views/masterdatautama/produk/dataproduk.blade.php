@@ -35,68 +35,39 @@
 			                        <h3 class="title"> Data Produk </h3>
 			                    </div>
 			                    <div class="header-block pull-right">
-		                			<button class="btn btn-primary"><i class="fa fa-plus"></i>&nbsp;Tambah Data Produk</button>
+		                			<button class="btn btn-primary" id="btn-tambah-produk"><i class="fa fa-plus"></i>&nbsp;Tambah Data Produk</button>
 			                    </div>
 		                    </div>
 		                    <div class="card-block">
 		                        <section>
 		                        	
 		                        	<div class="table-responsive">
-			                            <table class="table table-striped table-hover" cellspacing="0" id="tabel_jenisproduk">
+			                            <table class="table table-striped table-hover" cellspacing="0" id="tabel_produk">
 			                                <thead class="bg-primary">
 			                                    <tr>
 									                <th>No</th>
-									                <th>ID Pegawai</th>
-									                <th>NIK</th>
-									                <th>Nama Pegawai</th>
-									                <th>Alamat</th>
-									                <th>Status Karyawan</th>
+			                                		<th>Kode Barang</th>
+			                                		<th>Nama Barang</th>
+			                                		<th>Satuan</th>
+			                                		<th>Jenis Barang</th>
 									                <th>Aksi</th>
 									            </tr>
 			                                </thead>
 			                                <tbody>
 			                                	<tr>
 			                                		<td>1</td>
-			                                		<td>PG/001</td>
-			                                		<td>1111</td>
-			                                		<td>Alpha</td>
-			                                		<td>Jl. Alpha</td>
-			                                		<td>Sudah Menikah</td>
+			                                		<td>BRG/001</td>
+			                                		<td>Obat Tetes Mata</td>
+			                                		<td>Botol</td>
+			                                		<td>Herbal</td>
 			                                		<td>
 			                                			<div class="btn-group btn-group-sm">
 			                                				<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
-			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
+			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 			                                			</div>
 			                                		</td>
 			                                	</tr>
-			                                	<tr>
-			                                		<td>2</td>
-			                                		<td>PG/002</td>
-			                                		<td>1112</td>
-			                                		<td>Bravo</td>
-			                                		<td>Jl. Bravo</td>
-			                                		<td>Sudah Menikah</td>
-			                                		<td>
-			                                			<div class="btn-group btn-group-sm">
-															<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
-			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
-			                                			</div>
-			                                		</td>
-			                                	</tr>
-			                                	<tr>
-			                                		<td>3</td>
-			                                		<td>PG/003</td>
-			                                		<td>1113</td>
-			                                		<td>Charlie</td>
-			                                		<td>Jl. Charlie</td>
-			                                		<td>Belum Menikah</td>
-			                                		<td>
-			                                			<div class="btn-group btn-group-sm">
-															<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
-			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
-			                                			</div>
-			                                		</td>
-			                                	</tr>
+
 			                                </tbody>
 			                            </table>
 			                        </div>
@@ -113,7 +84,7 @@
 			            			<h3 class="title">Data Jenis Produk</h3>
 			            		</div>
 			            		<div class="header-block pull-right">
-			            			<button class="btn btn-primary" type="button"><i class="fa fa-plus"></i> Tambah Data Jenis Produk</button>
+			            			<button class="btn btn-primary" id="btn-tambah-jenisproduk" type="button"><i class="fa fa-plus"></i> Tambah Data Jenis Produk</button>
 			            		</div>
 		            		</div>
 
@@ -121,58 +92,35 @@
 		            			<section>
 			            			
 			            			<div class="table-responsive">
-			                            <table class="table table-striped table-hover" cellspacing="0" id="tabel_produk">
+			                            <table class="table table-striped table-hover" cellspacing="0" id="tabel_jenisproduk">
 			                                <thead class="bg-primary">
 			                                    <tr>
 									                <th>No</th>
-									                <th>ID Pegawai</th>
-									                <th>NIK</th>
-									                <th>Nama Pegawai</th>
-									                <th>Alamat</th>
-									                <th>Status Karyawan</th>
+									                <th>Kode Jenis Produk</th>
+									                <th>Nama Jenis Produk</th>
 									                <th>Aksi</th>
 									            </tr>
 			                                </thead>
 			                                <tbody>
 			                                	<tr>
 			                                		<td>1</td>
-			                                		<td>PG/001</td>
-			                                		<td>1111</td>
-			                                		<td>Alpha</td>
-			                                		<td>Jl. Alpha</td>
-			                                		<td>Sudah Menikah</td>
+			                                		<td>JP/1</td>
+			                                		<td>Herbal</td>
 			                                		<td>
 			                                			<div class="btn-group btn-group-sm">
 			                                				<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
-			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
+			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 			                                			</div>
 			                                		</td>
 			                                	</tr>
 			                                	<tr>
 			                                		<td>2</td>
-			                                		<td>PG/002</td>
-			                                		<td>1112</td>
-			                                		<td>Bravo</td>
-			                                		<td>Jl. Bravo</td>
-			                                		<td>Sudah Menikah</td>
+			                                		<td>JP/2</td>
+			                                		<td>Obat-obatan</td>
 			                                		<td>
 			                                			<div class="btn-group btn-group-sm">
-															<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
-			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
-			                                			</div>
-			                                		</td>
-			                                	</tr>
-			                                	<tr>
-			                                		<td>3</td>
-			                                		<td>PG/003</td>
-			                                		<td>1113</td>
-			                                		<td>Charlie</td>
-			                                		<td>Jl. Charlie</td>
-			                                		<td>Belum Menikah</td>
-			                                		<td>
-			                                			<div class="btn-group btn-group-sm">
-															<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
-			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>
+			                                				<button class="btn btn-warning btn-edit" title="Edit" type="button"><i class="fa fa-pencil"></i></button>
+			                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 			                                			</div>
 			                                		</td>
 			                                	</tr>
@@ -208,6 +156,31 @@ $(document).ready(function(){
 	var table = $('#tabel_jenisproduk').DataTable();
 	var table1 = $('#tabel_produk').DataTable();
 
+	$('#tabel_produk tbody').on('click', '.btn-edit', function(){
+
+		window.location.href = '{{route("edit_dataproduk")}}';
+
+	});
+
+	$('#tabel_jenisproduk tbody').on('click', '.btn-edit', function(){
+
+		window.location.href = '{{route("edit_datajenisproduk")}}';
+
+	});	
+
+	$('#btn-tambah-produk').on('click', function(){
+
+		window.location.href = '{{route("tambah_dataproduk")}}';
+
+	});
+
+	$('#btn-tambah-jenisproduk').on('click', function(){
+
+		window.location.href = '{{route("tambah_datajenisproduk")}}';
+
+	});	
+
+
 	$(document).on('click', '.btn-disable', function(){
 		var ini = $(this);
 		$.confirm({
@@ -215,8 +188,8 @@ $(document).ready(function(){
 			closeAnimation: 'scale',
 			animationBounce: 1.5,
 			icon: 'fa fa-exclamation-triangle',
-			title: 'Disable',
-			content: 'Apa anda yakin mau disable data ini?',
+			title: 'Peringatan!',
+			content: 'Apa anda yakin mau menonaktifkan data ini?',
 			theme: 'disable',
 			buttons: {
 				info: {
@@ -225,13 +198,13 @@ $(document).ready(function(){
 					action : function(){
 						$.toast({
 							heading: 'Information',
-							text: 'Data Berhasil di Disable.',
+							text: 'Data Berhasil di Nonaktifkan.',
 							bgColor: '#0984e3',
 							textColor: 'white',
 							loaderBg: '#fdcb6e',
 							icon: 'info'
 						})
-						ini.parents('.btn-group').html('<button class="btn btn-danger btn-enable" type="button" title="Enable"><i class="fa fa-eye"></i></button>');
+						ini.parents('.btn-group').html('<button class="btn btn-success btn-enable" type="button" title="Enable"><i class="fa fa-check-circle"></i></button>');
 					}
 				},
 				cancel:{
@@ -247,16 +220,15 @@ $(document).ready(function(){
 	$(document).on('click', '.btn-enable', function(){
 		$.toast({
 			heading: 'Information',
-			text: 'Data Berhasil di Enable.',
+			text: 'Data Berhasil di Aktifkan.',
 			bgColor: '#0984e3',
 			textColor: 'white',
 			loaderBg: '#fdcb6e',
 			icon: 'info'
 		})
 		$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
-										'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-eye-slash"></i></button>')
+										'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
 	})
-
 	// function table_hapus(a){
 	// 	table.row($(a).parents('tr')).remove().draw();
 	// }

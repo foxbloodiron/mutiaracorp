@@ -46,11 +46,13 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/masterdatautama/datapegawai/create', 'MasterController@tambah_kelolapegawai')->name('tambah_kelolapegawai');
 
 	Route::get('/masterdatautama/produk/index', 'MasterController@dataproduk')->name('dataproduk');
+	Route::get('/masterdatautama/produk/edit', 'MasterController@edit_dataproduk')->name('edit_dataproduk');
+	Route::get('/masterdatautama/produk/create', 'MasterController@tambah_dataproduk')->name('tambah_dataproduk');
+	Route::get('/masterdatautama/produk/jenis/edit', 'MasterController@edit_datajenisproduk')->name('edit_datajenisproduk');
+	Route::get('/masterdatautama/produk/jenis/create', 'MasterController@tambah_datajenisproduk')->name('tambah_datajenisproduk');
 
-	Route::get('/masterdatautama/harga/golonganharga/index', 'MasterController@golonganharga')->name('golonganharga');
-	Route::get('/masterdatautama/harga/hargaperitem/index', 'MasterController@hargaperitem')->name('hargaperitem');
-	Route::get('/masterdatautama/harga/hargapersatuan/index', 'MasterController@hargapersatuan')->name('hargapersatuan');
-	Route::get('/masterdatautama/harga/hargapergolongan/index', 'MasterController@hargapergolongan')->name('hargapergolongan');
+	Route::get('/masterdatautama/harga/index', 'MasterController@dataharga')->name('dataharga');
+	Route::get('/masterdatautama/harga/edit', 'MasterController@edit_dataharga')->name('edit_dataharga');
 
 	Route::get('/masterdatautama/suplier/index', 'MasterController@suplier')->name('suplier.index');
 	Route::get('/masterdatautama/suplier/tambah_suplier', 'MasterController@tambah_suplier')->name('tambah_suplier');
@@ -95,9 +97,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 	// INVENTORY
 	// Barang Masuk
-	Route::get('/inventory/barangmasuk/pencatatanbarang/index', 'InventoryController@pencatatan_barang_masuk')->name('pencatatan_masuk.index');
-	Route::get('/inventory/barangmasuk/pencatatanlokasi/index', 'InventoryController@pencatatan_lokasi_masuk')->name('lokasi_masuk.index');
-	Route::get('/inventory/barangmasuk/historibarangmasuk/index', 'InventoryController@histori_barang_masuk')->name('histori_masuk.index');
+	Route::get('/inventory/barangmasuk/index', 'InventoryController@barangmasuk')->name('barangmasuk');
 	// Barang Keluar
 	// Distribusi Barang
 	// Manajemen Stok

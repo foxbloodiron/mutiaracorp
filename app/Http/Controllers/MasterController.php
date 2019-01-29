@@ -99,26 +99,21 @@ class MasterController extends Controller
         return view('masterdatautama.produk.dataproduk');
     }    
 
+    public function tambah_dataproduk()
+    {   
+        return view('masterdatautama.produk.tambah_dataproduk');
+    }    
+
     // * Master Harga
 
-    public function golonganharga()
+    public function dataharga()
     {   
-        return view('masterdatautama.harga.golonganharga.golonganharga');
+        return view('masterdatautama.harga.harga');
     }
 
-    public function hargaperitem()
+    public function edit_dataharga()
     {   
-        return view('masterdatautama.harga.hargaperitem.hargaperitem');
-    }
-
-    public function hargapersatuan()
-    {   
-        return view('masterdatautama.harga.hargapersatuan.hargapersatuan');
-    }
-
-    public function hargapergolongan()
-    {   
-        return view('masterdatautama.harga.hargapergolongan.hargapergolongan');
+        return view('masterdatautama.harga.edit_harga');
     }
 
     // * Master Suplier
