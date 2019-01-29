@@ -177,23 +177,7 @@
                             <a href="{{route('dataproduk')}}"> Master Produk</a>
                         </li>
                         <li>
-                            <a href="#"> Master Harga
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li>
-                                    <a href="#"> Kelola Data Golongan Harga </a>
-                                </li>
-                                <li>
-                                    <a href="#"> Kelola Data Harga Per Satuan </a>
-                                </li>
-                                <li>
-                                    <a href="#">Kelola Data Harga Per Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Kelola Data Per Golongan</a>
-                                </li>
-                            </ul>
+                            <a href="#"> Master Harga</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/suplier/*') ? 'active' : ''}}">
                             <a href="{{route('suplier.index')}}">Master Suplier</a>
@@ -203,26 +187,6 @@
                         </li>
                         <li class="{{Request::is('masterdatautama/agen/*') ? 'active' : ''}}">
                             <a href="{{ route('agen.index')}}">Master Agen</a>
-                        </li>
-                        <li>
-                            <a href="#"> Master Cabang
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li>
-                                    <a href="#"> Kelola Data Cabang </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"> Master Agen
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li>
-                                    <a href="#"> Kelola Data Agen </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </li>
