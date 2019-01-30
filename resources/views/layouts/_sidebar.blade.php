@@ -161,6 +161,7 @@
                         </li>
                     </ul>
                 </li>
+                <!-- MASTER DATA UTAMA -->
                 <li class="{{Request::is('masterdatautama/*') ? 'active open' : ''}}">
                     <a href="#">
                         <i class="fa fa-th-large"></i> Master Data Utama
@@ -190,6 +191,8 @@
                         </li>
                     </ul>
                 </li>
+                <!-- END MASTER DATA UTAMA -->
+                <!-- AKTIVITAS PRODUKSI -->
                 <li class="{{Request::is('produksi/*') ? 'active open' : ''}}">
                     <a href="#">
                         <i class="fa fa-product-hunt"></i> Aktivitas Produksi
@@ -210,237 +213,76 @@
                         </li>
                     </ul>
                 </li>
+                <!-- END AKTIVITAS PRODUKSI -->
+                <!-- AKTIVITAS INVENTORY -->
                 <li class="{{Request::is('inventory/*') ? 'active open' : ''}}">
                     <a href="">
                         <i class="fa fa-desktop"></i> Aktivitas Inventory
                         <i class="fa arrow"></i>
                     </a>
-                <ul class="sidebar-nav">
-                    <li class="{{Request::is('inventory/barangmasuk/*') ? 'aktif open' : ''}}">
-                        <a href="{{route('barangmasuk')}}"> Pengelolaan Barang Masuk</a>
-                    </li>
-                    <li>
-                        <a href="#"> Pengelolaan Barang Keluar</a>
-                    </li>
-                    <li>
-                        <a href="#"> Pengelolaan Distribusi Barang</a>
-                    </li>
-                    <li>
-                        <a href="#"> Pengelolaan Manajemen Stok</a>
-                    </li>
-                </ul>
-            </li>
-                <li>
-                    <a href="">
+                    <ul class="sidebar-nav">
+                        <li class="{{Request::is('inventory/barangmasuk/*') ? 'aktif open' : ''}}">
+                            <a href="{{route('barangmasuk')}}"> Pengelolaan Barang Masuk</a>
+                        </li>
+                        <li>
+                            <a href="#"> Pengelolaan Barang Keluar</a>
+                        </li>
+                        <li>
+                            <a href="#"> Pengelolaan Distribusi Barang</a>
+                        </li>
+                        <li>
+                            <a href="#"> Pengelolaan Manajemen Stok</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- END AKTIFITAS INVENTORY -->
+                <!-- AKTIVITAS SDM -->
+                <li class="{{Request::is('sdm/*') ? 'active open' : ''}}">
+                    <a href="#">
                         <i class="fa fa-group"></i> Aktivitas SDM
                         <i class="fa arrow"></i>
                     </a>
-                <ul class="sidebar-nav">
-                    <li>
-                        <a href="#"> Proses Rekruitmen
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#"> Kelola Posisi SDM </a>
-                            </li>
-                            <li>
-                                <a href="#"> Kelola Pengajuan SDM</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Publikasi Lowongan Kerja</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Prosedur Calon SDM</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Kelola Kinerja SDM
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#">Kelola KPI SDM</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola SOP SDM</a>
-                            </li>
-                            <li>
-                                <a href="#">Dashboard KPI SDM</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Kelola Abesensi SDM
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#">Kelola Hari Kerja dan Hari Libur</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Jenis Cuti</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Aturan Kehadiran</a>
-                            </li>
-                            <li>
-                                <a href="#">Daftar Presensi SDM</a>
-                            </li>
-                            <li>
-                                <a href="#">Dashboard Presensi SDM</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Kelola Penggajian
-                            <i class="fa arrow"></i>
-                        </a>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#">Kelola Cashbon SDM</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Bonus, Reward, Punishment SDM</a>
-                            </li>
-                            <li>
-                                <a href="#">Kelola Pembayaran Salary SDM</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-                <li class="">
+                    <ul class="sidebar-nav">
+                        <li class="{{Request::is('sdm/prosesrekruitmen/*') ? 'active' : ''}}">
+                            <a href="{{route('rekruitmen.index')}}">Proses Rekruitmen</a>
+                        </li>
+                        <li class="{{Request::is('sdm/kinerjasdm/*') ? 'active' : ''}}">
+                            <a href="{{route('kinerjasdm.index')}}">Kelola Kinerja SDM</a>
+                        </li>
+                        <li class="{{Request::is('produksi/absensisdm/*') ? 'active' : ''}}">
+                            <a href="{{route('absensisdm.index')}}">Kelola Abesensi SDM</a>
+                        </li>
+                        <li class="{{Request::is('produksi/penggajian/*') ? 'active' : ''}}">
+                            <a href="{{ route('penggajian.index') }}">Kelola Penggajian</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- END AKTIVITAS SDM -->
+                <!-- AKTIVITAS MARKETING -->
+                <li class="{{Request::is('marketing/*') ? 'active open' : ''}}">
                     <a href="#">
                         <i class="fa fa-usd"></i> Aktivitas Marketing
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
-                        <li class="">
-                            <a href="#">Manajemen Marketing
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="">
-                                    <a href="#">Kelola Data Promosi Tahunan</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Kelola Data Promosi Bulanan</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Usulan Biaya Promosi</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Approval Promosi</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Histori Promosi</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('marketing/manajemenmarketing/*') ? 'active' : ''}}">
+                            <a href="{{route('mngmarketing.index')}}">Manajemen Marketing</a>
                         </li>
-                        <li class="">
-                            <a href="#">Manajemen Penjualan Pusat
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="">
-                                    <a href="#">Target dan Realisasi Penjualan</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Terima Order Penjualan Agen</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Distribusi Penjualan Agen</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Return Penjualan Agen</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Histori Penjualan</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('marketing/penjualanpusat/*') ? 'active' : ''}}">
+                            <a href="{{route('penjualanpusat.index')}}">Manajemen Penjualan Pusat</a>
                         </li>
-                        <li class="">
-                            <a href="#">Manajemen Konsinyasi Pusat
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="">
-                                    <a href="#">Penempatan Produk ke Konsignee</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Monitoring Penjualan Konsignee</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Nota Penjualan Konsignee</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Penerimaan Uang Pembayaran Penjualan Konsignee</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Histori Konsinyasi</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('marketing/kosinyasipusat/*') ? 'active' : ''}}">
+                            <a href="{{route('kosinyasi.index')}}">Manajemen Konsinyasi Pusat</a>
                         </li>
-                        <li class="">
-                            <a href="#">Manajemen Marketing Area
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="">
-                                    <a href="#">Pendaftaran dan Pengelolaan Data Agen</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Order Produk ke Pusat</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Kelola Data Order Agen</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Kelola Data Canvassing</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Hutang Piutang Marketing Area</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Histori Order Produk</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Histori Penjualan ke Agen</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Histori Canvassing</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Histori Konsinyasi</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('marketing/marketingarea/*') ? 'active' : ''}}">
+                            <a href="{{ route('marketingarea.index') }}">Manajemen Marketing Area</a>
                         </li>
-                        <li class="">
-                            <a href="#">Manajemen Agen
-                                <i class="fa arrow"></i>
-                            </a>
-                            <ul class="sidebar-nav">
-                                <li class="">
-                                    <a href="#">Order Produk ke Agen/Pusat</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Kelola Penjualan Langsung</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Kelola Penjualan Via Website Mutiara Berlian</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Kelola Laporan Keuangan Sederhana</a>
-                                </li>
-                                <li class="">
-                                    <a href="#">Kelola Data Inventory Agen</a>
-                                </li>
-                            </ul>
+                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                            <a href="{{ route('mngagen.index') }}">Manajemen Agen</a>
                         </li>
                     </ul>
                 </li>
+                <!-- END AKTIVITAS MARKETING -->
             </ul>
         </nav>
     </div>

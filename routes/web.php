@@ -74,7 +74,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/masterdatautama/datasatuan/edit_datasatuan', 'MasterController@edit_datasatuan')->name('edit_datasatuan');
 	// !===================================================== End Master Data Utama =====================================================!
 	
-	// PRODUKSI
+	// !===================================================== PRODUKSI =====================================================!
 	// Order Produksi
 	Route::get('/produksi/orderproduksi/index', 'ProduksiController@order_produksi')->name('order.index');
 	// Penerimaan Barang
@@ -83,27 +83,39 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/produksi/pembayaran/index', 'ProduksiController@pembayaran')->name('pembayaran.index');
 	// Return Produksi
 	Route::get('/produksi/returnproduksi/index', 'ProduksiController@return_produksi')->name('return.index');
-	// END PRODUKSI
+	// !===================================================== END PRODUKSI =====================================================!
 
-	// Produksi
-	Route::get('/produksi/pencatatanhasil/pencatatanhasil', 'ProduksiController@pencatatanhasil')->name('pencatatanhasil');
-	Route::get('/produksi/pencatatanhasil/proses_pencatatanhasil', 'ProduksiController@proses_pencatatanhasil')->name('proses_pencatatanhasil');
-	Route::get('/produksi/perencanaanproduksi/perencanaanproduksi', 'ProduksiController@perencanaanproduksi')->name('perencanaanproduksi');
-	Route::get('/produksi/produksirencana/produksirencana', 'ProduksiController@produksirencana')->name('produksirencana');
-	Route::get('/produksi/produksitanparencana/produksitanparencana', 'ProduksiController@produksitanparencana')->name('produksitanparencana');
-	Route::get('/produksi/upahboronganproduksi/upahboronganproduksi', 'ProduksiController@upahboronganproduksi')->name('upahboronganproduksi');
-	Route::get('/produksi/upahboronganproduksi/proses_upahboronganproduksi', 'ProduksiController@proses_upahboronganproduksi')->name('proses_upahboronganproduksi');
-
-
-	// INVENTORY
+	// !===================================================== INVENTORY =====================================================!
 	// Barang Masuk
 	Route::get('/inventory/barangmasuk/index', 'InventoryController@barangmasuk')->name('barangmasuk');
 	// Barang Keluar
 	// Distribusi Barang
 	// Manajemen Stok
-	// END INVENTORY
+	// !===================================================== END INVENTORY =====================================================!
 
+	// !===================================================== SDM =====================================================!
+	// Rekruitmen
+	Route::get('/sdm/prosesrekruitmen/index', 'SDMController@proses_rekruitmen')->name('rekruitmen.index');
+	// Kinerja
+	Route::get('/sdm/kinerjasdm/index', 'SDMController@kinerja')->name('kinerjasdm.index');
+	// Absensi
+	Route::get('/sdm/absensisdm/index', 'SDMController@absensi')->name('absensisdm.index');
+	// Penggajian
+	Route::get('/sdm/penggajian/index', 'SDMController@penggajian')->name('penggajian.index');
+	// !===================================================== END SDM =====================================================!
 
+	// !===================================================== Marketing =====================================================!
+	// Manajemen Marketing
+	Route::get('/marketing/manajemenmarketing/index', 'MarketingController@marketing')->name('mngmarketing.index');
+	// Penjualan Pusat
+	Route::get('/marketing/penjualanpusat/index', 'MarketingController@penjualan')->name('penjualanpusat.index');
+	// Konsinyasi Pusat
+	Route::get('/marketing/konsinyasipusat/index', 'MarketingController@kosinyasi')->name('kosinyasi.index');
+	// Marketing Area
+	Route::get('/marketing/marketingarea/index', 'MarketingController@marketing_area')->name('marketingarea.index');
+	// Manajemen Agen
+	Route::get('/marketing/agen/index', 'MarketingController@agen')->name('mngagen.index');
+	// !===================================================== END Marketing =====================================================!
 
 }); 
 // End Route Group
