@@ -38,18 +38,20 @@
 	                                <thead class="bg-primary">
 	                                    <tr>
 							                <th width="1%">No</th>
-							                <th>Nama Agen</th>
-							                <th>Alamat Agen</th>
-							                <th>No Telp</th>
+							                <th>Nama</th>
+							                <th>A/Bulan</th>
+											<th>S/Bulan</th>
+											<th>I/Bulan</th>
 							                <th>Aksi</th>
 							            </tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
 	                                		<td>1</td>
-	                                		<td>CUS/0001</td>
-	                                		<td>Jl. Cabang</td>
-	                                		<td>0843123123123</td>
+	                                		<td>Giono</td>
+	                                		<td>0</td>
+											<td>3</td>
+											<td>2</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>

@@ -7,11 +7,11 @@
 <article class="content">
 
 	<div class="title-block text-primary">
-	    <h1 class="title"> Data Harga </h1>
+	    <h1 class="title"> Pengelolaan Barang Keluar </h1>
 	    <p class="title-description">
 	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
-	    	 / <span>Master Data</span>
-	    	 / <span class="text-primary" style="font-weight: bold;">Data Harga</span>
+	    	 / <span>Aktivitas Inventory</span>
+	    	 / <span class="text-primary font-weight-bold">Pengelolaan Barang Keluar</span>
 	     </p>
 	</div>
 
@@ -24,7 +24,7 @@
 				<div class="card">
                     <div class="card-header bordered p-2">
                     	<div class="header-block">
-                            <h3 class="title"> Data Harga </h3>
+                            <h3 class="title"> Pengelolaan Barang Keluar </h3>
                         </div>
                         <div class="header-block pull-right">
                         	
@@ -35,7 +35,7 @@
                         <section>
                         	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_harga">
+	                            <table class="table table-striped table-hover" cellspacing="0" id="table_barangkeluar">
 	                                <thead class="bg-primary">
 	                                    <tr>
 	                                    	<th>No</th>
@@ -54,14 +54,7 @@
 	                                		<td>Semen</td>
 	                                		<td>Karung</td>
 	                                		<td>Bahan Baku</td>
-	                                		<td>
-	                                			<div class="pull-left">
-	                                				Rp. 
-	                                			</div>
-	                                			<div class="pull-right">
-	                                				0,00
-	                                			</div>
-	                                		</td>
+	                                		<td></td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
@@ -75,14 +68,7 @@
 	                                		<td>Pasir</td>
 	                                		<td>Butir</td>
 	                                		<td>Bahan Baku</td>
-	                                		<td>
-	                                			<div class="pull-left">
-	                                				Rp. 
-	                                			</div>
-	                                			<div class="pull-right">
-	                                				0,00
-	                                			</div>
-	                                		</td>
+	                                		<td></td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
@@ -96,14 +82,7 @@
 	                                		<td>Cat</td>
 	                                		<td>Kaleng</td>
 	                                		<td>Bahan Baku</td>
-	                                		<td>
-	                                			<div class="pull-left">
-	                                				Rp. 
-	                                			</div>
-	                                			<div class="pull-right">
-	                                				0,00
-	                                			</div>
-	                                		</td>
+	                                		<td></td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
@@ -132,17 +111,17 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		var table = $('#table_harga').DataTable();
+		var table = $('#table_barangkeluar').DataTable();
 
-	$('#table_harga tbody').on('click', '.btn-edit', function(){
+	$('#table_pegawai tbody').on('click', '.btn-edit', function(){
 
-		window.location.href = '{{route("edit_dataharga")}}';
+		window.location.href = '{{route("edit_datasatuan")}}';
 
 	});
 
 	$('#btn-tambah').on('click', function(){
 
-		
+		window.location.href = '{{route("tambah_datasatuan")}}';
 
 	});
 
