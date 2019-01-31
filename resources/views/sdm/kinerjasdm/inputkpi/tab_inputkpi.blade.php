@@ -5,7 +5,7 @@
 				<h3>Data KPI</h3>
 			</div>
 			<div class="header-block pull-right">
-				<a class="btn btn-primary" data-toggle="modal" data-target="#tambah_datakpi" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+				<a class="btn btn-primary" id="btn-tambah-mantan" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
 			</div>
 			<div class=""></div>
 		</div>
