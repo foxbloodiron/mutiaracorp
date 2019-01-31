@@ -1,10 +1,19 @@
 @extends('main')
 
 @section('content')
-
+<!-- modal scoreboard pegawai -->
 @include('sdm.kinerjasdm.scoreboardpegawai.modal_tambah_scoreboardp')
 @include('sdm.kinerjasdm.scoreboardpegawai.modal_edit_scoreboardp')
 @include('sdm.kinerjasdm.scoreboardpegawai.modal_detail_scoreboardp')
+<!-- end -->
+<!-- modal scoreboard manajemen scoreboard -->
+@include('sdm.kinerjasdm.manajemenscoreboard.modal_detail')
+@include('sdm.kinerjasdm.manajemenscoreboard.modal_edit')
+<!-- end -->
+<!-- modal scoreboard manajemen scoreboard & KPI-->
+@include('sdm.kinerjasdm.manajemenscoreboardkpi.modal_detail')
+@include('sdm.kinerjasdm.manajemenscoreboardkpi.modal_edit')
+<!-- end -->
 
 <article class="content">
 

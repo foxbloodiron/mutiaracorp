@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="edit_scoreboardp" class="modal fade" role="dialog">
+<div id="modal_edit" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
