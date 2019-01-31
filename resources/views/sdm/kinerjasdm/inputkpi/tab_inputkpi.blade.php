@@ -5,7 +5,7 @@
 				<h3>Data KPI</h3>
 			</div>
 			<div class="header-block pull-right">
-				<a class="btn btn-primary" data-toggle="modal" data-target="#tambah_datakpi" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+				<a class="btn btn-primary" id="btn-tambah-mantan" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
 			</div>
 			<div class=""></div>
 		</div>
@@ -60,7 +60,7 @@
 									<td>
 										<div class="btn-group btn-group-sm">
 											<button class="btn btn-primary btn-datail-inputkpi" data-toggle="modal" data-target="#tambah_scoreboardp" type="button" title="Detail"><i class="fa fa-info-circle"></i></button>
-											<button class="btn btn-warning btn-edit-inputkpi" data-toggle="modal" data-target="#tambah_datakpi" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+											<button class="btn btn-warning btn-edit-inputkpi" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
 											<button class="btn btn-danger btn-disable-inputkpi" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 										</div>
 									</td>

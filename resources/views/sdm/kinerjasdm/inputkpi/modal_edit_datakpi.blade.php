@@ -12,65 +12,67 @@
 
         <section>
 
-        <div class="row">
-          <div class="col-md-5 col-sm-6 col-xs-12">
-            <label>Nama Pegawai</label>
-          </div>
+          <form id="form_edit_pki">
 
-          <div class="col-md-7 col-sm-6 col-xs-12">
-            <div class="form-group">
-              <input type="text" class="form-control form-control-sm" readonly="" name="" value="Brad">
+            <div class="row">
+              <div class="col-md-5 col-sm-6 col-xs-12">
+                <label>Tanggal</label>
+              </div>
+
+              <div class="col-md-7 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-sm datepicker"name="">
+                </div>
+              </div>
+
+              <div class="col-md-5 col-sm-6 col-xs-12">
+                <label>Divisi</label>
+              </div>
+
+              <div class="col-md-7 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-sm" readonly="" name="" value="Sales Man">
+                </div>
+              </div>
+
+
+              <div class="col-md-5 col-sm-6 col-xs-12">
+                <label>Jabatan</label>
+              </div>
+
+              <div class="col-md-7 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-sm" readonly="" value="Admin Gudang" name="">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-5 col-sm-6 col-xs-12">
-            <label>Tanggal</label>
-          </div>
+            <div class="row" id="div_pki_pegawai">
+              <div class="col-md-5 col-sm-6 col-xs-12">
+                <label>Pegawai</label>
+              </div>
 
-          <div class="col-md-7 col-sm-6 col-xs-12">
-            <div class="form-group">
-              <input type="text" class="form-control form-control-sm datepicker" name="" value="08-01-2019">
+              <div class="col-md-7 col-sm-6 col-xs-12">
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-sm" readonly="" value="Ucok" name="">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-5 col-sm-6 col-xs-12">
-            <label>Divisi</label>
-          </div>
-
-          <div class="col-md-7 col-sm-6 col-xs-12">
-            <div class="form-group">
-              <input type="text" class="form-control form-control-sm" readonly="" name="" value="Sales Man">
+            <div class="row" id="div_pki_realisasi">
+              <div class="col-md-12 col-sm-12 col-12">
+                <label>JUMLAH CUSTOMER 
+                  | Bobot : <span class="text-primary">20</span> 
+                  | Target : <span class="text-primary">100</span> 
+                  | Deadline : <span class="text-primary">31-01-2019</span>
+                </label>
+                <div class="form-group">
+                  <input type="text" class="form-control form-control-sm" placeholder="Realisasi..." name="">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-5 col-sm-6 col-xs-12">
-            <label>Jabatan</label>
-          </div>
-
-          <div class="col-md-7 col-sm-6 col-xs-12">
-            <div class="form-group">
-              <input type="text" class="form-control form-control-sm" readonly="" name="" value="Ketua Bidang">
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-5 col-sm-6 col-xs-12">
-            <label>Jumlah barang yang harus dikeluarkan</label>
-          </div>
-
-          <div class="col-md-7 col-sm-6 col-xs-12">
-            <div class="form-group">
-              <textarea type="text" class="form-control" name="">50</textarea>
-            </div>
-          </div>
-        </div>
+          </form>  
 
         </section>
 

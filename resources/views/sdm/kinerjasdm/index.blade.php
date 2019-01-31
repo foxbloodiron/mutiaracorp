@@ -14,6 +14,10 @@
 @include('sdm.kinerjasdm.manajemenscoreboardkpi.modal_detail')
 @include('sdm.kinerjasdm.manajemenscoreboardkpi.modal_edit')
 <!-- end -->
+<!-- modal inputkpi -->
+@include('sdm.kinerjasdm.inputkpi.modal_tambah_datakpi')
+@include('sdm.kinerjasdm.inputkpi.modal_edit_datakpi')
+<!-- end -->
 
 <article class="content">
 
@@ -185,6 +189,49 @@
 				icon: 'success'
 			})
 		})
+	});
+</script>
+
+<script type="text/javascript">
+	$('#btn-tambah-mantan').click(function(){
+
+		$('#div_pki_pegawai').addClass('d-none');
+		$('#div_pki_realisasi').addClass('d-none');
+		$('#form_masuk_pki :input').val('').trigger('change');
+
+		$('#tambah_datakpi').modal('show');
+
+	});
+
+	$('#table_inputkpi').on('click', '.btn-edit-inputkpi', function(){
+		$('#edit_datakpi').modal('show');
+	});
+
+	$('#pki_jabatan').on('change',function(){
+		if($(this).val() === ''){
+			// console.log('if jab');
+			$('#div_pki_pegawai').addClass('d-none');
+			$('#div_pki_realisasi').addClass('d-none');
+
+		} else {
+			$('#div_pki_pegawai').removeClass('d-none');
+			// console.log('else jab');
+
+		}
+	});
+
+	$('#pki_pegawai').on('change',function(){
+		if($(this).val() === ''){
+
+			// console.log('if pegawai');
+			
+			$('#div_pki_realisasi').addClass('d-none');
+
+		} else {
+			$('#div_pki_realisasi').removeClass('d-none');
+			// console.log('else pegawai');
+
+		}
 	});
 </script>
 @endsection
