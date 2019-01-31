@@ -138,29 +138,6 @@
                         <i class="fa fa-home"></i> Dashboard 
                     </a>
                 </li>
-                <li class="{{Request::is('master/*') ? 'active open' : ''}}">
-                    <a href="#">
-                        <i class="fa fa-th-large"></i> Master Data
-                        <i class="fa arrow"></i>
-                    </a>
-                    <ul class="sidebar-nav">
-                        <li class="{{Request::is('master/databarang/*') ? 'active' : ''}}">
-                            <a href="{{route('databarang')}}">Data Barang</a>
-                        </li>
-                        <li class="{{Request::is('master/datasuplier/*') ? 'active' : ''}}">
-                            <a href="{{route('datasuplier')}}">Data Suplier</a>
-                        </li>
-                        <li class="{{Request::is('master/datacustomer/*') ? 'active' : ''}}">
-                            <a href="{{route('datacustomer')}}">Data Customer</a>
-                        </li>
-                        <li class="{{Request::is('master/datapegawai/*') ? 'active' : ''}}">
-                            <a href="{{route('datapegawai')}}">Data Pegawai</a>
-                        </li>
-                        <li class="{{Request::is('master/dataarmada/*') ? 'active' : ''}}">
-                            <a href="{{route('dataarmada')}}">Data Armada</a>
-                        </li>
-                    </ul>
-                </li>
                 <!-- MASTER DATA UTAMA -->
                 <li class="{{Request::is('masterdatautama/*') ? 'active open' : ''}}">
                     <a href="#">

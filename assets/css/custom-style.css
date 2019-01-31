@@ -1,0 +1,30 @@
+.status-pelamar {
+    font-style:italic;
+}
+.status-pelamar span{
+    color:#3498db;
+}
+.status-pelamar p{
+    color:#95a5a6;
+}
+.approval-1 {
+    margin-top:10px;
+}
+.approval-2 {
+    background-color:#e9ecef;
+    margin-top:10px;
+    margin-left:5px;
+}
+.approval-3 {
+    background-color:#e9ecef;
+    margin-top:10px;
+    margin-left:5px;
+}
+.radio-box p{
+    margin-left:10px;
+    margin-top:-5px;
+    font-size: 0.9em;
+}
+.preview-hr {
+    border: 1px solid #000;
+}
