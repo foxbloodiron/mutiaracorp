@@ -22,9 +22,9 @@
 <article class="content">
 
 	<div class="title-block text-primary">
-	    <h1 class="title"> Master Suplier </h1>
+	    <h1 class="title"> Aktivitas SDM </h1>
 	    <p class="title-description">
-	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a> / <span>Master Data Utama</span> / <span class="text-primary" style="font-weight: bold;">Kelola Data Suplier</span>
+	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a> / <span>Master Data Utama</span> / <span class="text-primary" style="font-weight: bold;">Aktivitas SDM</span>
 	     </p>
 	</div>
 

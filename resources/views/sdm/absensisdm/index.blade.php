@@ -19,52 +19,108 @@
 
 			<div class="col-12">
 				
-				<div class="card">
-                    <div class="card-header bordered p-2">
-                    	<div class="header-block">
-	                        <h3 class="title">Kelola Absensi SDM</h3>
-	                    </div>
-	                    <div class="header-block pull-right">
-                    			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
-	                    	
-	                    </div>
-                    </div>
-                    <div class="card-block">
-                        <section>
-                        	
-                        	
-                        	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_absensi">
-	                                <thead class="bg-primary">
-	                                    <tr>
-							                <th width="1%">No</th>
-							                <th>Nama</th>
-							                <th>A/Bulan</th>
-											<th>S/Bulan</th>
-											<th>I/Bulan</th>
-							                <th>Aksi</th>
-							            </tr>
-	                                </thead>
-	                                <tbody>
-	                                	<tr>
-	                                		<td>1</td>
-	                                		<td>Giono</td>
-	                                		<td>0</td>
-											<td>3</td>
-											<td>2</td>
-	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
-	                                			</div>
-	                                		</td>
-	                                	</tr>
-							        </tbody>
-	                            </table>
-	                        </div>
-                        </section>
-                    </div>
-                </div>
+			<div class="card">
+				<div class="card-header bordered p-2">
+					<div class="header-block">
+						<h3>Kelola Absensi SDM</h3>
+					</div>
+					<div class=""></div>
+				</div>
+				<div class="card-block">
+					<section>
+						<div class="row">
+						<div class="input-group mb-3">
+							<div class="row">
+								<div class="container">
+								<div class="file-upload col-8">
+								<div class="download-contoh pull-right">
+									<button class="btn btn-primary">Download Contoh</button>
+								</div>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input">
+									<label class="custom-file-label">Pilih File</label>
+								</div>
+								<div class="input-group-append">
+									<span class="input-group-text btn-upload btn btn-primary" id="">Upload</span>
+								</div>
+								</div>
+								</div>
+								</div>
+							</div>							
+							<div class="col-md-1 col-sm-6 col-xs-12">
+								<label>Periode</label>
+							</div> 
+
+							<div class="col-md-2 col-sm-6 col-xs-12">
+								<div class="form-group">
+								<input type="text" class="form-control form-control-sm datepicker" name="">
+								</div>
+							</div>
+
+							<div class="col-md-1 col-sm-6 col-xs-12">
+								<span>S/D</span>
+							</div> 
+
+							<div class="col-md-2 col-sm-6 col-xs-12">
+								<div class="form-group">
+								<input type="text" class="form-control form-control-sm datepicker" name="">
+								</div>
+							</div>
+
+							<div class="col-md-2">
+								<button type="button" class="btn btn-primary">Cari</button>
+							</div>
+
+							<div class="col-md-1 col-sm-6 col-xs-12">
+								<label>Divisi</label>
+							</div> 
+
+							<div class="col-md-3 col-sm-6 col-xs-12">
+								<div class="form-group">
+								<select type="text" class="form-control form-control-sm" name="">
+									<option value="">HRD & GA</option>
+									<option value="">Keuangan dan Akuntansi</option>
+									<option value="">Sales</option>
+								</select>
+								</div>
+							</div>
+						</div>
+							<hr>
+							<div class="table-responsive">
+								<table class="table table-hover table-striped" cellspacing="0" id="table_scoreboard">
+									<thead class="bg-primary">
+										<tr>
+											<th>Tanggal</th>
+											<th>Kode - Nama Pegawai</th>
+											<th>Jam Kerja</th>
+											<th>Jam Masuk</th>
+											<th>Jam Pulang</th>
+											<th>Scan Masuk</th>
+											<th>Scan Pulang</th>
+											<th>Terlambat</th>
+											<th>Total Kerja</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>01 sep 2018</td>
+											<td>13r4d - Brad</td>
+											<td>Normal</td>
+											<td>08:00:00</td>
+											<td>17:00:00</td>
+											<td>07:30:00</td>
+											<td>18:17:00</td>
+											<td>-</td>
+											<td>09:00:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+					</section>
+
+				</div>
+			</div>
 
 			</div>
 
@@ -79,6 +135,7 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
+		$('.file_upload').file_upload();
 		var table = $('#table_absensi').DataTable();
 
 		$(document).on('click', '.btn-disable', function(){

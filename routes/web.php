@@ -108,6 +108,20 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/sdm/absensisdm/index', 'SDMController@absensi')->name('absensisdm.index');
 	// Penggajian
 	Route::get('/sdm/penggajian/index', 'SDMController@penggajian')->name('penggajian.index');
+	// TAB MANAJEMEN
+	Route::get('/sdm/penggajian/manajemen/create', 'SDMController@create_manajemen')->name('manajemen.create');
+	Route::get('/sdm/penggajian/manajemen/edit', 'SDMController@edit_manajemen' )->name('manajemen.edit');
+	// END
+	// TAB TUNJANGAN
+	Route::get('/sdm/penggajian/tunjangan/create', 'SDMController@create_tunjangan')->name('tunjangan.create');
+	Route::get('/sdm/penggajian/tunjangan/edit', 'SDMController@edit_tunjangan')->name('tunjangan.edit');
+	Route::get('/sdm/penggajian/tunjangan/setting', 'SDMController@set_tunjangan')->name('tunjangan.setting');
+	Route::get('/sdm/penggajian/tunjangan/edit_setting_tunjangan', 'SDMController@edit_set_tunjangan')->name('tunjangan.setting.edit');
+	// END
+	// TAB PRODUKSI
+	Route::get('/sdm/penggajian/produksi/create', 'SDMController@create_produksi')->name('produksi.create');
+	Route::get('/sdm/penggajian/produksi/edit', 'SDMController@edit_produksi')->name('produksi.edit');
+	// END
 	// !===================================================== END SDM =====================================================!
 
 	// !===================================================== Marketing =====================================================!

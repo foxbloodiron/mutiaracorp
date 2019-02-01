@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="modal_edit" class="modal fade" role="dialog">
+<div id="modal_edit2" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
@@ -14,24 +14,12 @@
 
         <div class="row">
           <div class="col-md-5 col-sm-6 col-xs-12">
-            <label>Nama Pegawai</label>
-          </div>
-
-          <div class="col-md-7 col-sm-6 col-xs-12">
-            <div class="form-group">
-              <input type="text" class="form-control form-control-sm" readonly="" name="" value="Brad">
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-5 col-sm-6 col-xs-12">
             <label>Tanggal</label>
           </div>
 
           <div class="col-md-7 col-sm-6 col-xs-12">
             <div class="form-group">
-              <input type="text" class="form-control form-control-sm datepicker" name="" value="08-01-2019">
+              <input type="text" class="form-control form-control-sm datepicker" name="" value="30-10-2019">
             </div>
           </div>
         </div>
@@ -59,19 +47,44 @@
             </div>
           </div>
         </div>
-
+        
         <div class="row">
           <div class="col-md-5 col-sm-6 col-xs-12">
-            <label>Jumlah barang yang harus dikeluarkan</label>
+            <label>Pegawai</label>
           </div>
 
           <div class="col-md-7 col-sm-6 col-xs-12">
             <div class="form-group">
-              <textarea type="text" class="form-control" name="">50</textarea>
+              <input type="text" class="form-control form-control-sm" readonly="" name="" value="Brad">
             </div>
           </div>
         </div>
 
+        <div class="row" id="div_pki_realisasi">
+          <div class="col-md-12 col-sm-12 col-12">
+            <label>JUMLAH CUSTOMER 
+              | Bobot : <span class="text-primary">20</span> 
+              | Target : <span class="text-primary">100</span> 
+              | Deadline : <span class="text-primary">31-01-2019</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="col-md-5 col-sm-6 col-xs-12">
+          <label>Score</label>
+        </div>
+
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <div class="form-group">
+            <input type="text" class="form-control form-control-sm" name="" value="90">
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-6 col-xs-12">
+          <div class="form-group">
+            <input type="text" class="form-control form-control-sm" name="" value="90">
+          </div>
+        </div>
+          
         </section>
 
       </div>

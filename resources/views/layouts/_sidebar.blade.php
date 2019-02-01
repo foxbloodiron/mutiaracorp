@@ -226,10 +226,10 @@
                         <li class="{{Request::is('sdm/kinerjasdm/*') ? 'active' : ''}}">
                             <a href="{{route('kinerjasdm.index')}}">Kelola Kinerja SDM</a>
                         </li>
-                        <li class="{{Request::is('produksi/absensisdm/*') ? 'active' : ''}}">
+                        <li class="{{Request::is('sdm/absensisdm/*') ? 'active' : ''}}">
                             <a href="{{route('absensisdm.index')}}">Kelola Abesensi SDM</a>
                         </li>
-                        <li class="{{Request::is('produksi/penggajian/*') ? 'active' : ''}}">
+                        <li class="{{Request::is('sdm/penggajian/*') ? 'active' : ''}}">
                             <a href="{{ route('penggajian.index') }}">Kelola Penggajian</a>
                         </li>
                     </ul>

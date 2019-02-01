@@ -45,6 +45,8 @@
 									<th>Pegawai</th>
 									<th>Status</th>
 									<th>Tanggal Confirm</th>
+									<th>Total Skor</th>
+									<th>Jenis</th>
 									<th>Aksi</th>
 								</tr>
 							</thead>
@@ -56,10 +58,29 @@
 									<td>Brad</td>
 									<td class="statusmng">Belum Dikonfirmasi</td>
 									<td>-</td>
+									<td>Konfirmasi KPI</td>
+									<td>0.00</td>
 									<td>
 										<div class="btn-group btn-group-sm">
-											<button class="btn btn-primary btn-detail-manajemensb" data-toggle="modal" data-target="#detail" type="button" title="Detail"><i class="fa fa-info-circle"></i></button>
-											<button class="btn btn-warning btn-edit-manajemensb" data-toggle="modal" data-target="#modal_edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+											<button class="btn btn-primary btn-detail-manajemensb" data-toggle="modal" data-target="#modal_detail2" type="button" title="Detail"><i class="fa fa-info-circle"></i></button>
+											<button class="btn btn-warning btn-edit-manajemensb" data-toggle="modal" data-target="#modal_edit2" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+											<button class="btn btn-danger btn-disable-manajemensb" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>08-09-2019</td>
+									<td>P1t</td>
+									<td>Pit</td>
+									<td class="statusmng">Belum Dikonfirmasi</td>
+									<td>-</td>
+									<td>Data Scoreboard</td>
+									<td>0.00</td>
+									<td>
+										<div class="btn-group btn-group-sm">
+											<button class="btn btn-primary btn-detail-manajemensb" data-toggle="modal" data-target="#modal_detail2" type="button" title="Detail"><i class="fa fa-info-circle"></i></button>
+											<button class="btn btn-warning btn-edit-manajemensb" data-toggle="modal" data-target="#modal_edit2" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
 											<button class="btn btn-danger btn-disable-manajemensb" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 										</div>
 									</td>

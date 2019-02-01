@@ -9,89 +9,44 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-          <section>
-
+        <section>
+          <fieldset>
+            <div class="container">
             <div class="row">
-            <div class="col-md-5 col-sm-6 col-xs-12">
-                <label>Tanggal</label>
+            <label for="">Nama Pegawai : </label><span>Brad</span>
             </div>
-
-            <div class="col-md-7 col-sm-6 col-xs-12">
-                <div class="form-group">
-                <input type="text" class="form-control form-control-sm" readonly="" name="" value="30-01-2019">
-                </div>
-            </div>
-            </div>
-
             <div class="row">
-            <div class="col-md-5 col-sm-6 col-xs-12">
-                <label>Divisi</label>
+            <label for="">Divisi : </label><span>Duduk Manis</span>
             </div>
-
-            <div class="col-md-7 col-sm-6 col-xs-12">
-                <div class="form-group">
-                <input type="text" class="form-control form-control-sm" readonly="" name="" value="Sales Man">
-                </div>
-            </div>
-            </div>
-
             <div class="row">
-            <div class="col-md-5 col-sm-6 col-xs-12">
-                <label>Jabatan</label>
+            <label for="">Jumlah customer yang ditagih : </label><span>1</span>
             </div>
-
-            <div class="col-md-7 col-sm-6 col-xs-12">
-                <div class="form-group">
-                <input type="text" class="form-control form-control-sm" readonly="" name="" value="Kepala Bagian">
-                </div>
-            </div>
-            </div>
-
             <div class="row">
-            <div class="col-md-5 col-sm-6 col-xs-12">
-                <label>Pegawai</label>
+            <label for="">Jumlah hutang pada supplier yang dibayarkan dengan tepat waktu : </label><span>1</span>
             </div>
-
-            <div class="col-md-7 col-sm-6 col-xs-12">
-                <div class="form-group">
-                <input type="text" class="form-control form-control-sm" readonly="" name="" value="Brad">
-                </div>
+            <div class="row">
+            <label for="">Jumlah pelunasan piutang : </label><span>1</span>
+            </div>
+            <div class="row">
+            <label for="">Jumlah pemasukkan tunai : </label><span>1</span>
+            </div>
+            <div class="row">
+            <label for="">Saldo kas kecil dan kas besar : </label><span>10000</span>
+            </div>
+            <div class="row">
+            <label for="">Pekerjaan lain yang dilakukan : </label><span>Tidur Siang</span>
+            </div>
+            <div class="row">
+            <label for="">Tanggal : </label><span>24-12-2018</span>
+            </div>
+            <div class="row">
+            <label for="">Jabatan : </label><span>Sales Man</span>
             </div>
             </div>
-          </section>      
-        <div class="table-responsive">
-          <table class="table table-striped data-table table-hover" cellspacing="0">
-            <thead class="bg-primary">
-              <tr>
-                <th>No</th>
-                <th>Bobot</th>
-                <th>Key Performance Indicators</th>
-                <th>Target</th>
-                <th>Realisasi</th>
-                <th>Skor</th>
-                <th>Skor Akhir</th>
-              </tr>
-            </thead>
-            <tbody>
-               <tr>
-                   <td>1</td>
-                   <td>20</td>
-                   <td>JUMLAH CUSTOMER</td>
-                   <td>100</td>
-                   <td>90</td>
-                   <td>0.00</td>
-                   <td>0.00</td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">Total Bobot : 80</td>
-                <td colspan="5" align="center">Total Skor Akhir : 75</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          </fieldset>
+        </section>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Print</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
