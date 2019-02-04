@@ -15,6 +15,8 @@ Route::get('/', function () {
     return redirect('home');
 });
 
+Route::get('/recruitment', 'RecruitmentController@index')->name('recruitment.index');
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function(){
