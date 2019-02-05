@@ -3,8 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 /* End */
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden;
+}
+.tron {
+    margin-top:-1.5em;
 }
 .red-side {
     height: 768px;
@@ -98,6 +104,21 @@ transform: scale(1,1) translate(0px, 0px);
     margin-top: -15em;
     float: right;
 }
+#TopGan {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: 3px solid #2d3436;
+  outline: none;
+  background-color: transparent;
+  color: #2d3436;
+  padding:5px 15px 5px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 25px;
+}
 /* Section 1 */
 .tab-content {
     color:#2d3436;
@@ -180,12 +201,12 @@ span.round-tab i {
 
 .wizard li a.active span.round-tab {
     background: #fff;
-    border: 2px solid #5bc0de;
+    border: 2px solid #eb4d4b;
 
 }
 
 .wizard li a.active span.round-tab i {
-    color: #5bc0de;
+    color: #eb4d4b;
 }
 
 span.round-tab:hover {
@@ -248,9 +269,51 @@ span.round-tab:hover {
     background-color:#eb4d4b !important;
     color:white !important;
 }
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+.footer {
+    width:100%;
+    height:50px;
+    background-color:#d63031;
+    text-align:center;
+    color:white;
+    font-size:14px;
+}
+.footer-text {
+    vertical-align: -83%;
+}
 
 @media( max-width: 585px) {
 
+    body {
+        overflow-x:hidden;
+    }
+
+    .people-jumping {
+        display:none;
+    }
+    
+    .square-border {
+        display:none;
+    }
+
+    #TopGan {
+        margin-right:10px;
+    }
+
+    .red-side {
+        width:100%;
+        height:30px;
+    }
+    .hire-title {
+        margin-top:2em;
+    }
+
+    .content-about {
+        margin-top:-50px;
+    }
     .wizard {
         width: 90%;
         height: auto !important;
@@ -275,6 +338,18 @@ span.round-tab:hover {
         position: absolute;
         left: 35%;
     }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .red-side {
+        width:100em;
+        background-color:transparent;
+        height:100px;
+    }
+
+    .hire-title {
+        margin-top:-10em;
+    }
+
 }
 /* About US */
 .about-section {
