@@ -74,7 +74,21 @@
 	                        </div>
 
 	                        <fieldset>
-	                        	<div
+	                        	<div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped" id="table_penerimaan" cellspacing="0">
+                                        <thead class="bg-primary">
+                                            <tr>
+                                                <th>Barcode</th>
+                                                <th>Nama Barang</th>
+                                                <th>Qty Terima</th>
+                                                <th>Qty Order</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
 	                        </fieldset>
 
                         </section>
@@ -98,6 +112,9 @@
 @section('extra_script')
 <script type="text/javascript">
 
+    $(document).ready(function(){
+        $('#table_penerimaan').DataTable();
+    });
 
 </script>
 @endsection

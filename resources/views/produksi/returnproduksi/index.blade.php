@@ -11,7 +11,7 @@
 	    <p class="title-description">
 	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
 	    	 / <span>Aktifitas Produksi</span>
-	    	 / <span class="text-primary" style="font-weight: bold;">Return Produksi</span>
+	    	 / <span class="text-primary font-weight-bold">Return Produksi</span>
 	     </p>
 	</div>
 
@@ -27,7 +27,7 @@
                             <h3 class="title"> Return Produksi </h3>
                         </div>
                         <div class="header-block pull-right">
-                			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+                			<a class="btn btn-primary" href="{{route('return.create')}}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
                         </div>
                     </div>
                     <div class="card-block">
@@ -38,27 +38,18 @@
 	                                <thead class="bg-primary">
 	                                    <tr>
 	                                    	<th>No</th>
-	                                		<th>Kode Barang</th>
-	                                		<th>Nama Barang</th>
-	                                		<th>Tanggal Return</th>
-	                                		<th>Jumlah Return</th>
-											<th>Aksi</th>
+	                                    	<th>Tgl Return</th>
+	                                    	<th>Nota</th>
+	                                    	<th>Metode</th>
+	                                    	<th>Jenis Return</th>
+	                                    	<th>Type Sales</th>
+	                                    	<th>Status</th>
+	                                    	<th>Resi dari Cus</th>
+	                                    	<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
 	                                <tbody>
-	                                	<tr>
-	                                		<td>1</td>
-	                                		<td>BRG/001</td>
-	                                		<td>Permen Jahe</td>
-	                                		<td>07-09-2019</td>
-	                                		<td>200</td>
-	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='#'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
-	                                			</div>
-	                                		</td>
-	                                	</tr>
+
 	                                </tbody>
 	                            </table>
 	                        </div>
