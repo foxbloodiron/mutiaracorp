@@ -77,26 +77,6 @@
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Produsen</label>
-                            </div> 
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nilai</label>
-                            </div> 
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Total Bayar</label>
                             </div> 
 
@@ -105,12 +85,12 @@
                                 <input type="text" class="form-control form-control-sm" name="">
                               </div>
                             </div>
-
+                            <div class="container">
                             <div class="table-responsive">
 	                            <table class="table table-striped table-hover" cellspacing="0" id="table_order">
 	                                <thead class="bg-primary">
 	                                  <tr>
-	                                    <th>Kode Barang</th>
+	                                        <th>Kode Barang</th>
 	                                		<th>Satuan</th>
 	                                		<th>Nama Barang</th>
 	                                		<th>Aksi</th>
@@ -134,8 +114,10 @@
 	                                	</tr>
 	                                </tbody>
 	                            </table>
-	                        </div>
-
+	                        </div> 
+                            </div>
+                            <div class="container">
+                                <hr style="border:0.7px solid grey; margin-bottom:30px;">
                           <div class="table-responsive">
 	                            <table class="table table-striped table-hover" cellspacing="0" id="table_order_termin">
 	                                <thead class="bg-primary">
@@ -167,8 +149,8 @@
 	                                	</tr>
 	                                </tbody>
 	                            </table>
-	                        </div>
-
+	                        </div>                                
+                            </div>
                           </div>
                         
                         </section>
