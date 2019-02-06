@@ -96,7 +96,7 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		var table = $('#table_pembayaran').DataTable();
+		table = $('#table_pembayaran').DataTable();
 
 		$(document).on('click', '.btn-disable', function(){
 			var ini = $(this);
@@ -134,39 +134,86 @@
 			});
 		});
 
+		// Show Table 
 		$( ".btn-go" ).click(function() {
 			$( ".termin-table" ).show();
 		});
+		// End
+		
+		// Looping Table
+		td1 = '<input type="text" class="form-control form-control-sm" readonly="">'
+		td2 = '<input type="text" class="form-control form-control-sm" readonly="">'
+		td3 = '<input type="text" class="form-control form-control-sm" readonly="">'
+		td4 = '<input type="text" class="form-control form-control-sm" readonly="">'
+		td5 = '<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>'
+		tbody = $('tbody')
+		num_row = 5;
+		for(x = 0; x < num_row;x++) {
+		table.row.add([td1, td2, td3, td4, td5])
+		}
+		table.draw()
+		// End
 
+		// Tambah Table
 		$(document).on('click', '.btn-hapus-termin-gan', function(){
 		$(this).parents('tr').remove();
 		});
 
-		$('.btn-tambah-termin-gan').on('click',function(){
-		$('#table_pembayaran')
-		.append(
-			'<tr>'+
-			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
-			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
-			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
-			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
-			'<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>'+
-			'</tr>'
-			);
+		$(document).on('click', '.btn-tambah-termin-gan', function(){
+			var ini = $(this);
+			$.confirm({
+				animation: 'RotateY',
+				closeAnimation: 'scale',
+				animationBounce: 1.5,
+				icon: 'fa fa-exclamation-triangle',
+				title: 'Peringatan!',
+				content: 'Apa anda yakin mau menambah data?',
+				theme: 'awasya',
+			    buttons: {
+			        info: {
+						btnClass: 'btn-blue',
+			        	text:'Ya',
+			        	action : function(){
+							$('#table_pembayaran')
+							.append(
+								'<tr>'+
+								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+								'<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>'+
+								'</tr>'
+								);
+					        // ini.parents('.btn-group').html('<button class="btn btn-success btn-enable" type="button" title="Enable"><i class="fa fa-check-circle"></i></button>');
+				        }
+			        },
+			        cancel:{
+			        	text: 'Tidak',
+					    action: function () {
+    			            // tutup confirm
+    			        }
+    			    }
+			    }
+			});
 		});
 
-		$(document).on('click', '.btn-enable', function(){
-			$.toast({
-				heading: 'Information',
-				text: 'Data Berhasil di Aktifkan.',
-				bgColor: '#0984e3',
-				textColor: 'white',
-				loaderBg: '#fdcb6e',
-				icon: 'info'
-			})
-			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
-	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
-		})
+		// $('.btn-tambah-termin-gan').on('click',function(){
+
+		// End
+
+
+		// $(document).on('click', '.btn-enable', function(){
+		// 	$.toast({
+		// 		heading: 'Information',
+		// 		text: 'Data Berhasil di Aktifkan.',
+		// 		bgColor: '#0984e3',
+		// 		textColor: 'white',
+		// 		loaderBg: '#fdcb6e',
+		// 		icon: 'info'
+		// 	})
+		// 	$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
+	    //                             		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
+		// })
 
 		// function table_hapus(a){
 		// 	table.row($(a).parents('tr')).remove().draw();
