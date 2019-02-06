@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+@include('produksi.orderproduksi.modal')
 
 <article class="content">
 
@@ -26,9 +26,8 @@
                     	<div class="header-block">
                             <h3 class="title"> Order Produksi </h3>
                         </div>
-                        <div class="header-block pull-right">
-                        	
-                			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+                        <div class="header-block pull-right">	
+                			<a class="btn btn-primary" href="{{ route('order.create')  }}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
                         </div>
                     </div>
                     <div class="card-block">
@@ -39,25 +38,29 @@
 	                                <thead class="bg-primary">
 	                                    <tr>
 	                                    	<th>No</th>
-	                                		<th>Kode Barang</th>
-	                                		<th>Nama Barang</th>
-	                                		<th>Satuan</th>
-	                                		<th>Kelompok Barang</th>
-	                                		<th>Harga Beli</th>
+	                                		<th>Nota Order</th>
+	                                		<th>Produsen</th>
+	                                		<th>Detail Item</th>
+	                                		<th>Nilai Order</th>
+	                                		<th>Total Bayar</th>
+                                            <th>Status</th>
 	                                		<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
 	                                		<td>1</td>
-	                                		<td>BRG/001</td>
-	                                		<td>Permen Jahe</td>
-	                                		<td>Kapsul</td>
-	                                		<td>Angin</td>
-	                                		<td></td>
+	                                		<td>0123139 | 07/09/2019</td>
+	                                		<td>Brad</td>
+	                                		<td>
+											<button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button>
+                                            </td>
+	                                		<td>Rp. 1.000.000</td>
+	                                		<td>Rp. 500.000</td>
+                                            <td>-</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='#'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='{{ route('order.edit') }}'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
 	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 	                                			</div>
 	                                		</td>

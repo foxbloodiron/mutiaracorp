@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+@include('produksi.pembayaran.modal')
 
 <article class="content">
 
@@ -26,39 +26,54 @@
                     	<div class="header-block">
                             <h3 class="title"> Pembayaran </h3>
                         </div>
-                        <div class="header-block pull-right">
+                        <!-- <div class="header-block pull-right">
                         	
                 			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card-block">
                         <section>
-                        	
-                        	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_pembayaran">
+						<div class="row">
+						<div class="col-2 ml-3">
+						<label for="">Pilih Order</label>
+						</div>
+						<div class="col-4">
+						<select name="" id="" class="form-control form-control-sm select2"></select>
+						</div>
+						<div class="col-2">
+						<button class="btn btn-primary btn-go">Go</button>
+						</div>
+						</div>
+						<hr style="border:0.5px solid grey">
+                        	<div class="table-responsive termin-table">
+							<div>
+							<button type="button" class="btn btn-primary btn-tambah-termin-gan">Tambah Data</button>
+							</div>
+							<table class="table table-striped table-hover" cellspacing="0" id="table_pembayaran">
 	                                <thead class="bg-primary">
 	                                    <tr>
-	                                    	<th>No</th>
-	                                		<th>Nama</th>
-	                                		<th>Nama Barang</th>
-	                                		<th>Tanggal Pembayaran</th>
-	                                		<th>Jumlah</th>
-	                                		<th>Aksi</th>
+	                                    	<th>Termin</th>
+	                                		<th>Estimasi</th>
+	                                		<th>Nominal</th>
+											<th>Tanggal</th>
+											<th>Detail Order</th>
 	                                	</tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
-	                                		<td>1</td>
-	                                		<td>Giono</td>
-	                                		<td>Permen Jahe</td>
-	                                		<td>07-09-2019</td>
-	                                		<td>250.000.00</td>
 	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='#'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
-	                                			</div>
-	                                		</td>
+											<input type="text" class="form-control form-control-sm" readonly="">
+											</td>
+	                                		<td>
+											<input type="text" class="form-control form-control-sm" readonly="">
+											</td>
+	                                		<td>
+											<input type="text" class="form-control form-control-sm" readonly="">
+											</td>
+	                                		<td>
+											<input type="text" class="form-control form-control-sm" readonly="">
+											</td>
+											<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>
 	                                	</tr>
 	                                </tbody>
 	                            </table>
@@ -117,6 +132,27 @@
     			    }
 			    }
 			});
+		});
+
+		$( ".btn-go" ).click(function() {
+			$( ".termin-table" ).show();
+		});
+
+		$(document).on('click', '.btn-hapus-termin-gan', function(){
+		$(this).parents('tr').remove();
+		});
+
+		$('.btn-tambah-termin-gan').on('click',function(){
+		$('#table_pembayaran')
+		.append(
+			'<tr>'+
+			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+			'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+			'<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>'+
+			'</tr>'
+			);
 		});
 
 		$(document).on('click', '.btn-enable', function(){
