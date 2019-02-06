@@ -51,5 +51,5 @@
             }
         </style>
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/alamraya-style.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/css/custom-style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/custom-style.css')}}">
 </head>

@@ -7,18 +7,17 @@
     <title>Mutiara Berlian Recruitment</title>
     <!-- CSS -->
     <link rel="stylesheet" href="{{asset('assets/recruitment/css/recruitment.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 <body>
 <!-- Content -->
 <!-- Header -->
-<div class="row tron">
+<div class="row">
 <div class="continer-fluid animated fadeIn">
 <div class="red-side"></div>
 <h1 class="hire-title">WE'RE HIRING!</h1>
-<div class="row header-button">
+<div class="row">
     <button class="btn btn-secondary btn-about" onclick="window.location.href='#about'">About Us</button>
     <button class="btn btn-secondary btn-join" onclick="window.location.href='#section-1'">Apply Now</button>
 </div>
@@ -28,7 +27,6 @@
 </div>
 </div>
 </div>
-<button onclick="topFunction()" id="TopGan" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
 <div class="container" id="section-1">
  
 </div>
@@ -40,35 +38,35 @@
                 <li role="presentation" class="nav-item">
                     <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1" class="nav-link active">
                 <span class="round-tab">
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-building"></i>
                 </span>
             </a>
                 </li>
                 <li role="presentation" class="nav-item">
                     <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2" class="nav-link disabled">
                 <span class="round-tab">
-                    <i class="fa fa-history"></i>
+                    <i class="fa fa-info"></i>
                 </span>
             </a>
                 </li>
                 <li role="presentation" class="nav-item">
                     <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3" class="nav-link disabled">
                 <span class="round-tab">
-                    <i class="fa fa-file"></i>
+                    <i class="fa fa-money"></i>
                 </span>
             </a>
                 </li>
                 <li role="presentation" class="nav-item">
                     <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Step 4" class="nav-link disabled">
                 <span class="round-tab">
-                    <i class="fa fa-check"></i>
+                    <i class="fa fa-phone"></i>
                 </span>
             </a>
                 </li>
             </ul>
         </div>
 
-        <div class="tab-content" id="wizard-form">
+        <div class="tab-content">
             <div class="tab-pane active" role="tabpanel" id="step1">
                 <h1 class="text-md-center title-1">Data Diri</h1>
                 <div class="row">
@@ -76,69 +74,69 @@
                     <form action="">
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-lg-3 col-sm-12">
+                                <div class="col-2">
                                 <label for="">Nama<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Nomer Identitas<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Alamat<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Alamat Sekarang<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Tempat Lahir<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Tanggal Lahir<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Pendidikan<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Email<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">No Telp/WA<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Agama<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Status<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Nama Suami/Istri<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Anak<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Deskripsi diri anda<span style="color:red;">*</span></label>
                                 </div>
-                                <textarea type="text" class="form-control col-lg-9 col-sm-12" row="5"></textarea>
+                                <textarea type="text" class="form-control col-9" row="5"></textarea>
                             </div>
                         </div>
                     </form>
                     </div>
                 </div>
                 <ul class="list-inline text-md-center">
-                    <li><button type="button" onclick="window.location.href='#wizard-form'" class="btn btn-lg btn-common next-step next-button">Next</button></li>
+                    <li><button type="button" class="btn btn-lg btn-common next-step next-button">Next</button></li>
                 </ul>
             </div>
             <div class="tab-pane" role="tabpanel" id="step2">
@@ -148,22 +146,22 @@
                     <form action="">
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-lg-3 col-sm-12">
+                                <div class="col-2">
                                 <label for="">Nama Sekolah<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Tahun<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Jurusan<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Nilai/IPK<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
+                                <input type="text" class="form-control col-9">
                             </div>
                         </div>
                     </form>
@@ -171,75 +169,71 @@
                     <form action="">
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-lg-3 col-sm-12">
+                                <div class="col-2">
                                 <label for="">Nama Perusahaan</label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Tahun<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Job Desc<span style="color:red;">*</span></label>
                                 </div>
-                                <textarea type="text" class="form-control col-lg-9 col-sm-12"></textarea>
+                                <textarea type="text" class="form-control col-9"></textarea>
                                 <br>
-                                <div class="col-lg-3 col-sm-12">
+                                <div class="col-2">
                                 <label for="">Nama Perusaah<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Tahun<span style="color:red;">*</span></label>
                                 </div>
-                                <input type="text" class="form-control col-lg-9 col-sm-12">
-                                <div class="col-lg-3 col-sm-12">
+                                <input type="text" class="form-control col-9">
+                                <div class="col-2">
                                 <label for="">Job Desc<span style="color:red;">*</span></label>
                                 </div>
-                                <textarea type="text" class="form-control col-lg-9 col-sm-12"></textarea>
+                                <textarea type="text" class="form-control col-9"></textarea>
                             </div>
                         </div>
                     </form>
                     </div>
                 </div>
                 <ul class="list-inline text-md-center">
-                    <li><button type="button" onclick="window.location.href='#wizard-form'" class="btn btn-lg btn-common next-step next-button">Next Step</button></li>
+                    <li><button type="button" class="btn btn-lg btn-common next-step next-button">Next Step</button></li>
                 </ul>
             </div>
             <div class="tab-pane" role="tabpanel" id="step3">
-                <h1 class="text-md-center title-1">Upload Berkas</h1>
+                <h1 class="text-md-center">Step 3</h1>
                 <div class="row">
                 <div class="container">
                 <form action="">
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-lg-3 col-sm-12">
+                            <div class="col-2">
                             <label for="">File Foto<span style="color:red;">*</span></label>
                             </div>
-                            <div class="custom-file col-lg-9 col-sm-12 mb-3">
-                            <input type="file" class="custom-file-input">
-                            <label class="custom-file-label">Pilih Foto</label>
+                            <div class="input-group\">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Foto</span>
                             </div>
-                            <div class="col-lg-3 col-sm-12">
-                            <label for="">File KTP</label>
+                            <div class="custom-file">
+                                <input type="file" class="col-9">
+                                <label class="custom-file-label col-9">Pilih Foto</label>
                             </div>
-                            <div class="custom-file col-lg-9 col-sm-12 mb-3">
-                            <input type="file" class="custom-file-input">
-                            <label class="custom-file-label">Pilih File</label>
                             </div>
-                            <div class="col-lg-3 col-sm-12">
-                            <label for="">File Ijazah</label>
+                            <div class="col-2">
+                            <label for="">Tahun<span style="color:red;">*</span></label>
                             </div>
-                            <div class="custom-file col-lg-9 col-sm-12 mb-3">
-                            <input type="file" class="custom-file-input">
-                            <label class="custom-file-label">Pilih File</label>
+                            <input type="text" class="form-control col-9">
+                            <div class="col-2">
+                            <label for="">Jurusan<span style="color:red;">*</span></label>
                             </div>
-                            <div class="col-lg-3 col-sm-12">
-                            <label for="">File Lain-lain</label>
+                            <input type="text" class="form-control col-9">
+                            <div class="col-2">
+                            <label for="">Nilai/IPK<span style="color:red;">*</span></label>
                             </div>
-                            <div class="custom-file col-lg-9 col-sm-12 mb-3">
-                            <input type="file" class="custom-file-input">
-                            <label class="custom-file-label">Pilih File</label>
-                            </div>
+                            <input type="text" class="form-control col-9">
                         </div>
                     </div>
                 </form>
@@ -250,12 +244,20 @@
                 </ul>
             </div>
             <div class="tab-pane" role="tabpanel" id="step4">
-                <h1 class="text-md-center">Apakah anda yakin?</h1>
-                <div class="row"> 
+                <h1 class="text-md-center">Step 4</h1>
+                <div class="row">
+                    
                 </div>
                 <ul class="list-inline text-md-center">
-                    <li><button type="button" class="btn btn-lg btn-common next-step next-button">Simpan</button></li>
+                    <li><button type="button" class="btn btn-lg btn-common next-step next-button">Next Step</button></li>
                 </ul>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="step5">
+                <h1 class="text-md-center">Complete</h1>
+                <div class="row">
+
+
+                </div>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -270,11 +272,6 @@
     <div class="content-about">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum eos non sequi sit omnis. Expedita ad, labore esse fuga animi sit perferendis perspiciatis aut distinctio commodi, tempore, consectetur dolore voluptatibus!</p>
     </div>
-</div>
-<div class="footer">
-    <div class="container">
-       <span class="footer-text">Copyright © Alamraya Sebar Barokah</span> 
-    </div>    
 </div>
 <!-- JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -311,32 +308,6 @@ $(".prev-step").click(function (e) {
     $($activeli).prev().find('a[data-toggle="tab"]').click();
 
 });
-</script>
-<script>
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("TopGan").style.display = "block";
-  } else {
-    document.getElementById("TopGan").style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
-<script>
-    function initMap() {
-        var location = {lat: -25.344, lng: 131.036};
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 4, center: uluru});
-        var marker = new google.maps.Marker({position: location, map: map})
-        )
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIxvFFOLky9xL5Lckr03HUNEJhYSRhZ0g&callback=initMap">
 </script>
 </body>
 </html>

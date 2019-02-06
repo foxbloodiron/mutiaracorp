@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 /* END */
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .status-pelamar {
     font-style:italic;
@@ -47,62 +47,20 @@ body {
 .for-job {
     margin-left:13px;
 }
-.app {
-    background-color: rgb(247, 247, 247) !important;
-}
-.header {
-    background-color: white !important;
-}
-.sidebar-header .brand {
-    color: rgb(164, 176, 190);
-    text-align: left;
-    padding-left: 25px;
-    line-height: 70px;
-    font-size: 16px;
-}
-#search-container {
-    background-color: white;
-    margin-left: 30px;
-    border: 1px solid #d2dae2;
-    border-radius: 20px;
-    
-}
-.sidebar {
-    background-color: white;
+.icon-search {
+    color:white;
+    padding: 5px;
 }
 #btn-reset {
-    border-color: transparent !important;
-    margin-left: -39px;
-    color: red;
-    background-color: white !important;
+    background-color: transparent;
+    border: none;
+    color:white;
 }
-.sidebar .sidebar-menu{
-    font-size:10pt;
-    font-family: 'Roboto', sans-serif;
-}
-.sidebar .sidebar-menu li a {
-    color: rgb(164, 176, 190) !important;
-    text-decoration: none;
-    display: block;
-}
-.sidebar .sidebar-menu > li.active > a, .sidebar .sidebar-menu > li.active > a:hover {
-    background-color: rgb(52, 152, 219, 0.6) !important;
-    color: white !important;
-    border-left: 6px solid #2f89fc;
-}
-.sidebar .sidebar-menu > li.open > a {
-    background-color: white;
-}
-.sidebar .sidebar-menu > li.active > a, .sidebar .sidebar-menu > li:hover > a:hover {
-    background-color: rgb(52, 152, 219, 0.6) !important;
-    color: white !important;
-    border-left: 6px solid #2f89fc;
-}
-.sidebar .sidebar-menu > li > .sidebar-nav > li a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 50px;
-    padding-right: 15px;
-    color:white !important;
-    background-color: rgb(206, 214, 224) !important;
+.input-search {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color:white;
+    margin-bottom: 10px;
 }
