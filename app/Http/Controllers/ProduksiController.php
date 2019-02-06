@@ -14,6 +14,10 @@ class ProduksiController extends Controller
     {
     	return view('produksi/penerimaanbarang/index');
     }
+    public function tambah_penerimaan_barang()
+    {
+        return view('produksi/penerimaanbarang/tambah_penerimaanbarang');
+    }    
     public function pembayaran()
     {
     	return view('produksi/pembayaran/index');

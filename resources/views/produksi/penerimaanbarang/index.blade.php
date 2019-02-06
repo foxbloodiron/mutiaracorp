@@ -26,38 +26,28 @@
                     	<div class="header-block">
                             <h3 class="title"> Penerimaan Barang </h3>
                         </div>
-                        <div class="header-block pull-right">
-                        	
-                			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
-                        </div>
                     </div>
                     <div class="card-block">
                         <section>
                         	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_penerimaan">
+	                            <table class="table table-striped table-hover table-bordered" cellspacing="0" id="table_penerimaan">
 	                                <thead class="bg-primary">
 	                                    <tr>
-	                                    	<th>No</th>
-	                                		<th>Kode Barang</th>
-	                                		<th>Nama Barang</th>
-	                                		<th>Tanggal Diterima</th>
-	                                		<th>Kelompok Barang</th>
+	                                    	<th width="1%">No</th>
+	                                		<th>Nota Order</th>
 											<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
 	                                		<td>1</td>
-	                                		<td>BRG/001</td>
-	                                		<td>Permen Jahe</td>
-	                                		<td>07-09-2019</td>
-											<td>Tidak Diketahui</td>
 	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='#'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
-	                                			</div>
+	                                			NT/P/20190206/1<br>
+	                                			<small>06 Feb 2019</small>
+	                                		</td>
+	                                		<td align="center" valign="middle">
+	                                			<a href="{{route('tambah_penerimaan_barang')}}" class="btn btn-primary btn-sm"><i class="fa fa-sign-in"></i></a>
 	                                		</td>
 	                                	</tr>
 	                                </tbody>
