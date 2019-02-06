@@ -108,3 +108,7 @@ fieldset{
 aside.sidebar{
 	padding-bottom: unset;
 }
+.container-fluid{
+	padding-left: unset;
+	padding-right: unset;
+}

@@ -34,4 +34,8 @@ class ProduksiController extends Controller
     {
     	return view('produksi/returnproduksi/index');
     }
+    public function tambah_return_produksi()
+    {
+        return view('produksi/returnproduksi/tambah_returnproduksi');
+    }
 }
