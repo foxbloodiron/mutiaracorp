@@ -28,6 +28,7 @@
             </tbody>
           </table>
         </div>
+        <hr style="border:0.3px solid #000;">
       </div>
       <div class="section-nilai-bayar">
           <div class="row">
@@ -35,7 +36,7 @@
               <label for="">Nilai Bayar</label>
           </div>
           <div class="col-4">
-              <input type="text" class="form-control form-control-sm">
+              <input type="number" class="form-control form-control-sm">
           </div>
           </div>
       </div>

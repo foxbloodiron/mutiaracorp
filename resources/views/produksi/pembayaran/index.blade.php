@@ -168,7 +168,7 @@
 				icon: 'fa fa-exclamation-triangle',
 				title: 'Peringatan!',
 				content: 'Apa anda yakin mau menambah data?',
-				theme: 'awasya',
+				theme: 'disable',
 			    buttons: {
 			        info: {
 						btnClass: 'btn-blue',
