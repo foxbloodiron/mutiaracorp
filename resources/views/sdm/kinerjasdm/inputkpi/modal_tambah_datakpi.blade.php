@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="tambah_datakpi" class="modal fade" role="dialog">
+<div id="tambah_datakpi" class="modal fade animated fadeIn" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->

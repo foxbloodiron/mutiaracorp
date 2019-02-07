@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-<article class="content">
+<article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">
 	    <h1 class="title"> Data Pegawai </h1>

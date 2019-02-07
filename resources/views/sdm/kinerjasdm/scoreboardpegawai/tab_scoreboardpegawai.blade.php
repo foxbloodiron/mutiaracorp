@@ -1,4 +1,4 @@
-<div class="tab-pane fade in active show" id="list_scoreboardpegawai">
+<div class="tab-pane fade in active show animated fadeIn" id="list_scoreboardpegawai">
 	<div class="card">
 		<div class="card-header bordered p-2">
 			<div class="header-block">

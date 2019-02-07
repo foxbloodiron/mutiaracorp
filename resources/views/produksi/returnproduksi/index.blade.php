@@ -4,7 +4,7 @@
 
 
 
-<article class="content">
+<article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">
 	    <h1 class="title"> Return Produksi </h1>

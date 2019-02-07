@@ -2,7 +2,7 @@
 
 @section('content')
 
-<article class="content">
+<article class="content animated fadeInLeft">
 
   <div class="title-block text-primary">
       <h1 class="title"> Tambah Data Suplier </h1>
@@ -178,7 +178,7 @@
           '<td><input type="number" class="form-control" value="2500"></td>'+
           '<td><input type="number" class="form-control" value="20"></td>'+
           '<td><input type="text" class="form-control" value="Hampir Expired"></td>'+
-          '<td align="center"><button class="btn btn-danger btn-hapus" type="button"><i class="fa fa-trash-o"></i></button></td>'+
+          '<td align="center"><button class="btn btn-danger btn-hapus btn-sm" type="button"><i class="fa fa-trash-o"></i></button></td>'+
         '</tr>'
         );
     });

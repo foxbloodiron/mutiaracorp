@@ -19,7 +19,7 @@
 @include('sdm.kinerjasdm.inputkpi.modal_edit_datakpi')
 <!-- end -->
 
-<article class="content">
+<article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">
 	    <h1 class="title"> Aktivitas SDM </h1>

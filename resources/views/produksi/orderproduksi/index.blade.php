@@ -4,7 +4,7 @@
 
 @include('produksi.orderproduksi.modal')
 
-<article class="content">
+<article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">
 	    <h1 class="title"> Order Produksi </h1>

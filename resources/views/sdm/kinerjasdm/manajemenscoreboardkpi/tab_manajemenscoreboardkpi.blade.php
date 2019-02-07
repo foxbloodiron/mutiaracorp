@@ -1,4 +1,4 @@
-<div class="tab-pane fade in" id="list_manajemenscoreboardkpi">
+<div class="tab-pane fade in animated fadeIn" id="list_manajemenscoreboardkpi">
 	<div class="card">
 		<div class="card-header bordered p-2">
 			<div class="header-block">

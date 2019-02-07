@@ -2,7 +2,7 @@
 
 @section('content')
 
-<article class="content">
+<article class="content animated fadeInLeft">
 
   <div class="title-block text-primary">
       <h1 class="title"> Tambah Order Produksi </h1>
@@ -128,7 +128,7 @@
                                       <input type="text" class="form-control form-control-sm">
                                       </td>
                                       <td>
-                                      <button class="btn btn-success btn-tambah" type="button"><i class="fa fa-plus" aria-hidden="true"></i>
+                                      <button class="btn btn-success btn-tambah btn-sm" type="button"><i class="fa fa-plus" aria-hidden="true"></i>
 </button>
 	                                		</td>
 	                                	</tr>
@@ -162,7 +162,7 @@
                                       <input type="text" class="form-control form-control-sm">
                                       </td>
 	                                		<td>
-                                      <button class="btn btn-success btn-tambah-termin" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                      <button class="btn btn-success btn-tambah-termin btn-sm" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
 	                                		</td>
 	                                	</tr>
 	                                </tbody>
@@ -230,7 +230,7 @@
           '<td><input type="text" class="form-control form-control-sm""></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
-          '<td><button class="btn btn-danger btn-hapus" type="button"><i class="fa fa-trash-o"></i></button></td>'+
+          '<td><button class="btn btn-danger btn-hapus btn-sm" type="button"><i class="fa fa-trash-o"></i></button></td>'+
         '</tr>'
         );
     });
@@ -247,7 +247,7 @@
           '<td><input type="text" class="form-control form-control-sm"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
-          '<td><button class="btn btn-danger btn-hapus" type="button"><i class="fa fa-trash-o"></i></button></td>'+
+          '<td><button class="btn btn-danger btn-hapus btn-sm" type="button"><i class="fa fa-trash-o"></i></button></td>'+
         '</tr>'
         );
     });

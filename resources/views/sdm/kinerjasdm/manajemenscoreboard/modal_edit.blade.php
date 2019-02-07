@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div id="modal_edit" class="modal fade" role="dialog">
+<div id="modal_edit" class="modal fade animated fadeIn" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->

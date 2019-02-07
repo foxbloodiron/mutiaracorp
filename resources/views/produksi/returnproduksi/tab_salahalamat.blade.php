@@ -1,4 +1,4 @@
-<fieldset class="mt-3 d-none" id="salah_alamat">
+<fieldset class="mt-3 d-none animated fadeIn" id="salah_alamat">
     <div class="row">
         <div class="col-md-3 col-sm-6 col-12">
             <label>Nota Penjualan<span class="text-danger">*</span></label>
