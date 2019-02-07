@@ -32,24 +32,24 @@
       </div>
       <div class="section-nilai-bayar">
           <div class="row">
-          <div class="col-2">
-              <label for="">Nominal</label>
+          <div class="col-lg-3 col-sm-4">
+              <label for="" style="margin-right:10px;">Nominal</label>
           </div>
           <div class="col-4">
               <p>Rp. 1.000.000,00</p>
           </div>
           </div>
           <div class="row">
-          <div class="col-2">
-              <label for="">Nilai Bayar</label>
+          <div class="col-lg-3 col-sm-4">
+              <label for="" style="margin-right:10px;">Nilai Bayar</label>
           </div>
           <div class="col-4 mb-3">
               <input type="text" class="form-control form-control-sm input-rupiah" value="Rp. 1.000.000,00">
           </div>
           </div>
           <div class="row">
-          <div class="col-2">
-              <label for="">Kekurangan</label>
+          <div class="col-lg-3 col-sm-4">
+              <label for="" style="margin-right:10px;">Kekurangan</label>
           </div>
           <div class="col-4">
               <p>Rp. 0</p>

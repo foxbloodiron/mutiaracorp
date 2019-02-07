@@ -37,7 +37,7 @@
 						<div class="col-2 ml-3">
 						<label for="">Pilih Order</label>
 						</div>
-						<div class="col-4">
+						<div class="col-6">
 						<select name="" id="" class="form-control form-control-sm select2">
 							<option value="">-</option>
 							<option value="">001533903</option>
