@@ -1,6 +1,7 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+SC:700');
 /* END */
 body {
     font-family: 'Roboto', sans-serif;
@@ -146,4 +147,15 @@ body {
     font-size: 9pt;
     text-align: center;
     padding:5px 5px 5px 5px;
+}
+
+.text-brand {
+    font-family: 'Cormorant SC', serif;
+    font-size: 15pt;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.brand img{
+    margin-left:-10px;
 }

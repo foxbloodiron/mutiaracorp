@@ -113,7 +113,7 @@
                     <span class="l l4"></span>
                     <span class="l l5"></span>
                 </div>  --}}
-                <div class="text-brand">MUTIARA BERLIAN</div>
+                <div class="text-brand">Mutiara Berlian</div>
             </div>
         </div>
         <nav class="menu" id="sidebar">

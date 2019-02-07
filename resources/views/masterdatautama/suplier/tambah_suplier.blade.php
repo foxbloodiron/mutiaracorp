@@ -97,9 +97,10 @@
                             </div>
 
                             <div class="col-md-3">
-                              <button class="btn btn-primary btn-tambah"><i class="fa fa-plus"></i>&nbsp;Tambah Produk</button>
+                              <button class="btn btn-primary btn-tambahp"><i class="fa fa-plus"></i>&nbsp;Tambah Produk</button>
                             </div>
 
+                            <div class="container">
                             <div class="table-responsive mt-3">
                             <table class="table table-hover table-striped table-bordered" id="table_rencana">
                               <thead class="bg-primary">
@@ -116,7 +117,7 @@
                             </table>
 
                           </div>
-                        
+                          </div>
                         </section>
                     </div>
                     <div class="card-footer text-right">
@@ -169,7 +170,7 @@
       $(this).parents('tr').remove();
     });
 
-    $('.btn-tambah').on('click',function(){
+    $('.btn-tambahp').on('click',function(){
       $('#table_rencana tbody')
       .append(
         '<tr>'+
