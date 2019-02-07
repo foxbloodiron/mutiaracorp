@@ -105,7 +105,7 @@
     <div class="sidebar-container">
         <div class="sidebar-header">
             <div class="brand">
-                <!-- <img src="{{asset('assets/img/games.ico')}}" height="45px" width="45px" class="mr-2"> -->
+                <img src="{{asset('assets/img/logo.jpg')}}">
                 {{-- <div class="logo">
                     <span class="l l1"></span>
                     <span class="l l2"></span>
@@ -113,7 +113,7 @@
                     <span class="l l4"></span>
                     <span class="l l5"></span>
                 </div>  --}}
-                <div class="text-brand">Mutiara Berlian</div>
+                <!-- <div class="text-brand">Mutiara Berlian</div> -->
             </div>
         </div>
         <nav class="menu" id="sidebar">
