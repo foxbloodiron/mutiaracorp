@@ -235,7 +235,7 @@
                 <!-- AKTIVITAS MARKETING -->
                 <li class="{{Request::is('marketing/*') ? 'active open' : ''}}">
                     <a href="#">
-                        <i class="fa fa-usd"></i> Aktivitas Marketing
+                        <i class="fa fa-shopping-cart"></i> Aktivitas Marketing
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
@@ -257,7 +257,7 @@
                     </ul>
                 </li>
                 <!-- END AKTIVITAS MARKETING -->
-                                <li class="{{Request::is('marketing/*') ? 'active open' : ''}}">
+                <li class="{{Request::is('keuangan/*') ? 'active open' : ''}}">
                     <a href="#">
                         <i class="fa fa-usd"></i> Keuangan
                         <i class="fa arrow"></i>
@@ -275,30 +275,39 @@
                         <li class="{{Request::is('marketing/marketingarea/*') ? 'active' : ''}}">
                             <a href="{{ route('marketingarea.index') }}">Laporan Keuangan</a>
                         </li>
-                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
-                            <a href="{{ route('mngagen.index') }}">Analisa Progress Terhadap Perencanaan</a>
-                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                Analisa
+                                <i class="fa arrow"></i>
+                            </a>
+                            <ul class="sidebar-nav">
+                                <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                                    <a href="{{ route('mngagen.index') }}">Analisa Progress Terhadap Perencanaan</a>
+                                </li>
 
-                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
-                            <a href="{{ route('mngagen.index') }}">Analisa Net Profit Terhadap OCF</a>
-                        </li>
+                                <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                                    <a href="{{ route('mngagen.index') }}">Analisa Net Profit Terhadap OCF</a>
+                                </li>
 
-                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
-                            <a href="{{ route('mngagen.index') }}">Analisa Pertumbuhan Aset Terhadap ETA</a>
-                        </li>
+                                <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                                    <a href="{{ route('mngagen.index') }}">Analisa Pertumbuhan Aset Terhadap ETA</a>
+                                </li>
 
-                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
-                            <a href="{{ route('mngagen.index') }}">Analisa Cashflow</a>
-                        </li>
-                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
-                            <a href="{{ route('mngagen.index') }}">Analisa Common Size</a>
-                        </li>
+                                <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                                    <a href="{{ route('mngagen.index') }}">Analisa Cashflow</a>
+                                </li>
+                                <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                                    <a href="{{ route('mngagen.index') }}">Analisa Common Size</a>
+                                </li>
 
-                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
-                            <a href="{{ route('mngagen.index') }}">Analisa Ratio Liquiditas</a>
-                        </li>
-                        <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
-                            <a href="{{ route('mngagen.index') }}">Analisa Return on Equity</a>
+                                <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                                    <a href="{{ route('mngagen.index') }}">Analisa Ratio Liquiditas</a>
+                                </li>
+                                <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
+                                    <a href="{{ route('mngagen.index') }}">Analisa Return on Equity</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>

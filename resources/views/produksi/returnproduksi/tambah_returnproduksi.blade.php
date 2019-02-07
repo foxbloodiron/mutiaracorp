@@ -41,7 +41,7 @@
 
                         		<div class="col-md-3 col-sm-6 col-12">
                         			<div class="form-group">
-                        				<select class="form-control form-control-sm">
+                        				<select class="form-control form-control-sm" id="header-metodereturn">
                         					<option value="">--Pilih Metode Return--</option>
                         					<option value="1">Potong Nota</option>
                         					<option value="2">Tukar Barang</option>
@@ -53,127 +53,16 @@
                         		</div>
                         	</div>
 
-                        	<fieldset class="mt-3">
-                        		<div class="row">
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>Nota Penjualan</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					<select class="form-control form-control-sm select2">
-                        						<option value="">--Pilih Nota--</option>
-                        					</select>
-                        				</div>
-                        			</div>
-
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>Jenis Return</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					<select class="form-control form-control-sm">
-                        						<option value="">Barang Rusak</option>
-                        						<option value="">Kelebihan Barang</option>
-                        					</select>
-                        				</div>
-                        			</div>
-
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>Tanggal Return</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					
-                        					<input type="text" class="form-control form-control-sm datepicker" value="{{date('d-m-Y')}}" name="">
-                        				</div>
-                        			</div>
-
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>Metode Pembayaran</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					
-                        					<input type="text" class="form-control form-control-sm" readonly="" name="">
-                        				</div>
-                        			</div>
-
-                        		</div>
-
-                    			<hr>
-
-                    			<div class="row">
-                    				
-                    				<div class="col-md-3 col-sm-6 col-12">
-                    					<label>Detail Pelanggan</label>
-                    				</div>
-
-                    				<div class="col-md-9 col-sm-6 col-12">
-                    					<div class="form-group">
-                    						<input type="text" readonly="" class="form-control form-control-sm" name="">
-                    					</div>
-                    				</div>
+                            @include('produksi.returnproduksi.tab_potongnota')
+                            @include('produksi.returnproduksi.tab_tukarbarang')
+                            @include('produksi.returnproduksi.tab_salahbarang')
+                            @include('produksi.returnproduksi.tab_salahalamat')
+                        	@include('produksi.returnproduksi.tab_kurangbarang')
 
 
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>Total Return</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					
-                        					<input type="text" class="form-control form-control-sm" readonly="" name="">
-                        				</div>
-                        			</div>
 
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>S Gross</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					
-                        					<input type="text" class="form-control form-control-sm" readonly="" name="">
-                        				</div>
-                        			</div>
 
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>Total Diskon</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					
-                        					<input type="text" class="form-control form-control-sm" readonly="" name="">
-                        				</div>
-                        			</div>
 
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<label>Total Penjualan Nett</label>
-                        			</div>
-                        			<div class="col-md-3 col-sm-6 col-12">
-                        				<div class="form-group">
-                        					
-                        					<input type="text" class="form-control form-control-sm" readonly="" name="">
-                        				</div>
-                        			</div>
-                    			</div>
-                    			<hr>
-                    			<div class="table-responsive">
-                    				<table class="table table-bordered table-hover table-striped" cellspacing="0" id="tabel_return">
-                    					<thead class="bg-primary">
-                    						<tr>
-                    							<th>Nama</th>
-                    							<th>Jumlah</th>
-                    							<th>Return</th>
-                    							<th>Satuan</th>
-                    							<th>Harga</th>
-                    							<th>Disc Percent</th>
-                    							<th>Disc Value</th>
-                    							<th>Jumlah Return</th>
-                    							<th>Total</th>
-                    						</tr>
-                    					</thead>	
-                    				</table>
-                    			</div>
-                        	</fieldset>
 
                         </section>
                     </div>
@@ -196,7 +85,64 @@
 @section('extra_script')
 <script type="text/javascript">
 	$(document).ready(function(){
-		var eueue = $('#tabel_return').DataTable();
+        var eueue, crmpie, table3, table4, table5, table_salahkirim_1, table_salahkirim_2;
+
+        eueue = $('#tabel_return_1').DataTable();
+        crmpie = $('#tabel_return_2').DataTable();
+        table3 = $('#tabel_return_3').DataTable();
+        table4 = $('#tabel_return_4').DataTable();
+		table5 = $('#tabel_return_5').DataTable();
+        table_salahkirim_1 = $('#table_salahkirim_1').DataTable();
+        table_salahkirim_2 = $('#table_salahkirim_2').DataTable();
+
+        $('#header-metodereturn').change(function(){
+            var ini, potong_nota, tukar_barang, salah_barang, salah_alamat, kurang_barang;
+            ini             = $(this).val();
+            potong_nota     = $('#potong_nota');
+            tukar_barang     = $('#tukar_barang');
+            salah_barang     = $('#salah_barang');
+            salah_alamat     = $('#salah_alamat');
+            kurang_barang     = $('#kurang_barang');
+
+            if (ini === '1') {
+                potong_nota.removeClass('d-none');
+                tukar_barang.addClass('d-none');
+                salah_barang.addClass('d-none');
+                salah_alamat.addClass('d-none');
+                kurang_barang.addClass('d-none');
+            } else if(ini === '2'){
+                potong_nota.addClass('d-none');
+                tukar_barang.removeClass('d-none');
+                salah_barang.addClass('d-none');
+                salah_alamat.addClass('d-none');
+                kurang_barang.addClass('d-none');
+            } else if(ini === '3'){
+                potong_nota.addClass('d-none');
+                tukar_barang.addClass('d-none');
+                salah_barang.removeClass('d-none');
+                salah_alamat.addClass('d-none');
+                kurang_barang.addClass('d-none');
+            } else if(ini === '4'){
+                potong_nota.addClass('d-none');
+                tukar_barang.addClass('d-none');
+                salah_barang.addClass('d-none');
+                salah_alamat.removeClass('d-none');
+                kurang_barang.addClass('d-none');
+            } else if(ini === '5'){
+                potong_nota.addClass('d-none');
+                tukar_barang.addClass('d-none');
+                salah_barang.addClass('d-none');
+                salah_alamat.addClass('d-none');
+                kurang_barang.removeClass('d-none');
+            } else {
+
+                potong_nota.addClass('d-none');
+                tukar_barang.addClass('d-none');
+                salah_barang.addClass('d-none');
+                salah_alamat.addClass('d-none');
+                kurang_barang.addClass('d-none');
+            }
+        });
 	});
 </script>
 @endsection
