@@ -213,6 +213,7 @@
     });
 
     $('.btn-tambah').on('click',function(){
+      
       $('#table_order')
       .append(
         '<tr>'+
@@ -231,10 +232,16 @@
     });
 
     $('.btn-tambah-termin').on('click',function(){
+      var tbody = $(this).parents('tbody');
+      var last_row = tbody.find('tr:last-child');
+      var input = last_row.find('td:eq(0) input');
+      var termin = input.val();
+      termin = parseInt( termin );
+      var next_termin = termin + 1;
       $('#table_order_termin')
       .append(
         '<tr>'+
-          '<td><input type="text" class="form-control form-control-sm""></td>'+
+          '<td><input type="text" class="form-control form-control-sm" value="' + next_termin + '"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
