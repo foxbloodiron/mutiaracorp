@@ -64,6 +64,27 @@ body {
     color:white;
     margin-bottom: 10px;
 }
+.title {
+    font-size: 14pt;
+}
+.title-description { 
+    font-size: 10pt;
+}
+.section {
+    font-size: 10pt;
+}
+.btn-primary {
+    font-size: 10pt;
+}
+.btn-secondary {
+    font-size: 10pt;
+}
+.form-control {
+    font-size: 10pt;
+}
+.sidebar .sidebar-menu {
+    font-size: 9pt;
+}
 .termin-table {
     margin-top:10px;
     display:none;
