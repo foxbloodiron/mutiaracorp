@@ -101,3 +101,49 @@ body {
     margin-left:18px;
     margin-top:-20px;
     margin-bottom:10px;
+}
+
+.input-rupiah {
+    font-weight: bold;
+    text-align: right;
+}
+
+.btn-tambah {
+    border-radius: 50%;
+    color:white !important;
+}
+
+.btn-tambah-termin {
+    border-radius: 50%;
+    color:white !important;
+}
+
+.btn-hapus {
+    border-radius:50%;
+}
+
+.status-termin-lunas {
+    background-color:#1dd1a1;
+    border-radius: 20px;
+}
+
+.status-termin-belum {
+    background-color:#ff6b6b;
+    border-radius: 20px;
+}
+
+
+.status-termin-lunas p{
+    color:white;
+    font-size: 9pt;
+    text-align: center;
+    padding:5px 5px 5px 5px;
+}
+
+
+.status-termin-belum p{
+    color:white;
+    font-size: 9pt;
+    text-align: center;
+    padding:5px 5px 5px 5px;
+}

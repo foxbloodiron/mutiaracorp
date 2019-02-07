@@ -33,10 +33,26 @@
       <div class="section-nilai-bayar">
           <div class="row">
           <div class="col-2">
-              <label for="">Nilai Bayar</label>
+              <label for="">Nominal</label>
           </div>
           <div class="col-4">
-              <input type="number" class="form-control form-control-sm">
+              <p>Rp. 1.000.000,00</p>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-2">
+              <label for="">Nilai Bayar</label>
+          </div>
+          <div class="col-4 mb-3">
+              <input type="text" class="form-control form-control-sm input-rupiah" value="Rp. 1.000.000,00">
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-2">
+              <label for="">Kekurangan</label>
+          </div>
+          <div class="col-4">
+              <p>Rp. 0</p>
           </div>
           </div>
       </div>

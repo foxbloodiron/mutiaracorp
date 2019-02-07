@@ -38,9 +38,13 @@
 						<label for="">Pilih Order</label>
 						</div>
 						<div class="col-4">
-						<select name="" id="" class="form-control form-control-sm select2"></select>
+						<select name="" id="" class="form-control form-control-sm select2">
+							<option value="">-</option>
+							<option value="">001533903</option>
+							<option value="">001433953</option>
+						</select>
 						</div>
-						<div class="col-2">
+						<div class="">
 						<button class="btn btn-primary btn-go">Go</button>
 						</div>
 						</div>
@@ -56,22 +60,30 @@
 	                                		<th>Estimasi</th>
 	                                		<th>Nominal</th>
 											<th>Tanggal</th>
+											<th>Kekurangan</th>
+											<th>Status</th>
 											<th>Detail Order</th>
 	                                	</tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
 	                                		<td>
-											<input type="text" class="form-control form-control-sm" readonly="">
+											<input type="text" class="form-control form-control-sm" readonly="" value="1">
 											</td>
 	                                		<td>
-											<input type="text" class="form-control form-control-sm" readonly="">
+											<input type="text" class="form-control form-control-sm" readonly="" value="19-02-2019">
 											</td>
 	                                		<td>
-											<input type="text" class="form-control form-control-sm" readonly="">
+											<input type="text" class="form-control form-control-sm input-rupiah" readonly="" value="Rp. 1.000.000,00">
 											</td>
 	                                		<td>
-											<input type="text" class="form-control form-control-sm" readonly="">
+											<input type="text" class="form-control form-control-sm" readonly="" value="11-02-2019">
+											</td>
+											<td>
+											<input type="text" class="form-control form-control-sm" readonly="" value="0">
+											</td>
+											<td>
+											<div class="status-termin-lunas"><p>Lunas</p></div>
 											</td>
 											<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>
 	                                	</tr>
@@ -145,11 +157,13 @@
 		td2 = '<input type="text" class="form-control form-control-sm" readonly="">'
 		td3 = '<input type="text" class="form-control form-control-sm" readonly="">'
 		td4 = '<input type="text" class="form-control form-control-sm" readonly="">'
-		td5 = '<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>'
+		td5 = '<input type="text" class="form-control form-control-sm" readonly="">'
+		td6 = '<div class="status-termin-belum"><p>Belum</p></div>'
+		td7 = '<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>'
 		tbody = $('tbody')
 		num_row = 5;
 		for(x = 0; x < num_row;x++) {
-		table.row.add([td1, td2, td3, td4, td5])
+		table.row.add([td1, td2, td3, td4, td5, td6, td7])
 		}
 		table.draw()
 		// End
