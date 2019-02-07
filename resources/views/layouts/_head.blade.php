@@ -4,7 +4,7 @@
         <title>Mutiara Berlian Bispro</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="{{asset('assets/img/games.ico')}}">
+        <link rel="shortcut icon" href="{{asset('assets/img/cv-mutiaraberlian-icon.png')}}">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="{{asset('assets/css/vendor.css')}}">
         {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/jquery-ui/jquery-ui.css')}}"> --}}
