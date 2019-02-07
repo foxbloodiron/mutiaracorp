@@ -112,3 +112,6 @@ aside.sidebar{
 	padding-left: unset;
 	padding-right: unset;
 }
+.sidebar .sidebar-container{
+	bottom: 0;
+}
