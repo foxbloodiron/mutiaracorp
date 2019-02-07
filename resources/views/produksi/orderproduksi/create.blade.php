@@ -23,9 +23,6 @@
         <div class="card">
 
                     <div class="card-header bordered p-2">
-                      <div class="header-block">
-                        <h3 class="title"> Tambah Order Produksi </h3>
-                      </div>
                       <div class="header-block pull-right">
                         <a href="{{route('order.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i></a>
                       </div>
@@ -42,7 +39,11 @@
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <select name="" id="" class="form-control form-control-sm select2">
+                                  <option value="">-</option>
+                                  <option value="">001533903</option>
+                                  <option value="">001433953</option>
+                                </select>
                               </div>
                             </div>
 
@@ -51,9 +52,12 @@
                             </div> 
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm datepicker" name="">
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
                               </div>
+                              <input type="text" class="form-control form-control-sm datepicker" value="07-02-2019">
+                            </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -62,7 +66,10 @@
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <select name="" id="" class="form-control form-control-sm select2">
+                                  <option value="">CV Apaya</option>
+                                  <option value="">CV Itulo</option>
+                                </select>
                               </div>
                             </div>
 
@@ -72,17 +79,7 @@
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Total Bayar</label>
-                            </div> 
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="text" class="form-control form-control-sm input-rupiah" name="" value="Rp. 1.000.000,00">
                               </div>
                             </div>
                             <div class="container">
@@ -90,25 +87,35 @@
 	                            <table class="table table-striped table-hover" cellspacing="0" id="table_order">
 	                                <thead class="bg-primary">
 	                                  <tr>
-	                                        <th>Kode Barang</th>
-	                                		<th>Satuan</th>
-	                                		<th>Nama Barang</th>
+	                                    <th>Kode Barang/Nama Barang</th>
+	                                		<th width="5%">Satuan</th>
+                                      <th width="10%">Jumlah</th>
+                                      <th>Harga</th>
+                                      <th>Sub Total</th>
 	                                		<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
 	                                		<td>
-                                      <input type="text" class="form-control form-control-sm">
+                                      <select name="" id="" class="form-control form-control-sm select2">
+                                        <option value="">00145123/Obat</option>
+                                      </select>
                                       </td>
 	                                		<td>
-                                      <input type="text" class="form-control form-control-sm">
+                                      <input type="text" class="form-control form-control-sm" value="pcs">
                                       </td>
 	                                		<td>
-                                      <input type="text" class="form-control form-control-sm">
+                                      <input type="number" class="form-control form-control-sm" value="3">
                                       </td>
                                       <td>
-                                      <button class="btn btn-success btn-tambah" type="button"><i class="fa fa-plus" aria-hidden="true"></i>
+                                      <input type="text" class="form-control form-control-sm input-rupiah" value="Rp. 1.000.000,00">
+                                      </td>
+                                      <td>
+                                      <input type="text" class="form-control form-control-sm input-rupiah" value="Rp. 1.000.000,00">
+                                      </td>
+                                      <td>
+                                      <button class="btn btn-success btn-tambah btn-sm" type="button"><i class="fa fa-plus" aria-hidden="true"></i>
 </button>
 	                                		</td>
 	                                	</tr>
@@ -132,19 +139,19 @@
 	                                <tbody>
 	                                	<tr>
 	                                		<td>
-                                      <input type="text" class="form-control form-control-sm">
+                                      <input type="text" class="form-control form-control-sm" value="1">
                                       </td>
 	                                		<td>
-                                      <input type="text" class="form-control form-control-sm">
+                                      <input type="text" class="form-control form-control-sm datepicker" value="19-02-2019">
                                       </td>
 	                                		<td>
-                                      <input type="text" class="form-control form-control-sm">
+                                      <input type="text" class="form-control form-control-sm input-rupiah" value="Rp. 1.000.000,00">
                                       </td>
 	                                		<td>
-                                      <input type="text" class="form-control form-control-sm">
+                                      <input type="text" class="form-control form-control-sm datepicker" value="11-02-2019">
                                       </td>
 	                                		<td>
-                                      <button class="btn btn-success btn-tambah-termin" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                      <button class="btn btn-success btn-tambah-termin btn-sm" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
 	                                		</td>
 	                                	</tr>
 	                                </tbody>
@@ -209,10 +216,12 @@
       $('#table_order')
       .append(
         '<tr>'+
-          '<td><input type="text" class="form-control form-control-sm""></td>'+
+          '<td><select name="" id="" class="form-control form-control-sm select2"><option value="">00145123/Obat</option></select></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
-          '<td><input type="text" class="form-control form-control-sm"></td>'+
-          '<td><button class="btn btn-danger btn-hapus" type="button"><i class="fa fa-trash-o"></i></button></td>'+
+          '<td><input type="number" class="form-control form-control-sm"></td>'+
+          '<td><input type="text" class="form-control form-control-sm input-rupiah"></td>'+
+          '<td><input type="text" class="form-control form-control-sm input-rupiah"></td>'+
+          '<td><button class="btn btn-danger btn-sm btn-hapus" type="button"><i class="fa fa-trash-o"></i></button></td>'+
         '</tr>'
         );
     });
@@ -229,7 +238,7 @@
           '<td><input type="text" class="form-control form-control-sm"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
           '<td><input type="text" class="form-control form-control-sm"></td>'+
-          '<td><button class="btn btn-danger btn-hapus" type="button"><i class="fa fa-trash-o"></i></button></td>'+
+          '<td><button class="btn btn-danger btn-hapus btn-sm" type="button"><i class="fa fa-trash-o"></i></button></td>'+
         '</tr>'
         );
     });
