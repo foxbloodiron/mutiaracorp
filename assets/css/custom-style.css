@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Cormorant+SC:700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700');
 /* END */
 body {
     font-family: 'Roboto', sans-serif;
@@ -162,15 +163,40 @@ body {
 
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
-    background-color: #2e86de !important;
+    background-color: #40739e !important;
 }
 
 .sidebar .sidebar-menu > li.active > a, .sidebar .sidebar-menu > li.active > a:hover {
-    background-color: #2e86de !important;
+    background-color: #40739e !important;
     color: #ffffff !important;
 }
 
 .sidebar .sidebar-menu > li > .sidebar-nav > li.active a {
     color: #ffffff;
-    background-color: #3498db !important;
+    background-color: #487eb0 !important;
 }
+
+.text-primary {
+    font-family: 'Quicksand', sans-serif;
+    color:#40739e;
+}
+
+.card .card-header .title {
+    font-family: 'Quicksand', sans-serif;
+    color:#353b48;
+}
+
+.section-barang {
+    display:none;
+}
+
+.btn-go {
+    display: block;
+}
+
+/* .btn.btn-primary {
+    background-color: #ff4757;
+    border-color: #ff4757;
+    box-shadow: 0px 8px 17px rgba(255, 71, 87, 0.7);
+    color:white;
+} */

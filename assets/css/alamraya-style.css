@@ -113,6 +113,9 @@ aside.sidebar{
 	padding-left: unset;
 	padding-right: unset;
 }
+.sidebar {
+	background-color: #3c415e;
+}
 .sidebar .sidebar-container{
 	bottom: 0;
 }
@@ -120,7 +123,7 @@ aside.sidebar{
     height: 100px;
     display: flex;
     align-items: center;
-    background: #262d34;
+    background: #3c415e;
     box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
 }
 #sidebar #search-container-bro{

@@ -196,16 +196,16 @@
                     </a>
                     <ul class="sidebar-nav">
                         <li class="{{Request::is('inventory/barangmasuk/*') ? 'aktif open' : ''}}">
-                            <a href="{{route('barangmasuk')}}"> Pengelolaan Barang Masuk</a>
+                            <a href="{{route('barangmasuk.index')}}"> Pengelolaan Barang Masuk</a>
                         </li>
                         <li class="{{Request::is('inventory/barangkeluar/*') ? 'aktif open' : ''}}">
-                            <a href="{{route('barangkeluar')}}"> Pengelolaan Barang Keluar</a>
+                            <a href="{{route('barangkeluar.index')}}"> Pengelolaan Barang Keluar</a>
                         </li>
                         <li class="{{Request::is('inventory/distribusibarang/*') ? 'aktif open' : ''}}">
-                            <a href="{{route('distribusibarang')}}"> Pengelolaan Distribusi Barang</a>
+                            <a href="{{route('distribusibarang.index')}}"> Pengelolaan Distribusi Barang</a>
                         </li>
                         <li class="{{Request::is('inventory/manajemenstok/*') ? 'aktif open' : ''}}">
-                            <a href="{{route('manajemenstok')}}"> Pengelolaan Manajemen Stok</a>
+                            <a href="{{route('manajemenstok.index')}}"> Pengelolaan Manajemen Stok</a>
                         </li>
                     </ul>
                 </li>

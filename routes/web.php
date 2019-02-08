@@ -94,14 +94,22 @@ Route::group(['middleware' => 'auth'], function(){
 
 	// !===================================================== INVENTORY =====================================================!
 	// Barang Masuk
-	Route::get('/inventory/barangmasuk/index', 'InventoryController@barangmasuk')->name('barangmasuk');
+	Route::get('/inventory/barangmasuk/index', 'InventoryController@barangmasuk_index')->name('barangmasuk.index');
+	Route::get('/inventory/barangmasuk/create', 'InventoryController@barangmasuk_create')->name('barangmasuk.create');
+	Route::get('/inventory/barangmasuk/edit', 'InventoryController@barangmasuk_edit')->name('barangmasuk.edit');
 	// Barang Keluar
-	Route::get('/inventory/barangkeluar/index', 'InventoryController@barangkeluar')->name('barangkeluar');
+	Route::get('/inventory/barangkeluar/index', 'InventoryController@barangkeluar_index')->name('barangkeluar.index');
+	Route::get('/inventory/barangkeluar/create', 'InventoryController@barangkeluar_create')->name('barangkeluar.create');
+	Route::get('/inventory/barangkeluar/edit', 'InventoryController@barangkeluar_edit')->name('barangkeluar.edit');
 
 	// Distribusi Barang
-	Route::get('/inventory/distribusibarang/index', 'InventoryController@distribusibarang')->name('distribusibarang');
+	Route::get('/inventory/distribusibarang/index', 'InventoryController@distribusibarang_index')->name('distribusibarang.index');
+	Route::get('/inventory/distribusibarang/create', 'InventoryController@distribusibarang_create')->name('distribusibarang.create');
+	Route::get('/inventory/distribusibarang/edit', 'InventoryController@distribusibarang_edit')->name('distribusibarang.edit');
 	// Manajemen Stok
-	Route::get('/inventory/manajemenstok/index', 'InventoryController@manajemenstok')->name('manajemenstok');
+	Route::get('/inventory/manajemenstok/index', 'InventoryController@manajemenstok_index')->name('manajemenstok.index');
+	Route::get('/inventory/manajemenstok/create', 'InventoryController@manajemenstok_create')->name('manajemenstok.create');
+	Route::get('/inventory/manajemenstok/edit', 'InventoryController@manajemenstok_edit')->name('manajemenstok.edit');
 	// !===================================================== END INVENTORY =====================================================!
 
 	// !===================================================== SDM =====================================================!
