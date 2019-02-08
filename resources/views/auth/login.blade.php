@@ -6,7 +6,7 @@
 <body>
     <div class="auth">
             <div class="auth-container">
-                <div class="card login-section">
+                <div class="card login-section animated fadeIn">
                     <header class="auth-header">
                         <h1 class="auth-title">
                           <div class="logo">
