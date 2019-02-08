@@ -244,10 +244,10 @@ body {
 .login-section {
     font-family: 'Quicksand', sans-serif;
     border-radius: 12px;
-    background-color: #40739e;
+    background-color: #163458 !important;
     border-bottom: none;
     color:white;
-    box-shadow: 4px 10px 20px rgb(52, 73, 94, 0.5);
+    box-shadow: 4px 10px 20px rgb(255, 107, 107, 0.1);
 }
 
 .login-logo {
@@ -255,7 +255,7 @@ body {
 }
 
 .auth {
-    background-color: #233142;
+    background-color: #071C2E !important;
 }
 
 .auth-container .auth-header {
@@ -277,11 +277,15 @@ body {
     border:unset;
     border-bottom: 1px solid white;
     border-radius: 0px;
+
 }
 
 
 .login-input:focus {
     background-color: transparent;
+    outline:none;
+    box-shadow:unset;
+    border-bottom-color: white;
 }
 
 .check-remember {
