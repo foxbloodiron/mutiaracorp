@@ -43,7 +43,10 @@
 	                                		<th>Nama Barang</th>
 	                                		<th>Satuan</th>
 	                                		<th>Harga Barang</th>
-	                                		<th>Jumlah Stok</th>
+	                                		<th>Min Stok</th>
+											<th>Max Stok</th>
+											<th>Jumlah Stok</th>
+											<th>Status</th>
 	                                		<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
@@ -54,7 +57,14 @@
 	                                		<td>Obat 1</td>
 	                                		<td>pcs</td>
 	                                		<td style="font-weight:bold;">Rp. 10.000.00</td>
-	                                		<td>100</td>
+											<td>10</td>
+											<td>200</td>
+	                                		<td>150</td>
+											<td>
+											<div class="status-stok-normal">
+											<p>Normal</p>
+											</div>
+											</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>

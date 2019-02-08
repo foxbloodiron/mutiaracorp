@@ -45,6 +45,7 @@
 	                                		<th>Produsen</th>
 	                                		<th>Konsumen</th>
 											<th>Jenis Konsumen</th>
+											<th>Status</th>
 	                                		<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
@@ -57,6 +58,11 @@
 	                                		<td>CV Apalah</td>
 	                                		<td>Toko HerbalKuy</td>
 											<td>Retailer</td>
+											<td>
+											<div class="status-distribusi">
+											<p>prepare</p>
+											</div>
+											</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>

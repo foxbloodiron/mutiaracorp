@@ -94,6 +94,26 @@
                                 <input type="number" class="form-control form-contol-sm">
                                 </div>
                               </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Min Stok</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                <input type="number" class="form-control form-contol-sm">
+                                </div>
+                              </div>
+
+                              <div class="col-md-2 col-sm-6 col-xs-12">
+                                <label>Max Stok</label>
+                              </div>
+
+                              <div class="col-md-2 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                <input type="number" class="form-control form-contol-sm">
+                                </div>
+                              </div>
                             
                             </div>
                             </div>

@@ -194,6 +194,22 @@ body {
     display: block;
 }
 
+.status-distribusi {
+    background-color:#74b9ff;
+    border-radius:25px; 
+}
+
+.status-distribusi p{
+    color:white;
+    text-align: center;
+}
+
+.status-stok-normal {
+    background-color:#1dd1a1;
+    border-radius:25px;
+    color:white;
+    text-align: center;
+}
 /* .btn.btn-primary {
     background-color: #ff4757;
     border-color: #ff4757;

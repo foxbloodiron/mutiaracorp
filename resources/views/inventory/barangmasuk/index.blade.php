@@ -44,6 +44,7 @@
 	                                		<th>Satuan</th>
 	                                		<th>Jumlah Barang</th>
 	                                		<th>Tanggal Masuk</th>
+											<th>Lokasi Masuk</th>
 	                                		<th>Aksi</th>
 	                                	</tr>
 	                                </thead>
@@ -55,6 +56,7 @@
 	                                		<td>pcs</td>
 	                                		<td>100</td>
 											<td>07/09/2019</td>
+											<td>Gudang 1</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
