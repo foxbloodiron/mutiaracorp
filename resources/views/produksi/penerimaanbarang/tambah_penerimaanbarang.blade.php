@@ -51,7 +51,7 @@
                         		</div>
                         		<div class="col-md-2 col-sm-4 col-12">
                         			<input type="text" readonly="" class="form-control form-control-sm" name="">
-                        			<small>Sisa</small>
+                        			<small>Sudah di Bayar</small>
                         		</div>
                         		<div class="col-md-2 col-sm-4 col-12">
                         			<input type="text" readonly="" class="form-control form-control-sm" name="">
