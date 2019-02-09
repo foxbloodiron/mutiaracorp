@@ -23,7 +23,7 @@
                         {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="email">Username</label>
-                                <input type="text" class="form-control login-input" placeholder="Username" required autofocus=""> </div>
+                                <input type="text" class="form-control login-input" name="email" id="email" placeholder="Username" required autofocus=""> </div>
                                 <br>
                             <div class="form-group">
                                 <label for="password">Password</label>
