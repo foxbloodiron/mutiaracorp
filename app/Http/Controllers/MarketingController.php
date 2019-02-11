@@ -11,14 +11,34 @@ class MarketingController extends Controller
     	return view('marketing/manajemenmarketing/index');
     }
     
-    public function yearprom_create()
+    public function year_promotion_create()
     {
         return view('marketing/manajemenmarketing/tahunan/create');
     }
 
-    public function yearprom_edit()
+    public function year_promotion_edit()
     {
         return view('marketing/manajemenmarketing/tahunan/edit');
+    }
+
+    public function month_promotion_create()
+    {
+        return view('marketing/manajemenmarketing/bulanan/create');
+    }
+
+    public function month_promotion_edit()
+    {
+        return view('marketing/manajemenmarketing/bulanan/edit');
+    }
+
+    public function targetrealisasi()
+    {
+        return view('marketing/targetrealisasipenjualan/index');
+    }
+
+    public function targetrealisasi_create()
+    {
+        return view('marketing/targetrealisasipenjualan/targetrealisasi/create');
     }
 
     public function penjualan()

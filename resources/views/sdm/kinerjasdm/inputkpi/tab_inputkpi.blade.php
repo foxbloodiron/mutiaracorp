@@ -2,7 +2,7 @@
 	<div class="card">
 		<div class="card-header bordered p-2">
 			<div class="header-block">
-				<h3>Data KPI</h3>
+				<h3 class="title">Data KPI</h3>
 			</div>
 			<div class="header-block pull-right">
 				<a class="btn btn-primary" id="btn-tambah-mantan" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>

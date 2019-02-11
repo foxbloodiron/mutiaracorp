@@ -2,10 +2,10 @@
 	<div class="card">
 		<div class="card-header bordered p-2">
 			<div class="header-block">
-				<h3>Promosi Bulanan</h3>
+				<h3 class="title">Promosi Bulanan</h3>
 			</div>
 			<div class="header-block pull-right">		
-				<a class="btn btn-primary" href="{{ route('distribusibarang.create') }}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+				<a class="btn btn-primary" href="{{ route('monthpromotion.create') }}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
 			</div>
 			<div class=""></div>
 		</div>
@@ -38,7 +38,7 @@
 								</td>
 								<td>
 									<div class="btn-group btn-group-sm">
-										<button class="btn btn-warning btn-edit" type="button" title="edit"><i class="fa fa-pencil"></i></button>
+										<button class="btn btn-warning btn-edit" onclick="window.location.href='{{ route('monthpromotion.edit') }}'" type="button" title="edit"><i class="fa fa-pencil"></i></button>
 									</div>
 								</td>
 							</tr>
@@ -55,7 +55,7 @@
 								</td>
 								<td>
 									<div class="btn-group btn-group-sm">
-										<button class="btn btn-warning btn-edit" type="button" title="edit"><i class="fa fa-pencil"></i></button>
+										<button class="btn btn-warning btn-edit" onclick="window.location.href='{{ route('monthpromotion.edit') }}'"type="button" title="edit"><i class="fa fa-pencil"></i></button>
 									</div>
 								</td>
 							</tr>
@@ -72,7 +72,7 @@
 								</td>
 								<td>
 									<div class="btn-group btn-group-sm">
-										<button class="btn btn-warning btn-edit" type="button" title="edit"><i class="fa fa-pencil"></i></button>
+										<button class="btn btn-warning btn-edit" onclick="window.location.href='{{ route('monthpromotion.edit') }}'"type="button" title="edit"><i class="fa fa-pencil"></i></button>
 									</div>
 								</td>
 							</tr>

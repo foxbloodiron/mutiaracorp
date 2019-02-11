@@ -22,22 +22,22 @@
 			<div class="card">
 				<div class="card-header bordered p-2">
 					<div class="header-block">
-						<h3>Kelola Absensi SDM</h3>
+						<h3 class="title">Kelola Absensi SDM</h3>
 					</div>
 					<div class=""></div>
 				</div>
 				<div class="card-block">
 					<section>
+				        <div class="download-contoh mb-2">
+						    <button class="btn btn-primary">Download Contoh</button>
+				        </div>
 						<div class="row">
-						<div class="input-group mb-3">
+						<div class="input-group mb-3"> 
 							<div class="row">
-								<div class="container">
-								<div class="file-upload col-8">
-								<div class="download-contoh pull-right">
-									<button class="btn btn-primary">Download Contoh</button>
-								</div>
+								<div class="container col-12">
+								<div class="file-upload col-9">
 								<div class="custom-file">
-									<input type="file" class="custom-file-input">
+									<input type="file" class="custom-file-input col-8">
 									<label class="custom-file-label">Pilih File</label>
 								</div>
 								<div class="input-group-append">

@@ -23,8 +23,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 	Route::get('/home', 'HomeController@index')->name('home');
 
-	// Master
-	Route::get('/master/databarang/databarang', 'MasterController@databarang')->name('databarang');
+	// Mastern	Route::get('/master/databarang/databarang', 'MasterController@databarang')->name('databarang');
 	Route::get('/master/databarang/tambah_databarang', 'MasterController@tambah_databarang')->name('tambah_databarang');
 	Route::get('/master/databarang/edit_databarang', 'MasterController@edit_databarang')->name('edit_databarang');
 	Route::get('/master/datasuplier/datasuplier', 'MasterController@datasuplier')->name('datasuplier');
@@ -141,7 +140,14 @@ Route::group(['middleware' => 'auth'], function(){
 
 	// !===================================================== Marketing =====================================================!
 	// Manajemen Marketing
-	Route::get('/marketing/manajemenmarketing/index', 'MarketingController@marketing')->name('mngmarketing.index');
+    Route::get('/marketing/manajemenmarketing/index', 'MarketingController@marketing')->name('mngmarketing.index');
+    Route::get('/marketing/manajemenmarketing/create-year-promotion', 'MarketingController@year_promotion_create')->name('yearpromotion.create');
+    Route::get('/marketing/manajemenmarketing/edit-year-promotion', 'MarketingController@year_promotion_edit')->name('yearpromotion.edit');
+    Route::get('/marketing/manajemenmarketing/create-month-promotion', 'MarketingController@month_promotion_create')->name('monthpromotion.create');
+    Route::get('/marketing/manajemenmarketing/edit-month-promotion', 'MarketingController@month_promotion_edit')->name('monthpromotion.edit');
+    // Target dan Realisasi Penjualan
+    Route::get('/marketing/targetrealisasipenjualan/index', 'MarketingController@targetrealisasi')->name('targetrealisasi.index');
+    Route::get('/marketing/targetrealisasipenjualan/targetrealisasi/create', 'MarketingController@targetrealisasi_create')->name('targetrealisasi.create');
 	// Penjualan Pusat
 	Route::get('/marketing/penjualanpusat/index', 'MarketingController@penjualan')->name('penjualanpusat.index');
 	// Konsinyasi Pusat

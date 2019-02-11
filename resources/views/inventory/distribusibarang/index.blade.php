@@ -60,7 +60,7 @@
 											<td>Retailer</td>
 											<td>
 											<div class="status-distribusi">
-											<p>prepare</p>
+											<p>Prepare</p>
 											</div>
 											</td>
 	                                		<td>

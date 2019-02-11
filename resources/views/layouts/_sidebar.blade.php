@@ -242,14 +242,17 @@
                         <li class="{{Request::is('marketing/manajemenmarketing/*') ? 'active' : ''}}">
                             <a href="{{route('mngmarketing.index')}}">Manajemen Marketing</a>
                         </li>
+                        <li class="{{Request::is('marketing/targetrealisasipenjualan/*') ? 'active' : ''}}">
+                            <a href="{{route('targetrealisasi.index')}}">Target dan Realisasi Penjualan</a>
+                        </li>
                         <li class="{{Request::is('marketing/penjualanpusat/*') ? 'active' : ''}}">
-                            <a href="{{route('penjualanpusat.index')}}">Manajemen Penjualan Pusat</a>
+                            <a href="{{route('penjualanpusat.index')}}">Penjualan Pusat</a>
                         </li>
                         <li class="{{Request::is('marketing/kosinyasipusat/*') ? 'active' : ''}}">
-                            <a href="{{route('kosinyasi.index')}}">Manajemen Konsinyasi Pusat</a>
+                            <a href="{{route('kosinyasi.index')}}">Konsinyasi Pusat</a>
                         </li>
                         <li class="{{Request::is('marketing/marketingarea/*') ? 'active' : ''}}">
-                            <a href="{{ route('marketingarea.index') }}">Manajemen Marketing Area</a>
+                            <a href="{{ route('marketingarea.index') }}">Marketing Area</a>
                         </li>
                         <li class="{{Request::is('marketing/agen/*') ? 'active' : ''}}">
                             <a href="{{ route('mngagen.index') }}">Manajemen Agen</a>

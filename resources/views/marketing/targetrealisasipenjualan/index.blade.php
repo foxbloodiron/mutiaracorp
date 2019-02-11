@@ -7,9 +7,9 @@
 <article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">
-	    <h1 class="title"> Manajemen Marketing </h1>
+	    <h1 class="title"> Target dan Realisasi Penjualan </h1>
 	    <p class="title-description">
-	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a> / <span>Aktivitas Marketing</span> / <span class="text-primary" style="font-weight: bold;">Manajemen Marketing</span>
+	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a> / <span>Aktivitas Marketing</span> / <span class="text-primary" style="font-weight: bold;">Target dan Realisasi Penjualan</span>
 	     </p>
 	</div>
 
@@ -21,21 +21,16 @@
 
                 <ul class="nav nav-pills mb-3">
                     <li class="nav-item">
-                        <a href="" class="nav-link active" data-target="#approval" aria-controls="approval" data-toggle="tab" role="tab">Approval Promosi</a>
+                        <a href="" class="nav-link active" data-target="#targetrealisasi" aria-controls="targetrealisasi" data-toggle="tab" role="tab">Target dan Realisasi</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link" data-target="#promosi_tahunan" aria-controls="promosi_tahunan" data-toggle="tab" role="tab">Promosi Tahunan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link" data-target="#promosi_bulanan" aria-controls="promosi_bulanan" data-toggle="tab" role="tab">Promosi Bulanan</a>
+                        <a href="" class="nav-link" data-target="#promosi_tahunan" aria-controls="promosi_tahunan" data-toggle="tab" role="tab">History</a>
                     </li>
                 </ul>
 
                 <div class="tab-content">
 
-                	@include('marketing.manajemenmarketing.approval')
-                	@include('marketing.manajemenmarketing.tahunan.index')
-					@include('marketing.manajemenmarketing.bulanan.index')
+                	@include('marketing.targetrealisasipenjualan.targetrealisasi.index')
 
 	            </div>
 
