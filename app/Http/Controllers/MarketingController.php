@@ -40,10 +40,20 @@ class MarketingController extends Controller
     {
         return view('marketing/targetrealisasipenjualan/targetrealisasi/create');
     }
+    
+    public function status_target()
+    {
+        return view('marketing/targetrealisasipenjualan/targetrealisasi/status');
+    }
 
     public function penjualan()
     {
     	return view('marketing/penjualanpusat/index');
+    }
+
+    public function returnpenjualanagen_create()
+    {
+        return view('marketing/penjualanpusat/returnpenjualan/create');
     }
 
     public function kosinyasi()

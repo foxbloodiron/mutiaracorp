@@ -2,8 +2,6 @@
 
 @section('content')
 
-@include('marketing.manajemenmarketing.modal')
-
 <article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">

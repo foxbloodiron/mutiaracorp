@@ -28,7 +28,7 @@
                             <h3 class="title"> Tambah Return Produksi </h3>
                         </div>
                         <div class="header-block pull-right">
-                			<a class="btn btn-secondary btn-sm" href="{{route('return.index')}}"><i class="fa fa-arrow-left"></i></a>
+                			<a class="btn btn-secondary btn-sm" href="{{route('penjualanpusat.index')}}"><i class="fa fa-arrow-left"></i></a>
                         </div>
                     </div>
                     <div class="card-block">
@@ -52,23 +52,16 @@
                         			</div>
                         		</div>
                         	</div>
-
                             @include('marketing.penjualanpusat.returnpenjualan.tab_potongnota')
                             @include('marketing.penjualanpusat.returnpenjualan.tab_tukarbarang')
                             @include('marketing.penjualanpusat.returnpenjualan.tab_salahbarang')
                             @include('marketing.penjualanpusat.returnpenjualan.tab_salahalamat')
                         	@include('marketing.penjualanpusat.returnpenjualan.tab_kurangbarang')
-
-
-
-
-
-
                         </section>
                     </div>
                     <div class="card-footer text-right">
                     	<button class="btn btn-primary" type="button">Simpan</button>
-                    	<a href="{{route('return.index')}}" class="btn btn-secondary">Kembali</a>
+                    	<a href="{{route('penjualanpusat.index')}}" class="btn btn-secondary">Kembali</a>
                     </div>
                 </div>
 
