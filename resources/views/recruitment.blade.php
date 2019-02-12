@@ -16,15 +16,15 @@
 <!-- Header -->
 <div class="row tron">
 <div class="continer-fluid animated fadeIn">
-<div class="red-side"></div>
+<div class="green-side d-none d-xl-block"></div>
 <h1 class="hire-title">WE'RE HIRING!</h1>
 <div class="row header-button">
     <button class="btn btn-secondary btn-about" onclick="window.location.href='#about'">About Us</button>
     <button class="btn btn-secondary btn-join" onclick="window.location.href='#section-1'">Apply Now</button>
 </div>
-<div class="square-border"></div>
+<div class="square-border d-none d-xl-block"></div>
 <div class="images">
-    <img  class="people-jumping" src="assets/img/jumping.svg" alt="">
+    <img  class="people-jumping d-none d-xl-block" src="assets/img/jumping-green.svg" alt="">
 </div>
 </div>
 </div>
