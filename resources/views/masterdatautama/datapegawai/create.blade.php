@@ -58,6 +58,17 @@
                               </div>
 
 
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Ktp</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
                               <div class="col-md-3 col-sm-6 col-xs-12">
                                 <label>Status</label>
                               </div>
@@ -109,6 +120,32 @@
                               </div>
 
                               <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Tanggal Masuk</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" class="form-control form-control-sm datepicker" name="">
+                                  </div>
+                                </div>
+                              </div>
+
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Pendidikan</label>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <input type="text" class="form-control form-control-sm datepicker" name="">
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
                                 <label>E-mail</label>
                               </div>
 
@@ -144,10 +181,51 @@
 
                               <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                                 <div class="form-group">
+                                </div>
+                                  <textarea type="text" class="form-control form-control-sm mb-3"></textarea>
+                              </div>
+
+
+                              <div class="col-md-3 col-sm-12 col-xs-12">
+                                <label>Alamat Ktp</label>
+                              </div>
+
+                              <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                <div class="form-group">
                                   <textarea type="text" class="form-control form-control-sm"></textarea>
                                 </div>
                               </div>
 
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Bank</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>No. Rekening</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Atas Nama</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
 
                               <div class="col-md-3 col-sm-6 col-xs-12">
                                 <label>Foto</label>
