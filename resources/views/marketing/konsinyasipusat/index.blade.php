@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Modal Terima Order -->
-@include('marketing.penjualanpusat.terimaorder.modal')
+@include('marketing.konsinyasipusat.penempatanproduk.modal')
 
 <article class="content animated fadeInLeft">
 
@@ -111,6 +111,12 @@
 	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
 		})
 
+
+		$(document).ready(function() {
+			$('#modal-penempatan').DataTable( {
+				"iDisplayLength" : 5
+			});
+		});
 	});
 </script>
 @endsection
