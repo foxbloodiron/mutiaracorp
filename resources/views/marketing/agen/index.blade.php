@@ -127,9 +127,6 @@
 			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
 	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
 		})
-        // $('#table_agen tbody').on('click','.btn-edit', function(){
-		// 	window.location.href='{{route('edit_agen')}}'
-		// })
 	});
 </script>
 @endsection
