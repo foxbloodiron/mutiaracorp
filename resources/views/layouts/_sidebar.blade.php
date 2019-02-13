@@ -1,5 +1,5 @@
 <header class="header">
-    <div class="header-block header-block-collapse d-lg-none d-xl-none">
+    <div class="header-block header-block-collapse">
         <button class="collapse-btn" id="sidebar-collapse-btn">
             <i class="fa fa-bars"></i>
         </button>
@@ -121,24 +121,28 @@
                 <div id="search-container-bro" class="header-block header-block-search">
                     <form role="search">
                         <div class="input-container">
-                        <i class="fa fa-search icon-search"></i>
-                        <input type="search" placeholder="Cari Menu" class="input-search" id="filterInput">
-                        <button type="button" class="btn btn-secondary btn-sm d-none" id="btn-reset">
-                            <i class="fa fa-times"></i>
-                        </button>
-                        <div class="underline"></div>
+                            <div class="input-container-prepend">
+                                <button class="btn btn-sm btn-secondary" id="btn-search-menu" type="button">
+                                    <i class="fa fa-search icon-search"></i>
+                                </button>
+                            </div>
+                            <input type="search" placeholder="Cari Menu" class="input-search" id="filterInput">
+                            <button type="button" class="btn btn-secondary btn-sm d-none" id="btn-reset">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="underline"></div>
                         </div>
                     </form>
                 </div>
                 <li class="{{Request::is('home') ? 'active' : ''  || Request::is('/') ? 'active' : ''}}">
                     <a href="{{url('/')}}" class="dashboard">
-                        <i class="fa fa-home"></i> Dashboard 
+                        <i class="fa fa-home"></i> <span class="menu-title">Dashboard </span>
                     </a>
                 </li>
                 <!-- MASTER DATA UTAMA -->
                 <li class="{{Request::is('masterdatautama/*') ? 'active open' : ''}}">
                     <a href="#">
-                        <i class="fa fa-th-large"></i> Master Data Utama
+                        <i class="fa fa-th-large"></i> <span class="menu-title">Master Data Utama</span>
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
@@ -169,7 +173,7 @@
                 <!-- AKTIVITAS PRODUKSI -->
                 <li class="{{Request::is('produksi/*') ? 'active open' : ''}}">
                     <a href="#">
-                        <i class="fa fa-product-hunt"></i> Aktivitas Produksi
+                        <i class="fa fa-product-hunt"></i> <span class="menu-title">Aktivitas Produksi</span>
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
@@ -191,7 +195,7 @@
                 <!-- AKTIVITAS INVENTORY -->
                 <li class="{{Request::is('inventory/*') ? 'active open' : ''}}">
                     <a href="">
-                        <i class="fa fa-desktop"></i> Aktivitas Inventory
+                        <i class="fa fa-desktop"></i><span class="menu-title"> Aktivitas Inventory</span>
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
@@ -213,7 +217,7 @@
                 <!-- AKTIVITAS SDM -->
                 <li class="{{Request::is('sdm/*') ? 'active open' : ''}}">
                     <a href="">
-                        <i class="fa fa-group"></i> Aktivitas SDM
+                        <i class="fa fa-group"></i><span class="menu-title"> Aktivitas SDM</span>
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
@@ -235,7 +239,7 @@
                 <!-- AKTIVITAS MARKETING -->
                 <li class="{{Request::is('marketing/*') ? 'active open' : ''}}">
                     <a href="#">
-                        <i class="fa fa-shopping-cart"></i> Aktivitas Marketing
+                        <i class="fa fa-shopping-cart"></i><span class="menu-title"> Aktivitas Marketing</span>
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
@@ -262,7 +266,7 @@
                 <!-- END AKTIVITAS MARKETING -->
                 <li class="{{Request::is('keuangan/*') ? 'active open' : ''}}">
                     <a href="#">
-                        <i class="fa fa-usd"></i> Keuangan
+                        <i class="fa fa-usd"></i><span class="menu-title"> Keuangan</span>
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
