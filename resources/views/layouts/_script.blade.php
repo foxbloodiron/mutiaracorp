@@ -22,6 +22,23 @@
 <script src="{{asset('assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js')}}"></script>
 <script src="{{asset('assets/js/vue.js')}}"></script>
 <script type="text/javascript">
+  var getstorage;
+  $('#sidebar-collapse-btn, #sidebar-overlay').click(function(){
+    getstorage = localStorage.getItem('sidebar-collapse-storage');
+
+    console.log(getstorage);
+
+  (getstorage) ? (localStorage.removeItem('sidebar-collapse-storage')) : (localStorage.setItem('sidebar-collapse-storage', 'sidebar-open'));
+
+  });
+  //set sidebar ketika di refresh
+  getstorage = localStorage.getItem('sidebar-collapse-storage');
+  if (getstorage) {
+    $('#app').addClass(getstorage);
+  }  
+
+</script>
+<script type="text/javascript">
     var baseUrl = "{{url('/')}}";
 
 	$(document).ready(function(){
@@ -174,13 +191,13 @@
 
         // $('#wid-id-0 .widget-body').html($('#sidebar ul > li').parents('li').text() + '<br>')
         $('#sidebar ul > li > a').each(function(){
-          $(this).prepend('<span class="d-none"> '+ $(this).parents('li').ignore('span').ignore('ul').text() +'</span>');
+          $(this).prepend('<span class="d-none"> '+ $(this).parents('li').find('.menu-title').text() +'</span>');
         });
         $('#sidebar ul > li:has(ul) > a').each(function(){
           $(this).prepend('<span class="d-none d-sm-none"> '+ $(this).parent('li').children().ignore('span').text() +'</span>');
         });
         $('#sidebar ul > li > ul > li > a').each(function(){
-          $(this).prepend('<span class="d-none d-xs-none"> '+ $(this).parent().parent().parent().ignore('span').ignore('ul').text() +'</span>');
+          $(this).prepend('<span class="d-none d-xs-none"> '+ $(this).parent().parent().parent().find('.menu-title').text() +'</span>');
         });
 
         $search_fld.on('keyup focus blur resize', function(){
