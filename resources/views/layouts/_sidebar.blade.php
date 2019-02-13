@@ -143,7 +143,7 @@
                     </a>
                     <ul class="sidebar-nav">
                         <li class="{{Request::is('masterdatautama/datapegawai/*') ? 'active' : ''}}">
-                            <a href="{{route('kelolapegawai.index')}}"> Master Data Pegawai</a>
+                            <a href="{{route('kelolapegawai.index')}}"> Master Pegawai</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/produk/*') ? 'active' : ''}}">
                             <a href="{{route('dataproduk.index')}}"> Master Produk</a>
@@ -161,7 +161,7 @@
                             <a href="{{ route('agen.index')}}">Master Agen</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/datasatuan/*') ? 'active' : ''}}">
-                            <a href="{{route('datasatuan.index')}}">Master Data Satuan</a>
+                            <a href="{{route('datasatuan.index')}}">Master Satuan</a>
                         </li>
                     </ul>
                 </li>
