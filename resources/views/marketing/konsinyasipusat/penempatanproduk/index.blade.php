@@ -16,10 +16,8 @@
 						<thead class="bg-primary">
 							<tr>
 								<th width="1%">No</th>
-								<th>Kode/Nama Barang</th>
-								<th>Harga Produk</th>
-								<th>Satuan</th>
-								<th>Jumlah</th>
+								<th>Barang</th>
+								<th>Total Barang</th>
 								<th>Total Harga</th>
 								<th>Penempatan</th>
 								<th>Aksi</th>
@@ -28,10 +26,8 @@
 						<tbody>
 							<tr>
 								<td>1</td>
-								<td>OBT001/Obat Rahasia</td>
-								<td>Rp. 10.000,00</td>
-								<td>Pcs</td>
-								<td>50</td>
+								<td><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>
+								<td>500</td>
 								<td>Rp. 500.000,00</td>
 								<td>Toko Itu</td>
 								<td>
