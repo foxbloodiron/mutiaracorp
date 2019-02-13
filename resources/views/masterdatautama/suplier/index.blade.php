@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('masterdatautama.suplier.modal_produk')
+@include('masterdatautama.suplier.modal')
 
 <article class="content animated fadeInLeft">
 
@@ -25,7 +25,7 @@
 	                        <h3 class="title"> Data Suplier </h3>
 	                    </div>
 	                    <div class="header-block pull-right">
-                			<button class="btn btn-primary" data-toggle="modal" data-target="#tambah" onclick="window.location.href='{{route('tambah_suplier')}}'"><i class="fa fa-plus"></i>&nbsp;Tambah Data</button>
+                			<button class="btn btn-primary" data-toggle="modal" data-target="#tambah" onclick="window.location.href='{{route('suplier.create')}}'"><i class="fa fa-plus"></i>&nbsp;Tambah Data</button>
 	                    </div>
                     </div>
                     <div class="card-block">
@@ -58,7 +58,7 @@
 											<td><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" onclick="window.location.href='{{route('edit_suplier')}}'" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
 	                                				<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-times-circle"></i></button>
 	                                			</div>
 	                                		</td>
@@ -134,7 +134,7 @@
 	                                		'<button class="btn btn-danger btn-disable" type="button" title="Delete"><i class="fa fa-times-circle"></i></button>')
 		})
 		$('#table_suplier tbody').on('click','.btn-edit', function(){
-			window.location.href='{{route('edit_suplier')}}'
+			window.location.href='{{route('suplier.edit')}}'
 		})
 	});
 </script>

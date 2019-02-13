@@ -6,114 +6,55 @@ use Illuminate\Http\Request;
 
 class MasterController extends Controller
 {
-    public function databarang()
-    {
-    	return view('master/databarang/databarang');
-    }
-    public function tambah_databarang()
-    {
-        return view('master/databarang/tambah_databarang');
-    }
-    public function edit_databarang()
-    {
-        return view('master/databarang/edit_databarang');
-    }
-    public function datasuplier()
-    {
-    	return view('master/datasuplier/datasuplier');
-    }
-    public function tambah_datasuplier()
-    {
-        return view('master/datasuplier/tambah_datasuplier');
-    }
-    public function edit_datasuplier()
-    {
-        return view('master/datasuplier/edit_datasuplier');
-    }
-    public function datacustomer()
-    {
-    	return view('master/datacustomer/datacustomer');
-    }
-    public function tambah_datacustomer()
-    {
-        return view('master/datacustomer/tambah_datacustomer');
-    }
-    public function edit_datacustomer()
-    {
-        return view('master/datacustomer/edit_datacustomer');
-    }    
-    public function datacustomerkontraktor()
-    {
-    	return view('master/datacustomerkontraktor/datacustomerkontraktor');
-    }
-    public function datapegawai()
-    {
-    	return view('master/datapegawai/datapegawai');
-    }
-    public function tambah_datapegawai()
-    {
-        return view('master/datapegawai/tambah_datapegawai');
-    }
-    public function edit_datapegawai()
-    {
-        return view('master/datapegawai/edit_datapegawai');
-    }
-    public function dataarmada()
-    {
-    	return view('master/dataarmada/dataarmada');
-    }
-    public function tambah_dataarmada()
-    {
-        return view('master/dataarmada/tambah_dataarmada');
-    }
-    public function edit_dataarmada()
-    {
-        return view('master/dataarmada/edit_dataarmada');
-    }
-    public function modal_dataarmada()
-    {
-        return view('master/dataarmada/modal_dataarmada');
-    }
-
     // =============================== Master Data Utama ===============================
 
     //  * Master Data Pegawai
 
     public function kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.kelolapegawai');
+        return view('masterdatautama.datapegawai.index');
     }
     public function edit_kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.edit_kelolapegawai');
+        return view('masterdatautama.datapegawai.edit');
     }    
-    public function tambah_kelolapegawai()
+    public function create_kelolapegawai()
     {
-        return view('masterdatautama.datapegawai.tambah_kelolapegawai');
+        return view('masterdatautama.datapegawai.create');
     }     
 
     // * Master Data Produk
 
     public function dataproduk()
     {   
-        return view('masterdatautama.produk.dataproduk');
+        return view('masterdatautama.produk.index');
     }    
 
-    public function tambah_dataproduk()
+    public function create_dataproduk()
     {   
-        return view('masterdatautama.produk.tambah_dataproduk');
+        return view('masterdatautama.produk.create');
     }    
+
+    public function edit_dataproduk()
+    {   
+        return view('masterdatautama.produk.edit');
+    }  
 
     // * Master Harga
 
     public function dataharga()
     {   
-        return view('masterdatautama.harga.harga');
+        return view('masterdatautama.harga.index');
+    }
+
+    public function create_dataharga()
+    {   
+        return view('masterdatautama.harga.create');
     }
 
     public function edit_dataharga()
     {   
-        return view('masterdatautama.harga.edit_harga');
+        return view('masterdatautama.harga.edit');
     }
 
     // * Master Suplier
@@ -123,14 +64,14 @@ class MasterController extends Controller
         return view('masterdatautama.suplier.index');
     }
 
-    public function tambah_suplier()
+    public function create_suplier()
     {   
-        return view('masterdatautama.suplier.tambah_suplier');
+        return view('masterdatautama.suplier.create');
     }
 
     public function edit_suplier()
     {   
-        return view('masterdatautama.suplier.edit_suplier');
+        return view('masterdatautama.suplier.edit');
     }
 
     public function produkpersuplier()
@@ -144,13 +85,13 @@ class MasterController extends Controller
     {   
         return view('masterdatautama.cabang.index');
     }
-    public function tambah_cabang()
+    public function create_cabang()
     {   
-        return view('masterdatautama.cabang.tambah_cabang');
+        return view('masterdatautama.cabang.create');
     }
     public function edit_cabang()
     {   
-        return view('masterdatautama.cabang.edit_cabang');
+        return view('masterdatautama.cabang.edit');
     }
 
     // * Master Agen
@@ -159,26 +100,26 @@ class MasterController extends Controller
     {   
         return view('masterdatautama.agen.index');
     }
-    public function tambah_agen()
+    public function create_agen()
     {   
-        return view('masterdatautama.agen.tambah_agen');
+        return view('masterdatautama.agen.create');
     }
     public function edit_agen()
     {   
-        return view('masterdatautama.agen.edit_agen');
+        return view('masterdatautama.agen.edit');
     }
 
     public function datasatuan()
     {
-        return view('masterdatautama/datasatuan/datasatuan');
+        return view('masterdatautama/datasatuan/index');
     }
-    public function tambah_datasatuan()
+    public function create_datasatuan()
     {
-        return view('masterdatautama/datasatuan/tambah_datasatuan');
+        return view('masterdatautama/datasatuan/create');
     }
     public function edit_datasatuan()
     {
-        return view('masterdatautama/datasatuan/edit_datasatuan');
+        return view('masterdatautama/datasatuan/edit');
     }
 
 

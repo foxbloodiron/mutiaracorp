@@ -87,15 +87,15 @@
 	$(document).ready(function(){
 		var table = $('#table_satuan').DataTable();
 
-	$('#table_pegawai tbody').on('click', '.btn-edit', function(){
+	$('#table_satuan tbody').on('click', '.btn-edit', function(){
 
-		window.location.href = '{{route("edit_datasatuan")}}';
+		window.location.href = '{{route("datasatuan.edit")}}';
 
 	});
 
 	$('#btn-tambah').on('click', function(){
 
-		window.location.href = '{{route("tambah_datasatuan")}}';
+		window.location.href = '{{route("datasatuan.create")}}';
 
 	});
 

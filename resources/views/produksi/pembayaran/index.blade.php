@@ -195,6 +195,8 @@
 								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
 								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
 								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+								'<td><input type="text" class="form-control form-control-sm" readonly=""></td>'+
+								'<div class="status-termin-belum"><p>Belum</p></div>'+
 								'<td width="15%"><button class="btn btn-primary btn-modal" data-toggle="modal" data-target="#detail" type="button">Detail</button></td>'+
 								'</tr>'
 								);

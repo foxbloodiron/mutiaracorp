@@ -158,25 +158,25 @@ $(document).ready(function(){
 
 	$('#tabel_produk tbody').on('click', '.btn-edit', function(){
 
-		window.location.href = '{{route("edit_dataproduk")}}';
+		window.location.href = '{{route("dataproduk.edit")}}';
 
 	});
 
 	$('#tabel_jenisproduk tbody').on('click', '.btn-edit', function(){
 
-		window.location.href = '{{route("edit_datajenisproduk")}}';
+		window.location.href = '{{route("datajenisproduk.edit")}}';
 
 	});	
 
 	$('#btn-tambah-produk').on('click', function(){
 
-		window.location.href = '{{route("tambah_dataproduk")}}';
+		window.location.href = '{{route("dataproduk.create")}}';
 
 	});
 
 	$('#btn-tambah-jenisproduk').on('click', function(){
 
-		window.location.href = '{{route("tambah_datajenisproduk")}}';
+		window.location.href = '{{route("datajenisproduk.create")}}';
 
 	});	
 

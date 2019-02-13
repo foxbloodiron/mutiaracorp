@@ -28,7 +28,7 @@
                         </div>
                         <div class="header-block pull-right">
                         	
-                			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+                			<a class="btn btn-primary" href="{{ route('dataharga.create') }}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
                         </div>
                     </div>
                     <div class="card-block">
@@ -136,16 +136,9 @@
 
 	$('#table_harga tbody').on('click', '.btn-edit', function(){
 
-		window.location.href = '{{route("edit_dataharga")}}';
+		window.location.href = '{{route("dataharga.edit")}}';
 
 	});
-
-	$('#btn-tambah').on('click', function(){
-
-		
-
-	});
-
 
 	$(document).on('click', '.btn-disable', function(){
 		var ini = $(this);

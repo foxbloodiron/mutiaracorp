@@ -56,9 +56,9 @@ class MarketingController extends Controller
         return view('marketing/penjualanpusat/returnpenjualan/create');
     }
 
-    public function kosinyasi()
+    public function konsinyasipusat()
     {
-    	return view('marketing/kosinyasipusat/index');
+    	return view('marketing/konsinyasipusat/index');
     }
 
     public function marketing_area()

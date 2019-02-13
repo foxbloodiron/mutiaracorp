@@ -5,12 +5,12 @@
 <article class="content animated fadeInLeft">
 
   <div class="title-block text-primary">
-      <h1 class="title"> Edit Data Satuan </h1>
+      <h1 class="title"> Tambah Data Satuan </h1>
       <p class="title-description">
         <i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
          / <span>Master Data Utama</span>
-         / <a href="{{route('datasatuan')}}"><span>Data Satuan</span></a>
-         / <span class="text-primary" style="font-weight: bold;">Edit Data Satuan</span>
+         / <a href="{{route('datasatuan.index')}}"><span>Data Satuan</span></a>
+         / <span class="text-primary" style="font-weight: bold;">Tambah Data Satuan</span>
        </p>
   </div>
 
@@ -26,7 +26,7 @@
                         <h3 class="title">Tambah Data Satuan</h3>
                       </div>
                       <div class="header-block pull-right">
-                        <a href="{{route('datasatuan')}}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i></a>
+                        <a href="{{route('datasatuan.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i></a>
                       </div>
                     </div>
 
@@ -63,7 +63,7 @@
                     </div>
                     <div class="card-footer text-right">
                       <button class="btn btn-primary btn-submit" type="button">Simpan</button>
-                      <a href="{{route('datasatuan')}}" class="btn btn-secondary">Kembali</a>
+                      <a href="{{route('datasatuan.index')}}" class="btn btn-secondary">Kembali</a>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@
     $(document).on('click', '.btn-submit', function(){
 			$.toast({
 				heading: 'Success',
-				text: 'Data Berhasil di Edit',
+				text: 'Data Berhasil di Simpan',
 				bgColor: '#00b894',
 				textColor: 'white',
 				loaderBg: '#55efc4',

@@ -10,7 +10,7 @@ class ProduksiController extends Controller
     {
     	return view('produksi/orderproduksi/index');
     }
-    public function tambah_produksi()
+    public function create_produksi()
     {
         return view('produksi/orderproduksi/create');
     }
@@ -22,9 +22,9 @@ class ProduksiController extends Controller
     {
     	return view('produksi/penerimaanbarang/index');
     }
-    public function tambah_penerimaan_barang()
+    public function create_penerimaan_barang()
     {
-        return view('produksi/penerimaanbarang/tambah_penerimaanbarang');
+        return view('produksi/penerimaanbarang/create');
     }    
     public function pembayaran()
     {
@@ -34,8 +34,8 @@ class ProduksiController extends Controller
     {
     	return view('produksi/returnproduksi/index');
     }
-    public function tambah_return_produksi()
+    public function create_return_produksi()
     {
-        return view('produksi/returnproduksi/tambah_returnproduksi');
+        return view('produksi/returnproduksi/create');
     }
 }

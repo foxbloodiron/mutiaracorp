@@ -143,13 +143,13 @@
                     </a>
                     <ul class="sidebar-nav">
                         <li class="{{Request::is('masterdatautama/datapegawai/*') ? 'active' : ''}}">
-                            <a href="{{route('kelolapegawai')}}"> Master Data Pegawai</a>
+                            <a href="{{route('kelolapegawai.index')}}"> Master Data Pegawai</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/produk/*') ? 'active' : ''}}">
-                            <a href="{{route('dataproduk')}}"> Master Produk</a>
+                            <a href="{{route('dataproduk.index')}}"> Master Produk</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/harga/*') ? 'active' : ''}}">
-                            <a href="{{route('dataharga')}}"> Master Harga</a>
+                            <a href="{{route('dataharga.index')}}"> Master Harga</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/suplier/*') ? 'active' : ''}}">
                             <a href="{{route('suplier.index')}}">Master Suplier</a>
@@ -161,7 +161,7 @@
                             <a href="{{ route('agen.index')}}">Master Agen</a>
                         </li>
                         <li class="{{Request::is('masterdatautama/datasatuan/*') ? 'active' : ''}}">
-                            <a href="{{route('datasatuan')}}">Master Data Satuan</a>
+                            <a href="{{route('datasatuan.index')}}">Master Data Satuan</a>
                         </li>
                     </ul>
                 </li>
@@ -248,8 +248,8 @@
                         <li class="{{Request::is('marketing/penjualanpusat/*') ? 'active' : ''}}">
                             <a href="{{route('penjualanpusat.index')}}">Penjualan Pusat</a>
                         </li>
-                        <li class="{{Request::is('marketing/kosinyasipusat/*') ? 'active' : ''}}">
-                            <a href="{{route('kosinyasi.index')}}">Konsinyasi Pusat</a>
+                        <li class="{{Request::is('marketing/konsinyasipusat/*') ? 'active' : ''}}">
+                            <a href="{{route('konsinyasipusat.index')}}">Konsinyasi Pusat</a>
                         </li>
                         <li class="{{Request::is('marketing/marketingarea/*') ? 'active' : ''}}">
                             <a href="{{ route('marketingarea.index') }}">Marketing Area</a>
@@ -273,7 +273,7 @@
                             <a href="{{route('penjualanpusat.index')}}">Manajemen Hutang Piutang</a>
                         </li>
                         <li class="{{Request::is('marketing/kosinyasipusat/*') ? 'active' : ''}}">
-                            <a href="{{route('kosinyasi.index')}}">Manajemen Pajak</a>
+                            <a href="{{route('penjualanpusat.index')}}">Manajemen Pajak</a>
                         </li>
                         <li class="{{Request::is('marketing/marketingarea/*') ? 'active' : ''}}">
                             <a href="{{ route('marketingarea.index') }}">Laporan Keuangan</a>

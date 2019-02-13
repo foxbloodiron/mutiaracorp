@@ -67,7 +67,6 @@
                 </li>
             </ul>
         </div>
-
         <div class="tab-content" id="wizard-form">
             <div class="tab-pane active" role="tabpanel" id="step1">
                 <h1 class="text-md-center title-1">Data Diri</h1>

@@ -9,7 +9,7 @@
       <p class="title-description">
         <i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
          / <span>Master Data Utama</span>
-         / <a href="{{route('cabang.index')}}"><span>Data Agen</span></a>
+         / <a href="{{route('agen.index')}}"><span>Data Agen</span></a>
          / <span class="text-primary" style="font-weight: bold;"> Tambah Data Agen</span>
        </p>
   </div>

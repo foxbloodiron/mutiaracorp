@@ -116,13 +116,13 @@ $(document).ready(function(){
 
 	$('#table_pegawai tbody').on('click', '.btn-edit', function(){
 
-		window.location.href = '{{route("edit_kelolapegawai")}}';
+		window.location.href = '{{route("kelolapegawai.edit")}}';
 
 	});
 
 	$('#btn-tambah').on('click', function(){
 
-		window.location.href = '{{route("tambah_kelolapegawai")}}';
+		window.location.href = '{{route("kelolapegawai.create")}}';
 
 	});
 
