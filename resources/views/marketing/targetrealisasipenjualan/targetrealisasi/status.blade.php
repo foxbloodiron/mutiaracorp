@@ -82,19 +82,6 @@
 $(document).ready(function(){
 	var table = $('#table_pegawai').DataTable();
 
-	$('#table_pegawai tbody').on('click', '.btn-edit', function(){
-
-		window.location.href = '{{route("edit_kelolapegawai")}}';
-
-	});
-
-	$('#btn-tambah').on('click', function(){
-
-		window.location.href = '{{route("tambah_kelolapegawai")}}';
-
-	});
-
-
 	$(document).on('click', '.btn-disable', function(){
 		var ini = $(this);
 		$.confirm({
