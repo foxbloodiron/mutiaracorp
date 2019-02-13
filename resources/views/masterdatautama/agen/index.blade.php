@@ -38,8 +38,12 @@
 	                                <thead class="bg-primary">
 	                                    <tr>
 							                <th width="1%">No</th>
+											<th>Kode Agen</th>
 							                <th>Nama Agen</th>
+											<th>Tipe Agen</th>
+											<th>Tanggal Lahir</th>
 							                <th>Alamat Agen</th>
+											<th>Email</th>
 							                <th>No Telp</th>
 							                <th>Aksi</th>
 							            </tr>
@@ -47,8 +51,12 @@
 	                                <tbody>
 	                                	<tr>
 	                                		<td>1</td>
-	                                		<td>CUS/0001</td>
-	                                		<td>Jl. Cabang</td>
+	                                		<td>KUY/0001</td>
+											<td>Brad</td>
+											<td>Undefined</td>
+											<td>07/09/1999</td>
+	                                		<td>Jl. Rahasia</td>
+											<td>Brad@Pit.com</td>
 	                                		<td>0843123123123</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">

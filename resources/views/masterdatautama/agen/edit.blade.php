@@ -36,13 +36,47 @@
                           
                           <div class="row">
                             
+                          <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Kode Agen</label>
+                            </div> 
+
+                            <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" name="">
+                              </div>
+                            </div>
+
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Nama Agen</label>
                             </div> 
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" readonly="" name="">
+                                <input type="text" class="form-control form-control-sm" name="">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Tipe Agen</label>
+                            </div> 
+
+                            <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <select name="" id="" class="form-control form-control-sm">
+                                  <option value="">Pilih Tipe Agen</option>
+                                  <option value="">Lunas</option>
+                                  <option value="">Piutang</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Tanggal Lahir</label>
+                            </div> 
+
+                            <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-control-sm datepicker" name="">
                               </div>
                             </div>
 
@@ -52,7 +86,17 @@
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <textarea type="text" class="form-control form-control-sm" name=""></textarea>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Email</label>
+                            </div> 
+
+                            <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-control-sm" name="" placeholder="iniemail@email.com">
                               </div>
                             </div>
 
@@ -70,6 +114,7 @@
                         
                         </section>
                     </div>
+
                     <div class="card-footer text-right">
                       <button class="btn btn-primary btn-submit" type="button">Simpan</button>
                       <a href="{{route('agen.index')}}" class="btn btn-secondary">Kembali</a>
