@@ -5,6 +5,8 @@
 ============================
 */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .card-title-block {
     /*margin: -20px;*/
     padding: 20px !important;
@@ -141,27 +143,32 @@ aside.sidebar{
     border: unset;
     border-bottom: 1px solid lightgray;
     color: white;
-    /*font-family: 'Chakra Petch', sans-serif;*/
-    width: 79%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9pt;
+    width: 60%;
     flex: 1 1 auto;
     transition: .2s;
-    font-size: 13pt;
-    padding-right: 25px;
+    font-size: 9pt;
 }
+
+#search-container-bro .input-container #filterInput:hover {
+    border-bottom: 0px solid transparent;
+}
+
 #search-container-bro .input-container .underline,
 #search-container-bro .input-container .underline{
 	height: 1px;
 	background: #ff4757;
-    width: 0;
+    width: 1px;
     transition: 1s ease;
     margin-top: -1px;
-    margin-left: 48px;
+    margin-left:45px;
 }
 
 #search-container-bro .input-container:hover .underline,
 #search-container-bro .input-container:focus-within .underline{
 	height: 1px;
-    width: 100%;
+    width: 150px;
 }
 
 #search-container-bro .input-container #btn-reset{
@@ -190,7 +197,7 @@ aside.sidebar{
 	display: -ms-flexbox;
 	display: flex;
 	align-items: center;
-	padding: 5px;
+	padding: 0px;
 	color: white;
 }
 #sidebar-collapse-btn{

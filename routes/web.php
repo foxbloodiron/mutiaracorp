@@ -23,23 +23,6 @@ Route::group(['middleware' => 'auth'], function(){
 
 	Route::get('/home', 'HomeController@index')->name('home');
 
-	// Mastern	Route::get('/master/databarang/databarang', 'MasterController@databarang')->name('databarang');
-	// Route::get('/master/databarang/create', 'MasterController@create_databarang')->name('databarang.create');
-	// Route::get('/master/databarang/edit', 'MasterController@edit_databarang')->name('databarang.edit');
-	// Route::get('/master/datasuplier/index', 'MasterController@datasuplier')->name('datasuplier.index');
-	// Route::get('/master/datasuplier/create', 'MasterController@create_datasuplier')->name('datasuplier.create');
-	// Route::get('/master/datasuplier/edit', 'MasterController@edit_datasuplier')->name('datasuplier.edit');
-	// Route::get('/master/dataarmada/index', 'MasterController@dataarmada')->name('dataarmada.index');
-	// Route::get('/master/dataarmada/create', 'MasterController@create_dataarmada')->name('dataarmada.create');
-	// Route::get('/master/dataarmada/edit', 'MasterController@edit_dataarmada')->name('dataarmada.edit');
-	// Route::get('/master/dataarmada/modal', 'MasterController@modal_dataarmada')->name('modal_dataarmada');
-	// // Route::get('/master/datacustomer/datacustomer', 'MasterController@datacustomer')->name('datacustomer');
-	// Route::get('/master/datacustomer/create', 'MasterController@create_datacustomer')->name('datacustomer.create');
-	// Route::get('/master/datacustomer/edit', 'MasterController@edit_datacustomer')->name('datacustomer.create');
-	// Route::get('/master/datapegawai/index', 'MasterController@datapegawai')->name('datapegawai.index');
-	// Route::get('/master/datapegawai/create', 'MasterController@create_datapegawai')->name('datapegawai.create');
-	// Route::get('/master/datapegawai/edit', 'MasterController@edit_datapegawai')->name('datapegawai.edit');
-
 	// !====================================================== Master Data Utama ======================================================!
 
 	Route::get('/masterdatautama/datapegawai/index', 'MasterController@kelolapegawai')->name('kelolapegawai.index');
@@ -51,6 +34,10 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/masterdatautama/produk/create', 'MasterController@create_dataproduk')->name('dataproduk.create');
 	Route::get('/masterdatautama/produk/jenis/edit', 'MasterController@edit_datajenisproduk')->name('datajenisproduk.edit');
 	Route::get('/masterdatautama/produk/jenis/create', 'MasterController@create_datajenisproduk')->name('datajenisproduk.create');
+
+	Route::get('/masterdatautama/variasisatuanproduk/index', 'MasterController@variasisatuanproduk')->name('variasisatuan.index');
+	Route::get('/masterdatautama/variasisatuanproduk/create', 'MasterController@create_variasisatuanproduk')->name('variasisatuan.create');
+	Route::get('/masterdatautama/variasisatuanproduk/edit', 'MasterController@edit_variasisatuanproduk')->name('variasisatuan.edit');
 
 	Route::get('/masterdatautama/harga/index', 'MasterController@dataharga')->name('dataharga.index');
 	Route::get('/masterdatautama/harga/create', 'MasterController@create_dataharga')->name('dataharga.create');
@@ -154,7 +141,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/marketing/penjualanpusat/index', 'MarketingController@penjualan')->name('penjualanpusat.index');
 	Route::get('/marketing/penjualanpusat/returnpenjualan/create', 'MarketingController@returnpenjualanagen_create')->name('returnpenjualanagen.create');
 	// Konsinyasi Pusat
-	Route::get('/marketing/konsinyasipusat/index', 'MarketingController@konsinyasipusat')->name('konsinyasipusat.index');
+    Route::get('/marketing/konsinyasipusat/index', 'MarketingController@konsinyasipusat')->name('konsinyasipusat.index');
 	// Marketing Area
 	Route::get('/marketing/marketingarea/index', 'MarketingController@marketing_area')->name('marketingarea.index');
 	// Manajemen Agen

@@ -36,152 +36,68 @@
                           <div class="row">
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nama Produk</label>
+                              <label>Tipe</label>
                             </div>
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Jenis Produk</label>
-                            </div>
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <select class="form-control form-control-sm">
-                                  <option value="">--Pilih Jenis Produk--</option>
-                                  <option value="1">Bahan Baku</option>
-                                  <option value="2">Spare Part</option>
+                                <select name="" id="" class="form-control form-control-sm select2">
+                                  <option value="">Pilih Tipe</option>
+                                  <option value="">Agen</option>
+                                  <option value="">Sub Agen</option>
+                                  <option value="">Konsine</option>
                                 </select>
                               </div>
                             </div>
                             
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Kode Barang</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" readonly="" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Min Stock</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="number" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Satuan Utama</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <select class="form-control form-control-sm">
-                                  <option value="">--Pilih--</option>
-                                </select>
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Isi Satuan Utama</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                               <input type="number" class="form-control-sm form-control" min="0" readonly="" value="1" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Satuan Alternatif 1</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <select class="form-control form-control-sm">
-                                  <option value="">--Pilih--</option>
-                                </select>
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Isi Satuan Alternatif 1</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                               <input type="number" class="form-control-sm form-control" min="0" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Satuan Alternatif 2</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <select class="form-control form-control-sm">
-                                  <option value="">--Pilih--</option>
-                                </select>
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Isi Satuan Alternatif 2</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                               <input type="number" class="form-control-sm form-control" min="0" name="">
-                              </div>
-                            </div>
-
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Harga Persatuan</label>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Harga Satuan Utama</label>
-                              <div class="form-group">
-                               <input type="number" class="form-control-sm form-control text-right" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Harga Satuan Alternatif 1</label>
-                              <div class="form-group">
-                               <input type="number" class="form-control-sm form-control text-right" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Harga Satuan Alternatif 2</label>
-                              <div class="form-group">
-                               <input type="number" class="form-control-sm form-control text-right" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Detail</label>
+                              <label>Kode/Nama Barang</label>
                             </div>
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <textarea class="form-control"></textarea>
+                                <select name="" id="" class="form-control form-control-sm select2">
+                                  <option value="">Pilih Kode/Nama Barang</option>
+                                  <option value="">DUS001/Kerdus</option>
+                                </select>
                               </div>
                             </div>
 
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Satuan</label>
+                            </div>
 
+                            <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <select name="" id="" class="form-control form-control-sm select2">
+                                  <option value="">DUS</option>
+                                  <option value="">Botol</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Rentan</label>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                               <select name="" id="" class="form-control form-control-sm select2">
+                                  <option value="">Pilih Rentan</option>
+                                  <option value="">1 DUS - 2 DUS</option>
+                               </select>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Harga</label>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                               <input type="text" class="form-control-sm form-control input-rupiah" name="">
+                              </div>
+                            </div>
 
                           </div>
 

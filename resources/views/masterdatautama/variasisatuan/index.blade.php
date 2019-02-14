@@ -5,11 +5,11 @@
 <article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">
-	    <h1 class="title">Master Harga</h1>
+	    <h1 class="title">Variasi Satuan Produk</h1>
 	    <p class="title-description">
 	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
 	    	 / <span>Master Data Utama</span>
-	    	 / <span class="text-primary" style="font-weight: bold;">Master Harga</span>
+	    	 / <span class="text-primary" style="font-weight: bold;">Variasi Satuan Produk</span>
 	     </p>
 	</div>
 
@@ -22,10 +22,10 @@
 				<div class="card">
                     <div class="card-header bordered p-2">
                     	<div class="header-block">
-	                        <h3 class="title"> Master Harga </h3>
+	                        <h3 class="title"> Data Variasi Satuan Produk </h3>
 	                    </div>
 	                    <div class="header-block pull-right">
-                    			<a class="btn btn-primary" href="{{route('dataharga.create')}}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+                    			<a class="btn btn-primary" href="{{route('variasisatuan.create')}}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
 	                    </div>
                     </div>
                     <div class="card-block">
@@ -33,26 +33,22 @@
                         	
                         	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_harga">
+	                            <table class="table table-striped table-hover" cellspacing="0" id="table_agen">
 	                                <thead class="bg-primary">
 	                                    <tr>
 							                <th width="1%">No</th>
+											<th>Satuan</th>
+							                <th>Rentan</th>
 											<th>Tipe</th>
-											<th>Kode/Nama Barang</th>
-							                <th>Satuan</th>
-											<th>Rentan</th>
-											<th>Harga Barang</th>
 							                <th>Aksi</th>
 							            </tr>
 	                                </thead>
 	                                <tbody>
 	                                	<tr>
 	                                		<td>1</td>
-											<td>Agen</td>
-	                                		<td>DUS001/Kerdus</td>
-											<td>DUS</td>
+	                                		<td>DUS</td>
 											<td>1 DUS - 2 DUS</td>
-											<td>Rp. 250.000,00</td>
+											<td>Agen</td>
 	                                		<td>
 	                                			<div class="btn-group btn-group-sm">
 	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
@@ -80,7 +76,7 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		var table = $('#table_harga').DataTable();
+		var table = $('#table_agen').DataTable();
 
 		$(document).on('click', '.btn-disable', function(){
 			var ini = $(this);
@@ -130,8 +126,8 @@
 			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
 	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
 		})
-        $('#table_harga tbody').on('click','.btn-edit', function(){
-			window.location.href='{{route('dataharga.edit')}}'
+        $('#table_agen tbody').on('click','.btn-edit', function(){
+			window.location.href='{{route('variasisatuan.edit')}}'
 		})
 	});
 </script>

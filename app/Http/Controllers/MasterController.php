@@ -40,6 +40,23 @@ class MasterController extends Controller
         return view('masterdatautama.produk.edit');
     }  
 
+    // Master Variasi Satuan Produk
+
+    public function variasisatuanproduk()
+    {
+        return view('masterdatautama.variasisatuan.index');
+    }
+
+    public function create_variasisatuanproduk()
+    {
+        return view('masterdatautama.variasisatuan.create');
+    }
+
+    public function edit_variasisatuanproduk()
+    {
+        return view('masterdatautama.variasisatuan.edit');
+    }
+
     // * Master Harga
 
     public function dataharga()
