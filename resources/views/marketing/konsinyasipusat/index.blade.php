@@ -4,6 +4,7 @@
 
 <!-- Modal Terima Order -->
 @include('marketing.konsinyasipusat.penempatanproduk.modal')
+@include('marketing.konsinyasipusat.monitoringpenjualan.modal')
 
 <article class="content animated fadeInLeft">
 
@@ -25,14 +26,14 @@
                         <a href="" class="nav-link active" data-target="#penempatanproduk" aria-controls="penempatanproduk" data-toggle="tab" role="tab">Penempatan Produk</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link" data-target="#promosi_tahunan" aria-controls="promosi_tahunan" data-toggle="tab" role="tab">Monitoring Penjualan</a>
+                        <a href="" class="nav-link" data-target="#monitoringpenjualan" aria-controls="monitoringpenjualan" data-toggle="tab" role="tab">Monitoring Penjualan</a>
 					</li>
                 </ul>
 
                 <div class="tab-content">
 
 					@include('marketing.konsinyasipusat.penempatanproduk.index')
-					@include('marketing.penjualanpusat.returnpenjualan.index')
+					@include('marketing.konsinyasipusat.monitoringpenjualan.index')
 
 	            </div>
 
@@ -105,9 +106,15 @@
 	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
 		})
 
-
+		
 		$(document).ready(function() {
 			$('#modal-penempatan').DataTable( {
+				"iDisplayLength" : 5
+			});
+		});
+
+		$(document).ready(function() {
+			$('#detail-monitoring').DataTable( {
 				"iDisplayLength" : 5
 			});
 		});
