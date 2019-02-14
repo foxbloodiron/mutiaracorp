@@ -61,6 +61,15 @@ class MarketingController extends Controller
     	return view('marketing/konsinyasipusat/index');
     }
 
+    public function create_penempatanproduk()
+    {
+        return view('marketing/konsinyasipusat/penempatanproduk/create');
+    }
+
+    public function edit_penempatanproduk()
+    {
+        return view('marketing/konsinyasipusat/penempatanproduk/edit');
+    }
     public function marketing_area()
     {
     	return view('marketing/marketingarea/index');

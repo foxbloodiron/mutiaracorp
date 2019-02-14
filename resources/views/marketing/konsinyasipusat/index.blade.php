@@ -49,19 +49,13 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		var table_sup = $('#table_approval').DataTable();
-		var table_bar= $('#table_tahunan').DataTable();
-		var table_pus= $('#table_bulanan').DataTable();
+		var table_sup = $('#table_penempatan').DataTable();
 
-
-		$(document).on('click','.btn-preview-rekruitmen',function(){
-			window.location.href='{{route('rekruitmen.preview')}}'
-		});
-		$(document).on('click','.btn-proses-rekruitmen',function(){
-			window.location.href='{{route('rekruitmen.process')}}'
+		$(document).on('click','.btn-edit-pp',function(){
+			window.location.href='{{route('penempatanproduk.edit')}}'
 		});
 
-		$(document).on('click', '.btn-disable', function(){
+		$(document).on('click', '.btn-disable-pp', function(){
 			var ini = $(this);
 			$.confirm({
 				animation: 'RotateY',
@@ -98,7 +92,7 @@
 		});
 
 
-		$(document).on('click', '.btn-enable', function(){
+		$(document).on('click', '.btn-enable-pp', function(){
 			$.toast({
 				heading: 'Information',
 				text: 'Data Berhasil di Aktifkan.',

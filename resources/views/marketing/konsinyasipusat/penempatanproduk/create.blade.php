@@ -9,7 +9,7 @@
       <p class="title-description">
         <i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
          / <span>Marketing</span>
-         / <a href="{{route('konsinyasipusat.index')}}"><span>konsinyasi Pusat</span></a>
+         / <a href="{{route('konsinyasipusat.index')}}"><span>Manajemen Konsinyasi Pusat </span></a>
          / <span class="text-primary" style="font-weight: bold;"> Tambah Data Penempatan Produk </span>
        </p>
   </div>
@@ -34,20 +34,10 @@
                     <div class="card-block">
                         <section>
                           
-                          <div class="row">
+                          <div id="sectionsuplier" class="row">
                             
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nama Cabang</label>
-                            </div> 
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" readonly="" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Alamat Cabang</label>
+                              <label>Penempatan</label>
                             </div> 
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
@@ -56,23 +46,60 @@
                               </div>
                             </div>
 
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>No Telp</label>
-                            </div> 
+                            <div class="col-md-3">
 
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
                             </div>
+
+                            <div class="container">
+                            <div class="table-responsive mt-3">
+                            <div class="pull-right mb-3">
+                              <button class="btn btn-primary btn-tambahp"><i class="fa fa-plus"></i>&nbsp;Tambah Produk</button>
+                            </div>
+                            <table class="table table-hover table-striped table-bordered" id="table_rencana">
+                              <thead class="bg-primary">
+                              <tr>
+                                <th>Kode/Nama Barang</th>
+                                <th>Harga</th>
+                                <th>Jumlah</th>
+                                <th>Aksi</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              </tbody>
+                            </table>
 
                           </div>
-                        
+                          </div>
+                        </section>
+                        <section>
+                        <fieldset>
+                        <div class="row">
+                        <div class="container">
+                          <div class="col-5 pull-right">
+                            <input type="text" class="form-control form-control-sm" readonly="">
+                          </div>
+                          <div class="col-2 pull-right">
+                            <label for="">Total Barang</label>
+                          </div>
+                        </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                        <div class="container">
+                          <div class="col-5 pull-right">
+                            <input type="text" class="form-control form-control-sm input-rupiah" readonly="">
+                          </div>
+                          <div class="col-2 pull-right">
+                            <label for="">Total Harga</label>
+                          </div>
+                        </div>
+                        </div>
+                        </fieldset>
                         </section>
                     </div>
                     <div class="card-footer text-right">
                       <button class="btn btn-primary btn-submit" type="button">Simpan</button>
-                      <a href="{{route('cabang.index')}}" class="btn btn-secondary">Kembali</a>
+                      <a href="{{route('konsinyasipusat.index')}}" class="btn btn-secondary">Kembali</a>
                     </div>
                 </div>
 
@@ -115,6 +142,23 @@
         $('.125mm').addClass('d-none');
       }
     });
+
+    $(document).on('click', '.btn-hapus', function(){
+      $(this).parents('tr').remove();
+    });
+
+    $('.btn-tambahp').on('click',function(){
+      $('#table_rencana tbody')
+      .append(
+        '<tr>'+
+          '<td><input type="text" class="form-control form-control-sm"></td>'+
+          '<td><input type="text" class="form-control form-control-sm input-rupiah" readonly=""></td>'+
+          '<td><input type="number" class="form-control form-control-sm"></td>'+
+          '<td align="center"><button class="btn btn-danger btn-hapus btn-sm" type="button"><i class="fa fa-trash-o"></i></button></td>'+
+        '</tr>'
+        );
+    });
+
     $(document).on('click', '.btn-submit', function(){
 			$.toast({
 				heading: 'Success',

@@ -1,8 +1,13 @@
 <header class="header">
     <div class="header-block header-block-collapse">
-        <button class="collapse-btn" id="sidebar-collapse-btn">
+        <!-- <button class="collapse-btn icon" id="sidebar-collapse-btn">
             <i class="fa fa-bars"></i>
-        </button>
+        </button> -->
+    </div>
+    <div class="menuThree collapse-btn icon" id="sidebar-collapse-btn">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
     <!-- <div class="header-block header-block-buttons">
         <a href="https://github.com/modularcode/modular-admin-html" class="btn btn-sm header-btn">

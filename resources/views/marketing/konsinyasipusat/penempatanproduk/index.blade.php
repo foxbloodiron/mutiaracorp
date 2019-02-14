@@ -5,14 +5,14 @@
 				<h3 class="title">Penempatan Produk ke Konsignee </h3>
 			</div>
 	        <div class="header-block pull-right">
-                <a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>	                    	
+                <a class="btn btn-primary" href="{{ route('penempatanproduk.create') }}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>	                    	
 	        </div>
 			<div class=""></div>
 		</div>
 		<div class="card-block">
 			<section>
 				<div class="table-responsive">
-					<table class="table table-hover table-striped" cellspacing="0" id="table_approval">
+					<table class="table table-hover table-striped" cellspacing="0" id="table_penempatan">
 						<thead class="bg-primary">
 							<tr>
 								<th width="1%">No</th>
@@ -32,8 +32,8 @@
 								<td>Toko Itu</td>
 								<td>
 									<div class="btn-group btn-group-sm">
-										<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-										<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
+										<button class="btn btn-warning btn-edit-pp" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
+										<button class="btn btn-danger btn-disable-pp" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
 									</div>
 								</td>
 							</tr>
