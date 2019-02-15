@@ -241,10 +241,29 @@
 
     });
 </script>
-<script>
+<script type="text/javascript">
    const menuThree = document.querySelector('.menuThree');
+
+  var localStorage_menuThree;
+
+
+  $('.menuThree').addClass('localStorage_menuThree');
+
    function addClassFunThree() {
+      localStorage_menuThree = localStorage.getItem('storage-menuthree');
+      console.log(localStorage_menuThree);
+
+      (localStorage_menuThree) ? (localStorage.removeItem('storage-menuthree')) : (localStorage.setItem('storage-menuthree', 'clickMenuThree'));
+
+      $('#sidebar-collapse-btn').addClass(localStorage_menuThree);
+
         this.classList.toggle("clickMenuThree");
     }
+
+    localStorage_menuThree = localStorage.getItem('storage-menuthree');
+    if (localStorage_menuThree) {
+      $("#sidebar-collapse-btn").addClass(localStorage_menuThree);
+    }
+
     menuThree.addEventListener('click', addClassFunThree);
 </script>
