@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('assets/jquery-toast/jquery.toast.css')}}">
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="{{asset('assets/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css')}}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="{{asset('assets/css/animate.min.css')}}">
 
 
         <!-- Theme initialization -->
