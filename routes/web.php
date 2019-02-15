@@ -12,14 +12,14 @@
 */
 
 Route::get('/', function () {
-    return redirect('home');
+    return view('home');
 });
 
 Route::get('/recruitment', 'RecruitmentController@index')->name('recruitment.index');
 
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => 'guest'], function(){
 
 	Route::get('/home', 'HomeController@index')->name('home');
 
@@ -146,6 +146,14 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/marketing/konsinyasipusat/penempatanproduk/edit', 'MarketingController@edit_penempatanproduk')->name('penempatanproduk.edit');
 	// Marketing Area
 	Route::get('/marketing/marketingarea/index', 'MarketingController@marketing_area')->name('marketingarea.index');
+	Route::get('/marketing/marketingarea/orderproduk/create', 'MarketingController@create_orderproduk')->name('orderproduk.create');
+	Route::get('/marketing/marketingarea/orderproduk/edit', 'MarketingController@edit_orderproduk')->name('orderproduk.edit');
+	Route::get('/marketing/marketingarea/keloladataorder/create', 'MarketingController@create_keloladataorder')->name('keloladataorder.create');
+	Route::get('/marketing/marketingarea/keloladataorder/edit', 'MarketingController@edit_keloladataorder')->name('keloladataorder.edit');
+	Route::get('/marketing/marketingarea/datacavassing/create', 'MarketingController@create_datacanvassing')->name('datacanvassing.create');
+	Route::get('/marketing/marketingarea/datacavassing/edit', 'MarketingController@edit_datacanvassing')->name('datacanvassing.edit');
+	Route::get('/marketing/marketingarea/datakonsinyasi/create', 'MarketingController@create_datakonsinyasi')->name('datakonsinyasi.create');
+	Route::get('/marketing/marketingarea/datakonsinyasi/edit', 'MarketingController@edit_datakonsinyasi')->name('datakonsinyasi.edit');
 	// Manajemen Agen
 	Route::get('/marketing/agen/index', 'MarketingController@agen')->name('mngagen.index');
 	// !===================================================== END Marketing =====================================================!

@@ -53,11 +53,13 @@ body {
     color:white;
     padding:10px 4px 0px 13px;
 }
-/*#btn-reset {
-    background-color: transparent;
-    border: none;
-    color:white;
-}*/
+
+#btn-reset {
+    background-color: #3c415e !important;
+    border: 1px solid #3c415e !important;
+    color:white !important;
+}
+
 .input-search {
     border: 0;
     outline: 0;

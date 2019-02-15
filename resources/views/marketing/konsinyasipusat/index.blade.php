@@ -2,7 +2,6 @@
 
 @section('content')
 
-<!-- Modal Terima Order -->
 @include('marketing.konsinyasipusat.penempatanproduk.modal')
 @include('marketing.konsinyasipusat.monitoringpenjualan.modal')
 
@@ -51,6 +50,7 @@
 
 	$(document).ready(function(){
 		var table_sup = $('#table_penempatan').DataTable();
+		var table_pus = $('#table_monitoringpenjualan').DataTable();
 
 		$(document).on('click','.btn-edit-pp',function(){
 			window.location.href='{{route('penempatanproduk.edit')}}'

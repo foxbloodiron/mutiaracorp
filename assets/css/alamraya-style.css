@@ -145,14 +145,19 @@ aside.sidebar{
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 9pt;
-    width: 60%;
+    width: 62%;
     flex: 1 1 auto;
     transition: .2s;
     font-size: 9pt;
 }
 
 #search-container-bro .input-container #filterInput:hover {
-    border-bottom: 0px solid transparent;
+    border-bottom: 0px solid transparent !important;
+}
+
+
+#search-container-bro .input-container #filterInput:focus {
+    border-bottom: 0px solid transparent !important;
 }
 
 #search-container-bro .input-container .underline,
@@ -168,7 +173,7 @@ aside.sidebar{
 #search-container-bro .input-container:hover .underline,
 #search-container-bro .input-container:focus-within .underline{
 	height: 1px;
-    width: 150px;
+    width: 170px;
 }
 
 #search-container-bro .input-container #btn-reset{

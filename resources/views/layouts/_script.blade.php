@@ -266,17 +266,17 @@
   $('.menuThree').addClass('localStorage_menuThree');
 
    function addClassFunThree() {
-      localStorage_menuThree = localStorage.getItem('storage-menuthree');
+      localStorage_menuThree = localStorage.getItem('storage-menuthree-boys');
       console.log(localStorage_menuThree);
 
-      (localStorage_menuThree) ? (localStorage.removeItem('storage-menuthree')) : (localStorage.setItem('storage-menuthree', 'clickMenuThree'));
+      (localStorage_menuThree) ? (localStorage.removeItem('storage-menuthree-boys')) : (localStorage.setItem('storage-menuthree-boys', 'clickMenuThree'));
 
       $('#sidebar-collapse-btn').addClass(localStorage_menuThree);
 
         this.classList.toggle("clickMenuThree");
     }
 
-    localStorage_menuThree = localStorage.getItem('storage-menuthree');
+    localStorage_menuThree = localStorage.getItem('storage-menuthree-boys');
     if (localStorage_menuThree) {
       $("#sidebar-collapse-btn").addClass(localStorage_menuThree);
     }
