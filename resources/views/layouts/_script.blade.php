@@ -26,7 +26,7 @@
   $('#sidebar-collapse-btn, #sidebar-overlay').click(function(){
     getstorage = localStorage.getItem('sidebar-collapse-storage');
 
-    console.log(getstorage);
+    // console.log(getstorage);
 
   (getstorage) ? (localStorage.removeItem('sidebar-collapse-storage')) : (localStorage.setItem('sidebar-collapse-storage', 'sidebar-open'));
 
@@ -36,6 +36,22 @@
   if (getstorage) {
     $('#app').addClass(getstorage);
   }  
+
+
+  // var getstoragehamb;
+  // $('#sidebar-collapse-btn').click(function(){
+  //   getstorage = localStorage.getItem('hamburger-collapse-storage');
+
+  //   // console.log(getstorage);
+
+  // (getstorage) ? (localStorage.removeItem('hamburger-collapse-storage')) : (localStorage.setItem('hamburger-collapse-storage', 'menuThree'));
+
+  // });
+  // //set sidebar ketika di refresh
+  // getstorage = localStorage.getItem('hamburger-collapse-storage');
+  // if (getstorage) {
+  //   $('#app').addClass(getstorage);
+  // }  
 
 </script>
 <script type="text/javascript">
