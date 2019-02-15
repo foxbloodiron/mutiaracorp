@@ -120,4 +120,14 @@ class MarketingController extends Controller
     {
     	return view('marketing/agen/index');
     }
+
+    public function create_orderprodukagenpusat()
+    {
+        return view('marketing/agen/orderproduk/create');
+    }
+
+    public function edit_orderprodukagenpusat()
+    {
+        return view('marketing/agen/orderproduk/edit');
+    }
 }

@@ -156,6 +156,8 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/marketing/marketingarea/datakonsinyasi/edit', 'MarketingController@edit_datakonsinyasi')->name('datakonsinyasi.edit');
 	// Manajemen Agen
 	Route::get('/marketing/agen/index', 'MarketingController@agen')->name('mngagen.index');
+	Route::get('/marketing/agen/orderproduk/create', 'MarketingController@create_orderprodukagenpusat')->name('orderagenpusat.create');
+	Route::get('/marketing/agen/orderproduk/edit', 'MarketingController@edit_orderprodukagenpusat')->name('orderagenpusat.edit');
 	// !===================================================== END Marketing =====================================================!
 
 

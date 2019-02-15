@@ -2,14 +2,12 @@
 
 @section('content')
 
-<article class="content">
+<article class="content animated fadeInLeft">
 
 	<div class="title-block text-primary">
-	    <h1 class="title"> Master Agen</h1>
+	    <h1 class="title"> Manajemen Marketing Area  </h1>
 	    <p class="title-description">
-	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a>
-	    	 / <span>Master Data Utama</span>
-	    	 / <span class="text-primary" style="font-weight: bold;">Master Agen</span>
+	    	<i class="fa fa-home"></i>&nbsp;<a href="{{url('/home')}}">Home</a> / <span>Aktivitas Marketing</span> / <span class="text-primary" style="font-weight: bold;">Manajemen Marketing Area</span>
 	     </p>
 	</div>
 
@@ -18,51 +16,30 @@
 		<div class="row">
 
 			<div class="col-12">
-				
-				<div class="card">
-                    <div class="card-header bordered p-2">
-                    	<div class="header-block">
-	                        <h3 class="title"> Data Agen </h3>
-	                    </div>
-	                    <div class="header-block pull-right">
-                    			<a class="btn btn-primary" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
-	                    	
-	                    </div>
-                    </div>
-                    <div class="card-block">
-                        <section>
-                        	
-                        	
-                        	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_agen">
-	                                <thead class="bg-primary">
-	                                    <tr>
-							                <th width="1%">No</th>
-							                <th>Nama Agen</th>
-							                <th>Alamat Agen</th>
-							                <th>No Telp</th>
-							                <th>Aksi</th>
-							            </tr>
-	                                </thead>
-	                                <tbody>
-	                                	<tr>
-	                                		<td>1</td>
-	                                		<td>CUS/0001</td>
-	                                		<td>Jl. Cabang</td>
-	                                		<td>0843123123123</td>
-	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
-	                                			</div>
-	                                		</td>
-	                                	</tr>
-							        </tbody>
-	                            </table>
-	                        </div>
-                        </section>
-                    </div>
-                </div>
+
+                <ul class="nav nav-pills mb-3">
+                    <li class="nav-item">
+                        <a href="" class="nav-link active" data-target="#orderprodukagenpusat" aria-controls="orderprodukagenpusat" data-toggle="tab" role="tab">Order Produk ke Agen / Pusat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" data-target="#keloladataagen" aria-controls="keloladataagen" data-toggle="tab" role="tab">Kelola Penjualan Langsung </a>
+					</li>
+					<li class="nav-item">
+                        <a href="" class="nav-link" data-target="#monitoringpenjualanagen" aria-controls="monitoringpenjualanagen" data-toggle="tab" role="tab">Kelola Penjualan Via Website</a>
+					</li>
+					<li class="nav-item">
+                        <a href="" class="nav-link" data-target="#datacanvassing" aria-controls="datacanvassing" data-toggle="tab" role="tab">Kelola Laporan Keuangan Sederhana </a>
+					</li>
+					<li class="nav-item">
+                        <a href="" class="nav-link" data-target="#datakonsinyasi" aria-controls="datakonsinyasi" data-toggle="tab" role="tab">Kelola Data Inventory Agen</a>
+					</li>
+                </ul>
+
+                <div class="tab-content">
+
+					@include('marketing.agen.orderproduk.index')
+
+	            </div>
 
 			</div>
 
@@ -77,7 +54,11 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
-		var table = $('#table_agen').DataTable();
+		var table_sup = $('#table_orderprodukagenpusat').DataTable();
+
+		$(document).on('click','.btn-edit',function(){
+			window.location.href='{{ route('orderagenpusat.edit') }}'
+		});
 
 		$(document).on('click', '.btn-disable', function(){
 			var ini = $(this);
@@ -113,7 +94,20 @@
     			    }
 			    }
 			});
+
+			$(document).ready(function() {
+				$('#modal-order').DataTable( {
+					"iDisplayLength" : 5
+				});
+			});
+
+			$(document).ready(function() {
+				$('#detail-monitoring').DataTable( {
+					"iDisplayLength" : 5
+				});
+			});	
 		});
+
 
 		$(document).on('click', '.btn-enable', function(){
 			$.toast({
