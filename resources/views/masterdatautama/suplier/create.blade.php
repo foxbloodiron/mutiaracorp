@@ -90,9 +90,30 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>No Contact Person</label>
                             </div>
+
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
                                 <input type="text" class="form-control form-control-sm">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Batas TOP (Termin Of Payment)</label>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <input type="number" class="form-control form-control-sm">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Limit</label>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <input type="text" class="form-control form-control-sm input-rupiah">
                               </div>
                             </div>
 
