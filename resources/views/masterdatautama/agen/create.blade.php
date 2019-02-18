@@ -64,8 +64,8 @@
                               <div class="form-group">
                                 <select name="" id="" class="form-control form-control-sm">
                                   <option value="">Pilih Tipe Agen</option>
-                                  <option value="">Lunas</option>
-                                  <option value="">Piutang</option>
+                                  <option value="">Agen</option>
+                                  <option value="">Sub Agen</option>
                                 </select>
                               </div>
                             </div>
