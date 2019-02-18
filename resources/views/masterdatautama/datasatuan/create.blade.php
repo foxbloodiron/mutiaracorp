@@ -76,15 +76,12 @@
 @endsection
 @section('extra_script')
 <script type="text/javascript">
+  // set header token for ajax request
   $.ajaxSetup({
 		headers: {
 			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 		}
 	});
-
-  $(document).ready(function(){
-
-  });
 
   $('#btn_submit').on('click', function()
   {

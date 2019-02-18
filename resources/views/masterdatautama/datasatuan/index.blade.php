@@ -61,7 +61,7 @@
 @endsection
 @section('extra_script')
 <script type="text/javascript">
-
+	// set header token for ajax request
 	$.ajaxSetup({
 		headers: {
 			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -70,10 +70,11 @@
 
 	var tb_satuan;
 	setTimeout(function() {
-		table_satuan();
+		TableSatuan();
 	}, 1500);
 
-	function table_satuan()
+	// function to retrieve DataTable server side
+	function TableSatuan()
 	{
 		$('#table_satuan').dataTable().fnDestroy();
 		tb_satuan = $('#table_satuan').DataTable({
@@ -98,82 +99,18 @@
 			lengthMenu: [[10, 20, 50, -1], [10, 20, 50, 'All']]
 		});
 	}
-
-	$(document).ready(function(){
-
-		$('#table_satuan tbody').on('click', '.btn-edit', function(){
-			window.location.href = '{{route("datasatuan.edit", ["id" => 1])}}';
-		});
-
-		$('#btn-tambah').on('click', function(){
-			window.location.href = '{{route("datasatuan.create")}}';
-		});
-		// start : unused -> confirmed soon before deleted
-		$(document).on('click', '.btn-disable', function(){
-			var ini = $(this);
-			$.confirm({
-				animation: 'RotateY',
-				closeAnimation: 'scale',
-				animationBounce: 1.5,
-				icon: 'fa fa-exclamation-triangle',
-				title: 'Peringatan!',
-				content: 'Apa anda yakin mau menonaktifkan data ini?',
-				theme: 'disable',
-				buttons: {
-					info: {
-						btnClass: 'btn-blue',
-						text:'Ya',
-						action : function(){
-							$.toast({
-								heading: 'Information',
-								text: 'Data Berhasil di Nonaktifkan.',
-								bgColor: '#0984e3',
-								textColor: 'white',
-								loaderBg: '#fdcb6e',
-								icon: 'info'
-							})
-							ini.parents('.btn-group').html('<button class="btn btn-success btn-enable" type="button" title="Enable"><i class="fa fa-check-circle"></i></button>');
-						}
-					},
-					cancel:{
-						text: 'Tidak',
-						action: function () {
-							// tutup confirm
-						}
-					}
-				}
-			});
-		});
-		$(document).on('click', '.btn-enable', function(){
-			$.toast({
-				heading: 'Information',
-				text: 'Data Berhasil di Aktifkan.',
-				bgColor: '#0984e3',
-				textColor: 'white',
-				loaderBg: '#fdcb6e',
-				icon: 'info'
-			})
-			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
-											'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
-		})
-		// end : unused
-
-		// function table_hapus(a){
-		// 	table.row($(a).parents('tr')).remove().draw();
-		// }
-	});
-
+	// function to redirect page to edit page
 	function EditDatasatuan(idx)
 	{
 		window.location.href = baseUrl + "/masterdatautama/datasatuan/edit/" + idx;
 	}
-
+	// function to execute delete request
 	function DeleteDatasatuan(idx)
 	{
 		var url_hapus = baseUrl + "/masterdatautama/datasatuan/delete/" + idx;
 
 		$.confirm({
-			title: 'Tambah Satuan',
+			title: 'Hapus Satuan',
 			content: 'Apakah anda yakin ingin menghapus data ini ?',
 			buttons: {
 				YA: function () {
@@ -197,7 +134,7 @@
 						error : function(e){
 							$.toast({
 								heading: 'Warning',
-								text: response.message,
+								text: e.message,
 								bgColor: '#00b894',
 								textColor: 'white',
 								loaderBg: '#55efc4',
@@ -213,5 +150,70 @@
 			}
 		});
 	}
+
+	$(document).ready(function(){
+		$('#btn-tambah').on('click', function(){
+			window.location.href = '{{route("datasatuan.create")}}';
+		});
+
+		// start : unused -> confirmed soon before deleted
+		// $('#table_satuan tbody').on('click', '.btn-edit', function(){
+		// 	window.location.href = '{{route("datasatuan.edit", ["id" => 1])}}';
+		// });
+		//
+		// $(document).on('click', '.btn-disable', function(){
+		// 	var ini = $(this);
+		// 	$.confirm({
+		// 		animation: 'RotateY',
+		// 		closeAnimation: 'scale',
+		// 		animationBounce: 1.5,
+		// 		icon: 'fa fa-exclamation-triangle',
+		// 		title: 'Peringatan!',
+		// 		content: 'Apa anda yakin mau menonaktifkan data ini?',
+		// 		theme: 'disable',
+		// 		buttons: {
+		// 			info: {
+		// 				btnClass: 'btn-blue',
+		// 				text:'Ya',
+		// 				action : function(){
+		// 					$.toast({
+		// 						heading: 'Information',
+		// 						text: 'Data Berhasil di Nonaktifkan.',
+		// 						bgColor: '#0984e3',
+		// 						textColor: 'white',
+		// 						loaderBg: '#fdcb6e',
+		// 						icon: 'info'
+		// 					})
+		// 					ini.parents('.btn-group').html('<button class="btn btn-success btn-enable" type="button" title="Enable"><i class="fa fa-check-circle"></i></button>');
+		// 				}
+		// 			},
+		// 			cancel:{
+		// 				text: 'Tidak',
+		// 				action: function () {
+		// 					// tutup confirm
+		// 				}
+		// 			}
+		// 		}
+		// 	});
+		// });
+		// $(document).on('click', '.btn-enable', function(){
+		// 	$.toast({
+		// 		heading: 'Information',
+		// 		text: 'Data Berhasil di Aktifkan.',
+		// 		bgColor: '#0984e3',
+		// 		textColor: 'white',
+		// 		loaderBg: '#fdcb6e',
+		// 		icon: 'info'
+		// 	})
+		// 	$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
+		// 									'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
+		// })
+		// function table_hapus(a){
+		// 	table.row($(a).parents('tr')).remove().draw();
+		// }
+
+		// end : unused
+	});
+
 </script>
 @endsection

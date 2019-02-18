@@ -125,6 +125,7 @@ class MasterController extends Controller
     }
     public function list_agen()
     {
+      // start: get data from db and return it using DataTable
       $datas = DB::table('m_agen')->orderBy('a_name', 'asc')->get();
       return Datatables::of($datas)
         ->addColumn('type', function($datas) {
@@ -141,12 +142,12 @@ class MasterController extends Controller
           </div>';
         })
         ->rawColumns(['type', 'action'])
-        // ->addIndexColumn()
         ->make(true);
+        // end: return DataTable
     }
     function get_code_agen()
     {
-      // get max nota for add another 'perencanaan'
+      // start: get max nota for add another 'perencanaan'
       $det = DB::table('m_agen')->select('a_code')->first();
       if (empty($det)) {
         $id = 1;
@@ -161,10 +162,10 @@ class MasterController extends Controller
         }
         $id = $biggest + 1;
       }
-      // dd($id);
       $code = 'AG/' . Session::get('code_comp') . '/' . $id;
 
       return $code;
+      // end: return new code agen
     }
     public function create_agen()
     {
@@ -174,6 +175,7 @@ class MasterController extends Controller
     public function store_agen(Request $request)
     {
       // \LogActivity::addToLog('store-datasatuan');
+      // start: validate data before execute
       $messages = [
         'agen_name.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
         // 'agen_email.email' => 'Format email tidak valid, silahkan perbaiki terlebih dahulu !',
@@ -192,8 +194,8 @@ class MasterController extends Controller
           'message' => $errors
         ]);
       }
-
-      // start insert data
+      // end: validate
+      // start: execute insert data
       DB::beginTransaction();
       try {
         $id = DB::table('m_agen')->max('a_id') + 1;
@@ -208,7 +210,8 @@ class MasterController extends Controller
             'a_address' => $request->agen_address,
             // 'a_class' => $request->agen_class,
             'a_type' => $request->agen_type,
-            'a_insert' => Carbon::now()
+            'a_insert' => Carbon::now(),
+            'a_update' => Carbon::now()
           ]);
 
         DB::commit();
@@ -222,18 +225,88 @@ class MasterController extends Controller
           'message' => $e
         ]);
       }
+      // end: execute insert data
     }
-    public function edit_agen()
+    public function edit_agen($id)
     {
-        return view('masterdatautama.agen.edit');
+      $data['agen'] = DB::table('m_agen')
+      ->where('a_id', $id)
+      ->first();
+      return view('masterdatautama.agen.edit', compact('data'));
     }
-    public function update_agen()
+    public function update_agen(Request $request, $id)
     {
+      // \LogActivity::addToLog('store-datasatuan');
+      // start: validate data before execute
+      $messages = [
+        'agen_name.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
+        // 'agen_email.email' => 'Format email tidak valid, silahkan perbaiki terlebih dahulu !',
+        'agen_telp.required' => 'Nomor telp masih kosong, silahkan isi terlebih dahulu !'
+      ];
+      $validator = Validator::make($request->all(), [
+        'agen_name' => 'required',
+        // 'agen_email' => 'email',
+        'agen_telp' => 'required'
+      ], $messages);
+      if($validator->fails())
+      {
+        $errors = $validator->errors()->first();
+        return response()->json([
+          'status' => 'invalid',
+          'message' => $errors
+        ]);
+      }
+      // end: validate
+      // start: execute update data
+      DB::beginTransaction();
+      try {
+        DB::table('m_agen')
+          ->where('a_id', $id)
+          ->update([
+            'a_name' => $request->agen_name,
+            'a_birthday' => Carbon::parse($request->agen_birthday),
+            'a_email' => $request->agen_email,
+            'a_no_telp' => $request->agen_telp,
+            'a_address' => $request->agen_address,
+            // 'a_class' => $request->agen_class,
+            'a_type' => $request->agen_type,
+            'a_update' => Carbon::now()
+          ]);
 
+        DB::commit();
+        return response()->json([
+          'status' => 'berhasil'
+        ]);
+      } catch (\Exception $e) {
+        DB::rollback();
+        return response()->json([
+          'status' => 'gagal',
+          'message' => $e
+        ]);
+      }
+      // end: execute insert data
     }
-    public function delete_agen()
+    public function delete_agen($id)
     {
+      // start: execute delete data
+      DB::beginTransaction();
+      try {
+        DB::table('m_agen')
+          ->where('a_id', $id)
+          ->delete();
 
+        DB::commit();
+        return response()->json([
+          'status' => 'berhasil'
+        ]);
+      } catch (\Exception $e) {
+        DB::rollback();
+        return response()->json([
+          'status' => 'gagal',
+          'message' => $e
+        ]);
+      }
+      // end: execute delete data
     }
 
     // * Master Satuan
@@ -264,6 +337,7 @@ class MasterController extends Controller
     public function store_datasatuan(Request $request)
     {
       // \LogActivity::addToLog('store-datasatuan');
+      // start: validate data before execute
       $messages = [
         'satuan_name.required' => 'Nama satuan masih kosong, silahkan isi terlebih dahulu !'
       ];
@@ -278,8 +352,8 @@ class MasterController extends Controller
           'message' => $errors
         ]);
       }
-
-      // start insert data
+      // end: validate
+      // start: execute insert data
       DB::beginTransaction();
       try {
         DB::table('m_unit')
@@ -299,6 +373,7 @@ class MasterController extends Controller
           'message' => $e
         ]);
       }
+      // end: execute insert data
     }
     public function edit_datasatuan($id)
     {
@@ -310,6 +385,7 @@ class MasterController extends Controller
     public function update_datasatuan(Request $request, $id)
     {
       // \LogActivity::addToLog('store-datasatuan');
+      // start: validate data before execute
       $messages = [
         'satuan_name.required' => 'Nama satuan masih kosong, silahkan isi terlebih dahulu !'
       ];
@@ -324,8 +400,8 @@ class MasterController extends Controller
           'message' => $errors
         ]);
       }
-
-      // start insert data
+      // end: validate
+      // start: execute update data
       DB::beginTransaction();
       try {
         DB::table('m_unit')
@@ -345,10 +421,11 @@ class MasterController extends Controller
           'message' => $e
         ]);
       }
+      // end: execute insert data
     }
     public function delete_datasatuan($id)
     {
-      // start insert data
+      // start: execute delete data
       DB::beginTransaction();
       try {
         DB::table('m_unit')
@@ -366,6 +443,7 @@ class MasterController extends Controller
           'message' => $e
         ]);
       }
+      // end: execute delete data
     }
 
 

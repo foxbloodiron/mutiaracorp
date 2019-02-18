@@ -23,7 +23,7 @@
         <div class="card">
                     <div class="card-header bordered p-2">
                       <div class="header-block">
-                        <h3 class="title">Tambah Data Satuan</h3>
+                        <h3 class="title">Edit Data Satuan</h3>
                       </div>
                       <div class="header-block pull-right">
                         <a href="{{route('datasatuan.index')}}" class="btn btn-secondary"><i class="fa fa-arrow-left"></i></a>
@@ -40,18 +40,15 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Kode Satuan</label>
                             </div>
-
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
                                 <input type="text" class="form-control form-control-sm" name="" value="{{ $data['datasatuan']->u_id }}" readonly="">
                               </div>
                             </div>
 
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Nama Satuan</label>
                             </div>
-
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
                                 <input type="text" class="form-control form-control-sm" name="satuan_name" value="{{ $data['datasatuan']->u_name }}">
@@ -80,7 +77,7 @@
 @endsection
 @section('extra_script')
 <script type="text/javascript">
-  $(document).ready(function(){
+  // $(document).ready(function(){
     // $(document).on('click', '.btn-submit', function(){
 		// 	$.toast({
 		// 		heading: 'Success',
@@ -91,12 +88,12 @@
 		// 		icon: 'success'
 		// 	})
 		// })
-  });
+  // });
 
   $('#btn_simpan').on('click', function() {
     SubmitForm(event);
   })
-
+  // start: submit form to update data in db
   function SubmitForm(event)
   {
     event.preventDefault();
@@ -123,7 +120,6 @@
                   		icon: 'success',
                       stack: false
                   	});
-                  // window.location.href = "{{ route('datasatuan.index') }}";
                 } else if (response.status == 'invalid') {
                   $.toast({
                   		heading: 'Perhatian',
@@ -155,7 +151,6 @@
       }
     });
   }
-
-
+  // end: submit form
 </script>
 @endsection

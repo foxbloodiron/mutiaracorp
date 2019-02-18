@@ -55,9 +55,9 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/agen/list', 'MasterController@list_agen')->name('agen.list');
 	Route::get('/masterdatautama/agen/create', 'MasterController@create_agen')->name('agen.create');
 	Route::post('/masterdatautama/agen/store', 'MasterController@store_agen')->name('agen.store');
-	Route::get('/masterdatautama/agen/edit', 'MasterController@edit_agen')->name('agen.edit');
-  Route::post('/masterdatautama/agen/update', 'MasterController@update_agen')->name('agen.update');
-	Route::post('/masterdatautama/agen/delete', 'MasterController@delete_agen')->name('agen.delete');
+	Route::get('/masterdatautama/agen/edit/{id}', 'MasterController@edit_agen')->name('agen.edit');
+  Route::post('/masterdatautama/agen/update/{id}', 'MasterController@update_agen')->name('agen.update');
+	Route::post('/masterdatautama/agen/delete/{id}', 'MasterController@delete_agen')->name('agen.delete');
 
 
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen.index');
