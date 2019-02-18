@@ -70,7 +70,7 @@
                                     <option value="">Pilih Tipe</option>
                                     <option value="">Agen</option>
                                     <option value="">Sub Agen</option>
-                                    <option value="">Konsine</option>
+                                    <option value="">Konsigne</option>
                                 </select>
                               </div>
                             </div>

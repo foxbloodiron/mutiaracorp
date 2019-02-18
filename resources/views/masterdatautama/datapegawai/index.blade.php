@@ -38,6 +38,7 @@
 							                <th>ID Pegawai</th>
 							                <th>NIK</th>
 							                <th>Nama Pegawai</th>
+											<th>Jabatan</th>
 							                <th>Alamat</th>
 							                <th>Status Karyawan</th>
 											<th>Tanggal Masuk</th>
@@ -56,6 +57,7 @@
 	                                		<td>PG/001</td>
 	                                		<td>1111</td>
 	                                		<td>Alpha</td>
+											<td>Manager</td>
 	                                		<td>Jl. Alpha</td>
 	                                		<td>Sudah Menikah</td>
 											<td>02/01/2019</td>
@@ -77,6 +79,7 @@
 	                                		<td>PG/002</td>
 	                                		<td>1112</td>
 	                                		<td>Bravo</td>
+											<td>Supervisor</td>
 	                                		<td>Jl. Bravo</td>
 	                                		<td>Sudah Menikah</td>
 											<td>02/01/2019</td>
@@ -98,6 +101,7 @@
 	                                		<td>PG/003</td>
 	                                		<td>1113</td>
 	                                		<td>Charlie</td>
+											<td>Staf</td>
 	                                		<td>Jl. Charlie</td>
 	                                		<td>Belum Menikah</td>
 											<td>02/01/2019</td>

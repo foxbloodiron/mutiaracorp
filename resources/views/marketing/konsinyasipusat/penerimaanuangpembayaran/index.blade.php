@@ -114,7 +114,7 @@
 		</div>
         <div class="card-footer">
         <div class="pull-right">
-        <button class="btn btn-primary">Simpan</button>
+        <button class="btn btn-primary btn-submit">Simpan</button>
         </div>
         </div>
 	</div>

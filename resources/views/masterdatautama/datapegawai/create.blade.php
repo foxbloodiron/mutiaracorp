@@ -57,10 +57,28 @@
                                 </div>
                               </div>
 
-
-
                               <div class="col-md-3 col-sm-6 col-xs-12">
                                 <label>Ktp</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Hari Kerja</label>
+                              </div>
+
+                              <div class="col-md-9 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                  <input type="text" class="form-control form-control-sm" name="">
+                                </div>
+                              </div>
+
+                              <div class="col-md-3 col-sm-6 col-xs-12">
+                                <label>Nomor HP</label>
                               </div>
 
                               <div class="col-md-9 col-sm-6 col-xs-12">
@@ -93,16 +111,6 @@
                                     <option value="L">Laki-laki</option>
                                     <option value="P">Perempuan</option>
                                   </select>
-                                </div>
-                              </div>
-
-                              <div class="col-md-3 col-sm-6 col-xs-12">
-                                <label>Tempat Lahir</label>
-                              </div>
-
-                              <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="form-group">
-                                  <input type="text" class="form-control form-control-sm" name="">
                                 </div>
                               </div>
 
@@ -140,7 +148,7 @@
                               <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                   <div class="input-group">
-                                    <input type="text" class="form-control form-control-sm datepicker" name="">
+                                    <input type="text" class="form-control form-control-sm" name="">
                                   </div>
                                 </div>
                               </div>
@@ -156,22 +164,35 @@
                               </div>
 
                               <div class="col-md-3 col-sm-6 col-xs-12">
-                                <label>Nomor HP</label>
+                                <label>Jabatan</label>
                               </div>
 
                               <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                  <input type="text" class="form-control form-control-sm" name="">
+                                  <select name="" id="" class="form-control form-control-sm select2">
+                                    <option value="">Manager</option>
+                                    <option value="">Supervisor</option>
+                                    <option value="">Staf</option>
+                                    <option value="">Admin</option>
+                                  </select>
                                 </div>
                               </div>
 
                               <div class="col-md-3 col-sm-6 col-xs-12">
-                                <label>Jabatan</label>
+                                <label>Divisi</label>
                               </div>
 
-                              <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                  <input type="text" class="form-control form-control-sm" name="">
+                                  <select name="" id="" class="form-control form-control-sm select2">
+                                    <option value="">HRD & GA</option>
+                                    <option value="">Keuangan dan Akuntansi</option>
+                                    <option value="">Sales dan Marketing</option>
+                                    <option value="">Produksi</option>
+                                    <option value="">Gudang dan Pengiriman</option>
+                                    <option value="">Direksi</option>
+                                    <option value="">Operasional</option>
+                                  </select>
                                 </div>
                               </div>
 

@@ -53,7 +53,7 @@
 	                                		<td>1</td>
 	                                		<td>KUY/0001</td>
 											<td>Brad</td>
-											<td>Undefined</td>
+											<td>Agen</td>
 											<td>07/09/1999</td>
 	                                		<td>Jl. Rahasia</td>
 											<td>Brad@Pit.com</td>

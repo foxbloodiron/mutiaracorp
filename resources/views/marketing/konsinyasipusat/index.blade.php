@@ -122,6 +122,17 @@
 				"iDisplayLength" : 5
 			});
 		});
+
+		$(document).on('click', '.btn-submit', function(){
+			$.toast({
+				heading: 'Success',
+				text: 'Data Berhasil di Simpan',
+				bgColor: '#00b894',
+				textColor: 'white',
+				loaderBg: '#55efc4',
+				icon: 'success'
+			})
+		})
 	});
 </script>
 @endsection
