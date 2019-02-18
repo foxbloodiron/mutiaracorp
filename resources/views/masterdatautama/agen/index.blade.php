@@ -18,7 +18,7 @@
 		<div class="row">
 
 			<div class="col-12">
-				
+
 				<div class="card">
                     <div class="card-header bordered p-2">
                     	<div class="header-block">
@@ -26,46 +26,31 @@
 	                    </div>
 	                    <div class="header-block pull-right">
                     			<a class="btn btn-primary" href="{{route('agen.create')}}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
-	                    	
+
 	                    </div>
                     </div>
                     <div class="card-block">
                         <section>
-                        	
-                        	
+
+
                         	<div class="table-responsive">
 	                            <table class="table table-striped table-hover display nowrap" cellspacing="0" id="table_agen">
 	                                <thead class="bg-primary">
 	                                    <tr>
-							                <th width="1%">No</th>
-											<th>Kode Agen</th>
-							                <th>Nama Agen</th>
-											<th>Tipe Agen</th>
-											<th>Tanggal Lahir</th>
-							                <th>Alamat Agen</th>
-											<th>Email</th>
-							                <th>No Telp</th>
-							                <th>Aksi</th>
-							            </tr>
+												                <th width="1%">No</th>
+																				<th>Kode Agen</th>
+												                <th>Nama Agen</th>
+																				<th>Tipe Agen</th>
+																				<th>Tanggal Lahir</th>
+												                <th>Alamat Agen</th>
+																				<th>Email</th>
+												                <th>No Telp</th>
+												                <th>Aksi</th>
+												            </tr>
 	                                </thead>
 	                                <tbody>
-	                                	<tr>
-	                                		<td>1</td>
-	                                		<td>KUY/0001</td>
-											<td>Brad</td>
-											<td>Agen</td>
-											<td>07/09/1999</td>
-	                                		<td>Jl. Rahasia</td>
-											<td>Brad@Pit.com</td>
-	                                		<td>0843123123123</td>
-	                                		<td>
-	                                			<div class="btn-group btn-group-sm">
-	                                				<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>
-	                                				<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>
-	                                			</div>
-	                                		</td>
-	                                	</tr>
-							        </tbody>
+
+							        						</tbody>
 	                            </table>
 	                        </div>
                         </section>
@@ -83,6 +68,49 @@
 @endsection
 @section('extra_script')
 <script type="text/javascript">
+
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});
+
+	var tb_agen;
+	setTimeout(function() {
+		table_agen();
+	}, 1500);
+
+	function table_agen()
+	{
+		$('#table_agen').dataTable().fnDestroy();
+		tb_satuan = $('#table_agen').DataTable({
+			responsive: true,
+			// language: dataTableLanguage,
+			// processing: true,
+			serverSide: true,
+			ajax: {
+				url: "{{ route('agen.list') }}",
+				type: "get",
+				data: {
+					"_token": "{{ csrf_token() }}"
+				}
+			},
+			columns: [
+				{data: 'a_name', name: 'a_name'},
+				{data: 'a_code', name: 'a_code'},
+				{data: 'a_name', name: 'a_name'},
+				{data: 'type', name: 'type'},
+				{data: 'a_birthday', name: 'a_birthday'},
+				{data: 'a_address', name: 'a_address'},
+				{data: 'a_email', name: 'a_email'},
+				{data: 'a_no_telp', name: 'a_no_telp'},
+				{data: 'action', name: 'action'}
+			],
+			pageLength: 10,
+			lengthMenu: [[10, 20, 50, -1], [10, 20, 50, 'All']]
+		});
+	}
+
 
 	$(document).ready(function(){
 		var table = $('#table_agen').DataTable();
@@ -135,9 +163,9 @@
 			$(this).parents('.btn-group').html('<button class="btn btn-warning btn-edit" type="button" title="Edit"><i class="fa fa-pencil"></i></button>'+
 	                                		'<button class="btn btn-danger btn-disable" type="button" title="Disable"><i class="fa fa-times-circle"></i></button>')
 		})
-        $('#table_agen tbody').on('click','.btn-edit', function(){
+    $('#table_agen tbody').on('click','.btn-edit', function(){
 			window.location.href='{{route('agen.edit')}}'
-		})
+		});
 	});
 </script>
 @endsection

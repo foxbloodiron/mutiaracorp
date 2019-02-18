@@ -134,7 +134,7 @@
               error : function(e){
                 $.toast({
                     heading: 'Warning',
-                    text: response.message,
+                    text: e.message,
                     bgColor: '#00b894',
                     textColor: 'white',
                     loaderBg: '#55efc4',

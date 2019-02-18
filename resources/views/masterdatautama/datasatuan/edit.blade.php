@@ -19,7 +19,7 @@
     <div class="row">
 
       <div class="col-12">
-        
+
         <div class="card">
                     <div class="card-header bordered p-2">
                       <div class="header-block">
@@ -30,9 +30,10 @@
                       </div>
                     </div>
 
-                    <div class="card-block">
+                    <form action="{{ route('datasatuan.update', [$data['datasatuan']->u_id]) }}" method="post" id="myForm" autocomplete="off">
+                      {{ csrf_field() }}
+                      <div class="card-block">
                         <section>
-                        
 
                           <div class="row">
 
@@ -42,7 +43,7 @@
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="" readonly="">
+                                <input type="text" class="form-control form-control-sm" name="" value="{{ $data['datasatuan']->u_id }}" readonly="">
                               </div>
                             </div>
 
@@ -53,18 +54,19 @@
 
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="text" class="form-control form-control-sm" name="satuan_name" value="{{ $data['datasatuan']->u_name }}">
                               </div>
                             </div>
                           </div>
 
-                          
                         </section>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-primary btn-submit" type="button">Simpan</button>
-                      <a href="{{route('datasatuan.index')}}" class="btn btn-secondary">Kembali</a>
-                    </div>
+                      </div>
+                      <div class="card-footer text-right">
+                        <button class="btn btn-primary btn-submit" type="button" id="btn_simpan">Simpan</button>
+                        <a href="{{route('datasatuan.index')}}" class="btn btn-secondary">Kembali</a>
+                      </div>
+
+                    </form>
                 </div>
 
       </div>
@@ -79,16 +81,81 @@
 @section('extra_script')
 <script type="text/javascript">
   $(document).ready(function(){
-    $(document).on('click', '.btn-submit', function(){
-			$.toast({
-				heading: 'Success',
-				text: 'Data Berhasil di Edit',
-				bgColor: '#00b894',
-				textColor: 'white',
-				loaderBg: '#55efc4',
-				icon: 'success'
-			})
-		})
+    // $(document).on('click', '.btn-submit', function(){
+		// 	$.toast({
+		// 		heading: 'Success',
+		// 		text: 'Data Berhasil di Edit',
+		// 		bgColor: '#00b894',
+		// 		textColor: 'white',
+		// 		loaderBg: '#55efc4',
+		// 		icon: 'success'
+		// 	})
+		// })
   });
+
+  $('#btn_simpan').on('click', function() {
+    SubmitForm(event);
+  })
+
+  function SubmitForm(event)
+  {
+    event.preventDefault();
+    form_data = $('#myForm').serialize();
+
+    $.confirm({
+      title: 'Edit Satuan',
+      content: 'Apakah anda yakin menyimpan data ini ?',
+      buttons: {
+          YA: function () {
+            $.ajax({
+              data : form_data,
+              type : "post",
+              url : $("#myForm").attr('action'),
+              dataType : 'json',
+              success : function (response){
+                if(response.status == 'berhasil'){
+                  $.toast({
+                  		heading: 'Success',
+                  		text: 'Data berhasil disimpan !',
+                  		bgColor: '#00b894',
+                  		textColor: 'white',
+                  		loaderBg: '#55efc4',
+                  		icon: 'success',
+                      stack: false
+                  	});
+                  // window.location.href = "{{ route('datasatuan.index') }}";
+                } else if (response.status == 'invalid') {
+                  $.toast({
+                  		heading: 'Perhatian',
+                  		text: response.message,
+                  		bgColor: '#00b894',
+                  		textColor: 'white',
+                  		loaderBg: '#55efc4',
+                  		icon: 'warning',
+                      stack: false
+                  	});
+                }
+              },
+              error : function(e){
+                $.toast({
+                    heading: 'Warning',
+                    text: e.message,
+                    bgColor: '#00b894',
+                    textColor: 'white',
+                    loaderBg: '#55efc4',
+                    icon: 'warning',
+                    stack: false
+                  });
+              }
+            })
+          },
+          TIDAK: function () {
+              // $.alert('Canceled!');
+          }
+      }
+    });
+  }
+
+
 </script>
 @endsection

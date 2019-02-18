@@ -52,8 +52,12 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/cabang/edit', 'MasterController@edit_cabang')->name('cabang.edit');
 
 	Route::get('/masterdatautama/agen/index', 'MasterController@agen')->name('agen.index');
+	Route::get('/masterdatautama/agen/list', 'MasterController@list_agen')->name('agen.list');
 	Route::get('/masterdatautama/agen/create', 'MasterController@create_agen')->name('agen.create');
+	Route::post('/masterdatautama/agen/store', 'MasterController@store_agen')->name('agen.store');
 	Route::get('/masterdatautama/agen/edit', 'MasterController@edit_agen')->name('agen.edit');
+  Route::post('/masterdatautama/agen/update', 'MasterController@update_agen')->name('agen.update');
+	Route::post('/masterdatautama/agen/delete', 'MasterController@delete_agen')->name('agen.delete');
 
 
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen.index');
@@ -62,7 +66,9 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/datasatuan/list', 'MasterController@list_datasatuan')->name('datasatuan.list');
 	Route::get('/masterdatautama/datasatuan/create', 'MasterController@create_datasatuan')->name('datasatuan.create');
 	Route::post('/masterdatautama/datasatuan/store', 'MasterController@store_datasatuan')->name('datasatuan.store');
-	Route::get('/masterdatautama/datasatuan/edit', 'MasterController@edit_datasatuan')->name('datasatuan.edit');
+	Route::get('/masterdatautama/datasatuan/edit/{id}', 'MasterController@edit_datasatuan')->name('datasatuan.edit');
+	Route::post('/masterdatautama/datasatuan/update/{id}', 'MasterController@update_datasatuan')->name('datasatuan.update');
+	Route::post('/masterdatautama/datasatuan/delete/{id}', 'MasterController@delete_datasatuan')->name('datasatuan.delete');
 	// !===================================================== End Master Data Utama =====================================================!
 
 	// !===================================================== PRODUKSI =====================================================!
