@@ -27,12 +27,16 @@
                     <li class="nav-item">
                         <a href="" class="nav-link" data-target="#monitoringpenjualan" aria-controls="monitoringpenjualan" data-toggle="tab" role="tab">Monitoring Penjualan</a>
 					</li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" data-target="#penerimaanuangpembayaran" aria-controls="penerimaanuangpembayaran" data-toggle="tab" role="tab">Penerimaan Uang Pembayaran</a>
+					</li>
                 </ul>
 
                 <div class="tab-content">
 
 					@include('marketing.konsinyasipusat.penempatanproduk.index')
 					@include('marketing.konsinyasipusat.monitoringpenjualan.index')
+					@include('marketing.konsinyasipusat.penerimaanuangpembayaran.index')
 
 	            </div>
 

@@ -34,7 +34,7 @@
                         	
                         	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_agen">
+	                            <table class="table table-striped table-hover display nowrap" cellspacing="0" id="table_agen">
 	                                <thead class="bg-primary">
 	                                    <tr>
 							                <th width="1%">No</th>

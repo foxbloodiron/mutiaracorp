@@ -67,7 +67,7 @@
 			</fieldset>
 
 				<div class="table-responsive">
-					<table class="table table-hover table-striped" cellspacing="0" id="table_payrollmanajemen">
+					<table class="table table-hover table-striped display nowrap" cellspacing="0" id="table_payrollmanajemen">
 						<thead class="bg-primary">
 							<tr>
 								<th width="1%">Kode</th>

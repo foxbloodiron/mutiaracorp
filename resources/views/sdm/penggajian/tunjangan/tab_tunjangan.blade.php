@@ -13,7 +13,7 @@
 		<div class="card-block">
 			<section>
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped" cellspacing="0" id="table_tunjangan">
+                    <table class="table table-hover table-striped display nowrap" cellspacing="0" id="table_tunjangan">
                         <thead class="bg-primary">
                             <tr>
                                 <th>Nama</th>

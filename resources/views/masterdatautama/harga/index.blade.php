@@ -33,7 +33,7 @@
                         	
                         	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_harga">
+	                            <table class="table table-striped table-hover display nowrap" cellspacing="0" id="table_harga">
 	                                <thead class="bg-primary">
 	                                    <tr>
 							                <th width="1%">No</th>

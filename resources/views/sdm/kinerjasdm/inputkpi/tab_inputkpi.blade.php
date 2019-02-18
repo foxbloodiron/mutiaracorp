@@ -5,7 +5,7 @@
 				<h3 class="title">Data KPI</h3>
 			</div>
 			<div class="header-block pull-right">
-				<a class="btn btn-primary" id="btn-tambah-mantan" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
+				<a class="btn btn-primary" id="btn-tambah-kpi" href="#"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
 			</div>
 			<div class=""></div>
 		</div>
@@ -39,7 +39,7 @@
 				</div>
 					<hr>
 					<div class="table-responsive">
-						<table class="table table-hover table-striped" cellspacing="0" id="table_inputkpi">
+						<table class="table table-hover table-striped display nowrap" cellspacing="0" id="table_inputkpi">
 							<thead class="bg-primary">
 								<tr>
 									<th>No</th>

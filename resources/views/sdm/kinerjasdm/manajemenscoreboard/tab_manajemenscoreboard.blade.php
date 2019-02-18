@@ -36,7 +36,7 @@
 				</div>
 					<hr>
 					<div class="table-responsive">
-						<table class="table table-hover table-striped" cellspacing="0" id="table_manajemenscoreboard">
+						<table class="table table-hover table-striped display nowrap" cellspacing="0" id="table_manajemenscoreboard">
 							<thead class="bg-primary">
 								<tr>
 									<th width="1%">No</th>

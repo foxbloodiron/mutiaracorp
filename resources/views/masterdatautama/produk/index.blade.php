@@ -42,7 +42,7 @@
 		                        <section>
 		                        	
 		                        	<div class="table-responsive">
-			                            <table class="table table-striped table-hover" cellspacing="0" id="tabel_produk">
+			                            <table class="table table-striped table-hover display nowrap" cellspacing="0" id="tabel_produk">
 			                                <thead class="bg-primary">
 			                                    <tr>
 									                <th>No</th>

@@ -35,7 +35,7 @@
                         <section>
                         	
                         	<div class="table-responsive">
-	                            <table class="table table-striped table-hover" cellspacing="0" id="table_manajemenstok">
+	                            <table class="table table-striped table-hover display nowrap" cellspacing="0" id="table_manajemenstok">
 	                                <thead class="bg-primary">
 	                                    <tr>
 	                                    	<th>No</th>

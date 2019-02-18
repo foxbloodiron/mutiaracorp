@@ -193,7 +193,7 @@
 </script>
 
 <script type="text/javascript">
-	$('#btn-tambah-mantan').click(function(){
+	$('#btn-tambah-kpi').click(function(){
 
 		$('#div_pki_pegawai').addClass('d-none');
 		$('#div_pki_realisasi').addClass('d-none');
