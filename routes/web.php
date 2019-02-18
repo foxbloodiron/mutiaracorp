@@ -59,10 +59,12 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen.index');
 
 	Route::get('/masterdatautama/datasatuan/index', 'MasterController@datasatuan')->name('datasatuan.index');
+	Route::get('/masterdatautama/datasatuan/list', 'MasterController@list_datasatuan')->name('datasatuan.list');
 	Route::get('/masterdatautama/datasatuan/create', 'MasterController@create_datasatuan')->name('datasatuan.create');
+	Route::post('/masterdatautama/datasatuan/store', 'MasterController@store_datasatuan')->name('datasatuan.store');
 	Route::get('/masterdatautama/datasatuan/edit', 'MasterController@edit_datasatuan')->name('datasatuan.edit');
 	// !===================================================== End Master Data Utama =====================================================!
-	
+
 	// !===================================================== PRODUKSI =====================================================!
 	// Order Produksi
     Route::get('/produksi/orderproduksi/index', 'ProduksiController@order_produksi')->name('order.index');
@@ -162,5 +164,5 @@ Route::group(['middleware' => 'guest'], function(){
 
 
 
-}); 
+});
 // End Route Group
