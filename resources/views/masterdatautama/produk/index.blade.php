@@ -139,7 +139,7 @@
 		}
 	});
 
-	var tb_prduk;
+	var tb_produk;
 	setTimeout(function() {
 		TableProduk();
 	}, 1500);
@@ -148,7 +148,7 @@
 	function TableProduk()
 	{
 		$('#table_produk').dataTable().fnDestroy();
-		tb_prduk = $('#table_produk').DataTable({
+		tb_produk = $('#table_produk').DataTable({
 			responsive: true,
 			// language: dataTableLanguage,
 			// processing: true,
@@ -173,14 +173,14 @@
 		});
 	}
 	// function to redirect page to edit page
-	function EditProduk(idx)
+	function EditDataproduk(idx)
 	{
-		window.location.href = baseUrl + "/masterdatautama/agen/edit/" + idx;
+		window.location.href = baseUrl + "/masterdatautama/produk/edit/" + idx;
 	}
 	// function to execute delete request
-	function DeleteProduk(idx)
+	function DeleteDataproduk(idx)
 	{
-		var url_hapus = baseUrl + "/masterdatautama/agen/delete/" + idx;
+		var url_hapus = baseUrl + "/masterdatautama/produk/delete/" + idx;
 
 		$.confirm({
 			title: 'Hapus Agen',
@@ -201,7 +201,7 @@
 									icon: 'success',
 									stack: false
 								});
-								tb_prduk.ajax.reload();
+								tb_produk.ajax.reload();
 							}
 						},
 						error : function(e){

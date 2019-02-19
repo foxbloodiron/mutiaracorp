@@ -63,23 +63,178 @@ class MasterController extends Controller
     }
     public function create_dataproduk()
     {
-        return view('masterdatautama.produk.create');
+      return view('masterdatautama.produk.create');
+    }
+    public function get_codedataproduk()
+    {
+      // start: get max nota for add another 'perencanaan'
+      $det = DB::table('m_item')->select('i_code')->first();
+      if (empty($det)) {
+        $id = 1;
+      } else {
+        $biggest = 0;
+        $baseCodes = DB::table('m_item')->select('i_code')->get();
+        foreach ($baseCodes as $baseCode) {
+          $temp = explode('/', $baseCode->i_code, 3);
+          // var_dump($temp);
+          // dd($det);
+          if($temp[2] > $biggest) {
+            $biggest = (int)$temp[2];
+          }
+        }
+        $id = $biggest + 1;
+      }
+      $code = 'IP/' . Session::get('code_comp') . '/' . $id;
+
+      return $code;
+      // end: return new code agen
     }
     public function store_dataproduk(Request $request)
     {
+      // start: validate data before execute
+      $messages = [
+        'dataproduk_name.required' => 'Nama produk masih kosong, silahkan isi terlebih dahulu !'
+      ];
+      $validator = Validator::make($request->all(), [
+        'dataproduk_name' => 'required'
+      ], $messages);
+      if($validator->fails())
+      {
+        $errors = $validator->errors()->first();
+        return response()->json([
+          'status' => 'invalid',
+          'message' => $errors
+        ]);
+      }
+      // end: validate
+      // start: execute insert data
+      DB::beginTransaction();
+      try {
+        $id = DB::table('m_item')->max('i_id') + 1;
+        $code = $this->get_codedataproduk();
 
+        DB::table('m_item')
+          ->insert([
+            'i_id' => $id,
+            'i_code' => $code,
+            'i_type' => $request->dataproduk_type,
+            'i_codegroup' => null,
+            'i_name' => $request->dataproduk_name,
+            'i_unit1' => $request->dataproduk_satuanutama,
+            'i_unit2' => $request->dataproduk_satuanalt1,
+            'i_unit3' => $request->dataproduk_satuanalt2,
+            'i_unitcompare1' => $request->dataproduk_isisatuanutama,
+            'i_unitcompare2' => $request->dataproduk_isisatuanalt1,
+            'i_unitcompare3' => $request->dataproduk_isisatuanalt2,
+            'i_price' => null,
+            'i_det' => $request->dataproduk_ket,
+            'i_isactive' => "Y",
+            'i_created_at' => Carbon::now(),
+            'i_update_at' => Carbon::now(),
+            'i_insert_by' => Session::get('code_comp'),
+            'i_updated_by' => Session::get('code_comp')
+          ]);
+
+        DB::commit();
+        return response()->json([
+          'status' => 'berhasil'
+        ]);
+      } catch (\Exception $e) {
+        DB::rollback();
+        return response()->json([
+          'status' => 'gagal',
+          'message' => $e
+        ]);
+      }
+      // end: execute insert data
     }
     public function edit_dataproduk($id)
     {
-      return view('masterdatautama.produk.edit');
+      $data['dataproduk'] = DB::table('m_item')
+      ->where('i_id', $id)
+      ->first();
+      return view('masterdatautama.produk.edit', compact('data'));
     }
     public function update_dataproduk(Request $request, $id)
     {
+        // start: validate data before execute
+        $messages = [
+          'dataproduk_name.required' => 'Nama produk masih kosong, silahkan isi terlebih dahulu !'
+        ];
+        $validator = Validator::make($request->all(), [
+          'dataproduk_name' => 'required'
+        ], $messages);
+        if($validator->fails())
+        {
+          $errors = $validator->errors()->first();
+          return response()->json([
+            'status' => 'invalid',
+            'message' => $errors
+          ]);
+        }
+        // end: validate
+        // start: execute update data
+        DB::beginTransaction();
+        try {
+          DB::table('m_item')
+            ->where('i_id', $id)
+            ->update([
+              'i_type' => $request->dataproduk_type,
+              'i_codegroup' => null,
+              'i_name' => $request->dataproduk_name,
+              // 'i_unit1' => $request->dataproduk_satuanutama,
+              'i_unit2' => $request->dataproduk_satuanalt1,
+              'i_unit3' => $request->dataproduk_satuanalt2,
+              // 'i_unitcompare1' => $request->dataproduk_isisatuanutama,
+              'i_unitcompare2' => $request->dataproduk_isisatuanalt1,
+              'i_unitcompare3' => $request->dataproduk_isisatuanalt2,
+              'i_price' => null,
+              'i_det' => $request->dataproduk_ket,
+              'i_isactive' => "Y",
+              'i_created_at' => Carbon::now(),
+              'i_update_at' => Carbon::now(),
+              'i_insert_by' => Session::get('code_comp'),
+              'i_updated_by' => Session::get('code_comp')
+            ]);
 
+          DB::commit();
+          return response()->json([
+            'status' => 'berhasil'
+          ]);
+        } catch (\Exception $e) {
+          DB::rollback();
+          return response()->json([
+            'status' => 'gagal',
+            'message' => $e
+          ]);
+        }
+        // end: execute update data
     }
     public function delete_dataproduk($id)
     {
+      // start: execute update data (delete)
+      DB::beginTransaction();
+      try {
+        DB::table('m_item')
+          ->where('i_id', $id)
+          ->update([
+            'i_isactive' => "N",
+            'i_update_at' => Carbon::now(),
+            'i_updated_by' => Session::get('code_comp')
+          ]);
 
+        DB::commit();
+        return response()->json([
+          'status' => 'berhasil'
+        ]);
+      } catch (\Exception $e) {
+        DB::rollback();
+        return response()->json([
+          'status' => 'gagal',
+          'message' => $e
+        ]);
+      }
+      // end: execute update data (delete)
     }
 
     // Master Variasi Satuan Produk
@@ -173,8 +328,8 @@ class MasterController extends Controller
       // \LogActivity::addToLog('store-datasatuan');
       // start: validate data before execute
       $messages = [
-        'cabang_name.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
-        'cabang_address.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_name.required' => 'Nama cabang masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_address.required' => 'Alamat cabang masih kosong, silahkan isi terlebih dahulu !',
         'cabang_telp.required' => 'Nomor telp masih kosong, silahkan isi terlebih dahulu !'
       ];
       $validator = Validator::make($request->all(), [
@@ -230,8 +385,8 @@ class MasterController extends Controller
     {
       // start: validate data before execute
       $messages = [
-        'cabang_name.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
-        'cabang_address.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_name.required' => 'Nama cabang masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_address.required' => 'Alamat cabang masih kosong, silahkan isi terlebih dahulu !',
         'cabang_telp.required' => 'Nomor telp masih kosong, silahkan isi terlebih dahulu !'
       ];
       $validator = Validator::make($request->all(), [
