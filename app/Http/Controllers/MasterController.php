@@ -33,17 +33,53 @@ class MasterController extends Controller
 
     public function dataproduk()
     {
-        return view('masterdatautama.produk.index');
+      return view('masterdatautama.produk.index');
     }
-
+    public function list_dataproduk()
+    {
+      // start: get data from db and return it using DataTable
+      $datas = DB::table('m_item')->orderBy('i_name', 'asc')->where('i_isactive', 'Y')->get();
+      return Datatables::of($datas)
+        ->addColumn('type', function($datas) {
+          if ($datas->i_type == 'BB') {
+            return '<td>Bahan Baku</td>';
+          } elseif ($datas->i_type == 'BP') {
+            return '<td>Barang Produksi</td>';
+          } elseif ($datas->i_type == 'BJ') {
+            return '<td>Barang Jualan</td>';
+          } else {
+            return '<td>Lain-lain</td>';
+          }
+        })
+        ->addColumn('action', function($datas) {
+          return '<div class="btn-group btn-group-sm">
+          <button class="btn btn-warning" onclick="EditDataproduk('.$datas->i_id.')" rel="tooltip" data-placement="top"><i class="fa fa-pencil"></i></button>
+          <button class="btn btn-danger" onclick="DeleteDataproduk('.$datas->i_id.')" rel="tooltip" data-placement="top" data-original-title="Hapus"><i class="fa fa-trash-o"></i></button>
+          </div>';
+        })
+        ->rawColumns(['type', 'action'])
+        ->make(true);
+        // end: return DataTable
+    }
     public function create_dataproduk()
     {
         return view('masterdatautama.produk.create');
     }
-
-    public function edit_dataproduk()
+    public function store_dataproduk(Request $request)
     {
-        return view('masterdatautama.produk.edit');
+
+    }
+    public function edit_dataproduk($id)
+    {
+      return view('masterdatautama.produk.edit');
+    }
+    public function update_dataproduk(Request $request, $id)
+    {
+
+    }
+    public function delete_dataproduk($id)
+    {
+
     }
 
     // Master Variasi Satuan Produk
@@ -108,13 +144,157 @@ class MasterController extends Controller
     {
         return view('masterdatautama.cabang.index');
     }
+    public function list_cabang()
+    {
+      // start: get data from db and return it using DataTable
+      $datas = DB::table('m_company')->orderBy('c_nama', 'asc')->get();
+      return Datatables::of($datas)
+        ->addColumn('action', function($datas) {
+          return '<div class="btn-group btn-group-sm">
+          <button class="btn btn-warning" onclick="EditCabang('.$datas->c_id.')" rel="tooltip" data-placement="top"><i class="fa fa-pencil"></i></button>
+          <button class="btn btn-danger" onclick="DeleteCabang('.$datas->c_id.')" rel="tooltip" data-placement="top" data-original-title="Hapus"><i class="fa fa-trash-o"></i></button>
+          </div>';
+        })
+        ->rawColumns(['action'])
+        ->make(true);
+        // end: return DataTable
+    }
+    public function get_codecabang()
+    {
+
+    }
     public function create_cabang()
     {
-        return view('masterdatautama.cabang.create');
+      $id = DB::table('m_company')->max('c_id') + 1;
+      return view('masterdatautama.cabang.create', compact('id'));
     }
-    public function edit_cabang()
+    public function store_cabang(Request $request)
     {
-        return view('masterdatautama.cabang.edit');
+      // \LogActivity::addToLog('store-datasatuan');
+      // start: validate data before execute
+      $messages = [
+        'cabang_name.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_address.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_telp.required' => 'Nomor telp masih kosong, silahkan isi terlebih dahulu !'
+      ];
+      $validator = Validator::make($request->all(), [
+        'cabang_name' => 'required',
+        'cabang_address' => 'required',
+        'cabang_telp' => 'required'
+      ], $messages);
+      if($validator->fails())
+      {
+        $errors = $validator->errors()->first();
+        return response()->json([
+          'status' => 'invalid',
+          'message' => $errors
+        ]);
+      }
+      // end: validate
+      // start: execute insert data
+      DB::beginTransaction();
+      try {
+        $id = DB::table('m_company')->max('c_id') + 1;
+        DB::table('m_company')
+          ->insert([
+            'c_id' => $id,
+            'c_nama' => $request->cabang_name,
+            'c_alamat' => $request->cabang_address,
+            'c_no_telp' => $request->cabang_telp,
+            'c_type' => $request->cabang_type,
+            'c_insert' => Carbon::now(),
+            'c_update' => Carbon::now()
+          ]);
+
+        DB::commit();
+        return response()->json([
+          'status' => 'berhasil'
+        ]);
+      } catch (\Exception $e) {
+        DB::rollback();
+        return response()->json([
+          'status' => 'gagal',
+          'message' => $e
+        ]);
+      }
+      // end: execute insert data
+    }
+    public function edit_cabang($id)
+    {
+      $data['cabang'] = DB::table('m_company')
+      ->where('c_id', $id)
+      ->first();
+      return view('masterdatautama.cabang.edit', compact('data'));
+    }
+    public function update_cabang(Request $request, $id)
+    {
+      // start: validate data before execute
+      $messages = [
+        'cabang_name.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_address.required' => 'Nama agen masih kosong, silahkan isi terlebih dahulu !',
+        'cabang_telp.required' => 'Nomor telp masih kosong, silahkan isi terlebih dahulu !'
+      ];
+      $validator = Validator::make($request->all(), [
+        'cabang_name' => 'required',
+        'cabang_address' => 'required',
+        'cabang_telp' => 'required'
+      ], $messages);
+      if($validator->fails())
+      {
+        $errors = $validator->errors()->first();
+        return response()->json([
+          'status' => 'invalid',
+          'message' => $errors
+        ]);
+      }
+      // end: validate
+      // start: execute update data
+      DB::beginTransaction();
+      try {
+        DB::table('m_company')
+          ->where('c_id', $id)
+          ->update([
+            'c_nama' => $request->cabang_name,
+            'c_alamat' => $request->cabang_address,
+            'c_no_telp' => $request->cabang_telp,
+            'c_type' => $request->cabang_type,
+            'c_update' => Carbon::now()
+          ]);
+
+        DB::commit();
+        return response()->json([
+          'status' => 'berhasil'
+        ]);
+      } catch (\Exception $e) {
+        DB::rollback();
+        return response()->json([
+          'status' => 'gagal',
+          'message' => $e
+        ]);
+      }
+      // end: execute update data
+    }
+    public function delete_cabang($id)
+    {
+      // start: execute delete data
+      DB::beginTransaction();
+      try {
+        DB::table('m_company')
+          ->where('c_id', $id)
+          ->delete();
+
+        DB::commit();
+        return response()->json([
+          'status' => 'berhasil'
+        ]);
+      } catch (\Exception $e) {
+        DB::rollback();
+        return response()->json([
+          'status' => 'gagal',
+          'message' => $e
+        ]);
+      }
+      // end: execute delete data
     }
 
     // * Master Agen
@@ -145,7 +325,7 @@ class MasterController extends Controller
         ->make(true);
         // end: return DataTable
     }
-    function get_code_agen()
+    public function get_code_agen()
     {
       // start: get max nota for add another 'perencanaan'
       $det = DB::table('m_agen')->select('a_code')->first();

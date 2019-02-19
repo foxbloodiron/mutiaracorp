@@ -109,7 +109,7 @@
                         </section>
                       </div>
                       <div class="card-footer text-right">
-                        <button class="btn btn-primary btn-submit" id="btn_submit" type="button">Simpan</button>
+                        <button class="btn btn-primary btn-submit" id="btn_simpan" type="button">Simpan</button>
                         <a href="{{route('agen.index')}}" class="btn btn-secondary">Kembali</a>
                       </div>
                     </form>
@@ -133,47 +133,8 @@
     }
   });
 
-  // $(document).ready(function(){
-  //   $('#type_cus').change(function(){
-  //     if($(this).val() === 'kontrak'){
-  //       $('#label_type_cus').text('Jumlah Bulan');
-  //       $('#jumlah_hari_bulan').val('');
-  //       $('#pagu').val('');
-  //       $('#armada').prop('selectedIndex', 0).trigger('change');
-  //       $('.120mm').removeClass('d-none');
-  //       $('.125mm').addClass('d-none');
-  //       $('.122mm').removeClass('d-none');
-  //     } else if($(this).val() === 'harian'){
-  //       $('#label_type_cus').text('Jumlah Hari');
-  //       $('#armada').prop('selectedIndex', 0).trigger('change');
-  //       $('#pagu').val('');
-  //       $('#jumlah_hari_bulan').val('');
-  //       $('.122mm').addClass('d-none');
-  //       $('.120mm').removeClass('d-none');
-  //       $('.125mm').removeClass('d-none');
-  //     } else {
-  //       $('#jumlah_hari_bulan').val('');
-  //       $('#armada').prop('selectedIndex', 0).trigger('change');
-  //       $('#pagu').val('');
-  //       $('.122mm').addClass('d-none');
-  //       $('.120mm').addClass('d-none');
-  //       $('.125mm').addClass('d-none');
-  //     }
-  //   });
-    // $(document).on('click', '.btn-submit', function(){
-		// 	$.toast({
-		// 		heading: 'Success',
-		// 		text: 'Data Berhasil di Simpan',
-		// 		bgColor: '#00b894',
-		// 		textColor: 'white',
-		// 		loaderBg: '#55efc4',
-		// 		icon: 'success'
-		// 	});
-		// });
-  // });
 
-
-  $('#btn_submit').on('click', function() {
+  $('#btn_simpan').on('click', function() {
     SubmitForm(event);
   });
 
@@ -202,9 +163,11 @@
                   textColor: 'white',
                   loaderBg: '#55efc4',
                   icon: 'success',
-                  stack: false
+                  stack: false,
+                  afterHidden: function() {
+                    window.location.href = "{{ route('agen.index') }}";
+                  }
                 });
-                window.location.href = "{{ route('agen.index') }}";
               } else if (response.status == 'invalid') {
                 $.toast({
                   heading: 'Perhatian',
@@ -236,5 +199,45 @@
       }
     });
   }
+
+  // start: unused -> confirmed and deleted soon
+  // $(document).ready(function(){
+  //   $('#type_cus').change(function(){
+  //     if($(this).val() === 'kontrak'){
+  //       $('#label_type_cus').text('Jumlah Bulan');
+  //       $('#jumlah_hari_bulan').val('');
+  //       $('#pagu').val('');
+  //       $('#armada').prop('selectedIndex', 0).trigger('change');
+  //       $('.120mm').removeClass('d-none');
+  //       $('.125mm').addClass('d-none');
+  //       $('.122mm').removeClass('d-none');
+  //     } else if($(this).val() === 'harian'){
+  //       $('#label_type_cus').text('Jumlah Hari');
+  //       $('#armada').prop('selectedIndex', 0).trigger('change');
+  //       $('#pagu').val('');
+  //       $('#jumlah_hari_bulan').val('');
+  //       $('.122mm').addClass('d-none');
+  //       $('.120mm').removeClass('d-none');
+  //       $('.125mm').removeClass('d-none');
+  //     } else {
+  //       $('#jumlah_hari_bulan').val('');
+  //       $('#armada').prop('selectedIndex', 0).trigger('change');
+  //       $('#pagu').val('');
+  //       $('.122mm').addClass('d-none');
+  //       $('.120mm').addClass('d-none');
+  //       $('.125mm').addClass('d-none');
+  //     }
+  //   });
+  // $(document).on('click', '.btn-submit', function(){
+  // 	$.toast({
+  // 		heading: 'Success',
+  // 		text: 'Data Berhasil di Simpan',
+  // 		bgColor: '#00b894',
+  // 		textColor: 'white',
+  // 		loaderBg: '#55efc4',
+  // 		icon: 'success'
+  // 	});
+  // });
+  // });
 </script>
 @endsection

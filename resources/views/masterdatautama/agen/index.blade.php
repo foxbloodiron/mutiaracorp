@@ -163,6 +163,7 @@
 	}
 
 	// start : unused -> deleted soon
+	
 	// $(document).ready(function(){
 	// 	var table = $('#table_agen').DataTable();
 	//

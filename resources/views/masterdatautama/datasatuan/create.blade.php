@@ -58,7 +58,7 @@
                         </section>
                       </div>
                       <div class="card-footer text-right">
-                      <button class="btn btn-primary btn-submit" id="btn_submit" type="button">Simpan</button>
+                      <button class="btn btn-primary btn-submit" id="btn_simpan" type="button">Simpan</button>
                       <a href="{{route('datasatuan.index')}}" class="btn btn-secondary">Kembali</a>
                     </div>
 
@@ -83,7 +83,7 @@
 		}
 	});
 
-  $('#btn_submit').on('click', function()
+  $('#btn_simpan').on('click', function()
   {
     SubmitForm(event);
   });
@@ -113,9 +113,11 @@
                   		textColor: 'white',
                   		loaderBg: '#55efc4',
                   		icon: 'success',
-                      stack: false
+                      stack: false,
+                      afterHidden: function() {
+                        window.location.href = "{{ route('datasatuan.index') }}";
+                      }
                   	});
-                  window.location.href = "{{ route('datasatuan.index') }}";
                 } else if (response.status == 'invalid') {
                   $.toast({
                   		heading: 'Perhatian',
