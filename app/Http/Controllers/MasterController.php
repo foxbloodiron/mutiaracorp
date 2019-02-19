@@ -196,7 +196,6 @@ class MasterController extends Controller
               'i_insert_by' => Session::get('code_comp'),
               'i_updated_by' => Session::get('code_comp')
             ]);
-
           DB::commit();
           return response()->json([
             'status' => 'berhasil'
