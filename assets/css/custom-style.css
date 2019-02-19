@@ -434,6 +434,30 @@ body {
     transform: rotate(-45deg);
     transition-delay: 100ms;
   }
+  .kas-section {
+      padding:10px 50px 10px 50px;
+  }
+  .bank-card {
+      margin:0 auto;
+      float:none;
+      margin-bottom: 10px;
+  }
+  .horizontal-line {
+      height:1px;
+      width: 100%;
+      background-color: gainsboro;
+  }
+  .add-transaksi {
+      background-color:transparent;
+      border:none;
+      color:green;
+  }
+  
+  .add-transaksi:hover {
+    background-color:transparent;
+    border:none;
+    color:grey;
+ }
 /* End */
 /* .btn.btn-primary {
     background-color: #ff4757;

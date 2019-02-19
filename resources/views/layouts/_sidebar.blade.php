@@ -278,8 +278,8 @@
                         <i class="fa arrow"></i>
                     </a>
                     <ul class="sidebar-nav">
-                        <li class="{{Request::is('marketing/manajemenmarketing/*') ? 'active' : ''}}">
-                            <a href="{{route('mngmarketing.index')}}">Manajemen input transaksi</a>
+                        <li class="{{Request::is('keuangan/inputtransaksi/*') ? 'active' : ''}}">
+                            <a href="{{route('inputtransaksi.index')}}">Manajemen Input Transaksi</a>
                         </li>
                         <li class="{{Request::is('marketing/penjualanpusat/*') ? 'active' : ''}}">
                             <a href="{{route('penjualanpusat.index')}}">Manajemen Hutang Piutang</a>

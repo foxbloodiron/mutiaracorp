@@ -160,6 +160,14 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/marketing/agen/orderproduk/edit', 'MarketingController@edit_orderprodukagenpusat')->name('orderagenpusat.edit');
 	// !===================================================== END Marketing =====================================================!
 
+	// !===================================================== KEUANGAN =====================================================!
+	// Input Transaksi
+	Route::get('/keuangan/inputtransaksi/index', 'KeuanganController@index')->name('inputtransaksi.index');
+	Route::get('/keuangan/inputtransaksi/transaksi/kas', 'KeuanganController@create_transaksikas')->name('transaksikas.create');
+	Route::get('/keuangan/inputtransaksi/transaksi/bank', 'KeuanganController@create_transaksibank')->name('transaksibank.create');
+	Route::get('/keuangan/inputtransaksi/transaksi/memorial', 'KeuanganController@create_transaksimemorial')->name('transaksimemorial.create');
+	// !===================================================== END KEUANGAN =====================================================!
+
 
 
 }); 
