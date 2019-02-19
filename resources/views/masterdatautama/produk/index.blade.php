@@ -183,42 +183,54 @@
 		var url_hapus = baseUrl + "/masterdatautama/produk/delete/" + idx;
 
 		$.confirm({
-			title: 'Hapus Agen',
+			animation: 'RotateY',
+			closeAnimation: 'scale',
+			animationBounce: 1.5,
+			icon: 'fa fa-exclamation-triangle',
+			title: 'Peringatan!',
 			content: 'Apakah anda yakin ingin menghapus data ini ?',
+			theme: 'disable',
 			buttons: {
-				YA: function () {
-					return $.ajax({
-						type : "post",
-						url : url_hapus,
-						success : function (response){
-							if(response.status == 'berhasil'){
+				info: {
+					btnClass: 'btn-blue',
+					text:'Ya',
+					action : function(){
+						return $.ajax({
+							type : "post",
+							url : url_hapus,
+							success : function (response){
+								if(response.status == 'berhasil'){
+									$.toast({
+										heading: 'Success',
+										text: 'Data berhasil dihapus !',
+										bgColor: '#00b894',
+										textColor: 'white',
+										loaderBg: '#55efc4',
+										icon: 'success',
+										stack: false
+									});
+									tb_produk.ajax.reload();
+								}
+							},
+							error : function(e){
 								$.toast({
-									heading: 'Success',
-									text: 'Data berhasil dihapus !',
+									heading: 'Warning',
+									text: e.message,
 									bgColor: '#00b894',
 									textColor: 'white',
 									loaderBg: '#55efc4',
-									icon: 'success',
+									icon: 'warning',
 									stack: false
 								});
-								tb_produk.ajax.reload();
 							}
-						},
-						error : function(e){
-							$.toast({
-								heading: 'Warning',
-								text: e.message,
-								bgColor: '#00b894',
-								textColor: 'white',
-								loaderBg: '#55efc4',
-								icon: 'warning',
-								stack: false
-							});
-						}
-					});
+						});
+					}
 				},
-				TIDAK: function () {
-					// $.alert('Canceled!');
+				cancel:{
+					text: 'Tidak',
+					action: function () {
+						// tutup confirm
+					}
 				}
 			}
 		});

@@ -26,7 +26,7 @@
                 </div>
                 <div class="header-block pull-right">
 
-              			<button class="btn btn-primary" id="btn-tambah"><i class="fa fa-plus"></i>&nbsp;Tambah Data</button>
+										<a class="btn btn-primary" href="{{route('datasatuan.create')}}"><i class="fa fa-plus"></i>&nbsp;Tambah Data</a>
                 </div>
               </div>
               <div class="card-block">
@@ -110,53 +110,65 @@
 		var url_hapus = baseUrl + "/masterdatautama/datasatuan/delete/" + idx;
 
 		$.confirm({
-			title: 'Hapus Satuan',
+			animation: 'RotateY',
+			closeAnimation: 'scale',
+			animationBounce: 1.5,
+			icon: 'fa fa-exclamation-triangle',
+			title: 'Peringatan!',
 			content: 'Apakah anda yakin ingin menghapus data ini ?',
+			theme: 'disable',
 			buttons: {
-				YA: function () {
-					return $.ajax({
-						type : "post",
-						url : url_hapus,
-						success : function (response){
-							if(response.status == 'berhasil'){
+				info: {
+					btnClass: 'btn-blue',
+					text:'Ya',
+					action : function(){
+						return $.ajax({
+							type : "post",
+							url : url_hapus,
+							success : function (response){
+								if(response.status == 'berhasil'){
+									$.toast({
+										heading: 'Success',
+										text: 'Data berhasil dihapus !',
+										bgColor: '#00b894',
+										textColor: 'white',
+										loaderBg: '#55efc4',
+										icon: 'success',
+										stack: false
+									});
+									tb_satuan.ajax.reload();
+								}
+							},
+							error : function(e){
 								$.toast({
-									heading: 'Success',
-									text: 'Data berhasil dihapus !',
+									heading: 'Warning',
+									text: e.message,
 									bgColor: '#00b894',
 									textColor: 'white',
 									loaderBg: '#55efc4',
-									icon: 'success',
+									icon: 'warning',
 									stack: false
 								});
-								tb_satuan.ajax.reload();
 							}
-						},
-						error : function(e){
-							$.toast({
-								heading: 'Warning',
-								text: e.message,
-								bgColor: '#00b894',
-								textColor: 'white',
-								loaderBg: '#55efc4',
-								icon: 'warning',
-								stack: false
-							});
-						}
-					});
+						});
+
+					}
 				},
-				TIDAK: function () {
-					// $.alert('Canceled!');
+				cancel:{
+					text: 'Tidak',
+					action: function () {
+						// tutup confirm
+					}
 				}
 			}
 		});
 	}
 
-	$(document).ready(function(){
-		$('#btn-tambah').on('click', function(){
-			window.location.href = '{{route("datasatuan.create")}}';
-		});
-
-		// start : unused -> confirmed soon before deleted
+	// start : unused -> confirmed soon before deleted
+		// $(document).ready(function(){
+		// 	$('#btn-tambah').on('click', function(){
+		// 		window.location.href = '{{route("datasatuan.create")}}';
+		// 	});
 		// $('#table_satuan tbody').on('click', '.btn-edit', function(){
 		// 	window.location.href = '{{route("datasatuan.edit", ["id" => 1])}}';
 		// });
@@ -211,9 +223,8 @@
 		// function table_hapus(a){
 		// 	table.row($(a).parents('tr')).remove().draw();
 		// }
-
+		// });
 		// end : unused
-	});
 
 </script>
 @endsection

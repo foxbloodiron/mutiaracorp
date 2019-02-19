@@ -133,7 +133,6 @@
     }
   });
 
-
   $('#btn_simpan').on('click', function() {
     SubmitForm(event);
   });
@@ -144,60 +143,50 @@
     event.preventDefault();
     form_data = $('#myForm').serialize();
 
-    $.confirm({
-      title: 'Tambah Agen',
-      content: 'Apakah anda yakin menyimpan data ini ?',
-      buttons: {
-        YA: function () {
-          $.ajax({
-            data : form_data,
-            type : "post",
-            url : $("#myForm").attr('action'),
-            dataType : 'json',
-            success : function (response){
-              if(response.status == 'berhasil'){
-                $.toast({
-                  heading: 'Success',
-                  text: 'Data berhasil ditambahkan !',
-                  bgColor: '#00b894',
-                  textColor: 'white',
-                  loaderBg: '#55efc4',
-                  icon: 'success',
-                  stack: false,
-                  afterHidden: function() {
-                    window.location.href = "{{ route('agen.index') }}";
-                  }
-                });
-              } else if (response.status == 'invalid') {
-                $.toast({
-                  heading: 'Perhatian',
-                  text: response.message,
-                  bgColor: '#00b894',
-                  textColor: 'white',
-                  loaderBg: '#55efc4',
-                  icon: 'warning',
-                  stack: false
-                });
-              }
-            },
-            error : function(e){
-              $.toast({
-                heading: 'Warning',
-                text: e.message,
-                bgColor: '#00b894',
-                textColor: 'white',
-                loaderBg: '#55efc4',
-                icon: 'warning',
-                stack: false
-              });
+    $.ajax({
+      data : form_data,
+      type : "post",
+      url : $("#myForm").attr('action'),
+      dataType : 'json',
+      success : function (response){
+        if(response.status == 'berhasil'){
+          $.toast({
+            heading: 'Success',
+            text: 'Data berhasil ditambahkan !',
+            bgColor: '#00b894',
+            textColor: 'white',
+            loaderBg: '#55efc4',
+            icon: 'success',
+            stack: false,
+            afterHidden: function() {
+              window.location.href = "{{ route('agen.index') }}";
             }
-          })
-        },
-        TIDAK: function () {
-          // $.alert('Canceled!');
+          });
+        } else if (response.status == 'invalid') {
+          $.toast({
+            heading: 'Perhatian',
+            text: response.message,
+            bgColor: '#00b894',
+            textColor: 'white',
+            loaderBg: '#55efc4',
+            icon: 'warning',
+            stack: false
+          });
         }
+      },
+      error : function(e){
+        $.toast({
+          heading: 'Warning',
+          text: e.message,
+          bgColor: '#00b894',
+          textColor: 'white',
+          loaderBg: '#55efc4',
+          icon: 'warning',
+          stack: false
+        });
       }
-    });
+    })
+
   }
 
   // start: unused -> confirmed and deleted soon
@@ -228,16 +217,6 @@
   //       $('.125mm').addClass('d-none');
   //     }
   //   });
-  // $(document).on('click', '.btn-submit', function(){
-  // 	$.toast({
-  // 		heading: 'Success',
-  // 		text: 'Data Berhasil di Simpan',
-  // 		bgColor: '#00b894',
-  // 		textColor: 'white',
-  // 		loaderBg: '#55efc4',
-  // 		icon: 'success'
-  // 	});
-  // });
   // });
 </script>
 @endsection
