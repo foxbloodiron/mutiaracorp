@@ -62,8 +62,9 @@
                               <div class="form-group">
                                 <select id="" class="form-control form-control-sm" name="agen_type">
                                   <option value="">Pilih Tipe Agen</option>
-                                  <option value="RT">Retail</option>
-                                  <option value="GR">Grosir</option>
+                                  <option value="A">Agen</option>
+                                  <option value="SA">Sub Agen</option>
+                                  <option value="KS">Konsigne</option>
                                 </select>
                               </div>
                             </div>

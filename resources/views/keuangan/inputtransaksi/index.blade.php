@@ -17,7 +17,8 @@
 
 		<div class="row">
 
-            <div class="card" onclick="window.location.href='{{ route('transaksikas.create') }}'">
+            <div class="col-md-4 col-sm-6">
+            <div class="card" onclick="window.location.href='{{ route('transaksikas.create') }}'" style="cursor:pointer;">
             <div class="card-block text-center">
             <fieldset style="padding:10px 30px 10px 30px;">
                 <div class="kas-section">
@@ -27,8 +28,10 @@
             </fieldset>
             </div>
             </div>
+            </div>
 
-            <div class="card bank-card" onclick="window.location.href='{{ route('transaksibank.create') }}'">
+            <div class="col-md-4 col-sm-6">
+            <div class="card bank-card" onclick="window.location.href='{{ route('transaksibank.create') }}'" style="cursor:pointer;">
             <div class="card-block text-center">
             <fieldset style="padding:10px 30px 10px 30px;">
                 <div class="kas-section">
@@ -38,8 +41,10 @@
             </fieldset>
             </div>
             </div>
+            </div>
 
-            <div class="card" style="float:right;" onclick="window.location.href='{{ route('transaksimemorial.create') }}'">
+            <div class="col-md-4 col-sm-6">
+            <div class="card" onclick="window.location.href='{{ route('transaksimemorial.create') }}'" style="cursor:pointer;">
             <div class="card-block text-center">
             <fieldset style="padding:10px 30px 10px 30px;">
                 <div class="kas-section">
@@ -47,6 +52,7 @@
                     <p>Transaksi Memorial</p>
                 </div>
             </fieldset>
+            </div>
             </div>
             </div>
 

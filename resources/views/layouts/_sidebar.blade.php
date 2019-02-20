@@ -287,8 +287,8 @@
                         <li class="{{Request::is('marketing/kosinyasipusat/*') ? 'active' : ''}}">
                             <a href="{{route('penjualanpusat.index')}}">Manajemen Pajak</a>
                         </li>
-                        <li class="{{Request::is('marketing/marketingarea/*') ? 'active' : ''}}">
-                            <a href="{{ route('marketingarea.index') }}">Laporan Keuangan</a>
+                        <li class="{{Request::is('keuangan/laporankeuangan/*') ? 'active' : ''}}">
+                            <a href="{{ route('laporankeuangan.index') }}">Laporan Keuangan</a>
                         </li>
                         <li>
                             <a href="#">

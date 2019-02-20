@@ -442,6 +442,13 @@ body {
       float:none;
       margin-bottom: 10px;
   }
+
+  .another-card {
+    margin:5px auto;
+    float:none;
+    margin-bottom: 10px;
+  }
+
   .horizontal-line {
       height:1px;
       width: 100%;

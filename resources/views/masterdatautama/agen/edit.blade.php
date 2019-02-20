@@ -62,15 +62,22 @@
                               <div class="form-group">
                                 <select name="agen_type" id="" class="form-control form-control-sm">
                                   <option value="">Pilih Tipe Agen</option>
-                                  @if($data['agen']->a_type == 'RT')
-                                    <option value="RT" selected="">Retail</option>
-                                    <option value="GR">Grosir</option>
-                                  @elseif($data['agen']->a_type == 'GR')
-                                    <option value="RT">Retail</option>
-                                    <option value="GR" selected="">Grosir</option>
+                                  @if($data['agen']->a_type == 'A')
+                                    <option value="A" selected="">Agen</option>
+                                    <option value="SA">Sub Agen</option>
+                                    <option value="KS">Konsigne</option>
+                                  @elseif($data['agen']->a_type == 'SA')
+                                    <option value="A">Agen</option>
+                                    <option value="SA" selected="">Sub Agen</option>
+                                    <option value="KS">Konsigne</option>
+                                  @elseif($data['agen']->a_type == 'KS')
+                                    <option value="A">Agen</option>
+                                    <option value="SA">Sub Agen</option>
+                                    <option value="KS" selected="">Konsigne</option>
                                   @else
-                                    <option value="RT">Retail</option>
-                                    <option value="GR">Grosir</option>
+                                    <option value="A">Agen</option>
+                                    <option value="SA">Sub Agen</option>
+                                    <option value="KS">Konsigne</option>
                                   @endif
                                 </select>
                               </div>
