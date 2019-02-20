@@ -246,7 +246,7 @@
 						<table width="100%" border="0" style="border-bottom: 1px solid #333;" {{-- v-if="pageNow == 1" v-cloak --}}>
 				          <thead>
 				            <tr>
-				              <th style="text-align: left; font-size: 14pt; font-weight: 600; padding-top: 10px;" colspan="2">Laporan Arus Kas</th>
+				              <th style="text-align: left; font-size: 14pt; font-weight: 600; padding-top: 10px;" colspan="2">Laporan Neraca</th>
 				            </tr>
 
 				            <tr>
@@ -265,7 +265,7 @@
 
 				    {{-- End Judul Kop --}}
 
-			    	<div style="padding-top: 20px;">
+			    	<!-- <div style="padding-top: 20px;">
 						<table class="table" id="table-data" {{-- v-cloak --}}>
 							<tbody>
 								<tr>
@@ -384,7 +384,7 @@
 						</table>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="ez-popup" id="loading-popup">
 	            <div class="layout text-center" style="width: 50%; background: none; box-shadow: none; color: white; min-height: 0px; margin-top: 250px; border-radius: 2px;">
