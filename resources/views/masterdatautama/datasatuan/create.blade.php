@@ -93,7 +93,7 @@
   {
     event.preventDefault();
     form_data = $('#myForm').serialize();
-    
+
     $.ajax({
       data : form_data,
       type : "post",
@@ -109,6 +109,7 @@
             loaderBg: '#55efc4',
             icon: 'success',
             stack: false,
+            hideAfter: 1500,
             afterHidden: function() {
               window.location.href = "{{ route('datasatuan.index') }}";
             }
@@ -121,7 +122,8 @@
             textColor: 'white',
             loaderBg: '#55efc4',
             icon: 'warning',
-            stack: false
+            stack: false,
+            hideAfter: 2000
           });
         }
       },

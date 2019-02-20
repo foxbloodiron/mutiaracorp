@@ -159,6 +159,7 @@
             loaderBg: '#55efc4',
             icon: 'success',
             stack: false,
+            hideAfter: 1500,
             afterHidden: function() {
               window.location.href = "{{ route('agen.index') }}";
             }
@@ -171,7 +172,8 @@
             textColor: 'white',
             loaderBg: '#55efc4',
             icon: 'warning',
-            stack: false
+            stack: false,
+            hideAfter: 2000
           });
         }
       },

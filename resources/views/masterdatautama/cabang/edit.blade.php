@@ -141,7 +141,8 @@
             textColor: 'white',
             loaderBg: '#55efc4',
             icon: 'success',
-            stack: false
+            stack: false,
+            hideAfter: 1500
           });
         } else if (response.status == 'invalid') {
           $.toast({
@@ -151,7 +152,8 @@
             textColor: 'white',
             loaderBg: '#55efc4',
             icon: 'warning',
-            stack: false
+            stack: false,
+            hideAfter: 2000
           });
         }
       },
