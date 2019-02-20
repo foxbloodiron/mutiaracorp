@@ -19,7 +19,7 @@
     <div class="row">
 
       <div class="col-12">
-        
+
         <div class="card">
                     <div class="card-header bordered p-2">
                       <div class="header-block">
@@ -30,129 +30,142 @@
                       </div>
                     </div>
 
-                    <div class="card-block">
+                    <form action="{{ route('dataproduk.update', [$data['dataproduk']->i_id]) }}" method="post" id="myForm" autocomplete="off">
+                      <div class="card-block">
                         <section>
-                        
 
                           <div class="row">
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>NIK</label>
+                              <label>Nama Produk</label>
                             </div>
-
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nama Pegawai</label>
-                            </div>
-
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="text" class="form-control form-control-sm" name="dataproduk_name" value="{{ $data['dataproduk']->i_name }}">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Password</label>
+                              <label>Jenis Produk</label>
                             </div>
-
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
-                              </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Status</label>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <select class="form-control form-control-sm">
-                                  <option value="">--Pilih Status--</option>
-                                  <option value="1">Belum Menikah</option>
-                                  <option value="2">Sudah Menikah</option>
+                                <input type="hidden" value="{{ $data['dataproduk']->i_type }}" id="type">
+                                <select class="form-control form-control-sm" name="dataproduk_type" id="dataproduk_type">
+                                  <option value="">--Pilih Jenis Produk--</option>
+                                  <option value="BB">Bahan Baku</option>
+                                  <option value="SP">Spare Part</option>
+                                  <option value="BJ">Barang Jual</option>
+                                  <option value="LL">Lain-lain</option>
                                 </select>
                               </div>
                             </div>
-                            
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Jenis Kelamin</label>
-                            </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Kode Produk</label>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="text" class="form-control form-control-sm" readonly="" name="dataproduk_code"  value="{{ $data['dataproduk']->i_code }}">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Tempat Lahir</label>
+                              <label>Min Stock</label>
                             </div>
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="number" class="form-control form-control-sm" name="dataproduk_minstock">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Tanggal Lahir</label>
+                              <label>Satuan Utama</label>
                             </div>
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <div class="input-group">
-                                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                  <input type="text" class="form-control form-control-sm datepicker" name="">
-                                </div>
+                                <select class="form-control form-control-sm" name="dataproduk_satuanutama">
+                                  <option value="">--Pilih--</option>
+                                  <option value="1">Kardus</option>
+                                  <option value="2">Pcs</option>
+                                  <option value="3">Kg</option>
+                                </select>
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>E-mail</label>
+                              <label>Isi Satuan Utama</label>
                             </div>
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <input type="number" class="form-control-sm form-control" min="0" readonly="" name="dataproduk_isisatuanutama">
                               </div>
                             </div>
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>Nomor HP</label>
+                              <label>Satuan Alternatif 1</label>
                             </div>
-
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="">
+                                <select class="form-control form-control-sm" name="dataproduk_satuanalt1">
+                                  <option value="">--Pilih--</option>
+                                  <option value="1">Kardus</option>
+                                  <option value="2">Pcs</option>
+                                  <option value="3">Kg</option>
+                                </select>
                               </div>
                             </div>
 
-                            <div class="col-md-3 col-sm-12 col-xs-12">
-                              <label>Alamat</label>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Isi Satuan Alternatif 1</label>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <input type="number" class="form-control-sm form-control" min="0" name="dataproduk_isisatuanalt1">
+                              </div>
                             </div>
 
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Satuan Alternatif 2</label>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <textarea type="text" class="form-control form-control-sm"></textarea>
+                                <select class="form-control form-control-sm" name="dataproduk_satuanalt2">
+                                  <option value="">--Pilih--</option>
+                                  <option value="1">Kardus</option>
+                                  <option value="2">Pcs</option>
+                                  <option value="3">Kg</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Isi Satuan Alternatif 2</label>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <input type="number" class="form-control-sm form-control" min="0" name="dataproduk_isisatuanalt2">
+                              </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                              <label>Keterangan</label>
+                            </div>
+                            <div class="col-md-9 col-sm-6 col-xs-12">
+                              <div class="form-group">
+                                <textarea class="form-control" name="dataproduk_ket">{{ $data['dataproduk']->i_det }}</textarea>
                               </div>
                             </div>
 
                           </div>
-
-                          
                         </section>
-                    </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-primary btn-submit" type="button">Simpan</button>
-                      <a href="{{route('dataproduk.index')}}" class="btn btn-secondary">Kembali</a>
-                    </div>
+                      </div>
+                      <div class="card-footer text-right">
+                        <button class="btn btn-primary btn-submit" type="button" id="btn_simpan">Simpan</button>
+                        <a href="{{route('dataproduk.index')}}" class="btn btn-secondary">Kembali</a>
+                      </div>
+                    </form>
+
                 </div>
 
       </div>
@@ -166,17 +179,79 @@
 @endsection
 @section('extra_script')
 <script type="text/javascript">
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
+  $('#btn_simpan').on('click', function() {
+    SubmitForm(event);
+  })
+  // start: submit form to update data in db
+  function SubmitForm(event)
+  {
+    event.preventDefault();
+    form_data = $('#myForm').serialize();
+
+    $.ajax({
+      data : form_data,
+      type : "post",
+      url : $("#myForm").attr('action'),
+      dataType : 'json',
+      success : function (response){
+        if(response.status == 'berhasil'){
+          $.toast({
+            heading: 'Success',
+            text: 'Data berhasil disimpan !',
+            bgColor: '#00b894',
+            textColor: 'white',
+            loaderBg: '#55efc4',
+            icon: 'success',
+            stack: false
+          });
+        } else if (response.status == 'invalid') {
+          $.toast({
+            heading: 'Perhatian',
+            text: response.message,
+            bgColor: '#00b894',
+            textColor: 'white',
+            loaderBg: '#55efc4',
+            icon: 'warning',
+            stack: false
+          });
+        }
+      },
+      error : function(e){
+        $.toast({
+          heading: 'Warning',
+          text: e.message,
+          bgColor: '#00b894',
+          textColor: 'white',
+          loaderBg: '#55efc4',
+          icon: 'warning',
+          stack: false
+        });
+      }
+    })
+
+  }
+  // end: submit form
+
   $(document).ready(function(){
-    $(document).on('click', '.btn-submit', function(){
-			$.toast({
-				heading: 'Success',
-				text: 'Data Berhasil di Edit',
-				bgColor: '#00b894',
-				textColor: 'white',
-				loaderBg: '#55efc4',
-				icon: 'success'
-			})
-		})
+    type = $('#type').val();
+    $("#dataproduk_type option[value='"+ type +"']").prop('selected', 'selected');
+
+    // $(document).on('click', '.btn-submit', function(){
+		// 	$.toast({
+		// 		heading: 'Success',
+		// 		text: 'Data Berhasil di Edit',
+		// 		bgColor: '#00b894',
+		// 		textColor: 'white',
+		// 		loaderBg: '#55efc4',
+		// 		icon: 'success'
+		// 	})
+		// })
   });
 </script>
 @endsection

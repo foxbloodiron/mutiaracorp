@@ -40,6 +40,7 @@ class MasterController extends Controller
       // start: get data from db and return it using DataTable
       $datas = DB::table('m_item')->orderBy('i_name', 'asc')->where('i_isactive', 'Y')->get();
       return Datatables::of($datas)
+        ->addIndexColumn()
         ->addColumn('type', function($datas) {
           if ($datas->i_type == 'BB') {
             return '<td>Bahan Baku</td>';
@@ -63,7 +64,8 @@ class MasterController extends Controller
     }
     public function create_dataproduk()
     {
-      return view('masterdatautama.produk.create');
+      $code = $this->get_codedataproduk();
+      return view('masterdatautama.produk.create', compact('code'));
     }
     public function get_codedataproduk()
     {
@@ -111,15 +113,15 @@ class MasterController extends Controller
       DB::beginTransaction();
       try {
         $id = DB::table('m_item')->max('i_id') + 1;
-        $code = $this->get_codedataproduk();
 
         DB::table('m_item')
           ->insert([
             'i_id' => $id,
-            'i_code' => $code,
+            'i_code' => $request->dataproduk_code,
             'i_type' => $request->dataproduk_type,
             'i_codegroup' => null,
             'i_name' => $request->dataproduk_name,
+            'i_min_stock' => $request->dataproduk_minstock,
             'i_unit1' => $request->dataproduk_satuanutama,
             'i_unit2' => $request->dataproduk_satuanalt1,
             'i_unit3' => $request->dataproduk_satuanalt2,
@@ -182,6 +184,7 @@ class MasterController extends Controller
               'i_type' => $request->dataproduk_type,
               'i_codegroup' => null,
               'i_name' => $request->dataproduk_name,
+              'i_min_stock' => $request->dataproduk_minstock,
               // 'i_unit1' => $request->dataproduk_satuanutama,
               'i_unit2' => $request->dataproduk_satuanalt1,
               'i_unit3' => $request->dataproduk_satuanalt2,
@@ -196,7 +199,6 @@ class MasterController extends Controller
               'i_insert_by' => Session::get('code_comp'),
               'i_updated_by' => Session::get('code_comp')
             ]);
-
           DB::commit();
           return response()->json([
             'status' => 'berhasil'
@@ -304,6 +306,7 @@ class MasterController extends Controller
       // start: get data from db and return it using DataTable
       $datas = DB::table('m_company')->orderBy('c_nama', 'asc')->get();
       return Datatables::of($datas)
+        ->addIndexColumn()
         ->addColumn('action', function($datas) {
           return '<div class="btn-group btn-group-sm">
           <button class="btn btn-warning" onclick="EditCabang('.$datas->c_id.')" rel="tooltip" data-placement="top"><i class="fa fa-pencil"></i></button>
@@ -463,6 +466,7 @@ class MasterController extends Controller
       // start: get data from db and return it using DataTable
       $datas = DB::table('m_agen')->orderBy('a_name', 'asc')->get();
       return Datatables::of($datas)
+        ->addIndexColumn()
         ->addColumn('type', function($datas) {
           if ($datas->a_type == 'RT') {
             return '<td>Retail</td>';
@@ -654,6 +658,7 @@ class MasterController extends Controller
     {
       $datas = DB::table('m_unit')->orderBy('u_name', 'asc')->get();
       return Datatables::of($datas)
+        ->addIndexColumn()
         ->addColumn('action', function($datas) {
           return '<div class="btn-group btn-group-sm">
           <button class="btn btn-warning" onclick="EditDatasatuan('.$datas->u_id.')" rel="tooltip" data-placement="top"><i class="fa fa-pencil"></i></button>

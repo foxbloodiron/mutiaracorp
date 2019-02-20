@@ -91,7 +91,7 @@
 				}
 			},
 			columns: [
-				{data: 'c_nama', name: 'c_nama'},
+				{data: 'DT_RowIndex'},
 				{data: 'c_nama', name: 'c_nama'},
 				{data: 'c_alamat', name: 'c_alamat'},
 				{data: 'c_no_telp', name: 'c_no_telp'},
