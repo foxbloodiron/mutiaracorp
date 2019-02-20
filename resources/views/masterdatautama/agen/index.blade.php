@@ -96,7 +96,7 @@
 				}
 			},
 			columns: [
-				{data: 'a_name', name: 'a_name'},
+				{data: 'DT_RowIndex'},
 				{data: 'a_code', name: 'a_code'},
 				{data: 'a_name', name: 'a_name'},
 				{data: 'type', name: 'type'},

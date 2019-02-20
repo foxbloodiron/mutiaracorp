@@ -90,7 +90,7 @@
 				}
 			},
 			columns: [
-				{data: 'u_name', name: 'u_name'},
+				{data: 'DT_RowIndex'},
 				{data: 'u_id', name: 'u_id'},
 				{data: 'u_name', name: 'u_name'},
 				{data: 'action', name: 'action'}

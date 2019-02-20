@@ -161,7 +161,7 @@
 				}
 			},
 			columns: [
-				{data: 'i_name', name: 'i_name'},
+				{data: 'DT_RowIndex'},
 				{data: 'i_code', name: 'i_code'},
 				{data: 'i_name', name: 'i_name'},
 				{data: 'i_unit1', name: 'i_unit1'},
