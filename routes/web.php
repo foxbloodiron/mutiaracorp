@@ -30,7 +30,7 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/datapegawai/create', 'MasterController@create_kelolapegawai')->name('kelolapegawai.create');
 
 	Route::get('/masterdatautama/produk/index', 'MasterController@dataproduk')->name('dataproduk.index');
-	Route::get('/masterdatautama/produk/list', 'MasterController@list_dataproduk')->name('dataproduk.list');
+	Route::get('/masterdatautama/produk/list', 'MasterController@get_list_dataproduk')->name('dataproduk.list');
 	Route::get('/masterdatautama/produk/create', 'MasterController@create_dataproduk')->name('dataproduk.create');
   Route::post('/masterdatautama/produk/store', 'MasterController@store_dataproduk')->name('dataproduk.store');
   Route::get('/masterdatautama/produk/edit/{id}', 'MasterController@edit_dataproduk')->name('dataproduk.edit');
@@ -53,7 +53,7 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/suplier/edit', 'MasterController@edit_suplier')->name('suplier.edit');
 
 	Route::get('/masterdatautama/cabang/index', 'MasterController@cabang')->name('cabang.index');
-  Route::get('/masterdatautama/cabang/list', 'MasterController@list_cabang')->name('cabang.list');
+  Route::get('/masterdatautama/cabang/list', 'MasterController@get_list_cabang')->name('cabang.list');
 	Route::get('/masterdatautama/cabang/create', 'MasterController@create_cabang')->name('cabang.create');
   Route::post('/masterdatautama/cabang/store', 'MasterController@store_cabang')->name('cabang.store');
 	Route::get('/masterdatautama/cabang/edit/{id}', 'MasterController@edit_cabang')->name('cabang.edit');
@@ -61,7 +61,7 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::post('/masterdatautama/cabang/delete/{id}', 'MasterController@delete_cabang')->name('cabang.delete');
 
 	Route::get('/masterdatautama/agen/index', 'MasterController@agen')->name('agen.index');
-	Route::get('/masterdatautama/agen/list', 'MasterController@list_agen')->name('agen.list');
+	Route::get('/masterdatautama/agen/list', 'MasterController@get_list_agen')->name('agen.list');
 	Route::get('/masterdatautama/agen/create', 'MasterController@create_agen')->name('agen.create');
 	Route::post('/masterdatautama/agen/store', 'MasterController@store_agen')->name('agen.store');
 	Route::get('/masterdatautama/agen/edit/{id}', 'MasterController@edit_agen')->name('agen.edit');
@@ -72,7 +72,7 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen.index');
 
 	Route::get('/masterdatautama/datasatuan/index', 'MasterController@datasatuan')->name('datasatuan.index');
-	Route::get('/masterdatautama/datasatuan/list', 'MasterController@list_datasatuan')->name('datasatuan.list');
+	Route::get('/masterdatautama/datasatuan/list', 'MasterController@get_list_datasatuan')->name('datasatuan.list');
 	Route::get('/masterdatautama/datasatuan/create', 'MasterController@create_datasatuan')->name('datasatuan.create');
 	Route::post('/masterdatautama/datasatuan/store', 'MasterController@store_datasatuan')->name('datasatuan.store');
 	Route::get('/masterdatautama/datasatuan/edit/{id}', 'MasterController@edit_datasatuan')->name('datasatuan.edit');

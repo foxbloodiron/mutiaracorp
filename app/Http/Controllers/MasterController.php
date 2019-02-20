@@ -35,7 +35,7 @@ class MasterController extends Controller
     {
       return view('masterdatautama.produk.index');
     }
-    public function list_dataproduk()
+    public function get_list_dataproduk()
     {
       // start: get data from db and return it using DataTable
       $datas = DB::table('m_item')->orderBy('i_name', 'asc')->where('i_isactive', 'Y')->get();
@@ -301,7 +301,7 @@ class MasterController extends Controller
     {
         return view('masterdatautama.cabang.index');
     }
-    public function list_cabang()
+    public function get_list_cabang()
     {
       // start: get data from db and return it using DataTable
       $datas = DB::table('m_company')->orderBy('c_nama', 'asc')->get();
@@ -461,7 +461,7 @@ class MasterController extends Controller
     {
         return view('masterdatautama.agen.index');
     }
-    public function list_agen()
+    public function get_list_agen()
     {
       // start: get data from db and return it using DataTable
       $datas = DB::table('m_agen')->orderBy('a_name', 'asc')->get();
@@ -654,7 +654,7 @@ class MasterController extends Controller
     {
       return view('masterdatautama/datasatuan/index');
     }
-    public function list_datasatuan()
+    public function get_list_datasatuan()
     {
       $datas = DB::table('m_unit')->orderBy('u_name', 'asc')->get();
       return Datatables::of($datas)
