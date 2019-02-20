@@ -246,7 +246,7 @@
 						<table width="100%" border="0" style="border-bottom: 1px solid #333;" {{-- v-if="pageNow == 1" v-cloak --}}>
 				          <thead>
 				            <tr>
-				              <th style="text-align: left; font-size: 14pt; font-weight: 600; padding-top: 10px;" colspan="2">Laporan Arus Kas</th>
+				              <th style="text-align: left; font-size: 14pt; font-weight: 600; padding-top: 10px;" colspan="2">Laporan Jurnal</th>
 				            </tr>
 
 				            <tr>
@@ -267,7 +267,7 @@
 
 			    	<div style="padding-top: 20px;">
 						<table class="table" id="table-data" {{-- v-cloak --}}>
-							<tbody>
+							<!-- <tbody>
 								<tr>
 									<td width="70%" style="font-weight: bold;">Arus Kas Dari Aktivitas Operasional</td>
 									<td></td>
@@ -383,7 +383,7 @@
 							</tbody>
 						</table>
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="ez-popup" id="loading-popup">
