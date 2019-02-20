@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('keuangan.inputtransaksi.transaksikas.modal')
+
 <article class="content animated fadeInLeft">
 
   <div class="title-block text-primary">
@@ -39,7 +41,7 @@
                     <input type="text" class="form-control form-control-sm mb-3" readonly="">
                 </div>
                 <div style="margin-top:3px;">
-                    <i class="fa fa-search fa-lg"></i>
+                    <i class="fa fa-search fa-lg" data-toggle="modal" data-target="#detail" type="button" title="Cari Group Berdasarkan Nomer dan Type Group" style="cursor: pointer;"></i>
                 </div>
 
                 <div class="col-md-4 col-sm-12">
