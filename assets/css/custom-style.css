@@ -465,6 +465,25 @@ body {
     border:none;
     color:grey;
  }
+
+ .input-invis {
+     border:0px none;
+     background: white none repeat;
+     margin:0px;
+     color:#4f5f6f !important;
+     padding-right: 0px;
+
+ }
+
+ .input-invis:active,
+ .input-invis:hover,
+ .input-invis:focus {  
+    outline: none;
+    color:#4f5f6f !important;
+    box-shadow:none !important;
+    border:unset;
+
+}
 /* End */
 /* .btn.btn-primary {
     background-color: #ff4757;

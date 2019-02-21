@@ -67,7 +67,7 @@
 
                 <div class="horizontal-line mb-3"></div>
 
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12" >
                     <label for="">Ket. Transaksi <span style="color:red;">*</span></label>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -85,7 +85,7 @@
                     <label for="">Nominal Transaksi</label>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <input type="text" class="form-control form-control-sm mb-3 input-rupiah" value="Rp. 0,00">
+                    <input type="text" class="form-control form-control-sm mb-3 input-rupiah" id="nominal-rupiah" value="Rp. 0,00">
                 </div>
             </div>
             </div>
@@ -105,15 +105,15 @@
                 <tr>
                     <td align="center"><i class="fa fa-lock fa-lg"></i></td>
                     <td><select name="" id="" class="form-control form-control-sm select2" style="font-size:9pt;"></select></td>
-                    <td><p class="input-rupiah">Rp. 0,00</p></td>
-                    <td><p class="input-rupiah">Rp. 0,00</p></td>
+                    <td><div id="another" class="input-rupiah"><input type="text" class="form-control text-right input-rupiah input-invis input-special" style="cursor:no-drop;" value="Rp. 0,00"></div></td>
+                    <td><input type="text" class="form-control text-right input-rupiah input-invis" style="cursor:no-drop;" value="Rp. 0,00"></td>
                 </tr>
 
                 <tr>
                     <td align="center"><i class="fa fa-lock fa-lg"></i></td>
                     <td><select name="" id="" class="form-control form-control-sm select2" style="font-size:9pt;"></select></td>
-                    <td><p class="input-rupiah">Rp. 0,00</p></td>
-                    <td><p class="input-rupiah">Rp. 0,00</p></td>
+                    <td><input type="text" class="form-control text-right input-rupiah input-invis" value="Rp. 0,00"></td>
+                    <td><input type="text" class="form-control text-right input-rupiah input-invis" value="Rp. 0,00"></td>
                 </tr>
 
             </tbody>
@@ -123,7 +123,7 @@
                 <tr>
                     <th style="vertical-align:middle; text-align:center;" width="16%"><button class="btn btn-sm add-transaksi"><i class="fa fa-plus"></i></button></th>
                     <th style="vertical-align:middle; font-style:italic;">Total Debit Kredit</th>
-                    <td style="vertical-align:middle; padding:0px; padding-top:15px; padding-right:5px;"><p class="input-rupiah">Rp. 0,00</p></td>
+                    <td style="vertical-align:middle; padding:0px; padding-left:0px; margin-left:0px; padding-right:5px;"><div class="another2"><input class="form-control form-control-sm text-right input-invis input-rupiah" value="Rp. 0,00"></div></td>
                     <td style="vertical-align:middle; padding:0px; padding-top:15px; padding-right:5px;"><p class="input-rupiah">Rp. 0,00</p></td>
                 </tr>
             </thead>
@@ -204,5 +204,13 @@
 			})
 		})
   });
+</script>
+<script>
+$(function() {
+    $('#nominal-rupiah').keyup(function() {
+        $('#another').text($(this).val());
+    });
+});
+
 </script>
 @endsection
