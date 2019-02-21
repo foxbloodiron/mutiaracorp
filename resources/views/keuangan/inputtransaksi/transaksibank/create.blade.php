@@ -96,7 +96,7 @@
                 <tr>
                     <th width="8%" style="text-align:center;">*</th>
                     <th width="20%">Akun</th>
-                    <th width="10%">Deber</th>
+                    <th width="10%">Debet</th>
                     <th width="10%">Kredit</th>
                 </tr>
             </thead>
