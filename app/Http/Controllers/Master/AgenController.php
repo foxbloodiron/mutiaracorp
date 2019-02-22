@@ -99,29 +99,6 @@ class AgenController extends Controller
     }
 
     /**
-     * Return new code for item.
-     *
-     * @return String (code item)
-     */
-    public function getCode()
-    {
-      $basecode = DB::table('m_agen')
-        ->orderBy('a_insert', 'desc')
-        ->select('a_code')
-        ->first();
-      if (empty($basecode)) {
-        $id = '0001';
-      } else {
-        $basecode = substr($basecode->a_code, -4, 4);
-        $id = (int)$basecode + 1;
-        $id = str_pad((string)$id, 4, '0', STR_PAD_LEFT);
-      }
-      $code = 'AG' . $id;
-
-      return $code;
-    }
-
-    /**
      * Return DataTable list for view.
      *
      * @return Yajra/DataTables
@@ -158,7 +135,7 @@ class AgenController extends Controller
      */
     public function create()
     {
-      $data['code'] = $this->getCode();
+      $data['code'] = CodeGenerator::code('m_agen', 'a_id', 7, 'A');
       $data['provinces'] = $this->getProvinces();
       return view('masterdatautama.agen.create', compact('data'));
     }
