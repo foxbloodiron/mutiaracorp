@@ -31,26 +31,27 @@
                       </div>
                     </div>
 
-                    <form action="{{ route('cabang.store') }}" method="post" id="myForm" autocomplete="off">
+                    <form action="{{ route('cabang.create') }}" method="post" id="myForm" autocomplete="off">
                       <div class="card-block">
                         <section>
 
                           <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>ID Cabang</label>
-                            </div>
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $id }}">
-                              </div>
-                            </div>
+                            {{--<div class="col-md-3 col-sm-6 col-xs-12">--}}
+                            {{--<label>ID Cabang</label>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-9 col-sm-6 col-xs-12">--}}
+                            {{--<div class="form-group">--}}
+                            {{--<input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $id }}">--}}
+                            {{--</div>--}}
+                            {{--</div>--}}
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Nama Cabang</label>
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="cabang_name">
+                                <input type="text" class="form-control form-control-sm" name="cabang_name"
+                                       style="text-transform: uppercase;">
                               </div>
                             </div>
 
@@ -59,7 +60,8 @@
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <textarea type="text" class="form-control form-control-sm" name="cabang_address"></textarea>
+                                <textarea type="text" class="form-control form-control-sm"
+                                          name="cabang_address"></textarea>
                               </div>
                             </div>
 
@@ -135,10 +137,10 @@
             text: 'Data berhasil ditambahkan !',
             bgColor: '#00b894',
             textColor: 'white',
-            loaderBg: '#55efc4',
+            loaderBg: '#3C415E',
             icon: 'success',
             stack: false,
-            hideAfter: 1500,
+            hideAfter: 5000,
             afterHidden: function () {
               window.location.href = "{{ route('cabang.index') }}";
             }
@@ -147,12 +149,12 @@
           $.toast({
             heading: 'Perhatian',
             text: response.message,
-            bgColor: '#00b894',
+            bgColor: '#FF4444',
             textColor: 'white',
-            loaderBg: '#55efc4',
+            loaderBg: '#3C415E',
             icon: 'warning',
             stack: false,
-            hideAfter: 2000
+            hideAfter: 5000
           });
         }
       },
@@ -160,9 +162,9 @@
         $.toast({
           heading: 'Warning',
           text: e.message,
-          bgColor: '#00b894',
+          bgColor: '#FF4444',
           textColor: 'white',
-          loaderBg: '#55efc4',
+          loaderBg: '#3C415E',
           icon: 'warning',
           stack: false
         });

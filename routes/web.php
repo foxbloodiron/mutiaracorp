@@ -52,13 +52,23 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/suplier/create', 'MasterController@create_suplier')->name('suplier.create');
 	Route::get('/masterdatautama/suplier/edit', 'MasterController@edit_suplier')->name('suplier.edit');
 
-	Route::get('/masterdatautama/cabang/index', 'MasterController@cabang')->name('cabang.index');
-  Route::get('/masterdatautama/cabang/list', 'MasterController@get_list_cabang')->name('cabang.list');
-	Route::get('/masterdatautama/cabang/create', 'MasterController@create_cabang')->name('cabang.create');
-  Route::post('/masterdatautama/cabang/store', 'MasterController@store_cabang')->name('cabang.store');
-	Route::get('/masterdatautama/cabang/edit/{id}', 'MasterController@edit_cabang')->name('cabang.edit');
-	Route::post('/masterdatautama/cabang/update/{id}', 'MasterController@update_cabang')->name('cabang.update');
-	Route::post('/masterdatautama/cabang/delete/{id}', 'MasterController@delete_cabang')->name('cabang.delete');
+//	=============Mas Rowi=============
+
+//	Route::get('/masterdatautama/cabang/index', 'MasterController@cabang')->name('cabang.index');
+//    Route::get('/masterdatautama/cabang/list', 'MasterController@get_list_cabang')->name('cabang.list');
+//	Route::get('/masterdatautama/cabang/create', 'MasterController@create_cabang')->name('cabang.create');
+//    Route::post('/masterdatautama/cabang/store', 'MasterController@store_cabang')->name('cabang.store');
+//	Route::get('/masterdatautama/cabang/edit/{id}', 'MasterController@edit_cabang')->name('cabang.edit');
+//	Route::post('/masterdatautama/cabang/update/{id}', 'MasterController@update_cabang')->name('cabang.update');
+//	Route::post('/masterdatautama/cabang/delete/{id}', 'MasterController@delete_cabang')->name('cabang.delete');
+
+    //	=============End Mas Rowi=============
+
+//    ==========Master Outlet==========
+    Route::get('/masterdatautama/cabang/index', 'master\CompanyController@index')->name('cabang.index');
+    Route::get('/masterdatautama/cabang/list', 'master\CompanyController@getData')->name('cabang.list');
+    Route::match(['get', 'post'],'/masterdatautama/cabang/create', 'master\CompanyController@create')->name('cabang.create');
+//    ==========End Master Outlet======
 
 	Route::get('/masterdatautama/agen/index', 'MasterController@agen')->name('agen.index');
 	Route::get('/masterdatautama/agen/list', 'MasterController@get_list_agen')->name('agen.list');
