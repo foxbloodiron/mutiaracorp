@@ -136,46 +136,15 @@
       success : function (response){
         if(response.status == 'berhasil'){
           loadingHide();
-          messageSuccess('Success', 'Data berhasil ditambahkan !');
-          {{--$.toast({--}}
-            {{--heading: 'Success',--}}
-            {{--text: 'Data berhasil ditambahkan !',--}}
-            {{--bgColor: '#00b894',--}}
-            {{--textColor: 'white',--}}
-            {{--loaderBg: '#3C415E',--}}
-            {{--icon: 'success',--}}
-            {{--stack: false,--}}
-            {{--hideAfter: 3000,--}}
-            {{--afterHidden: function () {--}}
-              {{--window.location.href = "{{ route('cabang.index') }}";--}}
-            {{--}--}}
-          {{--});--}}
+          messageSuccess('Success', 'Data berhasil ditambahkan!');
         } else if (response.status == 'invalid') {
           loadingHide();
           messageWarning('Perhatian', response.message);
-          // $.toast({
-          //   heading: 'Perhatian',
-          //   text: response.message,
-          //   bgColor: '#FF4444',
-          //   textColor: 'white',
-          //   loaderBg: '#3C415E',
-          //   icon: 'warning',
-          //   stack: false,
-          //   hideAfter: 5000
-          // });
         }
       },
       error : function(e){
         loadingHide();
-        $.toast({
-          heading: 'Warning',
-          text: e.message,
-          bgColor: '#FF4444',
-          textColor: 'white',
-          loaderBg: '#3C415E',
-          icon: 'warning',
-          stack: false
-        });
+        messageWarning('Warning', e.message);
       }
     })
 

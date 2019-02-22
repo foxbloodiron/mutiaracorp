@@ -67,11 +67,11 @@
         $('#cover-spin').fadeOut(200);
     }
 
-    function messageSuccess($title, $message)
+    function messageSuccess(title, message)
     {
         $.toast({
-            heading: $title,
-            text: $message,
+            heading: title,
+            text: message,
             bgColor: '#00b894',
             textColor: 'white',
             loaderBg: '#3C415E',
@@ -81,11 +81,11 @@
         });
     }
 
-    function messageWarning($title, $message)
+    function messageWarning(title, message)
     {
         $.toast({
-            heading: $title,
-            text: $message,
+            heading: title,
+            text: message,
             bgColor: '#FF4444',
             textColor: 'white',
             loaderBg: '#3C415E',
