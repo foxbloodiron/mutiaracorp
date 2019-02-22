@@ -104,7 +104,7 @@
 
         // function to redirect page to edit page
         function EditCabang(idx) {
-            window.location.href = baseUrl + "/masterdatautama/cabang/edit/" + idx;
+            window.location = baseUrl + "/masterdatautama/cabang/edit/" + idx;
         }
 
         // function to execute delete request

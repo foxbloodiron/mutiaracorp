@@ -57,6 +57,16 @@
 <script type="text/javascript">
     var baseUrl = "{{url('/')}}";
 
+    function loading()
+    {
+        $('#cover-spin').fadeIn(200);
+    }
+
+    function loadingEnd()
+    {
+        $('#cover-spin').fadeOut(200);
+    }
+
 	$(document).ready(function(){
 		$("input[type='number']").keydown(function (e) {
 	        // Allow: backspace, delete, tab, escape, enter and .

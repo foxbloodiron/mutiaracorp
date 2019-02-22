@@ -130,8 +130,12 @@
       type : "post",
       url : $("#myForm").attr('action'),
       dataType : 'json',
+      beforeSend: function() {
+        loading();
+      },
       success : function (response){
         if(response.status == 'berhasil'){
+          loadingEnd();
           $.toast({
             heading: 'Success',
             text: 'Data berhasil ditambahkan !',
@@ -140,12 +144,13 @@
             loaderBg: '#3C415E',
             icon: 'success',
             stack: false,
-            hideAfter: 5000,
+            hideAfter: 3000,
             afterHidden: function () {
               window.location.href = "{{ route('cabang.index') }}";
             }
           });
         } else if (response.status == 'invalid') {
+          loadingEnd();
           $.toast({
             heading: 'Perhatian',
             text: response.message,
@@ -159,6 +164,7 @@
         }
       },
       error : function(e){
+        loadingEnd();
         $.toast({
           heading: 'Warning',
           text: e.message,
