@@ -36,14 +36,6 @@
                         <section>
 
                           <div class="row">
-                            {{--<div class="col-md-3 col-sm-6 col-xs-12">--}}
-                              {{--<label>ID Cabang</label>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-md-9 col-sm-6 col-xs-12">--}}
-                              {{--<div class="form-group">--}}
-                                {{--<input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $data['cabang']->c_id }}">--}}
-                              {{--</div>--}}
-                            {{--</div>--}}
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Nama Cabang</label>
@@ -119,7 +111,30 @@
   });
 
   $('#btn_simpan').on('click', function() {
-    SubmitForm(event);
+    $.confirm({
+      animation: 'RotateY',
+      closeAnimation: 'scale',
+      animationBounce: 1.5,
+      icon: 'fa fa-exclamation-triangle',
+      title: 'Pesan!',
+      content: 'Apakah anda yakin ingin memperbarui data ini?',
+      theme: 'disable',
+      buttons: {
+        info: {
+          btnClass: 'btn-blue',
+          text: 'Ya',
+          action: function () {
+            SubmitForm(event);
+          }
+        },
+        cancel: {
+          text: 'Tidak',
+          action: function () {
+
+          }
+        }
+      }
+    });
   })
   // start: submit form to update data in db
   function SubmitForm(event)

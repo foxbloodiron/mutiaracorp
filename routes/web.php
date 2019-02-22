@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/login', function () {
+    return view('auth.login');
+});
 
 Route::get('/recruitment', 'RecruitmentController@index')->name('recruitment.index');
 
@@ -69,6 +72,7 @@ Route::group(['middleware' => 'guest'], function(){
     Route::get('/masterdatautama/cabang/list', 'master\CompanyController@getData')->name('cabang.list');
     Route::match(['get', 'post'],'/masterdatautama/cabang/create', 'master\CompanyController@create')->name('cabang.create');
     Route::match(['get', 'post'], '/masterdatautama/cabang/edit/{id}', 'master\CompanyController@edit')->name('cabang.edit');
+    Route::get('/masterdatautama/cabang/delete/{id}', 'master\CompanyController@delete')->name('cabang.delete');
 //    ==========End Master Outlet======
 
 	Route::get('/masterdatautama/agen/index', 'Master\AgenController@index')->name('agen.index');
@@ -87,12 +91,10 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen.index');
 
 	Route::get('/masterdatautama/datasatuan/index', 'MasterController@datasatuan')->name('datasatuan.index');
-	Route::get('/masterdatautama/datasatuan/list', 'MasterController@get_list_datasatuan')->name('datasatuan.list');
-	Route::get('/masterdatautama/datasatuan/create', 'MasterController@create_datasatuan')->name('datasatuan.create');
-	Route::post('/masterdatautama/datasatuan/store', 'MasterController@store_datasatuan')->name('datasatuan.store');
-	Route::get('/masterdatautama/datasatuan/edit/{id}', 'MasterController@edit_datasatuan')->name('datasatuan.edit');
-	Route::post('/masterdatautama/datasatuan/update/{id}', 'MasterController@update_datasatuan')->name('datasatuan.update');
-	Route::post('/masterdatautama/datasatuan/delete/{id}', 'MasterController@delete_datasatuan')->name('datasatuan.delete');
+	Route::get('/masterdatautama/datasatuan/list', 'SatuanController@list_satuan')->name('datasatuan.list');
+	Route::get('/masterdatautama/datasatuan/store', 'SatuanController@tambahSatuan')->name('tambah_satuan');
+	Route::get('/masterdatautama/datasatuan/update', 'SatuanController@updateSatuan')->name('update_satuan');
+	Route::post('/masterdatautama/datasatuan/delete/{id}', 'SatuanController@deleteSatuan')->name('delete_satuan');
 	// !===================================================== End Master Data Utama =====================================================!
 
 	// !===================================================== PRODUKSI =====================================================!

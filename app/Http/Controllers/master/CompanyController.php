@@ -62,10 +62,9 @@ class CompanyController extends Controller
             // start: execute insert data
             DB::beginTransaction();
             try {
-                $id = (DB::table('m_company')->max('c_id')) ? DB::table('m_company')->max('c_id') + 1 : 1;
                 DB::table('m_company')
                     ->insert([
-                        'c_id' => $id,
+                        'c_id' => CodeGenerator::code('m_company', 'c_id', 7, 'MB'),
                         'c_name' => strtoupper($request->cabang_name),
                         'c_address' => $request->cabang_address,
                         'c_tlp' => $request->cabang_telp,
@@ -149,6 +148,35 @@ class CompanyController extends Controller
                     'message' => $e
                 ]);
             }
+        }
+    }
+
+    public function delete($id)
+    {
+        try{
+            $id = Crypt::decrypt($id);
+        }catch (\Exception $e){
+            return response()->json([
+                'status' => 'gagal',
+                'message' => $e
+            ]);
+        }
+        DB::beginTransaction();
+        try {
+            DB::table('m_company')
+                ->where('c_id', $id)
+                ->delete();
+
+            DB::commit();
+            return response()->json([
+                'status' => 'berhasil'
+            ]);
+        } catch (\Exception $e) {
+            DB::rollback();
+            return response()->json([
+                'status' => 'gagal',
+                'message' => $e
+            ]);
         }
     }
 }
