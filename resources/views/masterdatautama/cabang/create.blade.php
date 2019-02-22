@@ -31,26 +31,27 @@
                       </div>
                     </div>
 
-                    <form action="{{ route('cabang.store') }}" method="post" id="myForm" autocomplete="off">
+                    <form action="{{ route('cabang.create') }}" method="post" id="myForm" autocomplete="off">
                       <div class="card-block">
                         <section>
 
                           <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>ID Cabang</label>
-                            </div>
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $id }}">
-                              </div>
-                            </div>
+                            {{--<div class="col-md-3 col-sm-6 col-xs-12">--}}
+                            {{--<label>ID Cabang</label>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-9 col-sm-6 col-xs-12">--}}
+                            {{--<div class="form-group">--}}
+                            {{--<input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $id }}">--}}
+                            {{--</div>--}}
+                            {{--</div>--}}
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Nama Cabang</label>
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="cabang_name">
+                                <input type="text" class="form-control form-control-sm" name="cabang_name"
+                                       style="text-transform: uppercase;">
                               </div>
                             </div>
 
@@ -59,7 +60,8 @@
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <textarea type="text" class="form-control form-control-sm" name="cabang_address"></textarea>
+                                <textarea type="text" class="form-control form-control-sm"
+                                          name="cabang_address"></textarea>
                               </div>
                             </div>
 
@@ -128,44 +130,21 @@
       type : "post",
       url : $("#myForm").attr('action'),
       dataType : 'json',
+      beforeSend: function() {
+        loadingShow();
+      },
       success : function (response){
         if(response.status == 'berhasil'){
-          $.toast({
-            heading: 'Success',
-            text: 'Data berhasil ditambahkan !',
-            bgColor: '#00b894',
-            textColor: 'white',
-            loaderBg: '#55efc4',
-            icon: 'success',
-            stack: false,
-            hideAfter: 1500,
-            afterHidden: function () {
-              window.location.href = "{{ route('cabang.index') }}";
-            }
-          });
+          loadingHide();
+          messageSuccess('Success', 'Data berhasil ditambahkan!');
         } else if (response.status == 'invalid') {
-          $.toast({
-            heading: 'Perhatian',
-            text: response.message,
-            bgColor: '#00b894',
-            textColor: 'white',
-            loaderBg: '#55efc4',
-            icon: 'warning',
-            stack: false,
-            hideAfter: 2000
-          });
+          loadingHide();
+          messageWarning('Perhatian', response.message);
         }
       },
       error : function(e){
-        $.toast({
-          heading: 'Warning',
-          text: e.message,
-          bgColor: '#00b894',
-          textColor: 'white',
-          loaderBg: '#55efc4',
-          icon: 'warning',
-          stack: false
-        });
+        loadingHide();
+        messageWarning('Warning', e.message);
       }
     })
 
