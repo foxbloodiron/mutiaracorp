@@ -51,8 +51,9 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
+                                <input type="hidden" id="area_prov_hidden" value="{{ $data['area_prov'] }}">
                                 <select id="area_prov" class="select2 form-control form-control-sm" name="area_prov">
-                                  <option value="" selected>Pilih Provinsi</option>
+                                  <option value="">Pilih Provinsi</option>
                                   @foreach($data['provinces'] as $prov)
                                     <option value="{{ $prov->wp_id }}">{{ $prov->wp_name }}</option>
                                   @endforeach
@@ -65,8 +66,11 @@
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
+                                <input type="hidden" id="area_city_hidden" value="{{ $data['agen']->a_area }}">
                                 <select id="area_city" class="select2 form-control form-control-sm" name="area_city">
-                                  <option value="" selected>Pilih Kota</option>
+                                  @foreach($data['area_city'] as $city)
+                                    <option value="{{ $city->wc_id }}">{{ $city->wc_name }}</option>
+                                  @endforeach
                                 </select>
                               </div>
                             </div>
@@ -109,7 +113,7 @@
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <div class="form-group">
                                 <select id="address_prov" class="select2 form-control form-control-sm" name="address_prov">
-                                  <option value="" selected>Pilih Provinsi</option>
+                                  <option value="">Pilih Provinsi</option>
                                   @foreach($data['provinces'] as $prov)
                                     <option value="{{ $prov->wp_id }}">{{ $prov->wp_name }}</option>
                                   @endforeach
@@ -333,6 +337,13 @@
 
   }
   // end: submit form
+
+  $(document).ready(function() {
+    area_prov_hidden = $('#area_prov_hidden').val();
+    $("#area_prov option[value="+area_prov_hidden+"]").prop("selected", true);
+    area_city_hidden = $('#area_city_hidden').val();
+    $("#area_city option[value="+area_city_hidden+"]").prop("selected", true);
+  })
 
 </script>
 @endsection

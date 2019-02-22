@@ -57,6 +57,21 @@ class AgenController extends Controller
     }
 
     /**
+     * Return a province id.
+     *
+     * @return char provinceId
+     */
+    public function getProvinceFromCity($city_id)
+    {
+      $provinceId = DB::table('m_wil_kota')
+        ->where('wc_id', $city_id)
+        ->select('wc_provinsi')
+        ->first();
+      return $provinceId->wc_provinsi;
+    }
+
+
+    /**
      * Return list of cities based on provinces.
      *
      * @return \Illuminate\Http\Response
@@ -204,7 +219,15 @@ class AgenController extends Controller
       $data['agen'] = DB::table('m_agen')
         ->where('a_id', $id)
         ->first();
+      $provinceId = $this->getProvinceFromCity($data['agen']->a_area);
+
       $data['provinces'] = $this->getProvinces();
+      $data['area_prov'] = $provinceId;
+      $data['area_city'] = $this->getCities($provinceId);
+      $data['address_city'] = $this->getCities($data['agen']->a_kabupaten);
+      $data['address_district'] = $this->getDistricts($data['agen']->a_kecamatan);
+      $data['address_village'] = $this->getVillages($data['agen']->a_desa);
+      // dd($provinceId, $data['area_city']);
       return view('masterdatautama.agen.edit', compact('data'));
     }
 
