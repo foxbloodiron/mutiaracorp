@@ -60,13 +60,17 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::post('/masterdatautama/cabang/update/{id}', 'MasterController@update_cabang')->name('cabang.update');
 	Route::post('/masterdatautama/cabang/delete/{id}', 'MasterController@delete_cabang')->name('cabang.delete');
 
-	Route::get('/masterdatautama/agen/index', 'MasterController@agen')->name('agen.index');
-	Route::get('/masterdatautama/agen/list', 'MasterController@get_list_agen')->name('agen.list');
-	Route::get('/masterdatautama/agen/create', 'MasterController@create_agen')->name('agen.create');
-	Route::post('/masterdatautama/agen/store', 'MasterController@store_agen')->name('agen.store');
-	Route::get('/masterdatautama/agen/edit/{id}', 'MasterController@edit_agen')->name('agen.edit');
-  Route::post('/masterdatautama/agen/update/{id}', 'MasterController@update_agen')->name('agen.update');
-	Route::post('/masterdatautama/agen/delete/{id}', 'MasterController@delete_agen')->name('agen.delete');
+	Route::get('/masterdatautama/agen/index', 'Master\AgenController@index')->name('agen.index');
+	Route::get('/masterdatautama/agen/list', 'Master\AgenController@getList')->name('agen.list');
+	Route::get('/masterdatautama/agen/create', 'Master\AgenController@create')->name('agen.create');
+  Route::get('/masterdatautama/agen/provinces', 'Master\AgenController@getProvinces')->name('agen.provinces');
+	Route::get('/masterdatautama/agen/cities/{prov}', 'Master\AgenController@getCities')->name('agen.cities');
+	Route::get('/masterdatautama/agen/districts/{prov}', 'Master\AgenController@getDistricts')->name('agen.districts');
+	Route::get('/masterdatautama/agen/villages/{prov}', 'Master\AgenController@getVillages')->name('agen.villages');
+	Route::post('/masterdatautama/agen/store', 'Master\AgenController@store')->name('agen.store');
+	Route::get('/masterdatautama/agen/edit/{id}', 'Master\AgenController@edit')->name('agen.edit');
+  Route::post('/masterdatautama/agen/update/{id}', 'Master\AgenController@update')->name('agen.update');
+	Route::post('/masterdatautama/agen/delete/{id}', 'Master\AgenController@destroy')->name('agen.delete');
 
 
 	Route::get('/masterdatautama/agen/kelolaagen/index', 'MasterController@kelolaagen')->name('kelolaagen.index');

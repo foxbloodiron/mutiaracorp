@@ -99,11 +99,11 @@
 				{data: 'DT_RowIndex'},
 				{data: 'a_code', name: 'a_code'},
 				{data: 'a_name', name: 'a_name'},
-				{data: 'type', name: 'type'},
+				{data: 'a_type', name: 'a_type'},
 				{data: 'a_birthday', name: 'a_birthday'},
 				{data: 'a_address', name: 'a_address'},
 				{data: 'a_email', name: 'a_email'},
-				{data: 'a_no_telp', name: 'a_no_telp'},
+				{data: 'a_telp'},
 				{data: 'action', name: 'action'}
 			],
 			pageLength: 10,
