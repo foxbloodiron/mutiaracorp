@@ -116,8 +116,8 @@
                 closeAnimation: 'scale',
                 animationBounce: 1.5,
                 icon: 'fa fa-exclamation-triangle',
-                title: 'Peringatan!',
-                content: 'Apakah anda yakin ingin menghapus data ini ?',
+                title: 'Pesan!',
+                content: 'Apakah anda yakin ingin menghapus data ini?',
                 theme: 'disable',
                 buttons: {
                     info: {
@@ -125,32 +125,24 @@
                         text: 'Ya',
                         action: function () {
                             return $.ajax({
-                                type: "post",
+                                type: "get",
                                 url: url_hapus,
+                                beforeSend: function() {
+                                    loadingShow();
+                                },
                                 success: function (response) {
                                     if (response.status == 'berhasil') {
-                                        $.toast({
-                                            heading: 'Success',
-                                            text: 'Data berhasil dihapus !',
-                                            bgColor: '#00b894',
-                                            textColor: 'white',
-                                            loaderBg: '#55efc4',
-                                            icon: 'success',
-                                            stack: false
-                                        });
+                                        loadingHide();
+                                        messageSuccess('Berhasil', 'Data berhasil dihapus!');
                                         tb_cabang.ajax.reload();
+                                    } else {
+                                        loadingHide();
+                                        messageFailed('Gagal', response.message);
                                     }
                                 },
                                 error: function (e) {
-                                    $.toast({
-                                        heading: 'Warning',
-                                        text: e.message,
-                                        bgColor: '#00b894',
-                                        textColor: 'white',
-                                        loaderBg: '#55efc4',
-                                        icon: 'warning',
-                                        stack: false
-                                    });
+                                    loadingHide();
+                                    messageWarning('Peringatan', e.message);
                                 }
                             });
 
@@ -159,7 +151,7 @@
                     cancel: {
                         text: 'Tidak',
                         action: function () {
-                            // tutup confirm
+
                         }
                     }
                 }

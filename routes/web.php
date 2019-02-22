@@ -72,6 +72,7 @@ Route::group(['middleware' => 'guest'], function(){
     Route::get('/masterdatautama/cabang/list', 'master\CompanyController@getData')->name('cabang.list');
     Route::match(['get', 'post'],'/masterdatautama/cabang/create', 'master\CompanyController@create')->name('cabang.create');
     Route::match(['get', 'post'], '/masterdatautama/cabang/edit/{id}', 'master\CompanyController@edit')->name('cabang.edit');
+    Route::get('/masterdatautama/cabang/delete/{id}', 'master\CompanyController@delete')->name('cabang.delete');
 //    ==========End Master Outlet======
 
 	Route::get('/masterdatautama/agen/index', 'MasterController@agen')->name('agen.index');

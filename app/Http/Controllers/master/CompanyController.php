@@ -150,4 +150,33 @@ class CompanyController extends Controller
             }
         }
     }
+
+    public function delete($id)
+    {
+        try{
+            $id = Crypt::decrypt($id);
+        }catch (\Exception $e){
+            return response()->json([
+                'status' => 'gagal',
+                'message' => $e
+            ]);
+        }
+        DB::beginTransaction();
+        try {
+            DB::table('m_company')
+                ->where('c_id', $id)
+                ->delete();
+
+            DB::commit();
+            return response()->json([
+                'status' => 'berhasil'
+            ]);
+        } catch (\Exception $e) {
+            DB::rollback();
+            return response()->json([
+                'status' => 'gagal',
+                'message' => $e
+            ]);
+        }
+    }
 }

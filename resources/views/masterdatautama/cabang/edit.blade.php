@@ -111,7 +111,30 @@
   });
 
   $('#btn_simpan').on('click', function() {
-    SubmitForm(event);
+    $.confirm({
+      animation: 'RotateY',
+      closeAnimation: 'scale',
+      animationBounce: 1.5,
+      icon: 'fa fa-exclamation-triangle',
+      title: 'Pesan!',
+      content: 'Apakah anda yakin ingin memperbarui data ini?',
+      theme: 'disable',
+      buttons: {
+        info: {
+          btnClass: 'btn-blue',
+          text: 'Ya',
+          action: function () {
+            SubmitForm(event);
+          }
+        },
+        cancel: {
+          text: 'Tidak',
+          action: function () {
+
+          }
+        }
+      }
+    });
   })
   // start: submit form to update data in db
   function SubmitForm(event)

@@ -81,7 +81,7 @@
         });
     }
 
-    function messageWarning(title, message)
+    function messageFailed(title, message)
     {
         $.toast({
             heading: title,
@@ -90,6 +90,20 @@
             textColor: 'white',
             loaderBg: '#3C415E',
             icon: 'warning',
+            stack: false,
+            hideAfter: 3000
+        });
+    }
+
+    function messageWarning(title, message)
+    {
+        $.toast({
+            heading: title,
+            text: message,
+            bgColor: '#FF4444',
+            textColor: 'white',
+            loaderBg: '#3C415E',
+            icon: 'error',
             stack: false,
             hideAfter: 3000
         });
