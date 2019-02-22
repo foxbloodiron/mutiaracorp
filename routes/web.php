@@ -29,13 +29,13 @@ Route::group(['middleware' => 'guest'], function(){
 	Route::get('/masterdatautama/datapegawai/edit', 'MasterController@edit_kelolapegawai')->name('kelolapegawai.edit');
 	Route::get('/masterdatautama/datapegawai/create', 'MasterController@create_kelolapegawai')->name('kelolapegawai.create');
 
-	Route::get('/masterdatautama/produk/index', 'MasterController@dataproduk')->name('dataproduk.index');
-	Route::get('/masterdatautama/produk/list', 'MasterController@get_list_dataproduk')->name('dataproduk.list');
-	Route::get('/masterdatautama/produk/create', 'MasterController@create_dataproduk')->name('dataproduk.create');
-  Route::post('/masterdatautama/produk/store', 'MasterController@store_dataproduk')->name('dataproduk.store');
-  Route::get('/masterdatautama/produk/edit/{id}', 'MasterController@edit_dataproduk')->name('dataproduk.edit');
-  Route::post('/masterdatautama/produk/update/{id}', 'MasterController@update_dataproduk')->name('dataproduk.update');
-	Route::post('/masterdatautama/produk/delete/{id}', 'MasterController@delete_dataproduk')->name('dataproduk.delete');
+	Route::get('/masterdatautama/produk/index', 'Master\ItemController@index')->name('dataproduk.index');
+	Route::get('/masterdatautama/produk/list', 'Master\ItemController@getList')->name('dataproduk.list');
+	Route::get('/masterdatautama/produk/create', 'Master\ItemController@create')->name('dataproduk.create');
+  Route::post('/masterdatautama/produk/store', 'Master\ItemController@store')->name('dataproduk.store');
+  Route::get('/masterdatautama/produk/edit/{id}', 'Master\ItemController@edit')->name('dataproduk.edit');
+  Route::post('/masterdatautama/produk/update/{id}', 'Master\ItemController@update')->name('dataproduk.update');
+	Route::post('/masterdatautama/produk/delete/{id}', 'Master\ItemController@destroy')->name('dataproduk.delete');
 
   Route::get('/masterdatautama/produk/jenis/create', 'MasterController@create_datajenisproduk')->name('datajenisproduk.create');
 	Route::get('/masterdatautama/produk/jenis/edit', 'MasterController@edit_datajenisproduk')->name('datajenisproduk.edit');
