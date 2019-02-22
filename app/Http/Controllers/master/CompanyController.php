@@ -11,6 +11,7 @@ use Illuminate\Contracts\Encryption\DecryptException;
 use Carbon\Carbon;
 use DB;
 use Auth;
+use CodeGenerator;
 
 class CompanyController extends Controller
 {
