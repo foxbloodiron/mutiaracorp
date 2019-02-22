@@ -67,6 +67,34 @@
         $('#cover-spin').fadeOut(200);
     }
 
+    function messageSuccess($title, $message)
+    {
+        $.toast({
+            heading: $title,
+            text: $message,
+            bgColor: '#00b894',
+            textColor: 'white',
+            loaderBg: '#3C415E',
+            icon: 'success',
+            stack: false,
+            hideAfter: 3000
+        });
+    }
+
+    function messageWarning($title, $message)
+    {
+        $.toast({
+            heading: $title,
+            text: $message,
+            bgColor: '#FF4444',
+            textColor: 'white',
+            loaderBg: '#3C415E',
+            icon: 'warning',
+            stack: false,
+            hideAfter: 3000
+        });
+    }
+
 	$(document).ready(function(){
 		$("input[type='number']").keydown(function (e) {
 	        // Allow: backspace, delete, tab, escape, enter and .

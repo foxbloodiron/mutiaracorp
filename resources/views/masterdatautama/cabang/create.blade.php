@@ -136,31 +136,33 @@
       success : function (response){
         if(response.status == 'berhasil'){
           loadingHide();
-          $.toast({
-            heading: 'Success',
-            text: 'Data berhasil ditambahkan !',
-            bgColor: '#00b894',
-            textColor: 'white',
-            loaderBg: '#3C415E',
-            icon: 'success',
-            stack: false,
-            hideAfter: 3000,
-            afterHidden: function () {
-              window.location.href = "{{ route('cabang.index') }}";
-            }
-          });
+          messageSuccess('Success', 'Data berhasil ditambahkan !');
+          {{--$.toast({--}}
+            {{--heading: 'Success',--}}
+            {{--text: 'Data berhasil ditambahkan !',--}}
+            {{--bgColor: '#00b894',--}}
+            {{--textColor: 'white',--}}
+            {{--loaderBg: '#3C415E',--}}
+            {{--icon: 'success',--}}
+            {{--stack: false,--}}
+            {{--hideAfter: 3000,--}}
+            {{--afterHidden: function () {--}}
+              {{--window.location.href = "{{ route('cabang.index') }}";--}}
+            {{--}--}}
+          {{--});--}}
         } else if (response.status == 'invalid') {
           loadingHide();
-          $.toast({
-            heading: 'Perhatian',
-            text: response.message,
-            bgColor: '#FF4444',
-            textColor: 'white',
-            loaderBg: '#3C415E',
-            icon: 'warning',
-            stack: false,
-            hideAfter: 5000
-          });
+          messageWarning('Perhatian', response.message);
+          // $.toast({
+          //   heading: 'Perhatian',
+          //   text: response.message,
+          //   bgColor: '#FF4444',
+          //   textColor: 'white',
+          //   loaderBg: '#3C415E',
+          //   icon: 'warning',
+          //   stack: false,
+          //   hideAfter: 5000
+          // });
         }
       },
       error : function(e){
