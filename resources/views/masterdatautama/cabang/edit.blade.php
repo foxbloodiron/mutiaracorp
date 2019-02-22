@@ -133,11 +133,11 @@
       url : $("#myForm").attr('action'),
       dataType : 'json',
       beforeSend: function() {
-        loading();
+        loadingShow();
       },
       success : function (response){
         if(response.status == 'berhasil'){
-          loadingEnd();
+          loadingHide();
           $.toast({
             heading: 'Success',
             text: 'Data berhasil disimpan !',
@@ -149,7 +149,7 @@
             hideAfter: 5000
           });
         } else if (response.status == 'invalid') {
-          loadingEnd();
+          loadingHide();
           $.toast({
             heading: 'Perhatian',
             text: response.message,
@@ -163,7 +163,7 @@
         }
       },
       error : function(e){
-        loadingEnd();
+        loadingHide();
         $.toast({
           heading: 'Warning',
           text: e.message,

@@ -57,12 +57,12 @@
 <script type="text/javascript">
     var baseUrl = "{{url('/')}}";
 
-    function loading()
+    function loadingShow()
     {
         $('#cover-spin').fadeIn(200);
     }
 
-    function loadingEnd()
+    function loadingHide()
     {
         $('#cover-spin').fadeOut(200);
     }
