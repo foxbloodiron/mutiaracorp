@@ -442,22 +442,8 @@ class MasterController extends Controller
 
     public function datasatuan()
     {
-      return view('masterdatautama/datasatuan/index');
-    }
-    public function get_list_datasatuan()
-    {
-      $datas = DB::table('m_unit')->orderBy('u_name', 'asc')->get();
-      return Datatables::of($datas)
-        ->addIndexColumn()
-        ->addColumn('action', function($datas) {
-          return '<div class="btn-group btn-group-sm">
-          <button class="btn btn-warning" onclick="EditDatasatuan('.$datas->u_id.')" rel="tooltip" data-placement="top"><i class="fa fa-pencil"></i></button>
-          <button class="btn btn-danger" onclick="DeleteDatasatuan('.$datas->u_id.')" rel="tooltip" data-placement="top" data-original-title="Hapus"><i class="fa fa-trash-o"></i></button>
-          </div>';
-        })
-        ->rawColumns(['action'])
-        // ->addIndexColumn()
-        ->make(true);
+      $id = DB::table('m_unit')->max('u_id') + 1;
+      return view('masterdatautama/datasatuan/index', compact('id'));
     }
     public function create_datasatuan()
     {
