@@ -36,22 +36,13 @@
                         <section>
 
                           <div class="row">
-                            {{--<div class="col-md-3 col-sm-6 col-xs-12">--}}
-                            {{--<label>ID Cabang</label>--}}
-                            {{--</div>--}}
-                            {{--<div class="col-md-9 col-sm-6 col-xs-12">--}}
-                            {{--<div class="form-group">--}}
-                            {{--<input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $id }}">--}}
-                            {{--</div>--}}
-                            {{--</div>--}}
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Nama Cabang</label>
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="cabang_name"
-                                       style="text-transform: uppercase;">
+                                <input type="text" class="form-control form-control-sm" id="cabang_name" name="cabang_name" style="text-transform: uppercase;">
                               </div>
                             </div>
 
@@ -60,8 +51,7 @@
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <textarea type="text" class="form-control form-control-sm"
-                                          name="cabang_address"></textarea>
+                                <textarea type="text" class="form-control form-control-sm" id="cabang_address" name="cabang_address"></textarea>
                               </div>
                             </div>
 
@@ -70,7 +60,7 @@
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="number" class="form-control form-control-sm" name="cabang_telp">
+                                <input type="number" class="form-control form-control-sm" id="cabang_telp" name="cabang_telp">
                               </div>
                             </div>
 
@@ -79,7 +69,7 @@
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <select id="" class="form-control form-control-sm" name="cabang_type">
+                                <select id="cabang_type" class="form-control form-control-sm" name="cabang_type">
                                   <option value="PUSAT" selected="">Pusat</option>
                                   <option value="CABANG">Cabang</option>
                                 </select>
@@ -119,6 +109,14 @@
     SubmitForm(event);
   });
 
+  function resetForm()
+  {
+    $('#cabang_name').val('');
+    $('#cabang_address').val('');
+    $('#cabang_telp').val('');
+    $('#cabang_type').val('PUSAT');
+  }
+
   // submit form to store data in db
   function SubmitForm(event)
   {
@@ -137,6 +135,7 @@
         if(response.status == 'berhasil'){
           loadingHide();
           messageSuccess('Success', 'Data berhasil ditambahkan!');
+          resetForm();
         } else if (response.status == 'invalid') {
           loadingHide();
           messageWarning('Perhatian', response.message);
