@@ -157,6 +157,7 @@
 			{
             	if(data.status =='sukses'){
                 	$('#addSatuan').modal('hide');
+                	messageSuccess('Success', 'Data berhasil disimpan');
                    	$('#table_satuan').DataTable().ajax.reload();
             	} else {
                     $('#addSatuan').modal('hide');
@@ -191,6 +192,7 @@
 			{
             	if(data.status =='sukses'){
                 	$('#editSatuan').modal('hide');
+                	messageSuccess('Success', 'Data berhasil diupdate');
                    	$('#table_satuan').DataTable().ajax.reload();
             	} else {
                     $('#editSatuan').modal('hide');

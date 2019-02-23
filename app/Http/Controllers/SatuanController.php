@@ -99,8 +99,10 @@ class SatuanController extends Controller
         ->addIndexColumn()
         ->addColumn('action', function($datas) {
           return '<div class="text-center">
+                  <div class="btn-group btn-group-sm">
                     <button type="button" class="btn btn-warning" onclick="editSatuan(\''.$datas->u_id.'\',\''.$datas->u_name.'\')" rel="tooltip" data-placement="top"><i class="fa fa-pencil"></i></button>
                     <button type="button" class="btn btn-danger" onclick="deleteSatuan('.$datas->u_id.')" rel="tooltip" data-placement="top" data-original-title="Hapus"><i class="fa fa-trash-o"></i></button>
+                  </div>
                   </div>';
         })
         ->rawColumns(['action'])
