@@ -31,26 +31,26 @@
                       </div>
                     </div>
 
-                    <form action="{{ route('cabang.update', [$data['cabang']->c_id]) }}" method="post" id="myForm" autocomplete="off">
+                    <form action="{{ route('cabang.edit', [Crypt::encrypt($data->c_id)]) }}" method="post" id="myForm" autocomplete="off">
                       <div class="card-block">
                         <section>
 
                           <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                              <label>ID Cabang</label>
-                            </div>
-                            <div class="col-md-9 col-sm-6 col-xs-12">
-                              <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $data['cabang']->c_id }}">
-                              </div>
-                            </div>
+                            {{--<div class="col-md-3 col-sm-6 col-xs-12">--}}
+                              {{--<label>ID Cabang</label>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-9 col-sm-6 col-xs-12">--}}
+                              {{--<div class="form-group">--}}
+                                {{--<input type="text" class="form-control form-control-sm" readonly="" name="cabang_id" value="{{ $data['cabang']->c_id }}">--}}
+                              {{--</div>--}}
+                            {{--</div>--}}
 
                             <div class="col-md-3 col-sm-6 col-xs-12">
                               <label>Nama Cabang</label>
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="text" class="form-control form-control-sm" name="cabang_name" value="{{ $data['cabang']->c_nama }}">
+                                <input type="text" class="form-control form-control-sm" name="cabang_name" value="{{ $data->c_name }}" style="text-transform: uppercase;">
                               </div>
                             </div>
 
@@ -59,7 +59,7 @@
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <textarea type="text" class="form-control form-control-sm" name="cabang_address">{{ $data['cabang']->c_alamat }}</textarea>
+                                <textarea type="text" class="form-control form-control-sm" name="cabang_address">{{ $data->c_address }}</textarea>
                               </div>
                             </div>
 
@@ -68,7 +68,7 @@
                             </div>
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
-                                <input type="number" class="form-control form-control-sm" name="cabang_telp" value="{{ $data['cabang']->c_no_telp }}">
+                                <input type="number" class="form-control form-control-sm" name="cabang_telp" value="{{ $data->c_tlp }}">
                               </div>
                             </div>
 
@@ -78,10 +78,10 @@
                             <div class="col-md-9 col-sm-6 col-xs-12">
                               <div class="form-group">
                                 <select id="" class="form-control form-control-sm" name="cabang_type">
-                                  @if($data['cabang']->c_type == 'PUSAT')
+                                  @if($data->c_type == 'PUSAT')
                                     <option value="PUSAT" selected="">Pusat</option>
                                     <option value="CABANG">Cabang</option>
-                                  @elseif($data['cabang']->c_type == 'CABANG')
+                                  @elseif($data->c_type == 'CABANG')
                                     <option value="PUSAT">Pusat</option>
                                     <option value="CABANG" selected="">Cabang</option>
                                   @endif
@@ -132,41 +132,21 @@
       type : "post",
       url : $("#myForm").attr('action'),
       dataType : 'json',
+      beforeSend: function() {
+        loadingShow();
+      },
       success : function (response){
         if(response.status == 'berhasil'){
-          $.toast({
-            heading: 'Success',
-            text: 'Data berhasil disimpan !',
-            bgColor: '#00b894',
-            textColor: 'white',
-            loaderBg: '#55efc4',
-            icon: 'success',
-            stack: false,
-            hideAfter: 1500
-          });
+          loadingHide();
+          messageSuccess('Success', 'Data berhasil diperbarui!');
         } else if (response.status == 'invalid') {
-          $.toast({
-            heading: 'Perhatian',
-            text: response.message,
-            bgColor: '#00b894',
-            textColor: 'white',
-            loaderBg: '#55efc4',
-            icon: 'warning',
-            stack: false,
-            hideAfter: 2000
-          });
+          loadingHide();
+          messageWarning('Perhatian', response.message);
         }
       },
       error : function(e){
-        $.toast({
-          heading: 'Warning',
-          text: e.message,
-          bgColor: '#00b894',
-          textColor: 'white',
-          loaderBg: '#55efc4',
-          icon: 'warning',
-          stack: false
-        });
+        loadingHide();
+        messageWarning('Warning', e.message);
       }
     })
 
